@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "company": "网易互娱",
+    "title": "2027届实习生项目",
+    "positions": ["策划", "技术", "美术", "用户体验", "市场", "运营", "测试", "项目管理"],
+    "locations": ["广州", "杭州", "上海"],
+    "has_hc": true,
+    "hc_detail": "HC充足，30+岗位，全年最大岗位量",
+    "referral_code": "DNKyR1",
+    "referral_url": "https://game.campus.163.com/m/home?st=ZGRmMDYwMzMtYWQyMC00ZGIwLWE2ZGQtOGFkZWVkZWRlOGUw",
+    "description": "网易互娱2027届实习生项目大力招聘中，超高转正率！\n30+岗位上新，全年最大岗位量开放！HC充足\n\n面向 2027 届在校生，广州/杭州/上海均有岗\n首批策划 / 技术 / 美术 等岗位持续热招中\n用户体验/市场/运营/测试/项目管理等多类别上新岗位\n\n✅ 高转正率：表现优异直接发放校招OFFER\n多项目/方向任选，直接参与爆款项目实战\n福利拉满：行业竞争力薪酬 + 免费食堂/健身房 + 实习租房/交通补贴\n⏰ 入职超灵活：实习时间自主定，2个月及以上即可，可灵活/暑期实习，适配学业节奏",
+    "target": "2027届在校生",
+    "type": "实习",
+    "tags": ["实习", "2027届", "高转正率", "内推"],
+    "post_date": "2026-06",
+    "qr_code": "images/wangyi-2026-intern-qr.jpg",
+    "extra_links": []
+  },
+  {
+    "id": 2,
+    "company": "安克创新",
+    "title": "2027届可转正实习 · 26届春招",
+    "positions": ["算法类", "硬件研发类", "营销类", "产品类", "战略类", "服务类", "项目管理类", "供应链类", "人力资源类", "质量类"],
+    "locations": ["长沙", "深圳", "北京", "苏州", "海外"],
+    "has_hc": true,
+    "hc_detail": "",
+    "referral_code": "DZKQTDW",
+    "referral_url": "https://anker-in.jobs.feishu.cn/s/u7Es5xWv4ko",
+    "description": "安克创新2027届可转正实习进行中，26届春招同步进行中！\n\n【公司介绍】2023年全球营收175亿的上市公司，10年打造3个年销售超40亿的全球化品牌；全球办公网络，销售覆盖146个国家和地区，用户过亿。\n\n⭕招聘岗位：算法类/硬件研发类/营销类/产品类/战略类/服务类/项目管理类/供应链类/人力资源类/质量类\n⭕需求专业：专业不限，电子电力相关专业、小语种相关专业、机械自动化相关专业、计算软件相关专业更佳~\n⭕工作地点：长沙/深圳/北京/苏州/海外\n\n【内推码】DZKQTDW（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://anker-in.jobs.feishu.cn/s/u7Es5xWv4ko",
+    "target": "2027届在校生（实习）· 26届（春招）",
+    "type": "实习/校招",
+    "tags": ["实习", "校招", "2027届", "26届", "可转正", "内推"],
+    "post_date": "2026-06",
+    "qr_code": "images/anker-2026-intern-qr.jpg",
+    "extra_links": [
+      {"label": "春招&暑期内推合集", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+    ]
+  }
+]
