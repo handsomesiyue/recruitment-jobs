@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('加载招聘数据失败:', err);
       jobListEl.innerHTML = `
         <div class="empty-state" style="grid-column:1/-1;">
-          <div class="empty-icon">⚠️</div>
+          <div class="empty-icon">!</div>
           <p>数据加载失败</p>
           <p class="empty-hint">请确保 data/jobs.json 文件存在且格式正确</p>
         </div>
@@ -45,12 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const locations = new Set();
     data.forEach(j => j.locations.forEach(l => locations.add(l)));
     const sortedLocs = [...locations].sort();
-    locationFilter.innerHTML = '<option value="">📍 全部地点</option>' +
+    locationFilter.innerHTML = '<option value="">全部地点</option>' +
       sortedLocs.map(l => `<option value="${l}">${l}</option>`).join('');
 
     // Types
     const types = new Set(data.map(j => j.type).filter(Boolean));
-    typeFilter.innerHTML = '<option value="">📌 全部类型</option>' +
+    typeFilter.innerHTML = '<option value="">全部类型</option>' +
       [...types].sort().map(t => `<option value="${t}">${t}</option>`).join('');
   }
 
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (type && job.type !== type) return false;
 
       if (hc === '有HC' && !job.has_hc) return false;
-      if (hc === '未知/暂无' && job.has_hc) return false;
+      if (hc === '未知' && job.has_hc) return false;
 
       return true;
     });
@@ -103,46 +103,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function createCard(job) {
     const hcBadge = job.has_hc
-      ? `<span class="hc-badge has-hc">🟢 有HC ${job.hc_detail ? '· ' + job.hc_detail : ''}</span>`
-      : `<span class="hc-badge unknown">🟡 未知/暂无</span>`;
+      ? `<span class="hc-badge has-hc">有HC ${job.hc_detail ? '· ' + job.hc_detail : ''}</span>`
+      : `<span class="hc-badge unknown">暂无HC</span>`;
 
     const tags = (job.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
-
     const positions = (job.positions || []).slice(0, 4).join(' · ');
     const posDisplay = positions ? (job.positions.length > 4 ? positions + '…' : positions) : '';
-
     const locations = (job.locations || []).join(' · ');
-
     const desc = (job.description || '').slice(0, 150) + ((job.description || '').length > 150 ? '…' : '');
 
+    // Determine card layout: with or without company badge header
+    const posHtml = posDisplay ? `<span class="meta-item">${escHtml(posDisplay)}</span>` : '';
+    const locHtml = `<span class="meta-item">${escHtml(locations)}</span>`;
+    const typeHtml = job.type ? `<span class="meta-item">${escHtml(job.type)}</span>` : '';
+
     const qrHtml = job.qr_code
-      ? `<div class="job-card-qr"><img src="${escHtml(job.qr_code)}" alt="二维码" title="扫码投递/内推"></div>`
+      ? `<div class="job-card-qr"><img src="${escHtml(job.qr_code)}" alt="二维码"></div>`
       : '';
 
     return `
       <div class="job-card" data-id="${job.id}">
+        <div class="job-card-company-badge">
+          <span class="company-dot"></span>
+          <span class="company-name">${escHtml(job.company)}</span>
+        </div>
         <div class="job-card-header">
           <div class="job-card-title">
-            <div class="company">${escHtml(job.company)}</div>
             <h3>${escHtml(job.title)}</h3>
           </div>
           ${hcBadge}
         </div>
         ${qrHtml}
         <div class="job-card-meta">
-          ${posDisplay ? `<span class="meta-item">💼 ${escHtml(posDisplay)}</span>` : ''}
-          <span class="meta-item">📍 ${escHtml(locations)}</span>
-          ${job.type ? `<span class="meta-item">📋 ${escHtml(job.type)}</span>` : ''}
+          ${posHtml}
+          ${locHtml}
+          ${typeHtml}
         </div>
         ${tags ? `<div class="job-card-tags">${tags}</div>` : ''}
         <div class="job-card-desc">${escHtml(desc)}</div>
         <div class="job-card-actions">
           <button class="btn btn-primary btn-sm view-detail" data-id="${job.id}">查看详情</button>
-          ${job.referral_url ? `<a href="${escHtml(job.referral_url)}" target="_blank" class="btn btn-outline btn-sm" rel="noopener">内推链接 →</a>` : ''}
+          ${job.referral_url ? `<a href="${escHtml(job.referral_url)}" target="_blank" class="btn btn-outline btn-sm" rel="noopener">内推链接</a>` : ''}
         </div>
         ${job.extra_links && job.extra_links.length ? `
         <div class="job-card-extra-links">
-          ${job.extra_links.map(link => `<a href="${escHtml(link.url)}" target="_blank" class="extra-link" rel="noopener">🔗 ${escHtml(link.label)}</a>`).join('')}
+          ${job.extra_links.map(link => `<a href="${escHtml(link.url)}" target="_blank" class="extra-link" rel="noopener">${escHtml(link.label)}</a>`).join('')}
         </div>` : ''}
       </div>
     `;
@@ -154,8 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!job) return;
 
     const hcBadge = job.has_hc
-      ? `<span class="hc-badge has-hc">🟢 有HC ${job.hc_detail ? '· ' + job.hc_detail : ''}</span>`
-      : `<span class="hc-badge unknown">🟡 未知/暂无</span>`;
+      ? `<span class="hc-badge has-hc">有HC ${job.hc_detail ? '· ' + job.hc_detail : ''}</span>`
+      : `<span class="hc-badge unknown">暂无HC</span>`;
 
     const tags = (job.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
 
@@ -170,18 +175,18 @@ document.addEventListener('DOMContentLoaded', () => {
           ${hcBadge}
         </div>
         <div class="job-card-meta">
-          <span class="meta-item">💼 ${escHtml(positions)}</span>
-          <span class="meta-item">📍 ${escHtml(locations)}</span>
-          ${job.type ? `<span class="meta-item">📋 ${escHtml(job.type)}</span>` : ''}
-          ${job.target ? `<span class="meta-item">🎯 ${escHtml(job.target)}</span>` : ''}
-          ${job.post_date ? `<span class="meta-item">📅 ${escHtml(job.post_date)}</span>` : ''}
+          <span class="meta-item">${escHtml(positions)}</span>
+          <span class="meta-item">${escHtml(locations)}</span>
+          ${job.type ? `<span class="meta-item">${escHtml(job.type)}</span>` : ''}
+          ${job.target ? `<span class="meta-item">${escHtml(job.target)}</span>` : ''}
+          ${job.post_date ? `<span class="meta-item">${escHtml(job.post_date)}</span>` : ''}
         </div>
         ${tags ? `<div class="job-card-tags">${tags}</div>` : ''}
         <div class="job-detail-description">${escHtml(job.description || '暂无描述')}</div>
         <div class="job-detail-qr-section">${job.qr_code ? `
           <div class="qr-block">
-            <img src="${escHtml(job.qr_code)}" alt="二维码" class="qr-img">
-            <p class="qr-label">📱 扫码投递 / 联系内推</p>
+            <img src="${escHtml(job.qr_code)}" alt="二维码" class="qr-img" onclick="openQrZoom('${escHtml(job.qr_code)}')">
+            <p class="qr-label">点击二维码放大</p>
           </div>` : ''}
         </div>
         <div class="info-grid">
@@ -206,14 +211,14 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="referral-code-box">
             <span class="code-label">内推码</span>
             <span class="code-value" id="referralCode">${escHtml(job.referral_code)}</span>
-            <span class="copy-feedback" id="copyFeedback">✅ 已复制</span>
+            <span class="copy-feedback" id="copyFeedback">已复制</span>
           </div>
-          ${job.referral_url ? `<a href="${escHtml(job.referral_url)}" target="_blank" class="btn btn-primary" rel="noopener">内推链接 →</a>` : ''}
+          ${job.referral_url ? `<a href="${escHtml(job.referral_url)}" target="_blank" class="btn btn-primary" rel="noopener">内推链接</a>` : ''}
         </div>
         ${job.extra_links && job.extra_links.length ? `
         <div class="extra-links-section">
-          <div class="extra-links-label">📎 更多链接</div>
-          ${job.extra_links.map(link => `<a href="${escHtml(link.url)}" target="_blank" class="btn btn-outline btn-sm" rel="noopener">${escHtml(link.label)} →</a>`).join('')}
+          <div class="extra-links-label">更多链接</div>
+          ${job.extra_links.map(link => `<a href="${escHtml(link.url)}" target="_blank" class="btn btn-outline btn-sm" rel="noopener">${escHtml(link.label)}</a>`).join('')}
         </div>` : ''}
       </div>
     `;
@@ -290,3 +295,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Bootstrap ----
   loadJobs();
 });
+
+// ---- QR Zoom (global, called from inline onclick) ----
+function openQrZoom(src) {
+  const overlay = document.createElement('div');
+  overlay.className = 'qr-zoom-overlay';
+  overlay.innerHTML = `
+    <div class="qr-zoom-backdrop"></div>
+    <div class="qr-zoom-content">
+      <button class="qr-zoom-close">&times;</button>
+      <img src="${src}" alt="二维码放大">
+      <p class="qr-zoom-label">长按或截图保存，用微信/扫码工具扫描</p>
+    </div>
+  `;
+
+  overlay.querySelector('.qr-zoom-backdrop').addEventListener('click', () => overlay.remove());
+  overlay.querySelector('.qr-zoom-close').addEventListener('click', () => overlay.remove());
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') overlay.remove(); }, { once: true });
+
+  document.body.appendChild(overlay);
+  document.body.style.overflow = 'hidden';
+}

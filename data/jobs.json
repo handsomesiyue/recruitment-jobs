@@ -36,5 +36,23 @@
     "extra_links": [
       {"label": "春招&暑期内推合集", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
     ]
+  },
+  {
+    "id": 3,
+    "company": "美的集团",
+    "title": "26届春招 & 27届美少年暑期实习",
+    "positions": ["信息技术", "研发技术", "财务金融", "管理", "八大职业群"],
+    "locations": ["佛山", "合肥", "上海", "广州", "深圳", "40+海内外城市"],
+    "has_hc": true,
+    "hc_detail": "岗位扩招，大量HC，投递不限次数",
+    "referral_code": "M1609R",
+    "referral_url": "https://careers.midea.com/recruit-school-wechat/job?mvp_code=M1609R",
+    "description": "【美的集团26届春招&27届美少年暑期实习仍在进行中，还有大量 HC】\n\n【岗位扩招总有一款适合你】\n【投递不限次数岗位自由切】\n【招聘岗位】涵盖信息技术、研发技术、财务金融、管理等八大职业群，海量岗位任您选择\n【工作地点】佛山、合肥、上海、广州、深圳等40+海内外城市\n\n【内推码】M1609R（内部推荐→选择博乐（mvp）推荐→填写：M1609R）",
+    "target": "26届（春招）· 27届（美少年暑期实习）",
+    "type": "实习/校招",
+    "tags": ["实习", "校招", "26届", "27届", "美少年", "内推"],
+    "post_date": "2026-06",
+    "qr_code": "images/midea-2026-spring-qr.jpg",
+    "extra_links": []
   }
 ]
