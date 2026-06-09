@@ -116,10 +116,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const posHtml = posDisplay ? `<span class="meta-item">${escHtml(posDisplay)}</span>` : '';
     const locHtml = `<span class="meta-item">${escHtml(locations)}</span>`;
     const typeHtml = job.type ? `<span class="meta-item">${escHtml(job.type)}</span>` : '';
+    const targetHtml = job.target ? `<div class="job-card-target">${escHtml(job.target)}</div>` : '';
 
     const qrHtml = job.qr_code
       ? `<div class="job-card-qr"><img src="${escHtml(job.qr_code)}" alt="二维码"></div>`
       : '';
+
+    const bottomHtml = `<div class="job-card-bottom">
+      ${qrHtml}
+      ${hcBadge}
+    </div>`;
 
     return `
       <div class="job-card" data-id="${job.id}">
@@ -127,18 +133,15 @@ document.addEventListener('DOMContentLoaded', () => {
           <span class="company-dot"></span>
           <span class="company-name">${escHtml(job.company)}</span>
         </div>
-        <div class="job-card-header">
-          <div class="job-card-title">
-            <h3>${escHtml(job.title)}</h3>
-          </div>
-          ${hcBadge}
+        <div class="job-card-title">
+          <h3>${escHtml(job.title)}</h3>
         </div>
-        ${qrHtml}
         <div class="job-card-meta">
           ${posHtml}
           ${locHtml}
           ${typeHtml}
         </div>
+        ${targetHtml}
         ${tags ? `<div class="job-card-tags">${tags}</div>` : ''}
         <div class="job-card-desc">${escHtml(desc)}</div>
         <div class="job-card-actions">
@@ -149,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="job-card-extra-links">
           ${job.extra_links.map(link => `<a href="${escHtml(link.url)}" target="_blank" class="extra-link" rel="noopener">${escHtml(link.label)}</a>`).join('')}
         </div>` : ''}
+        ${bottomHtml}
       </div>
     `;
   }

@@ -324,16 +324,9 @@ a:hover {
   vertical-align: middle;
 }
 
-.job-card-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
+/* Card title */
 .job-card-title {
-  flex: 1;
+  margin-bottom: 10px;
 }
 
 .job-card-title h3 {
@@ -344,18 +337,6 @@ a:hover {
 }
 
 /* HC badge */
-.job-card .hc-badge {
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  padding: 5px 10px;
-  border-radius: 6px;
-  font-size: 0.76rem;
-  font-weight: 600;
-  white-space: nowrap;
-  letter-spacing: 0.01em;
-}
-
 .hc-badge.has-hc {
   background: var(--color-success-bg);
   color: var(--color-success);
@@ -387,23 +368,53 @@ a:hover {
   border-radius: 6px;
 }
 
-/* QR code on card */
-.job-card-qr {
-  margin-bottom: 12px;
-  text-align: left;
+/* Target audience row */
+.job-card-target {
+  font-size: 0.82rem;
+  color: var(--color-accent);
+  font-weight: 550;
+  margin-bottom: 8px;
+  padding: 0;
 }
 
-.job-card-qr img {
-  width: 76px;
-  height: 76px;
-  border-radius: 8px;
+/* Bottom bar — QR + HC */
+.job-card-bottom {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border-light);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.job-card-bottom .job-card-qr {
+  flex-shrink: 0;
+}
+
+.job-card-bottom .job-card-qr img {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
   border: 1px solid var(--color-border-light);
   object-fit: cover;
-  transition: transform 0.2s var(--ease);
+  cursor: pointer;
+  transition: opacity 0.2s var(--ease);
+  display: block;
 }
 
-.job-card-qr img:hover {
-  transform: scale(1.05);
+.job-card-bottom .job-card-qr img:hover {
+  opacity: 0.75;
+}
+
+.job-card-bottom .hc-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 /* Tags */
@@ -918,6 +929,11 @@ a:hover {
 
   .job-card-title h3 {
     font-size: 1rem;
+  }
+
+  .job-card-bottom .job-card-qr img {
+    width: 48px;
+    height: 48px;
   }
 
   .modal {
