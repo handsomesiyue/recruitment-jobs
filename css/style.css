@@ -50,12 +50,13 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   background-image:
-    radial-gradient(rgba(15, 26, 46, 0.06) 1px, transparent 1px);
-  background-size: 24px 24px;
+    radial-gradient(rgba(15, 26, 46, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  text-wrap: pretty;
 }
 
 ::selection {
@@ -106,10 +107,10 @@ a:hover {
 
 .site-title {
   font-size: 2.2rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-weight: 720;
+  letter-spacing: -0.025em;
   margin-bottom: 6px;
-  background: linear-gradient(135deg, #fff 60%, rgba(255,255,255,0.7));
+  background: linear-gradient(135deg, #fff 55%, rgba(255,255,255,0.65));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -179,8 +180,9 @@ a:hover {
 
 .search-input:focus {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(232, 93, 58, 0.10);
+  box-shadow: 0 0 0 3px rgba(232, 93, 58, 0.08), 0 2px 8px rgba(15, 26, 46, 0.04);
   background: var(--color-surface);
+  outline: none;
 }
 
 .filter-group {
@@ -273,7 +275,7 @@ a:hover {
 @keyframes cardIn {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -281,14 +283,49 @@ a:hover {
   }
 }
 
+.job-card:nth-child(1) { animation-delay: 0.05s; }
+.job-card:nth-child(2) { animation-delay: 0.12s; }
+.job-card:nth-child(3) { animation-delay: 0.19s; }
+.job-card:nth-child(4) { animation-delay: 0.26s; }
+.job-card:nth-child(5) { animation-delay: 0.33s; }
+.job-card:nth-child(6) { animation-delay: 0.40s; }
+.job-card:nth-child(7) { animation-delay: 0.47s; }
+.job-card:nth-child(8) { animation-delay: 0.54s; }
+.job-card:nth-child(9) { animation-delay: 0.61s; }
+.job-card:nth-child(10) { animation-delay: 0.68s; }
+
 .job-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--color-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(15, 26, 46, 0.09);
+  border-color: rgba(232, 93, 58, 0.3);
 }
 
 .job-card:active {
   transform: translateY(-1px);
+}
+
+/* Link-type card: top accent bar + subtle tint */
+.job-card-link {
+  background: linear-gradient(180deg, #fef9f7 0%, var(--color-surface) 8%);
+  border-top: 2px solid var(--color-accent);
+}
+
+.job-card-link .company-name::after {
+  content: '官网';
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+  padding: 1px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+  letter-spacing: 0.04em;
+}
+
+.job-card-link .job-card-desc {
+  -webkit-line-clamp: 5;
 }
 
 /* Card company badge */
@@ -503,6 +540,18 @@ a:hover {
   font-size: 0.8rem;
 }
 
+.btn-accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.btn-accent:hover {
+  background: var(--color-accent-hover);
+  box-shadow: 0 2px 8px rgba(232, 93, 58, 0.25);
+  text-decoration: none;
+  color: #fff;
+}
+
 /* Extra links on card */
 .job-card-extra-links {
   display: flex;
@@ -534,19 +583,23 @@ a:hover {
 }
 
 .empty-icon {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 16px;
-  opacity: 0.5;
+  opacity: 0.35;
+  filter: grayscale(0.3);
 }
 
 .empty-state p {
-  font-size: 1.05rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
 }
 
 .empty-hint {
-  font-size: 0.88rem !important;
+  font-size: 0.85rem !important;
   color: var(--color-text-tertiary);
-  margin-top: 6px;
+  margin-top: 4px;
+  font-weight: 400;
 }
 
 /* ---- Modal ---- */

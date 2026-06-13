@@ -102,6 +102,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function createCard(job) {
+    // Link-type entries: simplified card
+    if (job.entry_type === 'link') {
+      return createLinkCard(job);
+    }
+
     const hcBadge = job.has_hc
       ? `<span class="hc-badge has-hc">有HC ${job.hc_detail ? '· ' + job.hc_detail : ''}</span>`
       : `<span class="hc-badge unknown">暂无HC</span>`;
@@ -157,10 +162,45 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
+  function createLinkCard(job) {
+    const tags = (job.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
+    const desc = (job.description || '').slice(0, 200) + ((job.description || '').length > 200 ? '…' : '');
+
+    return `
+      <div class="job-card job-card-link" data-id="${job.id}">
+        <div class="job-card-company-badge">
+          <span class="company-name">${escHtml(job.company)}</span>
+        </div>
+        <div class="job-card-title">
+          <h3>${escHtml(job.title)}</h3>
+        </div>
+        <div class="job-card-meta">
+          ${job.type ? `<span class="meta-item">${escHtml(job.type)}</span>` : ''}
+          ${job.target ? `<span class="meta-item">${escHtml(job.target)}</span>` : ''}
+        </div>
+        ${tags ? `<div class="job-card-tags">${tags}</div>` : ''}
+        <div class="job-card-desc">${escHtml(desc)}</div>
+        <div class="job-card-actions">
+          ${job.referral_url ? `<a href="${escHtml(job.referral_url)}" target="_blank" class="btn btn-accent btn-sm" rel="noopener">访问官网 →</a>` : ''}
+        </div>
+        ${job.extra_links && job.extra_links.length ? `
+        <div class="job-card-extra-links">
+          ${job.extra_links.map(link => `<a href="${escHtml(link.url)}" target="_blank" class="extra-link" rel="noopener">${escHtml(link.label)}</a>`).join('')}
+        </div>` : ''}
+      </div>
+    `;
+  }
+
   // ---- Detail Modal ----
   function openDetail(jobId) {
     const job = jobs.find(j => j.id === jobId);
     if (!job) return;
+
+    // Link-type entries: simplified detail
+    if (job.entry_type === 'link') {
+      openLinkDetail(job);
+      return;
+    }
 
     const hcBadge = job.has_hc
       ? `<span class="hc-badge has-hc">有HC ${job.hc_detail ? '· ' + job.hc_detail : ''}</span>`
@@ -248,6 +288,57 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     }
+  }
+
+  function openLinkDetail(job) {
+    const tags = (job.tags || []).map(t => `<span class="tag">${t}</span>`).join('');
+
+    modalBody.innerHTML = `
+      <div class="job-detail">
+        <div class="job-detail-header">
+          <div class="company">${escHtml(job.company)}</div>
+          <h2>${escHtml(job.title)}</h2>
+        </div>
+        <div class="job-card-meta">
+          ${job.type ? `<span class="meta-item">${escHtml(job.type)}</span>` : ''}
+          ${job.target ? `<span class="meta-item">${escHtml(job.target)}</span>` : ''}
+          ${job.post_date ? `<span class="meta-item">${escHtml(job.post_date)}</span>` : ''}
+        </div>
+        ${tags ? `<div class="job-card-tags">${tags}</div>` : ''}
+        <div class="job-detail-description">${escHtml(job.description || '暂无描述')}</div>
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="label">公司</span>
+            <span class="value">${escHtml(job.company)}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">招聘类型</span>
+            <span class="value">${escHtml(job.type || '-')}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">目标人群</span>
+            <span class="value">${escHtml(job.target || '-')}</span>
+          </div>
+          <div class="info-item">
+            <span class="label">发布日期</span>
+            <span class="value">${escHtml(job.post_date || '-')}</span>
+          </div>
+        </div>
+        ${job.referral_url ? `
+        <div class="referral-section">
+          <span style="font-size:0.9rem;color:var(--color-text-secondary);">官方投递页面</span>
+          <a href="${escHtml(job.referral_url)}" target="_blank" class="btn btn-accent" rel="noopener">访问官网 →</a>
+        </div>` : ''}
+        ${job.extra_links && job.extra_links.length ? `
+        <div class="extra-links-section">
+          <div class="extra-links-label">更多链接</div>
+          ${job.extra_links.map(link => `<a href="${escHtml(link.url)}" target="_blank" class="btn btn-outline btn-sm" rel="noopener">${escHtml(link.label)}</a>`).join('')}
+        </div>` : ''}
+      </div>
+    `;
+
+    detailModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
   }
 
   function closeDetail() {
