@@ -111,5 +111,43 @@
     "hc_detail": "",
     "qr_code": "",
     "extra_links": []
+  },
+  {
+    "id": 7,
+    "entry_type": "link",
+    "company": "欣旺达",
+    "title": "实习生招聘官网",
+    "type": "实习",
+    "target": "在校生（实习）",
+    "tags": ["实习", "新能源", "电池", "官网"],
+    "post_date": "2026-06",
+    "description": "欣旺达电子（Sunwoda，A股上市300207）实习生招聘官方投递页面。全球领先的锂离子电池模组解决方案提供商，总部深圳，业务涵盖3C消费电池、动力电池、储能系统等领域，合作伙伴包括苹果、华为、小米等头部厂商。",
+    "referral_url": "https://sunwodacampus.zhiye.com/intern/jobs?queryId=7ebd6ead-94e7-4d46-a941-306723c94770",
+    "referral_code": "",
+    "positions": [],
+    "locations": [],
+    "has_hc": false,
+    "hc_detail": "",
+    "qr_code": "",
+    "extra_links": []
+  },
+  {
+    "id": 8,
+    "entry_type": "link",
+    "company": "鸣鸣很忙集团",
+    "title": "校园招聘官网",
+    "type": "校招",
+    "target": "2025届/2026届毕业生",
+    "tags": ["校招", "零售", "零食", "官网"],
+    "post_date": "2026-06",
+    "description": "鸣鸣很忙集团（港股01768）校园招聘官方投递页面。旗下零食很忙+赵一鸣零食双品牌，全国门店超21000家，2025年营收超935亿元。岗位涵盖开发选址、门店运营、供应链、客服、人力资源等方向，专业不限，零食自由，总部长沙。",
+    "referral_url": "https://hnlshm4.zhiye.com/campus/jobs?queryId=3fcdbd45-912e-44b1-92c9-c59841d7fea8",
+    "referral_code": "",
+    "positions": [],
+    "locations": [],
+    "has_hc": false,
+    "hc_detail": "",
+    "qr_code": "",
+    "extra_links": []
   }
 ]
