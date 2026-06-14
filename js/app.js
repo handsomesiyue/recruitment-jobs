@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const jobListEl = document.getElementById('jobList');
   const emptyState = document.getElementById('emptyState');
   const searchInput = document.getElementById('searchInput');
-  const locationFilter = document.getElementById('locationFilter');
   const typeFilter = document.getElementById('typeFilter');
   const hcFilter = document.getElementById('hcFilter');
   const jobCountEl = document.getElementById('jobCount');
@@ -41,13 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ---- Populate filter dropdowns ----
   function populateFilters(data) {
-    // Locations
-    const locations = new Set();
-    data.forEach(j => j.locations.forEach(l => locations.add(l)));
-    const sortedLocs = [...locations].sort();
-    locationFilter.innerHTML = '<option value="">全部地点</option>' +
-      sortedLocs.map(l => `<option value="${l}">${l}</option>`).join('');
-
     // Types
     const types = new Set(data.map(j => j.type).filter(Boolean));
     typeFilter.innerHTML = '<option value="">全部类型</option>' +
@@ -57,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // ---- Filter & Search ----
   function getFilteredJobs(data) {
     const keyword = searchInput.value.trim().toLowerCase();
-    const location = locationFilter.value;
     const type = typeFilter.value;
     const hc = hcFilter.value;
 
@@ -75,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!searchTarget.includes(keyword)) return false;
       }
 
-      if (location && !job.locations.includes(location)) return false;
       if (type && job.type !== type) return false;
 
       if (hc === '有HC' && !job.has_hc) return false;
@@ -375,7 +365,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Search & Filter
   searchInput.addEventListener('input', () => render(jobs));
-  locationFilter.addEventListener('change', () => render(jobs));
   typeFilter.addEventListener('change', () => render(jobs));
   hcFilter.addEventListener('change', () => render(jobs));
 
