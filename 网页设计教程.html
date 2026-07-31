@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网页设计入门教程 · HTML & CSS 从零到一</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<!-- Prism.js -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg: #fdfbf7;
+  --surface: #ffffff;
+  --sidebar-bg: #f4efe6;
+  --text: #1c1917;
+  --text-secondary: #78716c;
+  --text-muted: #a8a29e;
+  --accent: #c2410c;
+  --accent-soft: #fef7ee;
+  --accent-glow: rgba(194, 65, 12, 0.12);
+  --html-tag: #dc2626;
+  --css-prop: #2563eb;
+  --code-bg: #1e1b18;
+  --code-surface: #282420;
+  --border: #e7e5e4;
+  --border-light: #f0eeeb;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.08);
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --sidebar-w: 280px;
+  --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 2rem; }
+
+body {
+  font-family: 'Crimson Pro', 'Noto Serif SC', 'STSong', Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: var(--sidebar-w);
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  transition: transform var(--transition);
+}
+
+.sidebar-header {
+  padding: 1.75rem 1.5rem 1rem;
+  border-bottom: 1px solid var(--border-light);
+  position: sticky; top: 0;
+  background: var(--sidebar-bg);
+  z-index: 2;
+}
+
+.sidebar-header h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.35rem;
+  line-height: 1.3;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.sidebar-header .subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.sidebar-nav { flex: 1; padding: 1rem 0; }
+
+.nav-section { margin-bottom: 0.25rem; }
+
+.nav-section-title {
+  padding: 0.5rem 1.5rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  cursor: default;
+  user-select: none;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 1.5rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all var(--transition);
+  border-left: 3px solid transparent;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--text);
+  background: rgba(194, 65, 12, 0.06);
+}
+
+.nav-link.active {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-left-color: var(--accent);
+  font-weight: 500;
+}
+
+.nav-link .step-num {
+  width: 1.5rem; height: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  border: 1.5px solid currentColor;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.nav-link.active .step-num {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.sidebar-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border-light);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  position: sticky; bottom: 0;
+  background: var(--sidebar-bg);
+}
+
+/* ===== Mobile Nav Toggle ===== */
+.nav-toggle {
+  display: none;
+  position: fixed; top: 1rem; left: 1rem; z-index: 200;
+  width: 44px; height: 44px;
+  border: none;
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  align-items: center; justify-content: center;
+  font-size: 1.3rem;
+}
+
+/* ===== Main Content ===== */
+.main {
+  margin-left: var(--sidebar-w);
+  max-width: 900px;
+  padding: 3rem 3rem 6rem;
+}
+
+/* Progress Bar */
+.progress-bar-wrap {
+  position: fixed;
+  top: 0; left: var(--sidebar-w); right: 0; height: 3px;
+  z-index: 99;
+  background: transparent;
+  pointer-events: none;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--accent);
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* ===== Typography ===== */
+.section {
+  margin-bottom: 5rem;
+  scroll-margin-top: 2rem;
+}
+
+.section-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--border-light);
+  position: relative;
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 60px; height: 2px;
+  background: var(--accent);
+}
+
+.section-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.35rem;
+  line-height: 1.2;
+  color: var(--text);
+  letter-spacing: -0.015em;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+h3 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.6rem;
+  margin: 2.5rem 0 1rem;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin: 2rem 0 0.75rem;
+}
+
+p { margin-bottom: 1.1rem; }
+p + p { margin-top: 0; }
+
+strong { font-weight: 600; color: var(--text); }
+em { font-style: italic; }
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; transition: all var(--transition); }
+a:hover { color: #9a3412; }
+
+/* ===== Code Blocks ===== */
+.code-block {
+  position: relative;
+  margin: 1.5rem 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--code-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.code-block pre {
+  margin: 0 !important;
+  padding: 1.25rem 1.5rem !important;
+  border-radius: var(--radius) !important;
+  background: var(--code-bg) !important;
+  overflow-x: auto;
+}
+
+.code-block code {
+  font-family: 'JetBrains Mono', 'Cascadia Code', 'Fira Code', monospace;
+  font-size: 0.85rem !important;
+  line-height: 1.7 !important;
+  tab-size: 2;
+}
+
+/* Code Label */
+.code-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  background: var(--code-surface);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.code-label span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  color: #a8a29e;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.copy-btn {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #a8a29e;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all var(--transition);
+}
+
+.copy-btn:hover {
+  background: rgba(255,255,255,0.15);
+  color: #e7e5e4;
+}
+
+.copy-btn.copied {
+  background: rgba(22, 163, 74, 0.2);
+  border-color: rgba(22, 163, 74, 0.4);
+  color: #4ade80;
+}
+
+/* ===== Live Preview ===== */
+.live-preview {
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.live-preview-label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: #f5f0e8;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.04em;
+}
+
+.live-preview-label::before {
+  content: '▶';
+  font-size: 0.5rem;
+  color: var(--accent);
+}
+
+.live-preview iframe {
+  width: 100%;
+  border: none;
+  display: block;
+  background: #fff;
+}
+
+/* ===== Info Cards ===== */
+.info-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.info-card.tip {
+  border-left-color: #2563eb;
+}
+
+.info-card.warn {
+  border-left-color: #eab308;
+}
+
+.info-card h4 {
+  margin: 0 0 0.5rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+}
+
+.info-card p { margin: 0; font-size: 1rem; }
+
+/* ===== Tables ===== */
+.table-wrap {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+th {
+  background: #f5f0e8;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.7rem 1rem;
+  border-bottom: 2px solid var(--border);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: top;
+}
+
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(194, 65, 12, 0.02); }
+
+code.inline {
+  background: #f0eeeb;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88em;
+  color: var(--accent);
+  border: 1px solid var(--border-light);
+}
+
+/* ===== Tags ===== */
+.tag {
+  display: inline-block;
+  padding: 0.15em 0.55em;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.04em;
+  margin-right: 0.3rem;
+}
+
+.tag-html { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+.tag-css { background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+
+/* ===== Box Model Diagram ===== */
+.box-model-diagram {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.box-model-layers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.box-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all var(--transition);
+  cursor: default;
+}
+
+.box-layer.margin {
+  width: 340px; height: 200px;
+  background: #fef7ee;
+  border: 2px dashed #fdba74;
+  color: #c2410c;
+  border-radius: var(--radius-sm);
+}
+.box-layer.border {
+  width: 270px; height: 150px;
+  background: #fff7ed;
+  border: 2px solid #f97316;
+  color: #9a3412;
+  border-radius: 4px;
+}
+.box-layer.padding {
+  width: 210px; height: 110px;
+  background: #fefce8;
+  border: 2px dashed #fde047;
+  color: #a16207;
+  border-radius: 3px;
+}
+.box-layer.content {
+  width: 150px; height: 70px;
+  background: #f0fdf4;
+  border: 2px solid #86efac;
+  color: #166534;
+  border-radius: 3px;
+}
+
+/* ===== Flex Demo ===== */
+.flex-demo {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin: 1rem 0;
+}
+
+.flex-demo-item {
+  padding: 12px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ===== Grid Demo ===== */
+.grid-demo {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  margin: 1rem 0;
+}
+
+.grid-demo-item {
+  padding: 12px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ===== Back to Top ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem; right: 2rem;
+  width: 44px; height: 44px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--transition);
+  z-index: 50;
+  color: var(--text-secondary);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px var(--accent-glow);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .main { padding: 2rem 2rem 4rem; }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .sidebar.open { transform: translateX(0); }
+
+  .nav-toggle { display: flex; }
+
+  .main {
+    margin-left: 0;
+    padding: 4rem 1.25rem 3rem;
+  }
+
+  .progress-bar-wrap { left: 0; }
+
+  .section-title { font-size: 1.85rem; }
+
+  .code-block pre { padding: 1rem !important; }
+  .code-block code { font-size: 0.78rem !important; }
+
+  table { font-size: 0.82rem; }
+}
+
+/* ===== Sidebar overlay for mobile ===== */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 99;
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 768px) {
+  .sidebar-overlay.show {
+    display: block;
+  }
+}
+
+/* ===== Print ===== */
+@media print {
+  .sidebar, .nav-toggle, .back-to-top, .progress-bar-wrap, .sidebar-overlay { display: none !important; }
+  .main { margin-left: 0; max-width: 100%; padding: 0; }
+  .section { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<!-- Mobile Toggle -->
+<button class="nav-toggle" onclick="toggleSidebar()" aria-label="菜单">☰</button>
+<div class="sidebar-overlay" onclick="closeSidebar()"></div>
+
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <h1>网页设计入门</h1>
+    <p class="subtitle">HTML & CSS · 从零到一</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <div class="nav-section-title">入门</div>
+      <a href="#s1" class="nav-link" data-section="s1"><span class="step-num">1</span>环境搭建</a>
+      <a href="#s2" class="nav-link" data-section="s2"><span class="step-num">2</span>HTML 文档结构</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">HTML 基础</div>
+      <a href="#s3" class="nav-link" data-section="s3"><span class="step-num">3</span>标题与段落</a>
+      <a href="#s4" class="nav-link" data-section="s4"><span class="step-num">4</span>列表</a>
+      <a href="#s5" class="nav-link" data-section="s5"><span class="step-num">5</span>超链接与图片</a>
+      <a href="#s6" class="nav-link" data-section="s6"><span class="step-num">6</span>语义化元素</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">HTML 进阶</div>
+      <a href="#s7" class="nav-link" data-section="s7"><span class="step-num">7</span>表格</a>
+      <a href="#s8" class="nav-link" data-section="s8"><span class="step-num">8</span>表单</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">CSS 入门</div>
+      <a href="#s9" class="nav-link" data-section="s9"><span class="step-num">9</span>CSS 语法与选择器</a>
+      <a href="#s10" class="nav-link" data-section="s10"><span class="step-num">10</span>颜色与背景</a>
+      <a href="#s11" class="nav-link" data-section="s11"><span class="step-num">11</span>文本与字体</a>
+      <a href="#s12" class="nav-link" data-section="s12"><span class="step-num">12</span>盒模型 ★</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">CSS 布局</div>
+      <a href="#s13" class="nav-link" data-section="s13"><span class="step-num">13</span>Display 与 Position</a>
+      <a href="#s14" class="nav-link" data-section="s14"><span class="step-num">14</span>Flexbox ★</a>
+      <a href="#s15" class="nav-link" data-section="s15"><span class="step-num">15</span>CSS Grid</a>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-section-title">进阶</div>
+      <a href="#s16" class="nav-link" data-section="s16"><span class="step-num">16</span>响应式设计</a>
+      <a href="#s17" class="nav-link" data-section="s17"><span class="step-num">17</span>层叠与优先级</a>
+    </div>
+  </nav>
+
+  <div class="sidebar-footer">
+    基于 MDN · W3Schools · freeCodeCamp
+  </div>
+</aside>
+
+<!-- Progress Bar -->
+<div class="progress-bar-wrap">
+  <div class="progress-bar" id="progressBar"></div>
+</div>
+
+<!-- Main Content -->
+<main class="main" id="mainContent">
+
+<!-- ===== Section 1: 环境搭建 ===== -->
+<section class="section" id="s1">
+  <div class="section-header">
+    <span class="section-num">Chapter 01</span>
+    <h2 class="section-title">环境搭建：创建你的第一个网页</h2>
+    <p class="section-subtitle">不需要安装任何软件，一个文本编辑器 + 浏览器就够了</p>
+  </div>
+
+  <h3>你需要什么？</h3>
+  <p>编写网页只需要两样东西：<strong>文本编辑器</strong>（写代码）和 <strong>浏览器</strong>（看效果）。</p>
+
+  <div class="info-card">
+    <h4>推荐工具</h4>
+    <p><strong>编辑器：</strong>VS Code（免费，macOS/Windows/Linux）—— 最流行的代码编辑器。<br>
+    <strong>浏览器：</strong>Chrome 或 Firefox —— 都自带强大的开发者工具（按 F12 打开）。</p>
+  </div>
+
+  <h3>创建第一个 HTML 文件</h3>
+  <p>在任意位置新建一个文件，命名为 <code class="inline">index.html</code>，用编辑器打开，输入以下内容：</p>
+
+  <div class="code-block">
+    <div class="code-label">
+      <span>index.html</span>
+      <button class="copy-btn" onclick="copyCode(this)">复制</button>
+    </div>
+    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;我的第一个网页&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+  &lt;p&gt;这是我的第一个网页。&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </div>
+
+  <p>保存后，用浏览器打开这个文件（拖到浏览器窗口，或右键 → 打开方式 → Chrome），你就能看到你的第一个网页了！</p>
+
+  <div class="live-preview">
+    <div class="live-preview-label">预览效果</div>
+    <iframe srcdoc="<style>body{font-family:sans-serif;padding:24px;background:#fff}</style><h1 style='color:#1a1a2e;margin-bottom:8px'>Hello, World!</h1><p style='color:#555;font-size:16px'>这是我的第一个网页。</p>" height="140"></iframe>
+  </div>
+
+  <div class="info-card tip">
+    <h4>关键点</h4>
+    <p><code class="inline">&lt;!DOCTYPE html&gt;</code> 告诉浏览器"这是 HTML5 文档"。<br>
+    <code class="inline">&lt;html&gt;</code> 是所有内容的根元素，<code class="inline">lang="zh-CN"</code> 表示页面语言是中文。<br>
+    <code class="inline">&lt;head&gt;</code> 放元信息（标题、编码等），<strong>不显示</strong>在页面上。<br>
+    <code class="inline">&lt;body&gt;</code> 里的内容才会在浏览器窗口中<strong>真正显示</strong>。</p>
+  </div>
+</section>
+
+<!-- ===== Section 2: HTML 文档结构 ===== -->
+<section class="section" id="s2">
+  <div class="section-header">
+    <span class="section-num">Chapter 02</span>
+    <h2 class="section-title">HTML 文档结构</h2>
+    <p class="section-subtitle">理解 HTML 元素、标签和属性的基本语法</p>
+  </div>
+
+  <h3>元素 = 开始标签 + 内容 + 结束标签</h3>
+  <p>HTML 的核心是<strong>元素</strong>（Element）。绝大多数元素由一对标签包裹内容构成：</p>
+
+  <div class="code-block">
+    <div class="code-label"><span>元素语法</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-html">&lt;标签名 属性="值"&gt;内容&lt;/标签名&gt;
+
+&lt;!-- 例子 --&gt;
+&lt;a href="https://example.com"&gt;点击这里&lt;/a&gt;
+&lt;img src="photo.jpg" alt="一张照片"&gt;  &lt;!-- 空元素：没有结束标签 --&gt;</code></pre>
+  </div>
+
+  <p><strong>属性</strong>（Attribute）提供元素的额外信息，写在开始标签内，格式为 <code class="inline">属性名="值"</code>。</p>
+
+  <div class="info-card">
+    <h4>常见的 HTML 属性</h4>
+    <p><code class="inline">class</code> — 给元素起一个"类名"，用于 CSS 选择<br>
+    <code class="inline">id</code> — 给元素一个唯一标识（一个页面中每个 id 只能出现一次）<br>
+    <code class="inline">href</code> — 链接的目标地址<br>
+    <code class="inline">src</code> — 图片/视频/脚本的来源路径<br>
+    <code class="inline">alt</code> — 图片的替代文本（无障碍 + SEO 必备）</p>
+  </div>
+
+  <h3>HTML 注释</h3>
+  <p>注释不会在页面上显示，用于给代码做说明：</p>
+  <div class="code-block">
+    <div class="code-label"><span>注释语法</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-html">&lt;!-- 这是注释，浏览器会忽略它 --&gt;
+
+&lt;!--
+  多行注释
+  可以跨越多行
+--&gt;</code></pre>
+  </div>
+</section>
+
+<!-- ===== Section 3: 标题与段落 ===== -->
+<section class="section" id="s3">
+  <div class="section-header">
+    <span class="section-num">Chapter 03</span>
+    <h2 class="section-title">标题与段落</h2>
+    <p class="section-subtitle">页面内容的基础 —— 标题层级和文本段落</p>
+  </div>
+
+  <h3>标题：h1 到 h6</h3>
+  <p>HTML 提供 6 级标题，<code class="inline">&lt;h1&gt;</code> 最重要，<code class="inline">&lt;h6&gt;</code> 最次要。<strong>一个页面只应有一个 h1。</strong></p>
+
+  <div class="code-block">
+    <div class="code-label"><span>标题示例</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-html">&lt;h1&gt;一级标题 — 页面的主标题&lt;/h1&gt;
+&lt;h2&gt;二级标题 — 主要章节&lt;/h2&gt;
+&lt;h3&gt;三级标题 — 子章节&lt;/h3&gt;
+&lt;h4&gt;四级标题&lt;/h4&gt;
+&lt;h5&gt;五级标题&lt;/h5&gt;
+&lt;h6&gt;六级标题&lt;/h6&gt;</code></pre>
+  </div>
+
+  <div class="live-preview">
+    <div class="live-preview-label">预览效果</div>
+    <iframe srcdoc="<style>body{font-family:sans-serif;padding:24px;background:#fff;line-height:1.6}</style><h1 style='margin:0 0 8px;font-size:28px'>一级标题 — 页面的主标题</h1><h2 style='margin:12px 0 6px;font-size:22px'>二级标题 — 主要章节</h2><h3 style='margin:10px 0 4px;font-size:18px'>三级标题 — 子章节</h3><h4 style='margin:8px 0 2px;font-size:16px'>四级标题</h4><h5 style='margin:6px 0 2px;font-size:14px'>五级标题</h5><h6 style='margin:4px 0;font-size:12px;opacity:0.7'>六级标题</h6>" height="260"></iframe>
+  </div>
+
+  <h3>段落与文本格式化</h3>
+  <p><code class="inline">&lt;p&gt;</code> 定义段落。<code class="inline">&lt;br&gt;</code> 是换行（空元素）。下面是一些语义化文本标签：</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>标签</th><th>作用</th><th>默认样式</th></tr>
+      <tr><td><code class="inline">&lt;strong&gt;</code></td><td>表示重要内容（语义）</td><td><strong>粗体</strong></td></tr>
+      <tr><td><code class="inline">&lt;em&gt;</code></td><td>表示强调（语义）</td><td><em>斜体</em></td></tr>
+      <tr><td><code class="inline">&lt;b&gt;</code></td><td>纯视觉粗体（无语义）</td><td><b>粗体</b></td></tr>
+      <tr><td><code class="inline">&lt;i&gt;</code></td><td>纯视觉斜体（无语义）</td><td><i>斜体</i></td></tr>
+      <tr><td><code class="inline">&lt;mark&gt;</code></td><td>高亮标记</td><td><mark>黄色背景</mark></td></tr>
+      <tr><td><code class="inline">&lt;small&gt;</code></td><td>小号文字/附属说明</td><td><small>较小字体</small></td></tr>
+      <tr><td><code class="inline">&lt;del&gt;</code></td><td>删除线</td><td><del>划线文字</del></td></tr>
+      <tr><td><code class="inline">&lt;ins&gt;</code></td><td>插入线</td><td><ins>下划线文字</ins></td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ===== Section 4: 列表 ===== -->
+<section class="section" id="s4">
+  <div class="section-header">
+    <span class="section-num">Chapter 04</span>
+    <h2 class="section-title">列表</h2>
+    <p class="section-subtitle">无序列表、有序列表、描述列表 —— 组织信息的三种方式</p>
+  </div>
+
+  <h3>无序列表 &lt;ul&gt;</h3>
+  <p>每项前面有圆点符号，顺序不重要。</p>
+
+  <div class="code-block">
+    <div class="code-label"><span>无序列表</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+  </div>
+
+  <h3>有序列表 &lt;ol&gt;</h3>
+  <p>每项前面有数字编号，顺序很重要。</p>
+
+  <div class="code-block">
+    <div class="code-label"><span>有序列表</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-html">&lt;ol&gt;
+  &lt;li&gt;打开编辑器&lt;/li&gt;
+  &lt;li&gt;编写代码&lt;/li&gt;
+  &lt;li&gt;保存文件&lt;/li&gt;
+  &lt;li&gt;在浏览器中打开&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+  </div>
+
+  <div class="live-preview">
+    <div class="live-preview-label">预览效果</div>
+    <iframe srcdoc="<style>body{font-family:sans-serif;padding:24px;background:#fff;line-height:1.8}</style><p style='margin-bottom:6px;font-weight:600'>无序列表：</p><ul style='margin-top:0'><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><p style='margin-bottom:6px;font-weight:600;margin-top:20px'>有序列表：</p><ol style='margin-top:0'><li>打开编辑器</li><li>编写代码</li><li>保存文件</li><li>在浏览器中打开</li></ol>" height="260"></iframe>
+  </div>
+
+  <h3>描述列表 &lt;dl&gt;</h3>
+  <p>术语 + 定义的结构，适合词汇表、FAQ 等。</p>
+
+  <div class="code-block">
+    <div class="code-label"><span>描述列表</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-html">&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;超文本标记语言，定义网页的结构和内容。&lt;/dd&gt;
+
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;层叠样式表，控制网页的外观和布局。&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+  </div>
+</section>
+
+<!-- ===== Section 5: 超链接与图片 ===== -->
+<section class="section" id="s5">
+  <div class="section-header">
+    <span class="section-num">Chapter 05</span>
+    <h2 class="section-title">超链接与图片</h2>
+    <p class="section-subtitle">让页面互相连接，展示视觉内容</p>
+  </div>
+
+  <h3>超链接 &lt;a&gt;</h3>
+  <p><code class="inline">href</code> 属性指定目标地址。最重要的属性是 <code class="inline">href</code> 和 <code class="inline">target</code>。</p>
+
+  <div class="code-block">
+    <div class="code-label"><span>链接示例</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-html">&lt;!-- 跳转到外部网站 --&gt;
+&lt;a href="https://developer.mozilla.org/zh-CN/"&gt;MDN 中文文档&lt;/a&gt;
+
+&lt;!-- 在新标签页打开 --&gt;
+&lt;a href="https://example.com" target="_blank"&gt;新标签页打开&lt;/a&gt;
+
+&lt;!-- 跳转到页面内的某个位置（锚点） --&gt;
+&lt;a href="#s3"&gt;跳转到第三章&lt;/a&gt;
+
+&lt;!-- 发送邮件 --&gt;
+&lt;a href="mailto:hello@example.com"&gt;发邮件&lt;/a&gt;</code></pre>
+  </div>
+
+  <h3>图片 &lt;img&gt;</h3>
+  <p><code class="inline">&lt;img&gt;</code> 是空元素（没有结束标签）。<strong>alt 属性是必须的</strong> —— 图片加载失败时显示替代文本，对屏幕阅读器也至关重要。</p>
+
+  <div class="code-block">
+    <div class="code-label"><span>图片示例</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-html">&lt;!-- 基本用法 --&gt;
+&lt;img src="photo.jpg" alt="日落下海滩的风景照"&gt;
+
+&lt;!-- 指定宽高（防止布局抖动） --&gt;
+&lt;img src="photo.jpg" alt="..." width="800" height="600"&gt;
+
+&lt;!-- 图片 + 标题（语义化） --&gt;
+&lt;figure&gt;
+  &lt;img src="chart.png" alt="2024 年销售数据柱状图"&gt;
+  &lt;figcaption&gt;图 1: 2024 年度销售趋势&lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+  </div>
+
+  <div class="info-card warn">
+    <h4>常见错误</h4>
+    <p><strong>忘记 alt 属性</strong> —— 即使图片是纯装饰性的，也应写 <code class="inline">alt=""</code>（空字符串），这样屏幕阅读器会跳过它。<br>
+    <strong>图片路径错误</strong> —— 相对路径是相对于 HTML 文件的位置。如果图片在 <code class="inline">images/</code> 文件夹中，路径应为 <code class="inline">images/photo.jpg</code>。</p>
+  </div>
+</section>
+
+<!-- ===== Section 6: 语义化元素 ===== -->
+<section class="section" id="s6">
+  <div class="section-header">
+    <span class="section-num">Chapter 06</span>
+    <h2 class="section-title">语义化元素</h2>
+    <p class="section-subtitle">用正确的标签描述内容的意义，而不仅仅是外观</p>
+  </div>
+
+  <p>在 HTML5 之前，人们用 <code class="inline">&lt;div&gt;</code> 做一切布局。现在我们有语义化标签，让代码更有意义：</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>标签</th><th>用途</th><th>说明</th></tr>
+      <tr><td><code class="inline">&lt;header&gt;</code></td><td>页眉</td><td>页面或区块的头部（logo、导航、标题等）</td></tr>
+      <tr><td><code class="inline">&lt;nav&gt;</code></td><td>导航</td><td>主要的导航链接区域</td></tr>
+      <tr><td><code class="inline">&lt;main&gt;</code></td><td>主要内容</td><td>页面独有的核心内容，一个页面只能有一个</td></tr>
+      <tr><td><code class="inline">&lt;section&gt;</code></td><td>章节</td><td>主题相关的内容组，通常带一个标题</td></tr>
+      <tr><td><code class="inline">&lt;article&gt;</code></td><td>文章</td><td>独立、可分发的内容（博客文章、新闻等）</td></tr>
+      <tr><td><code class="inline">&lt;aside&gt;</code></td><td>侧栏</td><td>与主要内容间接相关的内容（侧边栏、广告等）</td></tr>
+      <tr><td><code class="inline">&lt;footer&gt;</code></td><td>页脚</td><td>页面或区块的底部（版权、联系方式等）</td></tr>
+      <tr><td><code class="inline">&lt;div&gt;</code></td><td>通用容器</td><td>无语义，纯布局用途。当没有更合适的语义标签时使用</td></tr>
+      <tr><td><code class="inline">&lt;span&gt;</code></td><td>行内容器</td><td>无语义的行内元素，用于包裹一小段文字以添加样式</td></tr>
+    </table>
+  </div>
+
+  <h3>典型页面结构</h3>
+  <div class="code-block">
+    <div class="code-label"><span>语义化布局</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-html">&lt;body&gt;
+  &lt;header&gt;
+    &lt;nav&gt;... 导航菜单 ...&lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h1&gt;文章标题&lt;/h1&gt;
+      &lt;section&gt;
+        &lt;h2&gt;第一节&lt;/h2&gt;
+        &lt;p&gt;...&lt;/p&gt;
+      &lt;/section&gt;
+    &lt;/article&gt;
+
+    &lt;aside&gt;... 侧边栏 ...&lt;/aside&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;... 页脚信息 ...&lt;/footer&gt;
+&lt;/body&gt;</code></pre>
+  </div>
+
+  <div class="info-card tip">
+    <h4>为什么要用语义化标签？</h4>
+    <p>1. <strong>SEO</strong>：搜索引擎更好地理解页面结构<br>
+    2. <strong>无障碍</strong>：屏幕阅读器能准确描述页面区域<br>
+    3. <strong>可维护性</strong>：代码更易读，协作更高效</p>
+  </div>
+</section>
+
+<!-- ===== Section 7: 表格 ===== -->
+<section class="section" id="s7">
+  <div class="section-header">
+    <span class="section-num">Chapter 07</span>
+    <h2 class="section-title">表格</h2>
+    <p class="section-subtitle">用表格展示结构化数据</p>
+  </div>
+
+  <div class="code-block">
+    <div class="code-label"><span>基本表格</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;姓名&lt;/th&gt;
+      &lt;th&gt;职位&lt;/th&gt;
+      &lt;th&gt;城市&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;张三&lt;/td&gt;
+      &lt;td&gt;前端工程师&lt;/td&gt;
+      &lt;td&gt;北京&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;李四&lt;/td&gt;
+      &lt;td&gt;设计师&lt;/td&gt;
+      &lt;td&gt;上海&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+  <div class="live-preview">
+    <div class="live-preview-label">预览效果</div>
+    <iframe srcdoc="<style>body{font-family:sans-serif;padding:24px;background:#fff}table{border-collapse:collapse;width:100%}th,td{border:1px solid #ddd;padding:8px 12px;text-align:left}th{background:#f5f5f5}</style><table><thead><tr><th>姓名</th><th>职位</th><th>城市</th></tr></thead><tbody><tr><td>张三</td><td>前端工程师</td><td>北京</td></tr><tr><td>李四</td><td>设计师</td><td>上海</td></tr></tbody></table>" height="180"></iframe>
+  </div>
+
+  <p><code class="inline">&lt;thead&gt;</code>、<code class="inline">&lt;tbody&gt;</code>、<code class="inline">&lt;tfoot&gt;</code> 是可选但推荐的语义分组。<code class="inline">colspan</code> 和 <code class="inline">rowspan</code> 属性可以合并单元格。</p>
+</section>
+
+<!-- ===== Section 8: 表单 ===== -->
+<section class="section" id="s8">
+  <div class="section-header">
+    <span class="section-num">Chapter 08</span>
+    <h2 class="section-title">表单</h2>
+    <p class="section-subtitle">收集用户输入 —— 搜索框、登录、注册、调查问卷</p>
+  </div>
+
+  <div class="code-block">
+    <div class="code-label"><span>表单示例</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-html">&lt;form action="/submit" method="POST"&gt;
+  &lt;label for="name"&gt;姓名：&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" required&gt;
+
+  &lt;label for="email"&gt;邮箱：&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" placeholder="you@example.com"&gt;
+
+  &lt;label for="msg"&gt;留言：&lt;/label&gt;
+  &lt;textarea id="msg" name="msg" rows="4"&gt;&lt;/textarea&gt;
+
+  &lt;label for="city"&gt;城市：&lt;/label&gt;
+  &lt;select id="city" name="city"&gt;
+    &lt;option value="beijing"&gt;北京&lt;/option&gt;
+    &lt;option value="shanghai"&gt;上海&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;button type="submit"&gt;提交&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+  </div>
+
+  <p><code class="inline">&lt;input&gt;</code> 的 <code class="inline">type</code> 属性决定了输入类型：</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>type 值</th><th>用途</th></tr>
+      <tr><td><code class="inline">text</code></td><td>单行文本（默认）</td></tr>
+      <tr><td><code class="inline">email</code></td><td>邮箱地址（移动端弹出邮箱键盘）</td></tr>
+      <tr><td><code class="inline">password</code></td><td>密码（输入内容被遮挡）</td></tr>
+      <tr><td><code class="inline">number</code></td><td>数字（带增减按钮）</td></tr>
+      <tr><td><code class="inline">checkbox</code></td><td>复选框（多选）</td></tr>
+      <tr><td><code class="inline">radio</code></td><td>单选框（name 相同即为一组）</td></tr>
+      <tr><td><code class="inline">file</code></td><td>文件上传</td></tr>
+      <tr><td><code class="inline">date</code></td><td>日期选择器</td></tr>
+      <tr><td><code class="inline">submit</code></td><td>提交按钮</td></tr>
+    </table>
+  </div>
+
+  <div class="info-card">
+    <h4>重要原则</h4>
+    <p>每个 <code class="inline">&lt;input&gt;</code> 都应该有一个对应的 <code class="inline">&lt;label&gt;</code>（通过 <code class="inline">for</code> 属性关联），这样点击标签文字就能聚焦输入框，大大提升可用性和无障碍体验。</p>
+  </div>
+</section>
+
+<!-- ===== Section 9: CSS 语法与选择器 ===== -->
+<section class="section" id="s9">
+  <div class="section-header">
+    <span class="section-num">Chapter 09</span>
+    <h2 class="section-title"><span class="tag tag-css">CSS</span> 语法与选择器</h2>
+    <p class="section-subtitle">CSS 是网页的"化妆师"——控制颜色、字体、布局、动画</p>
+  </div>
+
+  <h3>三种引入 CSS 的方式</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>方式</th><th>代码</th><th>推荐度</th></tr>
+      <tr><td><strong>外部样式表</strong></td><td><code class="inline">&lt;link rel="stylesheet" href="style.css"&gt;</code></td><td>★★★ 最佳</td></tr>
+      <tr><td>内部 &lt;style&gt;</td><td><code class="inline">&lt;style&gt;h1 { color: red; }&lt;/style&gt;</code></td><td>★★ 小页面可用</td></tr>
+      <tr><td>内联样式</td><td><code class="inline">&lt;p style="color: red;"&gt;</code></td><td>★ 尽量避免</td></tr>
+    </table>
+  </div>
+
+  <h3>CSS 规则结构</h3>
+  <div class="code-block">
+    <div class="code-label"><span>CSS 语法</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-css">选择器 {
+  属性: 值;
+  属性: 值;
+}
+
+/* 实际例子 */
+h1 {
+  color: #333333;
+  font-size: 28px;
+  text-align: center;
+}</code></pre>
+  </div>
+
+  <h3>核心选择器一览</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>选择器</th><th>语法</th><th>匹配</th></tr>
+      <tr><td>元素（类型）</td><td><code class="inline">p { }</code></td><td>所有 &lt;p&gt; 元素</td></tr>
+      <tr><td>类（class）</td><td><code class="inline">.highlight { }</code></td><td>所有 class="highlight" 的元素</td></tr>
+      <tr><td>ID</td><td><code class="inline">#header { }</code></td><td>id="header" 的元素（唯一）</td></tr>
+      <tr><td>后代</td><td><code class="inline">article p { }</code></td><td>article 内部所有 p（任意层级）</td></tr>
+      <tr><td>子代</td><td><code class="inline">ul > li { }</code></td><td>ul 的直接子元素 li</td></tr>
+      <tr><td>分组</td><td><code class="inline">h1, h2, h3 { }</code></td><td>同时选择多个选择器</td></tr>
+      <tr><td>伪类</td><td><code class="inline">a:hover { }</code></td><td>鼠标悬停时的链接</td></tr>
+      <tr><td>通用</td><td><code class="inline">* { }</code></td><td>所有元素</td></tr>
+    </table>
+  </div>
+
+  <div class="info-card tip">
+    <h4>最佳实践</h4>
+    <p><strong>优先使用 class 选择器</strong>，避免过度使用 ID 选择器（特异性太高，难以覆盖）。组合选择时：<code class="inline">.card.highlight</code> 选择同时拥有两个类的元素。</p>
+  </div>
+</section>
+
+<!-- ===== Section 10: 颜色与背景 ===== -->
+<section class="section" id="s10">
+  <div class="section-header">
+    <span class="section-num">Chapter 10</span>
+    <h2 class="section-title"><span class="tag tag-css">CSS</span> 颜色与背景</h2>
+    <p class="section-subtitle">文字颜色、背景色、背景图 —— 页面配色的基础</p>
+  </div>
+
+  <h3>颜色的四种表示法</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>方式</th><th>示例</th><th>说明</th></tr>
+      <tr><td>颜色名</td><td><code class="inline">red</code>, <code class="inline">tomato</code>, <code class="inline">dodgerblue</code></td><td>140+ 种预设颜色名</td></tr>
+      <tr><td>HEX</td><td><code class="inline">#ff6347</code> 或 <code class="inline">#f63</code></td><td>最常用，RRGGBB</td></tr>
+      <tr><td>RGB / RGBA</td><td><code class="inline">rgb(255, 99, 71)</code> / <code class="inline">rgba(255, 99, 71, 0.5)</code></td><td>A = 透明度 (0-1)</td></tr>
+      <tr><td>HSL</td><td><code class="inline">hsl(9, 100%, 64%)</code></td><td>色相、饱和度、亮度</td></tr>
+    </table>
+  </div>
+
+  <div class="code-block">
+    <div class="code-label"><span>颜色与背景示例</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-css">body {
+  color: #1c1917;              /* 文字颜色 */
+  background-color: #fdfbf7;   /* 背景色 */
+}
+
+.hero {
+  background-image: url('hero-bg.jpg');
+  background-size: cover;       /* 图片覆盖整个区域 */
+  background-position: center;  /* 居中显示 */
+  background-repeat: no-repeat;
+}
+
+.card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}</code></pre>
+  </div>
+</section>
+
+<!-- ===== Section 11: 文本与字体 ===== -->
+<section class="section" id="s11">
+  <div class="section-header">
+    <span class="section-num">Chapter 11</span>
+    <h2 class="section-title"><span class="tag tag-css">CSS</span> 文本与字体</h2>
+    <p class="section-subtitle">控制文字的样式、大小、间距和对齐</p>
+  </div>
+
+  <div class="code-block">
+    <div class="code-label"><span>文字排版大全</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-css">.article {
+  /* 字体家族（优先使用第一个，找不到则回退） */
+  font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+
+  /* 字号 */
+  font-size: 18px;
+
+  /* 字重：400=正常, 700=粗体 */
+  font-weight: 600;
+
+  /* 行高：无单位的数字 = 字号倍数（推荐） */
+  line-height: 1.75;
+
+  /* 文字对齐：left / center / right / justify */
+  text-align: left;
+
+  /* 文字装饰：none / underline / line-through */
+  text-decoration: none;
+
+  /* 字母间距 */
+  letter-spacing: -0.01em;
+
+  /* 首行缩进 */
+  text-indent: 2em;
+}</code></pre>
+  </div>
+
+  <h3>Web 安全字体 vs 自定义字体</h3>
+  <p><strong>Web 安全字体</strong>是几乎所有系统都预装的字体（Arial, Georgia, Times New Roman 等）。<strong>自定义字体</strong>通过 Google Fonts 或 <code class="inline">@font-face</code> 引入。</p>
+
+  <div class="code-block">
+    <div class="code-label"><span>Google Fonts 使用</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-html">&lt;!-- 1. 在 &lt;head&gt; 中引入 --&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"&gt;
+
+&lt;!-- 2. 在 CSS 中使用 --&gt;
+&lt;style&gt;
+  h1 { font-family: 'Playfair Display', serif; }
+&lt;/style&gt;</code></pre>
+  </div>
+</section>
+
+<!-- ===== Section 12: 盒模型 ===== -->
+<section class="section" id="s12">
+  <div class="section-header">
+    <span class="section-num">Chapter 12</span>
+    <h2 class="section-title"><span class="tag tag-css">CSS</span> 盒模型 ★</h2>
+    <p class="section-subtitle">理解 CSS 最核心的概念 —— 每个元素都是一个矩形盒子</p>
+  </div>
+
+  <p>在 CSS 中，<strong>一切皆为盒子</strong>。每个 HTML 元素都被渲染成一个矩形，由四层组成（从内到外）：</p>
+
+  <div class="box-model-diagram">
+    <div class="box-model-layers">
+      <div class="box-layer margin">margin（外边距）—— 盒子之间的间距
+        <div class="box-layer border">border（边框）—— 可见的边界线
+          <div class="box-layer padding">padding（内边距）—— 边框到内容的距离
+            <div class="box-layer content">content（内容）—— 文字/图片本身</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>层</th><th>CSS 属性</th><th>说明</th></tr>
+      <tr><td>content</td><td><code class="inline">width</code>, <code class="inline">height</code></td><td>内容区域的大小</td></tr>
+      <tr><td>padding</td><td><code class="inline">padding</code></td><td>内容与边框之间的内部留白</td></tr>
+      <tr><td>border</td><td><code class="inline">border</code></td><td>围绕 padding 和 content 的边框</td></tr>
+      <tr><td>margin</td><td><code class="inline">margin</code></td><td>盒子与其他元素之间的外部间距</td></tr>
+    </table>
+  </div>
+
+  <div class="code-block">
+    <div class="code-label"><span>盒模型实操</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-css">.card {
+  width: 300px;           /* 内容宽度 */
+  padding: 20px;          /* 内边距：上下左右各 20px */
+  border: 2px solid #ccc; /* 边框 */
+  margin: 16px auto;      /* 外边距：上下 16px，左右居中 */
+
+  /* 简写技巧 */
+  /* padding: 上 右 下 左; */
+  /* padding: 20px 15px 10px 15px; */
+  /* margin: 10px 20px; (上下 10px, 左右 20px) */
+}</code></pre>
+  </div>
+
+  <div class="info-card warn">
+    <h4>box-sizing 陷阱</h4>
+    <p>默认情况下，<code class="inline">width: 300px</code> 只设置内容区的宽度。加上 padding 和 border 后，元素实际占用宽度 = <strong>300 + 20×2 + 2×2 = 344px</strong>。</p>
+    <p>使用 <code class="inline">box-sizing: border-box</code> 可以让 width 包含 padding 和 border，这样设置 300px 就是 300px。几乎所有现代项目都会全局设置：</p>
+  </div>
+
+  <div class="code-block">
+    <div class="code-label"><span>全局 border-box</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-css">*, *::before, *::after {
+  box-sizing: border-box;
+}</code></pre>
+  </div>
+</section>
+
+<!-- ===== Section 13: Display 与 Position ===== -->
+<section class="section" id="s13">
+  <div class="section-header">
+    <span class="section-num">Chapter 13</span>
+    <h2 class="section-title"><span class="tag tag-css">CSS</span> Display 与 Position</h2>
+    <p class="section-subtitle">控制元素如何显示、如何定位</p>
+  </div>
+
+  <h3>display 属性</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>值</th><th>行为</th><th>常见元素</th></tr>
+      <tr><td><code class="inline">block</code></td><td>独占一行，可设宽高</td><td>div, p, h1, section</td></tr>
+      <tr><td><code class="inline">inline</code></td><td>不换行，不可设宽高</td><td>span, a, strong, em</td></tr>
+      <tr><td><code class="inline">inline-block</code></td><td>不换行，但可设宽高</td><td>button（默认）</td></tr>
+      <tr><td><code class="inline">none</code></td><td>完全隐藏，不占空间</td><td>—</td></tr>
+      <tr><td><code class="inline">flex</code></td><td>弹性布局容器</td><td>—</td></tr>
+      <tr><td><code class="inline">grid</code></td><td>网格布局容器</td><td>—</td></tr>
+    </table>
+  </div>
+
+  <h3>position 属性</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>值</th><th>行为</th></tr>
+      <tr><td><code class="inline">static</code></td><td>默认值，按正常文档流排列</td></tr>
+      <tr><td><code class="inline">relative</code></td><td>相对于元素原本的位置偏移（不脱离文档流）</td></tr>
+      <tr><td><code class="inline">absolute</code></td><td>相对于最近的定位祖先（非 static）定位，脱离文档流</td></tr>
+      <tr><td><code class="inline">fixed</code></td><td>相对于浏览器视口定位，滚动页面时不动（如固定导航栏）</td></tr>
+      <tr><td><code class="inline">sticky</code></td><td>滚动到一定位置后"粘住"（如本页面的侧边栏头部）</td></tr>
+    </table>
+  </div>
+
+  <div class="code-block">
+    <div class="code-label"><span>定位示例</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-css">/* 固定导航栏 */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 100;   /* 层级：数值越大越靠前 */
+}
+
+/* 绝对定位的弹出菜单 */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+}</code></pre>
+  </div>
+</section>
+
+<!-- ===== Section 14: Flexbox ===== -->
+<section class="section" id="s14">
+  <div class="section-header">
+    <span class="section-num">Chapter 14</span>
+    <h2 class="section-title"><span class="tag tag-css">CSS</span> Flexbox ★</h2>
+    <p class="section-subtitle">现代网页布局的基石 —— 一维弹性布局</p>
+  </div>
+
+  <p>Flexbox 让你轻松实现<strong>水平或垂直排列、居中对齐、等宽分布</strong>等布局。只需要在<strong>容器</strong>上设置 <code class="inline">display: flex</code>，其直接子元素自动变为"弹性项目"。</p>
+
+  <h3>容器属性（设置在父元素上）</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>属性</th><th>常用值</th><th>作用</th></tr>
+      <tr><td><code class="inline">flex-direction</code></td><td>row / column</td><td>主轴方向：水平（默认）或垂直</td></tr>
+      <tr><td><code class="inline">justify-content</code></td><td>center / space-between / space-around</td><td>主轴上的对齐方式</td></tr>
+      <tr><td><code class="inline">align-items</code></td><td>center / flex-start / flex-end</td><td>交叉轴上的对齐方式</td></tr>
+      <tr><td><code class="inline">flex-wrap</code></td><td>wrap / nowrap</td><td>是否允许换行</td></tr>
+      <tr><td><code class="inline">gap</code></td><td>16px / 1rem</td><td>项目之间的间距</td></tr>
+    </table>
+  </div>
+
+  <h3>三大经典布局</h3>
+  <div class="code-block">
+    <div class="code-label"><span>Flexbox 经典模式</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-css">/* 1. 水平居中 + 垂直居中（万能居中） */
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 2. 导航栏：logo 在左，菜单在右 */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 3. 等宽三列 */
+.row {
+  display: flex;
+  gap: 20px;
+}
+.row > * {
+  flex: 1;  /* 每个子元素平均分配空间 */
+}</code></pre>
+  </div>
+
+  <h3>直观演示</h3>
+  <p>下面用 Flexbox 实现的效果，过去需要十几行 CSS 甚至 float hack：</p>
+
+  <div class="flex-demo" style="justify-content: space-between">
+    <div class="flex-demo-item">项目 A</div>
+    <div class="flex-demo-item">项目 B</div>
+    <div class="flex-demo-item">项目 C</div>
+  </div>
+  <p style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-top:-0.5rem">← space-between：两端对齐，中间等距 →</p>
+
+  <div class="flex-demo" style="justify-content: center; gap: 16px">
+    <div class="flex-demo-item">居中</div>
+    <div class="flex-demo-item">排列</div>
+  </div>
+  <p style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-top:-0.5rem">← center：居中排列 →</p>
+
+  <div class="info-card tip">
+    <h4>学习资源</h4>
+    <p>推荐 Flexbox Froggy（<a href="https://flexboxfroggy.com/" target="_blank">flexboxfroggy.com</a>）—— 通过小青蛙游戏学会所有 Flexbox 属性，15 分钟搞定。</p>
+  </div>
+</section>
+
+<!-- ===== Section 15: CSS Grid ===== -->
+<section class="section" id="s15">
+  <div class="section-header">
+    <span class="section-num">Chapter 15</span>
+    <h2 class="section-title"><span class="tag tag-css">CSS</span> CSS Grid</h2>
+    <p class="section-subtitle">二维网格布局 —— 同时控制行和列</p>
+  </div>
+
+  <p>Flexbox 适合一维布局（排成一行或一列），<strong>Grid 适合二维布局</strong>（行和列同时控制）。</p>
+
+  <h3>核心属性</h3>
+  <div class="code-block">
+    <div class="code-label"><span>Grid 基础</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-css">.container {
+  display: grid;
+  /* 定义三列：两侧固定宽度，中间自适应 */
+  grid-template-columns: 200px 1fr 200px;
+  /* 定义行高 */
+  grid-template-rows: auto;
+  /* 间距 */
+  gap: 16px;
+}</code></pre>
+  </div>
+
+  <h3>三种经典 Grid 布局</h3>
+  <div class="code-block">
+    <div class="code-label"><span>Grid 经典模式</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-css">/* 1. 响应式卡片网格（自动适配列数） */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+/* 2. 经典页面布局（header / sidebar / main / footer） */
+.page-layout {
+  display: grid;
+  grid-template-areas:
+    "header  header"
+    "sidebar main"
+    "footer  footer";
+  grid-template-columns: 250px 1fr;
+  gap: 0;
+}
+.header  { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main    { grid-area: main; }
+.footer  { grid-area: footer; }
+
+/* 3. 三列等宽 */
+.three-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}</code></pre>
+  </div>
+
+  <h3>直观演示</h3>
+
+  <div class="grid-demo" style="grid-template-columns: repeat(3, 1fr);">
+    <div class="grid-demo-item">1</div>
+    <div class="grid-demo-item">2</div>
+    <div class="grid-demo-item">3</div>
+    <div class="grid-demo-item">4</div>
+    <div class="grid-demo-item">5</div>
+    <div class="grid-demo-item">6</div>
+  </div>
+  <p style="text-align:center;font-size:0.85rem;color:var(--text-muted);margin-top:-0.5rem">← grid-template-columns: repeat(3, 1fr) →</p>
+
+  <h3>fr 单位</h3>
+  <p><code class="inline">fr</code>（fraction）是 Grid 独有的单位，表示"可用空间的一份"。<code class="inline">1fr 2fr 1fr</code> 意味着三列宽度比例为 25% : 50% : 25%。</p>
+
+  <div class="info-card tip">
+    <h4>学习资源</h4>
+    <p>推荐 Grid Garden（<a href="https://cssgridgarden.com/" target="_blank">cssgridgarden.com</a>）—— 通过浇灌胡萝卜花园学会 Grid 布局。</p>
+  </div>
+</section>
+
+<!-- ===== Section 16: 响应式设计 ===== -->
+<section class="section" id="s16">
+  <div class="section-header">
+    <span class="section-num">Chapter 16</span>
+    <h2 class="section-title">响应式设计</h2>
+    <p class="section-subtitle">让网站在手机、平板、电脑上都好看</p>
+  </div>
+
+  <h3>四大核心技巧</h3>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>技巧</th><th>代码</th><th>说明</th></tr>
+      <tr>
+        <td>视口 meta 标签</td>
+        <td><code class="inline">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></td>
+        <td>必须放在 &lt;head&gt; 中，告诉手机浏览器按设备宽度渲染</td>
+      </tr>
+      <tr>
+        <td>媒体查询</td>
+        <td><code class="inline">@media (max-width: 768px) { ... }</code></td>
+        <td>根据屏幕宽度应用不同样式</td>
+      </tr>
+      <tr>
+        <td>弹性图片</td>
+        <td><code class="inline">img { max-width: 100%; height: auto; }</code></td>
+        <td>图片不会超出容器宽度</td>
+      </tr>
+      <tr>
+        <td>相对单位</td>
+        <td><code class="inline">rem</code>, <code class="inline">%</code>, <code class="inline">vw</code>, <code class="inline">vh</code></td>
+        <td>避免使用固定 px，让尺寸随屏幕变化</td>
+      </tr>
+    </table>
+  </div>
+
+  <h3>移动优先的媒体查询</h3>
+  <p>推荐的做法：先写移动端的样式（基础），然后用 <code class="inline">min-width</code> 从小到大地添加桌面端增强：</p>
+
+  <div class="code-block">
+    <div class="code-label"><span>移动优先</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-css">/* 基础样式：面向手机（窄屏） */
+.card {
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+/* 平板及以上（≥ 768px） */
+@media (min-width: 768px) {
+  .card {
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* 桌面端（≥ 1024px） */
+@media (min-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}</code></pre>
+  </div>
+
+  <h3>常用断点</h3>
+  <div class="table-wrap">
+    <table>
+      <tr><th>断点</th><th>目标设备</th></tr>
+      <tr><td><code class="inline">max-width: 576px</code></td><td>小屏手机</td></tr>
+      <tr><td><code class="inline">max-width: 768px</code></td><td>平板 / 大屏手机</td></tr>
+      <tr><td><code class="inline">max-width: 992px</code></td><td>小平板横屏 / 小笔记本</td></tr>
+      <tr><td><code class="inline">max-width: 1200px</code></td><td>普通桌面显示器</td></tr>
+    </table>
+  </div>
+
+  <div class="info-card">
+    <h4>响应式设计口诀</h4>
+    <p><strong>移动优先，从小到大写；能不用 px 就不用 px；图片要弹性；Grid 的 auto-fit 是神器。</strong></p>
+  </div>
+</section>
+
+<!-- ===== Section 17: 层叠与优先级 ===== -->
+<section class="section" id="s17">
+  <div class="section-header">
+    <span class="section-num">Chapter 17</span>
+    <h2 class="section-title">层叠与优先级</h2>
+    <p class="section-subtitle">当多个 CSS 规则作用于同一个元素时，谁说了算？</p>
+  </div>
+
+  <p>CSS 全称是<strong>层叠样式表</strong>（Cascading Style Sheets），"层叠"就是它解决冲突的机制。</p>
+
+  <h3>优先级规则（从低到高）</h3>
+  <ol>
+    <li><strong>元素选择器</strong>（如 <code class="inline">p</code>, <code class="inline">div</code>）— 权重最低</li>
+    <li><strong>类选择器</strong>（如 <code class="inline">.card</code>）、属性选择器、伪类 — 中等权重</li>
+    <li><strong>ID 选择器</strong>（如 <code class="inline">#header</code>）— 高权重</li>
+    <li><strong>内联样式</strong>（<code class="inline">style="..."</code>）— 仅次于 !important</li>
+    <li><strong>!important</strong> — 最高权重（尽量不用！）</li>
+  </ol>
+
+  <p>当优先级相同时，<strong>后写的规则覆盖先写的</strong>。</p>
+
+  <div class="code-block">
+    <div class="code-label"><span>优先级演示</span><button class="copy-btn" onclick="copyCode(this)">复制</button></div>
+    <pre><code class="language-css">/* 元素选择器 — 权重低 */
+p { color: black; }
+
+/* 类选择器 — 覆盖上面的 */
+.intro { color: blue; }
+
+/* 更具体的选择器 — 再覆盖 */
+article p.intro { color: green; }
+
+/* ID — 最高（但尽量不用） */
+#special { color: red; }</code></pre>
+  </div>
+
+  <div class="info-card tip">
+    <h4>实用建议</h4>
+    <p><strong>用 class 做样式，不要用 ID。</strong> ID 优先级太高，后面很难覆盖。<br>
+    <strong>尽量不要用 !important</strong> —— 如果用了 !important 才能生效，说明选择器设计有问题。<br>
+    <strong>保持选择器简单</strong> —— 最多两层嵌套（如 <code class="inline">.card .title</code>），太深的选择器既难维护又影响性能。</p>
+  </div>
+</section>
+
+<!-- ===== 结语 ===== -->
+<section class="section" style="text-align:center;border-bottom:none;">
+  <div style="border-top:1px solid var(--border-light);padding-top:3rem;">
+    <p style="font-size:1.3rem;font-style:italic;color:var(--text-secondary);">
+      "The best way to learn is to build."
+    </p>
+    <p style="color:var(--text-muted);margin-top:0.5rem;">
+      学习的最好方式是动手实践。现在打开你的编辑器，开始写第一个网页吧。
+    </p>
+    <div style="margin-top:2rem;">
+      <a href="#s1" style="display:inline-block;padding:0.75rem 2rem;background:var(--accent);color:#fff;border-radius:var(--radius);text-decoration:none;font-weight:600;transition:all var(--transition);">回到开头 &uarr;</a>
+    </div>
+    <p style="margin-top:2rem;font-size:0.82rem;color:var(--text-muted);">
+      参考资料：<a href="https://developer.mozilla.org/zh-CN/" target="_blank">MDN Web Docs</a> ·
+      <a href="https://www.w3schools.com/" target="_blank">W3Schools</a> ·
+      <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a><br>
+      本教程由 AI 辅助生成 · 2026-06-10
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="回到顶部">&uarr;</button>
+
+<!-- Prism.js -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-css.min.js"></script>
+
+<script>
+/* ===== Sidebar Toggle (Mobile) ===== */
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.querySelector('.sidebar-overlay').classList.toggle('show');
+}
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.querySelector('.sidebar-overlay').classList.remove('show');
+}
+
+/* ===== Copy Code ===== */
+function copyCode(btn) {
+  const codeBlock = btn.closest('.code-block').querySelector('code');
+  const text = codeBlock.textContent;
+  navigator.clipboard.writeText(text).then(() => {
+    btn.textContent = '已复制!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = '复制';
+      btn.classList.remove('copied');
+    }, 2000);
+  }).catch(() => {
+    btn.textContent = '失败';
+    setTimeout(() => { btn.textContent = '复制'; }, 2000);
+  });
+}
+
+/* ===== Scroll Spy — Highlight active nav link ===== */
+const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('.nav-link');
+const progressBar = document.getElementById('progressBar');
+const backToTop = document.getElementById('backToTop');
+
+function updateActiveNav() {
+  let current = '';
+  const scrollPos = window.scrollY + 120;
+
+  sections.forEach(section => {
+    const top = section.offsetTop;
+    if (scrollPos >= top) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.dataset.section === current);
+  });
+
+  /* Progress bar */
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = (window.scrollY / docHeight) * 100;
+  progressBar.style.width = Math.min(scrolled, 100) + '%';
+
+  /* Back to top button */
+  backToTop.classList.toggle('visible', window.scrollY > 500);
+}
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+updateActiveNav();
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ===== Close sidebar on nav link click (mobile) ===== */
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      closeSidebar();
+    }
+  });
+});
+</script>
+
+</body>
+</html>
