@@ -52,7 +52,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 └── CLAUDE.md           # 本文件
 ```
 
-## Desktop App (Electron / Windows x64 便携版)
+## Desktop App (Electron / Windows 便携版 + macOS)
 
 本项目同时是一个 Electron 桌面应用，可打包为 Windows x64 绿色便携版（单个 exe）。
 

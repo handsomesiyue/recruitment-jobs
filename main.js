@@ -3,8 +3,8 @@
    ============================================
    作用：
    - 通过自定义 app:// 协议加载本地静态页面
-   - 优先读取 exe 旁边的外置 data/ 目录（用户可编辑）
-   - 首次运行自动把内置数据复制到 exe 旁
+   - 优先读取应用同目录的外置 data/ 目录（Windows 便携版 exe 旁 / macOS .app 旁，用户可编辑）
+   - 首次运行自动把内置数据复制到应用同目录
    - 外链在系统浏览器中打开
    - 剪贴板权限放行（navigator.clipboard.writeText 无需改页面代码）
    ============================================ */
@@ -71,6 +71,16 @@ async function fileExists(p) {
   }
 }
 
+// 判断 p 是否为普通文件（目录或其它非文件返回 false，避免对目录 readFile 触发 EISDIR）
+async function isFile(p) {
+  try {
+    const st = await fsp.stat(p);
+    return st.isFile();
+  } catch {
+    return false;
+  }
+}
+
 // ---- 内容类型 ----
 const TEXT_MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -104,37 +114,43 @@ async function readResponse(file) {
 
 // ---- app:// 协议处理 ----
 async function serve(req) {
-  const { pathname } = new URL(req.url);
-  const rel = decodeURIComponent(pathname).replace(/^\/+/, '');
+  try {
+    const { pathname } = new URL(req.url);
+    const rel = decodeURIComponent(pathname).replace(/^\/+/, '');
 
-  // 路径遍历防护
-  const safeRel = path.posix.normalize('/' + rel).replace(/^\/+/, '');
-  if (safeRel.split('/').some((s) => s === '..') || path.isAbsolute(safeRel)) {
+    // 路径遍历防护：在 normalize 之前检查原始路径中的 '..' 段，
+    // 避免归一化把遍历意图吞掉后防护失效（normalize 仅用于统一斜杠/点段）
+    if (rel.split('/').some((s) => s === '..')) {
+      return new Response('Bad Request', { status: 400 });
+    }
+    const safeRel = path.posix.normalize('/' + rel).replace(/^\/+/, '');
+
+    if (!rel || rel === 'index.html') {
+      return readResponse(path.join(bundledRoot, 'index.html'));
+    }
+
+    // data/ 与 images/ 优先读外置目录（用户改 jobs.json 立即生效）。
+    // 外置目录结构：<app 同目录>/data/ 内含 jobs.json 与 images/，
+    // 因此 data/ 前缀需剥离后再拼接（避免多一层 data/data）。
+    if (externalDataDir && (safeRel.startsWith('data/') || safeRel.startsWith('images/'))) {
+      const relInExternal = safeRel.startsWith('data/') ? safeRel.slice('data/'.length) : safeRel;
+      const externalFile = path.join(externalDataDir, relInExternal);
+      if (await isFile(externalFile)) {
+        return readResponse(externalFile);
+      }
+    }
+
+    // 回退到打包内嵌文件
+    const bundledFile = path.join(bundledRoot, safeRel);
+    if (await isFile(bundledFile)) {
+      return readResponse(bundledFile);
+    }
+
+    return new Response('Not Found', { status: 404 });
+  } catch (err) {
+    // 无法解析的 URL（如非法 % 转义抛 URIError）或其它意外错误：统一 400
     return new Response('Bad Request', { status: 400 });
   }
-
-  if (!rel || rel === 'index.html') {
-    return readResponse(path.join(bundledRoot, 'index.html'));
-  }
-
-  // data/ 与 images/ 优先读外置目录（用户改 jobs.json 立即生效）。
-  // 外置目录结构：<app 同目录>/data/ 内含 jobs.json 与 images/，
-  // 因此 data/ 前缀需剥离后再拼接（避免多一层 data/data）。
-  if (externalDataDir && (safeRel.startsWith('data/') || safeRel.startsWith('images/'))) {
-    const relInExternal = safeRel.startsWith('data/') ? safeRel.slice('data/'.length) : safeRel;
-    const externalFile = path.join(externalDataDir, relInExternal);
-    if (await fileExists(externalFile)) {
-      return readResponse(externalFile);
-    }
-  }
-
-  // 回退到打包内嵌文件
-  const bundledFile = path.join(bundledRoot, safeRel);
-  if (await fileExists(bundledFile)) {
-    return readResponse(bundledFile);
-  }
-
-  return new Response('Not Found', { status: 404 });
 }
 
 // ---- 创建窗口 ----
@@ -179,7 +195,7 @@ app.whenReady().then(async () => {
       await fsp.writeFile(probe, 'x');
       await fsp.unlink(probe);
       externalDataDir = candidate;
-      // 首次运行：把内置 data/ 与 images/ 复制到外置目录（缺哪个补哪个）
+      // 首次运行（外置无 jobs.json 时）：把内置 data/ 与 images/ 复制到外置目录
       if (!(await fileExists(path.join(externalDataDir, 'jobs.json')))) {
         await seedExternalData();
       }
