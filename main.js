@@ -24,19 +24,41 @@ protocol.registerSchemesAsPrivileged([
 // 页面根目录：开发模式为项目根目录，打包后为 asar 根目录（fs 对 asar 透明）
 const bundledRoot = __dirname;
 
-// 外置数据目录：便携版运行时优先取 exe 所在目录下的 data/，
-// 否则（开发模式）回退到项目内的 data/。
-const externalDir = process.env.PORTABLE_EXECUTABLE_DIR
-  ? path.join(process.env.PORTABLE_EXECUTABLE_DIR, 'data')
-  : path.join(__dirname, 'data');
+// 外置数据目录，whenReady 时解析：
+// - Windows 便携版：exe 所在目录下的 data/
+// - macOS 打包版：.app 同目录的 data/（不可写时回退内置只读）
+// - 开发模式：null（直接用项目内 data/）
+let externalDataDir = null;
 
-// 首次运行要复制到 exe 旁的文件（内置兜底数据）
-const SEED_FILES = [
-  { bundled: path.join(__dirname, 'data', 'jobs.json'), external: ['jobs.json'] },
-  { bundled: path.join(__dirname, 'images', 'wangyi-2026-intern-qr.jpg'), external: ['images', 'wangyi-2026-intern-qr.jpg'] },
-  { bundled: path.join(__dirname, 'images', 'anker-2026-intern-qr.jpg'), external: ['images', 'anker-2026-intern-qr.jpg'] },
-  { bundled: path.join(__dirname, 'images', 'midea-2026-spring-qr.jpg'), external: ['images', 'midea-2026-spring-qr.jpg'] },
-];
+function resolveExternalDataDir() {
+  if (process.env.PORTABLE_EXECUTABLE_DIR) {
+    return path.join(process.env.PORTABLE_EXECUTABLE_DIR, 'data');
+  }
+  if (process.platform === 'darwin' && app.isPackaged) {
+    const bundleDir = path.join(path.dirname(process.execPath), '..', '..', '..');
+    return path.join(bundleDir, '..', 'data');
+  }
+  return null;
+}
+
+async function seedExternalData() {
+  const jobsSeed = path.join(bundledRoot, 'data');
+  const imgSeed = path.join(bundledRoot, 'images');
+  for (const f of await fsp.readdir(jobsSeed)) {
+    const dst = path.join(externalDataDir, f);
+    if (!(await fileExists(dst))) {
+      await fsp.copyFile(path.join(jobsSeed, f), dst);
+    }
+  }
+  const imgDst = path.join(externalDataDir, 'images');
+  await fsp.mkdir(imgDst, { recursive: true });
+  for (const f of await fsp.readdir(imgSeed)) {
+    const dst = path.join(imgDst, f);
+    if (!(await fileExists(dst))) {
+      await fsp.copyFile(path.join(imgSeed, f), dst);
+    }
+  }
+}
 
 async function fileExists(p) {
   try {
@@ -94,11 +116,11 @@ async function serve(req) {
   }
 
   // data/ 与 images/ 优先读外置目录（用户改 jobs.json 立即生效）。
-  // 外置目录结构：<exe 旁>/data/ 内含 jobs.json 与 images/，
+  // 外置目录结构：<app 同目录>/data/ 内含 jobs.json 与 images/，
   // 因此 data/ 前缀需剥离后再拼接（避免多一层 data/data）。
-  if (safeRel.startsWith('data/') || safeRel.startsWith('images/')) {
+  if (externalDataDir && (safeRel.startsWith('data/') || safeRel.startsWith('images/'))) {
     const relInExternal = safeRel.startsWith('data/') ? safeRel.slice('data/'.length) : safeRel;
-    const externalFile = path.join(externalDir, relInExternal);
+    const externalFile = path.join(externalDataDir, relInExternal);
     if (await fileExists(externalFile)) {
       return readResponse(externalFile);
     }
@@ -146,19 +168,23 @@ function createWindow() {
 
 // ---- 启动 ----
 app.whenReady().then(async () => {
-  // 便携版首次运行：把内置数据复制到 exe 旁，用户之后直接编辑外置文件
-  if (process.env.PORTABLE_EXECUTABLE_DIR) {
+  // 解析外置数据目录：Windows 便携版 / macOS 打包版
+  const candidate = resolveExternalDataDir();
+  if (candidate) {
     try {
-      await fsp.mkdir(externalDir, { recursive: true });
-      for (const seed of SEED_FILES) {
-        const dst = path.join(externalDir, ...seed.external);
-        if (!(await fileExists(dst)) && (await fileExists(seed.bundled))) {
-          await fsp.mkdir(path.dirname(dst), { recursive: true });
-          await fsp.copyFile(seed.bundled, dst);
-        }
+      await fsp.mkdir(candidate, { recursive: true });
+      const probe = path.join(candidate, '.write-probe');
+      await fsp.writeFile(probe, 'x');
+      await fsp.unlink(probe);
+      externalDataDir = candidate;
+      // 首次运行：把内置 data/ 与 images/ 复制到外置目录（缺哪个补哪个）
+      if (!(await fileExists(path.join(externalDataDir, 'jobs.json')))) {
+        await seedExternalData();
       }
     } catch (err) {
-      console.error('初始化外置数据目录失败:', err);
+      // 不可写（如 mac app 放在 /Applications）：回退内置只读数据
+      externalDataDir = null;
+      console.warn('外置数据目录不可写，使用内置数据:', err.message);
     }
   }
 
