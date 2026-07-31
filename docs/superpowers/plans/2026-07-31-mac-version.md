@@ -323,10 +323,12 @@ rm -rf /tmp/zp-mac
 - [ ] **Step 2: 验证文档可读**
 
 ```bash
-grep -n "dist:mac" CLAUDE.md
+grep -n "dist:mac" CLAUDE.md   # 预期：1 处（打包 macOS 应用一行）
+grep -n "mac 版数据目录" CLAUDE.md  # 预期：1 处
+grep -n "mac 版验证" CLAUDE.md      # 预期：1 处
 ```
 
-预期：能 grep 到至少两处 `dist:mac`。
+预期：三行 mac 说明全部就位。
 
 - [ ] **Step 3: Commit**
 
