@@ -58,6 +58,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - **运行调试（本机 macOS）**：`npm install` 后执行 `npm start`，用 Electron 窗口加载同一套页面。
 - **打包 Windows 便携版**：`npm run dist:win`，产物在 `dist/` 下（`招聘信息聚合-<版本>-portable.exe`，单文件）。
+- **打包 macOS 应用**：`npm run dist:mac`，产物在 `dist/` 下（`招聘信息聚合-<版本>-<架构>.dmg`）。
+- **mac 版数据目录**：从 `.app` 同目录的 `data/` 读取（首次运行自动生成）；app 放在不可写位置（如 `/Applications`）时自动回退内置只读数据。
+- **mac 版验证**：`SMOKE_TEST=1 "<解包后 .app>/Contents/MacOS/招聘信息聚合"` 可对打包应用跑冒烟测试。
 - **数据更新方式（桌面版）**：软件从 exe 旁边的 `data/jobs.json` 读取数据；首次运行会自动在 exe 旁生成一份 `data/`。**以后更新招聘信息直接改 exe 旁的 `data/jobs.json`，无需重新打包。**
 - **国内网络提示**：构建需从 GitHub 下载 Windows 版 Electron（约 110MB）。若下载慢可先设置镜像再构建：
   ```bash
