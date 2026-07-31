@@ -35,8 +35,10 @@ function resolveExternalDataDir() {
     return path.join(process.env.PORTABLE_EXECUTABLE_DIR, 'data');
   }
   if (process.platform === 'darwin' && app.isPackaged) {
-    const bundleDir = path.join(path.dirname(process.execPath), '..', '..', '..');
-    return path.join(bundleDir, '..', 'data');
+    // process.execPath = <bundle>/Contents/MacOS/<可执行文件>；
+    // 三层 .. 即"包含 .app 的文件夹"（app 同目录），数据目录在其下 data/
+    const appDir = path.join(path.dirname(process.execPath), '..', '..', '..');
+    return path.join(appDir, 'data');
   }
   return null;
 }
