@@ -222,7 +222,7 @@ app.whenReady().then(async () => {
       try {
         await new Promise((r) => setTimeout(r, 800));
         const result = await win.webContents.executeJavaScript(`(async () => {
-          const out = { jobsLoaded: false, cardCount: 0, searchCount: 0, modalOpen: false, error: null };
+          const out = { jobsLoaded: false, cardCount: 0, searchCount: 0, highlight: false, modalOpen: false, drawerOpen: false, firstPostDate: '', cityCount: 0, typeFilterCount: 0, error: null };
           try {
             const resp = await fetch('data/jobs.json');
             out.jobsLoaded = resp.ok;
@@ -236,10 +236,29 @@ app.whenReady().then(async () => {
           input.dispatchEvent(new Event('input', { bubbles: true }));
           await new Promise((r) => setTimeout(r, 100));
           out.searchCount = document.querySelectorAll('.job-card').length;
+          out.highlight = !!document.querySelector('#jobList mark');
           const btn = document.querySelector('.view-detail');
           if (btn) { btn.click(); await new Promise((r) => setTimeout(r, 100)); }
           out.modalOpen = document.getElementById('detailModal').style.display === 'flex';
+          out.drawerOpen = document.getElementById('detailModal').classList.contains('open');
           document.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
+          await new Promise((r) => setTimeout(r, 300));
+          document.getElementById('clearFilters').click();
+          const sortSel = document.getElementById('sortSelect');
+          sortSel.value = 'newest';
+          sortSel.dispatchEvent(new Event('change', { bubbles: true }));
+          await new Promise((r) => setTimeout(r, 100));
+          const firstDate = document.querySelector('.job-card .post-date');
+          out.firstPostDate = firstDate ? firstDate.textContent.trim() : '';
+          const chip = document.querySelector('#cityBar .city-chip[data-loc="杭州"]');
+          if (chip) { chip.click(); await new Promise((r) => setTimeout(r, 100)); }
+          out.cityCount = document.querySelectorAll('.job-card').length;
+          const allChip = document.querySelector('#cityBar .city-chip[data-loc="__all__"]');
+          if (allChip) { allChip.click(); await new Promise((r) => setTimeout(r, 100)); }
+          const cb = document.querySelector('#typeOptions input[value="实习"]');
+          if (cb) { cb.checked = true; cb.dispatchEvent(new Event('change', { bubbles: true })); }
+          await new Promise((r) => setTimeout(r, 100));
+          out.typeFilterCount = document.querySelectorAll('.job-card').length;
           return out;
         })()`);
         console.log('SMOKE_RESULT ' + JSON.stringify(result));

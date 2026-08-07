@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>绿城服务集团 · 实习生招聘海报</title>
+<style>
+  :root {
+    --bg: #F6F3EC;
+    --card: #FFFFFF;
+    --green: #0F7A4E;
+    --green-deep: #0A3D2A;
+    --green-soft: #E8F1EB;
+    --green-pale: #F0F6F2;
+    --ink: #1B2A22;
+    --sub: #5C6B62;
+    --line: #E5E0D3;
+    --gold: #B98A2F;
+    --gold-soft: #F7F0E1;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-font-smoothing: antialiased; }
+  body {
+    background: var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .page {
+    width: 1080px;
+    margin: 0 auto;
+    background: var(--bg);
+    position: relative;
+  }
+
+  /* ============ Hero ============ */
+  .hero {
+    background: var(--green-pale);
+    padding: 64px 72px 52px;
+    border-bottom: 2px solid var(--green);
+    position: relative;
+  }
+  .hero-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .brandmark {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .seal {
+    width: 60px; height: 60px;
+    background: var(--green);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff;
+    font-size: 30px; font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 18px rgba(15,122,78,.22);
+  }
+  .brandname { line-height: 1.2; }
+  .brandname .cn { font-size: 22px; font-weight: 700; color: var(--green-deep); letter-spacing: 2px; }
+  .brandname .en { font-size: 12px; letter-spacing: 3px; color: var(--sub); margin-top: 3px; }
+  .hero-tag {
+    background: var(--green);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 999px;
+    letter-spacing: 2px;
+  }
+  .hero-title {
+    margin-top: 44px;
+    font-size: 62px;
+    font-weight: 800;
+    color: var(--green-deep);
+    letter-spacing: 4px;
+    line-height: 1.15;
+  }
+  .hero-title .thin { color: var(--ink); }
+  .hero-role {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+  .role-bar {
+    width: 8px; height: 44px;
+    background: var(--green);
+    border-radius: 4px;
+  }
+  .role-name {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 1px;
+  }
+  .role-count {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--green);
+    border: 1.5px solid var(--green);
+    border-radius: 8px;
+    padding: 4px 12px;
+  }
+  .hero-chips {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .chip {
+    background: #fff;
+    border: 1px solid var(--line);
+    color: var(--sub);
+    font-size: 14px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    letter-spacing: 1px;
+  }
+  .chip.green { background: var(--green-soft); border-color: #BFD8C8; color: var(--green-deep); font-weight: 600; }
+
+  /* ============ Section ============ */
+  .section { padding: 46px 72px 8px; }
+  .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 26px; }
+  .sec-square { width: 12px; height: 12px; background: var(--green); border-radius: 3px; transform: translateY(-2px); }
+  .sec-title { font-size: 28px; font-weight: 700; color: var(--green-deep); letter-spacing: 2px; }
+  .sec-sub { font-size: 13px; color: var(--sub); letter-spacing: 1px; }
+
+  /* ============ Stats ============ */
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; padding: 0 72px; }
+  .stat {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 26px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .stat .label { font-size: 15px; color: var(--sub); letter-spacing: 1px; }
+  .stat .label .en { display: block; font-size: 11px; letter-spacing: 2px; margin-top: 4px; color: #9AA69E; }
+  .stat .value { font-size: 32px; font-weight: 800; color: var(--green); letter-spacing: 1px; }
+  .stat .value small { font-size: 14px; font-weight: 600; color: var(--ink); }
+  .stat .value.gold { color: var(--gold); }
+  .stat .value .sub-v { display: block; font-size: 14px; font-weight: 500; color: var(--sub); margin-top: 4px; letter-spacing: 0; }
+
+  /* ============ List card ============ */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 34px 38px;
+  }
+  .duty { display: flex; gap: 22px; padding: 18px 0; border-bottom: 1px dashed var(--line); }
+  .duty:last-child { border-bottom: none; padding-bottom: 4px; }
+  .duty-num {
+    flex: 0 0 44px;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--green-soft);
+    color: var(--green);
+    font-size: 18px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 2px;
+  }
+  .duty-body .dt { font-size: 18px; font-weight: 700; color: var(--green-deep); margin-bottom: 6px; }
+  .duty-body .dd { font-size: 15.5px; line-height: 1.75; color: #3A4A41; }
+
+  .req { display: flex; gap: 18px; padding: 15px 0; border-bottom: 1px dashed var(--line); }
+  .req:last-child { border-bottom: none; padding-bottom: 2px; }
+  .req-dot { flex: 0 0 10px; width: 10px; height: 10px; border-radius: 50%; background: var(--green); margin-top: 9px; }
+  .req .rt { font-size: 15.5px; font-weight: 700; color: var(--green-deep); }
+  .req .rd { font-size: 15.5px; line-height: 1.75; color: #3A4A41; }
+
+  /* ============ Intern / 转正 ============ */
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; padding: 0 72px; }
+  .panel { border-radius: 18px; padding: 30px 32px; border: 1px solid var(--line); background: var(--card); }
+  .panel.intern { background: var(--green-pale); border-color: #D4E4D8; }
+  .panel.offer { background: var(--gold-soft); border-color: #E9DDBE; }
+  .panel-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+  .panel-title { font-size: 21px; font-weight: 700; color: var(--green-deep); letter-spacing: 1px; }
+  .panel.offer .panel-title { color: #8A6420; }
+  .pill { font-size: 12.5px; font-weight: 700; letter-spacing: 1px; padding: 5px 14px; border-radius: 999px; }
+  .pill.intern { background: var(--green); color: #fff; }
+  .pill.offer { background: var(--gold); color: #fff; }
+  .plist { display: flex; flex-direction: column; gap: 12px; }
+  .pitem { display: flex; gap: 12px; font-size: 15px; line-height: 1.7; color: #3A4A41; }
+  .pitem .k { flex: 0 0 64px; font-weight: 700; color: var(--green-deep); }
+  .panel.offer .pitem .k { color: #8A6420; }
+  .pitem .v { flex: 1; }
+
+  /* ============ 地点时间 ============ */
+  .loc { padding: 0 72px; }
+  .loc-row {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 22px 30px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  .loc-row:last-child { margin-bottom: 0; }
+  .loc-k { flex: 0 0 96px; font-size: 15px; font-weight: 700; color: var(--green); letter-spacing: 1px; padding-top: 2px; }
+  .loc-v { flex: 1; font-size: 16.5px; line-height: 1.7; color: var(--ink); font-weight: 500; }
+
+  /* ============ 投递 ============ */
+  .cta {
+    margin: 40px 72px 0;
+    background: var(--green-deep);
+    border-radius: 22px;
+    padding: 40px 44px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta::after {
+    content: "";
+    position: absolute;
+    right: -70px; top: -70px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    border: 28px solid rgba(255,255,255,.06);
+  }
+  .cta-title { font-size: 24px; font-weight: 700; letter-spacing: 2px; }
+  .cta-mail { margin-top: 18px; display: flex; align-items: center; gap: 16px; }
+  .cta-mail .box {
+    font-size: 30px; font-weight: 800;
+    letter-spacing: 1px;
+    color: #fff;
+    background: rgba(255,255,255,.12);
+    border: 1.5px solid rgba(255,255,255,.35);
+    padding: 10px 26px;
+    border-radius: 12px;
+  }
+  .cta-note { margin-top: 16px; font-size: 14.5px; color: #BFD3C6; letter-spacing: 1px; }
+
+  /* ============ Footer ============ */
+  .foot {
+    margin-top: 46px;
+    padding: 26px 72px 30px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #8A968E;
+    font-size: 12.5px;
+    letter-spacing: 2px;
+  }
+  .foot .right { letter-spacing: 3px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-top">
+      <div class="brandmark">
+        <div class="seal">绿</div>
+        <div class="brandname">
+          <div class="cn">绿城服务集团</div>
+          <div class="en">GREENTOWN SERVICE GROUP</div>
+        </div>
+      </div>
+      <div class="hero-tag">实习生招聘</div>
+    </div>
+
+    <div class="hero-title">园区活动运营</div>
+    <div class="hero-role">
+      <div class="role-bar"></div>
+      <div class="role-name">新活力管培生 · 园区活动运营方向</div>
+      <div class="role-count">1 人</div>
+    </div>
+    <div class="hero-chips">
+      <span class="chip green">在校实习</span>
+      <span class="chip green">表现优秀可转正</span>
+      <span class="chip">杭州 · 余杭</span>
+      <span class="chip">面向 27 届在校生</span>
+    </div>
+  </div>
+
+  <!-- 待遇速览 -->
+  <div class="section" style="padding-bottom: 22px;">
+    <div class="sec-head">
+      <div class="sec-square"></div>
+      <div class="sec-title">薪酬待遇速览</div>
+      <div class="sec-sub">薪资、福利一眼看全</div>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat">
+      <div class="label">实习期薪资<span class="en">INTERNSHIP</span></div>
+      <div class="value">3000-3800<small> 元/月</small></div>
+    </div>
+    <div class="stat">
+      <div class="label">转正薪资<span class="en">FULL-TIME</span></div>
+      <div class="value">5450-6500<small> 元/月</small></div>
+    </div>
+    <div class="stat">
+      <div class="label">年终福利<span class="en">ANNUAL BONUS</span></div>
+      <div class="value gold">13 薪<span class="sub-v">高温补贴 300 元/月（6-9 月）</span></div>
+    </div>
+    <div class="stat">
+      <div class="label">工作节奏<span class="en">WORK SCHEDULE</span></div>
+      <div class="value">周末双休<span class="sub-v">9:00 - 17:30 · 五险一金</span></div>
+    </div>
+  </div>
+
+  <!-- 岗位职责 -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="sec-square"></div>
+      <div class="sec-title">岗位职责</div>
+      <div class="sec-sub">岗位全链路：运营、商户、活动、数据</div>
+    </div>
+    <div class="card">
+      <div class="duty"><div class="duty-num">1</div><div class="duty-body"><div class="dt">园区增值服务运营</div><div class="dd">负责园区增值服务的拓展与落地，包括但不限于便民服务（家政、维修、代收代寄）、社群活动、商户合作等，提升业主/商户满意度与园区服务附加值。</div></div></div>
+      <div class="duty"><div class="duty-num">2</div><div class="duty-body"><div class="dt">园区商户管理</div><div class="dd">对接园区内商户（便利店、生鲜店、服务类商户等），负责商户日常沟通、履约监督、服务质量管控，维护良好的商户合作关系，协助解决商户经营中的相关问题。</div></div></div>
+      <div class="duty"><div class="duty-num">3</div><div class="duty-body"><div class="dt">园区活动策划与执行</div><div class="dd">策划并落地园区各类文化、便民、商业类活动（如邻里节、节日活动、便民服务日等），负责活动方案撰写、物料筹备、现场执行及效果复盘，增强园区凝聚力。</div></div></div>
+      <div class="duty"><div class="duty-num">4</div><div class="duty-body"><div class="dt">经营数据统计与分析</div><div class="dd">负责园区经营数据（增值服务收入、商户营收、活动效果等）的统计、整理，定期出具经营分析报告，提出优化建议，助力提升园区经营效益。</div></div></div>
+      <div class="duty"><div class="duty-num">5</div><div class="duty-body"><div class="dt">业主/商户沟通对接</div><div class="dd">主动对接园区业主、商户，收集需求与意见，及时反馈并协调解决，搭建高效的沟通桥梁，维护园区良好的运营氛围。</div></div></div>
+      <div class="duty"><div class="duty-num">6</div><div class="duty-body"><div class="dt">协助完成园区经营目标</div><div class="dd">配合部门完成年度经营指标，拓展新的经营合作渠道，优化现有经营模式，降低运营成本，提升园区盈利能力。</div></div></div>
+      <div class="duty"><div class="duty-num">7</div><div class="duty-body"><div class="dt">配合其他工作</div><div class="dd">协助完成园区日常运营相关工作，配合物业各部门（客服、工程、安保）协同开展工作，完成上级交办的其他经营相关任务。</div></div></div>
+    </div>
+  </div>
+
+  <!-- 任职要求 -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="sec-square"></div>
+      <div class="sec-title">任职要求</div>
+      <div class="sec-sub">希望你具备这些特质</div>
+    </div>
+    <div class="card">
+      <div class="req"><div class="req-dot"></div><div><span class="rt">学历专业 · </span><span class="rd">全日制本科及以上学历的 27 届在校生，工商管理、市场营销专业优先。</span></div></div>
+      <div class="req"><div class="req-dot"></div><div><span class="rt">沟通能力 · </span><span class="rd">性格活泼开朗，善于与人沟通，具备较强的沟通协调能力、谈判能力及客户服务意识，能快速对接业主、商户及内部各部门。</span></div></div>
+      <div class="req"><div class="req-dot"></div><div><span class="rt">技能要求 · </span><span class="rd">具备基础的活动策划、文案撰写能力，熟悉新媒体运营（微信公众号、视频号等）者优先；能熟练使用 Excel、Word、PPT 等办公软件，具备基础的数据统计与分析能力。</span></div></div>
+      <div class="req"><div class="req-dot"></div><div><span class="rt">职业素养 · </span><span class="rd">工作积极主动、责任心强，具备较强的执行力与抗压能力，做事细致严谨，有良好的团队协作精神。</span></div></div>
+      <div class="req"><div class="req-dot"></div><div><span class="rt">形象要求 · </span><span class="rd">BMI 25 以下；男生身高 170cm 以上，女生身高 160cm 以上。</span></div></div>
+    </div>
+  </div>
+
+  <!-- 实习 / 转正 -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="sec-square"></div>
+      <div class="sec-title">实习与转正</div>
+      <div class="sec-sub">毕业前的实习，毕业后的转正</div>
+    </div>
+  </div>
+  <div class="duo">
+    <div class="panel intern">
+      <div class="panel-head">
+        <div class="panel-title">关于实习（毕业前）</div>
+        <div class="pill intern">实习可转正</div>
+      </div>
+      <div class="plist">
+        <div class="pitem"><div class="k">实习证明</div><div class="v">实习期可提供实习证明，表现优秀者毕业后可转正留用。</div></div>
+        <div class="pitem"><div class="k">实习时间</div><div class="v">实习期大于六个月以上，每周可出勤 5 天；可长期实习优先考虑，能立刻到岗的优先。</div></div>
+        <div class="pitem"><div class="k">实习薪资</div><div class="v">3000-3800/月（实习期可等额抵扣试用期）。</div></div>
+      </div>
+    </div>
+    <div class="panel offer">
+      <div class="panel-head">
+        <div class="panel-title">关于转正</div>
+        <div class="pill offer">毕业证到手即转正</div>
+      </div>
+      <div class="plist">
+        <div class="pitem"><div class="k">转正薪资</div><div class="v">5450-6500/月，年终 13 薪。</div></div>
+        <div class="pitem"><div class="k">补贴福利</div><div class="v">高温补贴 300 元（6 月-9 月）；除杭州政府补贴外，另享公司租房补贴 800/月（12 个月）。</div></div>
+        <div class="pitem"><div class="k">基础保障</div><div class="v">缴纳五险一金，享受法定节假日；加班有额外加班费或调休。</div></div>
+        <div class="pitem"><div class="k">家人假期</div><div class="v">绿城家人假期：生日假、就诊陪护假、生日团圆假、健康呵护假、幸福纪念假等。</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 地点时间 -->
+  <div class="section">
+    <div class="sec-head">
+      <div class="sec-square"></div>
+      <div class="sec-title">工作信息</div>
+      <div class="sec-sub">在哪工作、什么节奏</div>
+    </div>
+  </div>
+  <div class="loc">
+    <div class="loc-row">
+      <div class="loc-k">工作地点</div>
+      <div class="loc-v">杭州市余杭区 浙大校友总部经济园二期 · 绿城服务杭西地区公司</div>
+    </div>
+    <div class="loc-row">
+      <div class="loc-k">工作时间</div>
+      <div class="loc-v">9:00 - 17:30　周末双休</div>
+    </div>
+  </div>
+
+  <!-- 投递 -->
+  <div class="cta">
+    <div class="cta-title">简历投递方式</div>
+    <div class="cta-mail"><div class="box">Icfwhzqy@163.com</div></div>
+    <div class="cta-note">投递请备注：岗位名称及可实习时间</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="foot">
+    <div class="left">绿城服务集团 · 实习生招聘</div>
+    <div class="right">GREENTOWN SERVICE</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -8,62 +8,102 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <div class="header-inner">
-        <h1 class="site-title">招聘信息聚合</h1>
-        <p class="site-subtitle">会计专硕2401专用</p>
+  <!-- 顶栏：品牌 + 搜索 + 移动端筛选入口 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="招聘信息聚合首页">
+        <span class="brand-logo" aria-hidden="true">招</span>
+        <span class="brand-name">招聘信息聚合</span>
+      </a>
+      <div class="header-search">
+        <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="搜索公司、职位、关键词…" autocomplete="off">
+      </div>
+      <div class="header-side">
+        <span class="site-subtitle">会计专硕2401专用</span>
+        <button id="filterToggle" class="filter-toggle" type="button" aria-label="打开筛选">筛选</button>
       </div>
     </div>
   </header>
 
-  <!-- Toolbar -->
-  <section class="toolbar">
-    <div class="container">
-      <div class="toolbar-inner">
-        <div class="search-box">
-          <input type="text" id="searchInput" placeholder="搜索公司、职位、关键词…" class="search-input">
-        </div>
-        <div class="filter-group">
-          <select id="typeFilter" class="filter-select">
-            <option value="">全部类型</option>
-          </select>
-          <select id="hcFilter" class="filter-select">
-            <option value="">全部HC状态</option>
-            <option value="有HC">有HC</option>
-            <option value="未知">未知/暂无</option>
-          </select>
-        </div>
-        <div class="stats">
-          共 <span id="jobCount">0</span> 条招聘信息
-        </div>
+  <!-- 顶部统计 + 城市条 -->
+  <section class="stats-bar">
+    <div class="container stats-bar-inner">
+      <div class="stats-counts">
+        共 <strong id="jobCount">0</strong> 个岗位 · <strong id="companyCount">0</strong> 家公司
+      </div>
+      <div id="cityBar" class="city-bar" aria-label="地点快捷筛选">
+        <!-- JS 渲染城市 chips -->
       </div>
     </div>
   </section>
 
-  <!-- Job List -->
-  <main class="main">
-    <div class="container">
-      <div id="jobList" class="job-grid"></div>
+  <!-- 主体双栏 -->
+  <main class="layout container">
+    <!-- 左：筛选侧栏（移动端 1024px 以下转为底部抽屉） -->
+    <aside id="sidebar" class="sidebar" aria-label="筛选条件">
+      <div class="sidebar-header">
+        <span class="sidebar-title">筛选</span>
+        <button id="clearFilters" class="clear-filters" type="button">重置</button>
+      </div>
+
+      <div class="filter-group" data-group="type">
+        <h4 class="filter-title">招聘类型</h4>
+        <div id="typeOptions" class="filter-options"></div>
+      </div>
+
+      <div class="filter-group" data-group="hc">
+        <h4 class="filter-title">HC 状态</h4>
+        <div id="hcOptions" class="filter-options"></div>
+      </div>
+
+      <div class="filter-group" data-group="location">
+        <h4 class="filter-title">工作地点</h4>
+        <div id="locationOptions" class="filter-options filter-options-scroll"></div>
+      </div>
+
+      <div class="filter-group" data-group="tag">
+        <h4 class="filter-title">标签</h4>
+        <div id="tagOptions" class="filter-options"></div>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" data-sidebar-close></div>
+
+    <!-- 右：职位列表 -->
+    <section class="list-pane">
+      <div class="list-toolbar">
+        <div id="activeFilters" class="active-filters"></div>
+        <div class="sort-control">
+          <label class="sort-label" for="sortSelect">排序</label>
+          <select id="sortSelect" class="sort-select">
+            <option value="default">默认排序</option>
+            <option value="newest">最新发布</option>
+          </select>
+        </div>
+      </div>
+      <div id="jobList" class="job-list"></div>
       <div id="emptyState" class="empty-state" style="display:none;">
         <div class="empty-icon">—</div>
         <p>没有匹配的招聘信息</p>
         <p class="empty-hint">试试其他关键词或筛选条件</p>
       </div>
-    </div>
+    </section>
   </main>
 
-  <!-- Detail Modal -->
-  <div id="detailModal" class="modal" style="display:none;">
-    <div class="modal-backdrop"></div>
-    <div class="modal-content">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <div id="modalBody"></div>
-    </div>
+  <!-- 详情抽屉（右侧滑入，移动端全屏）。保留 #detailModal 兼容冒烟测试 -->
+  <div id="detailModal" class="drawer" style="display:none;" aria-hidden="true">
+    <div class="drawer-backdrop"></div>
+    <aside class="drawer-panel" role="dialog" aria-modal="true">
+      <button class="drawer-close" id="modalClose" type="button" aria-label="关闭">&times;</button>
+      <div id="modalBody" class="drawer-body"></div>
+    </aside>
   </div>
 
-  <!-- Footer -->
+  <!-- 页脚 -->
   <footer class="footer">
     <div class="container">
       <p>招聘信息由人工整理，仅供参考。如有疑问请通过内推链接联系对应公司。</p>

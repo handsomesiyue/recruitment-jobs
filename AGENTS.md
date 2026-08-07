@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
 
 ## Project
 
@@ -52,7 +52,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ├── main.js             # Electron 桌面版主进程（app:// 协议、外置数据、外链）
 ├── package.json        # 桌面版依赖与构建配置
 ├── build/icon.svg/png  # 应用图标
-└── CLAUDE.md           # 本文件
+└── AGENTS.md           # 本文件
 ```
 
 ## Desktop App (Electron / Windows 便携版 + macOS)
