@@ -15,9 +15,7 @@ const JobBlock = {
     const locs = job.locations || [];
     const locText = locs.length ? locs.slice(0, 3).join(' / ') : '';
     const typeBadge = job.type ? `<span class="meta-badge">${escHtml(job.type)}</span>` : '';
-    const hcBadge = job.has_hc
-      ? `<span class="hc-badge has-hc">有HC</span>`
-      : `<span class="hc-badge unknown">暂无HC</span>`;
+    const industryBadges = (job.industry || []).map(i => `<span class="tag industry-tag">${escHtml(i)}</span>`).join('');
     const dateBadge = has(job.post_date) ? `<span class="meta-badge post-date">${escHtml(job.post_date)}</span>` : '';
     const copyBtn = has(job.referral_code)
       ? `<button type="button" class="btn btn-outline btn-xs btn-copy" data-code="${escHtml(job.referral_code)}">复制内推码</button>`
@@ -34,7 +32,7 @@ const JobBlock = {
           <span class="compact-title">${highlight(job.title, kw)}</span>
         </div>
         <div class="compact-tags">${tags}</div>
-        <div class="compact-meta">${typeBadge}${locText ? `<span class="meta-badge">${escHtml(locText)}</span>` : ''}${dateBadge}${hcBadge}</div>
+        <div class="compact-meta">${typeBadge}${industryBadges}${locText ? `<span class="meta-badge">${escHtml(locText)}</span>` : ''}${dateBadge}</div>
         <div class="compact-salary-col">${salary}</div>
         <div class="compact-actions">
           ${copyBtn}
@@ -74,9 +72,7 @@ const JobBlock = {
     const kw = keyword;
     const avatar = companyAvatar(job.company, 'sm');
     const tags = (job.tags || []).slice(0, 2).map(t => `<span class="tag">${escHtml(t)}</span>`).join('');
-    const hcBadge = job.has_hc
-      ? `<span class="hc-badge has-hc">有HC</span>`
-      : `<span class="hc-badge unknown">暂无HC</span>`;
+    const industryBadges = (job.industry || []).map(i => `<span class="tag industry-tag">${escHtml(i)}</span>`).join('');
     const copyBtn = has(job.referral_code)
       ? `<button type="button" class="btn btn-outline btn-xs btn-copy" data-code="${escHtml(job.referral_code)}">复制</button>`
       : '';
@@ -91,7 +87,7 @@ const JobBlock = {
           </div>
         </div>
         <div class="board-card-bottom">
-          <div class="board-card-badges">${tags}${hcBadge}</div>
+          <div class="board-card-badges">${tags}${industryBadges}</div>
           ${copyBtn}
         </div>
       </div>`;
@@ -103,17 +99,15 @@ const JobBlock = {
     const kw = keyword;
     const locs = job.locations || [];
     const locText = locs.length ? locs.slice(0, 3).join(' / ') : '—';
-    const hcBadge = job.has_hc
-      ? `<span class="hc-badge has-hc">有HC</span>`
-      : `<span class="hc-badge unknown">暂无HC</span>`;
+    const industryText = (job.industry || []).join(' / ') || '—';
 
     return `
       <tr class="table-row view-detail" data-id="${job.id}">
         <td class="td-company">${escHtml(job.company)}</td>
         <td class="td-title">${highlight(job.title, kw)}</td>
         <td class="td-type">${escHtml(job.type || '—')}</td>
+        <td class="td-industry">${escHtml(industryText)}</td>
         <td class="td-location">${escHtml(locText)}</td>
-        <td class="td-hc">${hcBadge}</td>
         <td class="td-date">${escHtml(job.post_date || '—')}</td>
       </tr>`;
   },

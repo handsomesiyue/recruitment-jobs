@@ -29,12 +29,30 @@ const Utils = {
 
   AVATAR_COLORS: ['#00a396', '#5b8def', '#f59e0b', '#8b5cf6', '#ef6c87', '#0ea5e9', '#22c55e', '#f97316'],
 
+  // 公司 → 本地 logo 文件映射（无映射则显示首字头像）
+  COMPANY_LOGOS: {
+    '网易互娱': 'images/logos/netease.png',
+    '安克创新': 'images/logos/anker.png',
+    '美的集团': 'images/logos/midea.png',
+    '韶音科技': 'images/logos/shokz.png',
+    '欣旺达': 'images/logos/sunwoda.png',
+    '卧安机器人': 'images/logos/switchbot.png',
+    '大参林医药集团': 'images/logos/dashenlin.png',
+    '中信证券浙江分公司': 'images/logos/citics.jpg',
+    '鸣鸣很忙集团': 'images/logos/hnlshm.jpg',
+    '国家电投集团': 'images/logos/spic.jpg',
+  },
+
   companyAvatar(name, size) {
     const s = String(name || '招');
     let hash = 0;
     for (let i = 0; i < s.length; i++) hash = (hash * 31 + s.charCodeAt(i)) >>> 0;
     const color = Utils.AVATAR_COLORS[hash % Utils.AVATAR_COLORS.length];
     const cls = size === 'sm' ? 'company-avatar company-avatar-sm' : 'company-avatar';
+    const logo = Utils.COMPANY_LOGOS[name];
+    if (logo) {
+      return `<span class="${cls}" style="--avatar-bg:${color}"><img src="${logo}" alt="" class="avatar-logo" onload="this.parentElement.classList.add('avatar-loaded')" onerror="this.remove()"><span class="avatar-letter">${Utils.escHtml(s.charAt(0))}</span></span>`;
+    }
     return `<span class="${cls}" style="--avatar-bg:${color}">${Utils.escHtml(s.charAt(0))}</span>`;
   },
 

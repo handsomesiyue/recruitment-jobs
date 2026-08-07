@@ -1,4 +1,4 @@
-[
+window.__JOBS_DATA__ = [
   {
     "id": 1,
     "company": "网易互娱",
@@ -227,3 +227,4 @@
     "extra_links": []
   }
 ]
+;

@@ -50,8 +50,8 @@ class TableView extends HTMLElement {
       ['company',  '公司'],
       ['title',    '标题'],
       ['type',     '类型'],
+      ['industry', '行业'],
       ['location', '城市'],
-      ['hc',       'HC'],
       ['date',     '日期'],
     ];
     return cols.map(([key, label]) => {
@@ -71,8 +71,8 @@ class TableView extends HTMLElement {
         case 'company':  va = a.company; vb = b.company; break;
         case 'title':    va = a.title;   vb = b.title;   break;
         case 'type':     va = a.type || '';         vb = b.type || '';         break;
+        case 'industry': va = (a.industry || []).join(); vb = (b.industry || []).join(); break;
         case 'location': va = (a.locations || []).join(); vb = (b.locations || []).join(); break;
-        case 'hc':       va = a.has_hc ? 0 : 1;    vb = b.has_hc ? 0 : 1;    break;
         case 'date':     va = a.post_date || '';    vb = b.post_date || '';    break;
         default: return 0;
       }

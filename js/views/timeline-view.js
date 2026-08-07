@@ -1,6 +1,6 @@
 /* ============================================
    招聘信息聚合 - 时间线视图
-   按月份分组，水平时间线，节点交替上下排列
+   按月份分组，月份标题在上方，卡片在下方
    ============================================ */
 
 class TimelineView extends HTMLElement {
@@ -8,44 +8,38 @@ class TimelineView extends HTMLElement {
     this.className = 'view-content view-timeline';
   }
 
-  update({ jobs, keyword }) {
+  update({ jobs, keyword, sort }) {
     if (!jobs.length) { this.innerHTML = ''; return; }
 
     // Group jobs by month
     const groups = new Map();
     jobs.forEach(job => {
       const m = job.post_date || '';
-      const key = m.slice(0, 7) || '未知'; // "2026-06" or fallback
+      const key = m.slice(0, 7) || '未知';
       if (!groups.has(key)) groups.set(key, []);
       groups.get(key).push(job);
     });
 
-    // Sort months ascending
+    // Sort months: newest first when sort='newest', otherwise oldest first
     const months = [...groups.entries()].sort((a, b) => {
       if (a[0] === '未知') return 1;
       if (b[0] === '未知') return -1;
-      return a[0].localeCompare(b[0]);
+      const cmp = a[0].localeCompare(b[0]);
+      return sort === 'newest' ? -cmp : cmp;
     });
 
-    // Build HTML
-    let html = '<div class="timeline-view"><div class="timeline-track">';
-    html += '<div class="timeline-line"></div>';
-
+    let html = '<div class="timeline-view">';
     months.forEach(([month, monthJobs]) => {
+      const label = month === '未知' ? '未知' : month;
       html += `<div class="timeline-month">`;
-      html += `<div class="timeline-month-nodes">`;
-      monthJobs.forEach((job, i) => {
-        const posClass = i % 2 === 0 ? 'tl-above' : 'tl-below';
-        html += `<div class="timeline-node-wrap ${posClass}">`;
+      html += `<div class="timeline-month-label"><span class="tl-month-dot"></span>${Utils.escHtml(label)}<span class="tl-month-count">${monthJobs.length}条</span></div>`;
+      html += `<div class="timeline-month-cards">`;
+      monthJobs.forEach(job => {
         html += JobBlock.timelineNode(job, keyword);
-        html += `</div>`;
       });
-      html += `</div>`;
-      html += `<div class="timeline-month-label">${Utils.escHtml(month === '未知' ? '未知' : month)}</div>`;
-      html += `</div>`;
+      html += `</div></div>`;
     });
-
-    html += '</div></div>';
+    html += '</div>';
     this.innerHTML = html;
   }
 }

@@ -498,6 +498,33 @@ img { max-width: 100%; display: block; }
   font-size: 1.25rem;
   font-weight: 600;
   background: var(--avatar-bg, var(--teal-500));
+  overflow: hidden;
+  position: relative;
+}
+
+.company-avatar .avatar-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  position: absolute;
+  inset: 0;
+}
+
+.company-avatar .avatar-letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.company-avatar.avatar-loaded {
+  background: #f3f4f6;
+}
+
+.company-avatar.avatar-loaded .avatar-letter {
+  display: none;
 }
 
 .card-main {
@@ -551,6 +578,11 @@ img { max-width: 100%; display: block; }
   color: var(--teal-700);
   font-size: var(--text-xs);
   line-height: 1.6;
+}
+
+.industry-tag {
+  background: #fef3c7;
+  color: #92400e;
 }
 
 .card-meta {
@@ -1021,6 +1053,14 @@ mark.hl {
   flex-shrink: 0;
 }
 
+/* ---------- 工具栏次行（排序） ---------- */
+.list-toolbar-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: var(--space-3);
+}
+
 /* ---------- 视图切换器 ---------- */
 .view-switcher {
   display: inline-flex;
@@ -1177,18 +1217,15 @@ mark.hl {
 
 .board-view {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-4);
-  overflow-x: auto;
   padding-bottom: var(--space-4);
-  scrollbar-width: thin;
 }
 
-.board-view::-webkit-scrollbar { height: 6px; }
-.board-view::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: var(--radius-pill); }
-
 .board-column {
-  flex: 0 0 260px;
-  min-width: 260px;
+  flex: 1 1 240px;
+  min-width: 220px;
+  max-width: 320px;
   background: var(--gray-50);
   border-radius: var(--radius-lg);
   display: flex;
@@ -1359,7 +1396,7 @@ mark.hl {
   white-space: nowrap;
 }
 
-.td-hc { white-space: nowrap; }
+.td-industry { white-space: nowrap; }
 .td-date { white-space: nowrap; color: var(--color-text-secondary); }
 
 /* ==========================================================
@@ -1367,89 +1404,51 @@ mark.hl {
    ========================================================== */
 
 .timeline-view {
-  overflow-x: auto;
-  padding: var(--space-6) 0 var(--space-8);
-  scrollbar-width: thin;
-}
-
-.timeline-view::-webkit-scrollbar { height: 6px; }
-.timeline-view::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: var(--radius-pill); }
-
-.timeline-track {
   display: flex;
-  position: relative;
-  min-width: max-content;
-  padding: 120px 0 80px;
-}
-
-.timeline-line {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--color-border);
-  transform: translateY(-50%);
-  border-radius: 2px;
+  flex-direction: column;
+  gap: var(--space-6);
 }
 
 .timeline-month {
-  flex: 0 0 220px;
-  min-width: 220px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.timeline-month-nodes {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  width: 100%;
-  padding: 0 var(--space-2);
+  gap: var(--space-3);
 }
 
 .timeline-month-label {
-  font-size: var(--text-xs);
-  font-weight: 600;
-  color: var(--color-text-secondary);
-  padding-top: var(--space-4);
-  text-align: center;
-  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid var(--color-primary);
 }
 
-.timeline-node-wrap {
-  display: flex;
-  justify-content: center;
-}
-
-.timeline-node-wrap.tl-above {
-  align-self: flex-start;
-  margin-bottom: auto;
-  padding-bottom: var(--space-4);
-  order: -1;
-}
-
-.timeline-node-wrap.tl-below {
-  align-self: flex-end;
-  margin-top: auto;
-  padding-top: var(--space-4);
-  order: 1;
-}
-
-.timeline-node {
-  /* No extra positioning needed; the wrap handles alternation */
-}
-
-.timeline-dot {
-  width: 12px;
-  height: 12px;
+.tl-month-dot {
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: var(--color-primary);
-  border: 3px solid var(--color-surface);
-  box-shadow: 0 0 0 2px var(--color-primary);
-  display: none; /* hidden since we use card-style nodes */
+  flex-shrink: 0;
+}
+
+.tl-month-count {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-text-tertiary);
+  background: var(--gray-100);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  margin-left: var(--space-1);
+}
+
+.timeline-month-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-left: var(--space-4);
 }
 
 .timeline-card {
@@ -1463,8 +1462,8 @@ mark.hl {
   cursor: pointer;
   box-shadow: var(--shadow-sm);
   transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease), border-color var(--duration) var(--ease);
-  min-width: 180px;
-  max-width: 220px;
+  flex: 0 1 260px;
+  min-width: 200px;
 }
 
 .timeline-card:hover {
@@ -1478,7 +1477,7 @@ mark.hl {
 .timeline-info { min-width: 0; flex: 1; }
 
 .timeline-title {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   font-weight: 600;
   color: var(--color-text);
   overflow: hidden;
@@ -1527,64 +1526,14 @@ mark.hl {
   .compact-meta { display: none; }
   .compact-salary-col { display: none; }
 
-  /* 看板：单列，可横向滑动切换 */
-  .board-column { flex: 0 0 85vw; min-width: 85vw; }
+  /* 看板：单列 */
+  .board-column { flex: 1 1 100%; max-width: none; }
 
   /* 表格：隐藏更多列 */
   .table-view .td-location { display: none; }
   .data-table th[data-sort="location"] { display: none; }
 
-  /* 时间线：转为垂直 */
-  .timeline-track {
-    flex-direction: column;
-    padding: var(--space-4) 0;
-    min-width: auto;
-  }
-
-  .timeline-line {
-    top: 0;
-    bottom: 0;
-    left: 20px;
-    right: auto;
-    width: 3px;
-    height: auto;
-    transform: none;
-  }
-
-  .timeline-month {
-    flex: none;
-    min-width: auto;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: var(--space-3);
-    padding: var(--space-2) 0 var(--space-2) 40px;
-  }
-
-  .timeline-month-nodes {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0;
-  }
-
-  .timeline-node-wrap.tl-above,
-  .timeline-node-wrap.tl-below {
-    order: 0;
-    padding: 0;
-    margin: 0;
-  }
-
-  .timeline-month-label {
-    position: absolute;
-    left: 0;
-    top: var(--space-2);
-    width: 36px;
-    text-align: center;
-    padding-top: 0;
-    font-size: 10px;
-  }
-
-  .timeline-card {
-    min-width: 140px;
-    max-width: 180px;
-  }
+  /* 时间线：保持垂直布局，卡片更窄 */
+  .timeline-month-cards { gap: var(--space-2); }
+  .timeline-card { flex: 1 1 100%; min-width: 0; }
 }

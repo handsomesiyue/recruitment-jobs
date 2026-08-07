@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
     keyword: '',
     filters: {
       type: new Set(),
-      hc: new Set(),
-      location: new Set(),
-      tag: new Set(),
+      industry: new Set(),
+      position: new Set(),
+      location: new Set(), // kept for city bar quick-filter
     },
     sort: 'default',
     selectedJobId: null,
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     groupBy: localStorage.getItem('groupBy') || 'company',
   };
 
-  const GROUP_LABELS = { type: '类型', hc: 'HC', location: '地点', tag: '标签' };
+  const GROUP_LABELS = { type: '类型', industry: '行业', position: '岗位分类' };
 
   // ---- DOM refs ----
   const jobListEl = document.getElementById('jobList');         // kept for backward compat (smoke tests)
@@ -33,9 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.getElementById('sidebar');
   const clearFiltersEl = document.getElementById('clearFilters');
   const typeOptions = document.getElementById('typeOptions');
-  const hcOptions = document.getElementById('hcOptions');
-  const locationOptions = document.getElementById('locationOptions');
-  const tagOptions = document.getElementById('tagOptions');
+  const industryOptions = document.getElementById('industryOptions');
+  const positionOptions = document.getElementById('positionOptions');
   const activeFiltersEl = document.getElementById('activeFilters');
   const sortSelect = document.getElementById('sortSelect');
   const filterToggle = document.getElementById('filterToggle');
@@ -51,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const sortControl = document.querySelector('.sort-control');
 
   // ---- Options derivation ----
-  let options = { types: [], hc: [], locations: [], tags: [] };
+  let options = { types: [], industries: [], positions: [], locations: [] };
 
   function byCount(map) {
     return [...map.entries()]
@@ -66,14 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
       return m;
     };
     const types = countMap(state.jobs.map(j => j.type).filter(Utils.has));
-    const hcMap = new Map();
-    let yes = 0, no = 0;
-    state.jobs.forEach(j => (j.has_hc ? yes++ : no++));
-    hcMap.set('有HC', yes);
-    hcMap.set('暂无HC', no);
+    const industries = countMap(state.jobs.flatMap(j => j.industry || []));
+    const positions = countMap(state.jobs.flatMap(j => (j.positions || []).filter(Utils.has)));
     const locations = countMap(state.jobs.flatMap(j => j.locations || []));
-    const tags = countMap(state.jobs.flatMap(j => j.tags || []));
-    options = { types: byCount(types), hc: byCount(hcMap), locations: byCount(locations), tags: byCount(tags) };
+    options = { types: byCount(types), industries: byCount(industries), positions: byCount(positions), locations: byCount(locations) };
   }
 
   // ---- Filtering ----
@@ -90,10 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!hay.includes(kw)) return false;
       }
       if (f.type.size && !f.type.has(job.type)) return false;
-      const hcKey = job.has_hc ? '有HC' : '暂无HC';
-      if (f.hc.size && !f.hc.has(hcKey)) return false;
+      if (f.industry.size && !(job.industry || []).some(i => f.industry.has(i))) return false;
+      if (f.position.size && !(job.positions || []).some(p => f.position.has(p))) return false;
       if (f.location.size && !(job.locations || []).some(l => f.location.has(l))) return false;
-      if (f.tag.size && !(job.tags || []).some(t => f.tag.has(t))) return false;
       return true;
     });
   }
@@ -131,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
       viewContainer.style.display = '';
       const viewEl = viewContainer.firstElementChild;
       if (viewEl && viewEl.update) {
-        viewEl.update({ jobs: list, keyword: state.keyword, groupBy: state.groupBy });
+        viewEl.update({ jobs: list, keyword: state.keyword, groupBy: state.groupBy, sort: state.sort });
       }
     }
     // Legacy fallback: also update jobList for smoke test compat
@@ -146,9 +140,8 @@ document.addEventListener('DOMContentLoaded', () => {
       `<label class="filter-check"><input type="checkbox" data-group="${group}" value="${Utils.escHtml(o.name)}"${state.filters[group].has(o.name) ? ' checked' : ''}><span>${Utils.escHtml(o.name)}</span><span class="count">${o.count}</span></label>`
     ).join('');
     typeOptions.innerHTML = chipHTML('type', options.types);
-    hcOptions.innerHTML = chipHTML('hc', options.hc);
-    locationOptions.innerHTML = chipHTML('location', options.locations);
-    tagOptions.innerHTML = chipHTML('tag', options.tags);
+    industryOptions.innerHTML = chipHTML('industry', options.industries);
+    positionOptions.innerHTML = chipHTML('position', options.positions);
   }
 
   function syncSidebarChecks() {
@@ -168,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderActiveFilters() {
     const chips = [];
     if (state.keyword) chips.push({ group: 'keyword', value: '', label: `关键词：${state.keyword}` });
-    ['type', 'hc', 'location', 'tag'].forEach(group => {
+    ['type', 'industry', 'position'].forEach(group => {
       state.filters[group].forEach(v => chips.push({ group, value: v, label: `${GROUP_LABELS[group]}：${v}` }));
     });
     activeFiltersEl.innerHTML = chips.map(c =>
@@ -315,9 +308,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show/hide group-by control (only for board view)
     if (groupByControl) groupByControl.style.display = mode === 'board' ? '' : 'none';
 
-    // Show/hide global sort control (table has its own column sorting)
-    if (sortControl) sortControl.style.display = mode === 'table' ? 'none' : '';
-
     // Replace view container content
     if (viewContainer) {
       viewContainer.innerHTML = '';
@@ -335,26 +325,44 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---- Bootstrap ----
-  async function loadData() {
-    try {
-      const resp = await fetch('data/jobs.json');
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-      state.jobs = await resp.json();
-      deriveOptions();
-      renderFilters();
-      switchView(state.viewMode);
-      renderStats(sortJobs(filterByState()));
-      renderCityBar();
-    } catch (err) {
-      console.error('加载招聘数据失败:', err);
-      if (viewContainer) viewContainer.style.display = 'none';
-      emptyState.style.display = 'block';
-      emptyState.innerHTML = `
-        <div class="empty-icon">!</div>
-        <p>数据加载失败</p>
-        <p class="empty-hint">请确保 data/jobs.json 文件存在且格式正确</p>
-      `;
+  function loadData() {
+    // 优先使用内联数据（file:// 兼容）
+    if (window.__JOBS_DATA__) {
+      initData(window.__JOBS_DATA__);
+      return;
     }
+    // HTTP 环境下用 XHR 加载
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'data/jobs.json', true);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState !== 4) return;
+      if (xhr.status === 200 || (xhr.status === 0 && xhr.responseText)) {
+        try { initData(JSON.parse(xhr.responseText)); } catch (e) { showError(); }
+      } else {
+        showError();
+      }
+    };
+    xhr.onerror = showError;
+    xhr.send();
+  }
+
+  function initData(jobs) {
+    state.jobs = jobs;
+    deriveOptions();
+    renderFilters();
+    switchView(state.viewMode);
+    renderStats(sortJobs(filterByState()));
+    renderCityBar();
+  }
+
+  function showError() {
+    console.error('加载招聘数据失败');
+    if (viewContainer) viewContainer.style.display = 'none';
+    emptyState.style.display = 'block';
+    emptyState.innerHTML =
+      '<div class="empty-icon">!</div>' +
+      '<p>数据加载失败</p>' +
+      '<p class="empty-hint">请确保 data/jobs.json 文件存在且格式正确</p>';
   }
 
   // ---- Event Delegation ----

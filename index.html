@@ -55,19 +55,14 @@
         <div id="typeOptions" class="filter-options"></div>
       </div>
 
-      <div class="filter-group" data-group="hc">
-        <h4 class="filter-title">HC 状态</h4>
-        <div id="hcOptions" class="filter-options"></div>
+      <div class="filter-group" data-group="industry">
+        <h4 class="filter-title">行业</h4>
+        <div id="industryOptions" class="filter-options"></div>
       </div>
 
-      <div class="filter-group" data-group="location">
-        <h4 class="filter-title">工作地点</h4>
-        <div id="locationOptions" class="filter-options filter-options-scroll"></div>
-      </div>
-
-      <div class="filter-group" data-group="tag">
-        <h4 class="filter-title">标签</h4>
-        <div id="tagOptions" class="filter-options"></div>
+      <div class="filter-group" data-group="position">
+        <h4 class="filter-title">岗位分类</h4>
+        <div id="positionOptions" class="filter-options filter-options-scroll"></div>
       </div>
     </aside>
 
@@ -103,17 +98,20 @@
             <select id="groupBySelect" class="sort-select">
               <option value="company">公司</option>
               <option value="type">招聘类型</option>
-              <option value="location">工作城市</option>
-              <option value="hc">HC 状态</option>
+              <option value="industry">行业</option>
+              <option value="position">岗位分类</option>
             </select>
           </div>
-          <div class="sort-control">
-            <label class="sort-label" for="sortSelect">排序</label>
-            <select id="sortSelect" class="sort-select">
-              <option value="default">默认排序</option>
-              <option value="newest">最新发布</option>
-            </select>
-          </div>
+        </div>
+      </div>
+      <!-- 排序（独立行，视图切换不受影响） -->
+      <div class="list-toolbar-secondary">
+        <div class="sort-control">
+          <label class="sort-label" for="sortSelect">排序</label>
+          <select id="sortSelect" class="sort-select">
+            <option value="default">综合排序</option>
+            <option value="newest">最新发布</option>
+          </select>
         </div>
       </div>
       <!-- 视图容器 -->
@@ -144,6 +142,7 @@
     </div>
   </footer>
 
+  <script src="data/jobs.js"></script>
   <script src="js/utils.js"></script>
   <script src="js/job-block.js"></script>
   <script src="js/views/compact-list-view.js"></script>

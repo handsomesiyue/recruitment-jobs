@@ -46,10 +46,12 @@ class BoardView extends HTMLElement {
         return [job.company || '未知'];
       case 'type':
         return [job.type || '未知'];
+      case 'industry':
+        return (job.industry && job.industry.length) ? job.industry : ['未知'];
+      case 'position':
+        return (job.positions && job.positions.length) ? job.positions : ['未知'];
       case 'location':
         return (job.locations && job.locations.length) ? job.locations : ['未知'];
-      case 'hc':
-        return [job.has_hc ? '有HC' : '暂无HC'];
       default:
         return [job.company || '未知'];
     }
