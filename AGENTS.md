@@ -4,7 +4,7 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 
 ## Project
 
-**招聘信息聚合网站** — 人工整理的招聘信息集中展示页。支持搜索高亮、多选筛选、内推码一键复制、详情抽屉等。
+**招聘信息聚合网站** — 人工整理的招聘信息集中展示页。支持搜索高亮、多选筛选、内推码一键复制、详情抽屉、多视图切换（紧凑列表/看板/表格/时间线）等。
 
 ## Development
 
@@ -12,7 +12,10 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 
 - `index.html` — 主页面
 - `css/style.css` — 样式（BOSS 直聘风格：青绿主题、双栏布局）
-- `js/app.js` — 交互逻辑（搜索、筛选、排序、复制、详情抽屉）
+- `js/app.js` — 主控制器（状态管理、视图调度、筛选、排序、详情抽屉）
+- `js/utils.js` — 共享工具函数
+- `js/job-block.js` — 岗位块 HTML 生成（紧凑行、看板卡片、表格行、时间线节点）
+- `js/views/` — 四种视图 Custom Element 组件
 - `data/jobs.json` — 招聘数据（核心文件，直接编辑此文件添加/修改招聘信息）
 
 ## How to Add a Job
@@ -45,14 +48,22 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 
 ```
 2606_招聘信息网站/
-├── index.html          # 主页面
-├── css/style.css       # 样式表（响应式设计）
-├── js/app.js           # 前端交互（搜索/筛选/弹窗/复制）
-├── data/jobs.json      # 招聘数据（JSON）
-├── main.js             # Electron 桌面版主进程（app:// 协议、外置数据、外链）
-├── package.json        # 桌面版依赖与构建配置
-├── build/icon.svg/png  # 应用图标
-└── AGENTS.md           # 本文件
+├── index.html                # 主页面
+├── css/style.css             # 样式表（响应式设计）
+├── js/
+│   ├── app.js                # 主控制器（状态管理 + 视图调度 + 事件绑定）
+│   ├── utils.js              # 共享工具函数（escHtml, highlight, companyAvatar 等）
+│   ├── job-block.js          # 岗位块渲染（各视图共享的 HTML 生成函数）
+│   └── views/
+│       ├── compact-list-view.js   # 紧凑列表视图组件
+│       ├── board-view.js          # 看板视图组件
+│       ├── table-view.js          # 表格视图组件
+│       └── timeline-view.js       # 时间线视图组件
+├── data/jobs.json            # 招聘数据（JSON）
+├── main.js                   # Electron 桌面版主进程（app:// 协议、外置数据、外链）
+├── package.json              # 桌面版依赖与构建配置
+├── build/icon.svg/png        # 应用图标
+└── AGENTS.md                 # 本文件
 ```
 
 ## Desktop App (Electron / Windows 便携版 + macOS)
@@ -75,11 +86,30 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 
 ## Features
 
-- **关键词搜索 + 高亮** — 实时搜索公司、职位、描述等，命中词在卡片中高亮
+- **多视图切换** — 4 种视图自由切换：紧凑列表（默认）、看板（按公司/类型/城市/HC 分组）、表格（可列头排序）、时间线（按月份）
+- **看板分组** — 看板视图支持切换分组字段（公司/招聘类型/工作城市/HC 状态）
+- **视图状态持久化** — 用户选择的视图模式和分组字段通过 localStorage 记忆
+- **关键词搜索 + 高亮** — 实时搜索公司、职位、描述等，命中词在所有视图中高亮
 - **多选筛选侧栏** — 工作地点 / 招聘类型 / HC 状态 / 标签，组内多选（OR）、组间叠加（AND）
 - **顶部统计 + 城市条** — 显示岗位数/公司数，点击城市条快捷筛选
 - **排序** — 默认排序 / 最新发布（按 post_date）
 - **卡片快捷投递** — 卡片直接显示内推码复制按钮与投递链接
 - **内推码一键复制** — 点击复制，显示"已复制"反馈
 - **详情抽屉** — 右侧滑入（移动端全屏），含薪资/学历/经验、二维码放大
-- **响应式设计** — 桌面双栏布局，移动端筛选收为底部抽屉
+- **响应式设计** — 桌面双栏布局，移动端筛选收为底部抽屉；各视图独立适配
+
+## View System Architecture
+
+视图系统基于 Web Components（Custom Elements），使用 light DOM（非 Shadow DOM）。
+
+- **状态驱动**：`app.js` 中 `state.viewMode` 控制当前视图，`state.groupBy` 控制看板分组字段
+- **组件接口**：每个视图组件必须实现 `connectedCallback()` 和 `update({ jobs, keyword, groupBy })` 方法
+- **事件委托**：点击岗位打开详情、复制内推码等交互由 `app.js` 在 `viewContainer` 上统一委托处理，视图组件自身不绑定点击事件
+- **标签名映射**：`VIEW_TAGS` 对象将 `viewMode` 映射到 Custom Element 标签名（如 `compact` → `compact-list-view`）
+- **共享渲染**：`job-block.js` 中的 `JobBlock` 对象提供各视图共享的 HTML 生成函数
+
+添加新视图的步骤：
+1. 在 `js/views/` 创建新组件文件，注册 Custom Element
+2. 在 `js/app.js` 的 `VIEW_TAGS` 中添加映射
+3. 在 `index.html` 的 `viewSwitcher` 中添加按钮
+4. 在 `css/style.css` 中添加样式

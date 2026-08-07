@@ -1008,3 +1008,583 @@ mark.hl {
   .referral-code-box { flex-wrap: wrap; }
   .list-toolbar { flex-wrap: wrap; }
 }
+
+/* ==========================================================
+   多视图系统
+   ========================================================== */
+
+/* ---------- 工具栏右侧 ---------- */
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-shrink: 0;
+}
+
+/* ---------- 视图切换器 ---------- */
+.view-switcher {
+  display: inline-flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  border: none;
+  background: var(--color-surface);
+  color: var(--color-text-tertiary);
+  font-size: var(--text-xs);
+  transition: all var(--duration) var(--ease);
+}
+
+.view-btn + .view-btn { border-left: 1px solid var(--color-border); }
+
+.view-btn:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+}
+
+.view-btn.active {
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+  font-weight: 600;
+}
+
+.view-btn svg { flex-shrink: 0; }
+
+.view-btn-label { white-space: nowrap; }
+
+/* ---------- 分组选择器 ---------- */
+.group-by-control {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* ---------- 视图容器 ---------- */
+.view-container {
+  min-height: 200px;
+}
+
+/* ---------- xs 按钮 ---------- */
+.btn-xs {
+  padding: 3px 10px;
+  font-size: var(--text-xs);
+  border-radius: var(--radius-sm);
+}
+
+/* ---------- 小头像 ---------- */
+.company-avatar-sm {
+  width: 36px;
+  height: 36px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+}
+
+/* ==========================================================
+   紧凑列表视图
+   ========================================================== */
+
+.compact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--color-border-light);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.compact-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--color-surface);
+  padding: var(--space-2) var(--space-4);
+  min-height: 52px;
+  cursor: pointer;
+  transition: background var(--duration) var(--ease);
+}
+
+.compact-row:hover { background: var(--gray-50); }
+
+.compact-row .company-avatar { width: 36px; height: 36px; font-size: 0.95rem; flex-shrink: 0; }
+
+.compact-main {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  min-width: 0;
+  flex: 2;
+}
+
+.compact-company {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.compact-title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.compact-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.compact-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.compact-salary-col {
+  flex-shrink: 0;
+  min-width: 80px;
+  text-align: right;
+}
+
+.compact-salary {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+
+.compact-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+  align-items: center;
+}
+
+/* ==========================================================
+   看板视图
+   ========================================================== */
+
+.board-view {
+  display: flex;
+  gap: var(--space-4);
+  overflow-x: auto;
+  padding-bottom: var(--space-4);
+  scrollbar-width: thin;
+}
+
+.board-view::-webkit-scrollbar { height: 6px; }
+.board-view::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: var(--radius-pill); }
+
+.board-column {
+  flex: 0 0 260px;
+  min-width: 260px;
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 240px);
+}
+
+.board-column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border-light);
+  flex-shrink: 0;
+}
+
+.board-column-title {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.board-column-count {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  background: var(--gray-200);
+  padding: 1px 8px;
+  border-radius: var(--radius-pill);
+  flex-shrink: 0;
+}
+
+.board-column-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.board-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  cursor: pointer;
+  transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+
+.board-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+  border-color: var(--teal-200);
+}
+
+.board-card-top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.board-card-info { min-width: 0; flex: 1; }
+
+.board-card-title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.board-card-company {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.board-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.board-card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* ==========================================================
+   表格视图
+   ========================================================== */
+
+.table-view {
+  overflow-x: auto;
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.data-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.data-table th {
+  background: var(--gray-50);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  text-align: left;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 2px solid var(--color-border);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.sortable-th {
+  cursor: pointer;
+  transition: color var(--duration) var(--ease);
+}
+
+.sortable-th:hover { color: var(--color-primary); }
+
+.data-table td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border-light);
+  vertical-align: middle;
+}
+
+.table-row {
+  cursor: pointer;
+  transition: background var(--duration) var(--ease);
+}
+
+.table-row:hover { background: var(--gray-50); }
+
+.td-company { font-weight: 500; white-space: nowrap; }
+
+.td-title {
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.td-location {
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.td-hc { white-space: nowrap; }
+.td-date { white-space: nowrap; color: var(--color-text-secondary); }
+
+/* ==========================================================
+   时间线视图
+   ========================================================== */
+
+.timeline-view {
+  overflow-x: auto;
+  padding: var(--space-6) 0 var(--space-8);
+  scrollbar-width: thin;
+}
+
+.timeline-view::-webkit-scrollbar { height: 6px; }
+.timeline-view::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: var(--radius-pill); }
+
+.timeline-track {
+  display: flex;
+  position: relative;
+  min-width: max-content;
+  padding: 120px 0 80px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-border);
+  transform: translateY(-50%);
+  border-radius: 2px;
+}
+
+.timeline-month {
+  flex: 0 0 220px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-month-nodes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 100%;
+  padding: 0 var(--space-2);
+}
+
+.timeline-month-label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  padding-top: var(--space-4);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.timeline-node-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-node-wrap.tl-above {
+  align-self: flex-start;
+  margin-bottom: auto;
+  padding-bottom: var(--space-4);
+  order: -1;
+}
+
+.timeline-node-wrap.tl-below {
+  align-self: flex-end;
+  margin-top: auto;
+  padding-top: var(--space-4);
+  order: 1;
+}
+
+.timeline-node {
+  /* No extra positioning needed; the wrap handles alternation */
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  border: 3px solid var(--color-surface);
+  box-shadow: 0 0 0 2px var(--color-primary);
+  display: none; /* hidden since we use card-style nodes */
+}
+
+.timeline-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-3);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease), border-color var(--duration) var(--ease);
+  min-width: 180px;
+  max-width: 220px;
+}
+
+.timeline-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+  border-color: var(--teal-200);
+}
+
+.timeline-card .company-avatar-sm { flex-shrink: 0; }
+
+.timeline-info { min-width: 0; flex: 1; }
+
+.timeline-title {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--color-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.timeline-company {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tl-salary {
+  font-size: var(--text-xs);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* 时间线节点类型颜色 */
+.timeline-node.type-intern .timeline-card { border-left: 3px solid var(--teal-400); }
+.timeline-node.type-campus .timeline-card { border-left: 3px solid #5b8def; }
+.timeline-node.type-other .timeline-card { border-left: 3px solid var(--gray-400); }
+
+/* ==========================================================
+   多视图响应式
+   ========================================================== */
+
+@media (max-width: 1024px) {
+  /* 表格：隐藏次要列 */
+  .table-view .td-type { display: none; }
+  .data-table th[data-sort="type"] { display: none; }
+}
+
+@media (max-width: 768px) {
+  /* 工具栏换行 */
+  .toolbar-right { flex-wrap: wrap; }
+  .view-btn-label { display: none; }
+  .view-btn { padding: 6px 8px; }
+
+  /* 紧凑列表：隐藏标签列，缩小间距 */
+  .compact-row { padding: var(--space-2) var(--space-3); gap: var(--space-2); }
+  .compact-tags { display: none; }
+  .compact-meta { display: none; }
+  .compact-salary-col { display: none; }
+
+  /* 看板：单列，可横向滑动切换 */
+  .board-column { flex: 0 0 85vw; min-width: 85vw; }
+
+  /* 表格：隐藏更多列 */
+  .table-view .td-location { display: none; }
+  .data-table th[data-sort="location"] { display: none; }
+
+  /* 时间线：转为垂直 */
+  .timeline-track {
+    flex-direction: column;
+    padding: var(--space-4) 0;
+    min-width: auto;
+  }
+
+  .timeline-line {
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    right: auto;
+    width: 3px;
+    height: auto;
+    transform: none;
+  }
+
+  .timeline-month {
+    flex: none;
+    min-width: auto;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-2) 0 var(--space-2) 40px;
+  }
+
+  .timeline-month-nodes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .timeline-node-wrap.tl-above,
+  .timeline-node-wrap.tl-below {
+    order: 0;
+    padding: 0;
+    margin: 0;
+  }
+
+  .timeline-month-label {
+    position: absolute;
+    left: 0;
+    top: var(--space-2);
+    width: 36px;
+    text-align: center;
+    padding-top: 0;
+    font-size: 10px;
+  }
+
+  .timeline-card {
+    min-width: 140px;
+    max-width: 180px;
+  }
+}
