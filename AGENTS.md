@@ -43,8 +43,15 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
    - `qr_code` — 二维码图片路径（如 `"images/anker-qr.jpg"`，没有则留空字符串）
    - `extra_links` — 附加链接列表（数组，每项含 `label` 和 `url`，没有则 `[]`）
 
-3. 如需显示公司 logo，在 `images/logos/` 放一张 PNG 图片，并在 `js/utils.js` 的 `COMPANY_LOGOS` 中添加公司名 → 图片路径映射
-4. 在浏览器刷新页面即可看到新信息
+3. 如需显示公司 logo，按以下步骤操作：
+   a. 搜索并下载公司 logo（PNG，建议 200x200 以内，白色/透明背景优先）
+   b. 保存到 `images/logos/` 目录，文件名用公司英文名或拼音（如 `netease.png`）
+   c. 在 `js/utils.js` 的 `COMPANY_LOGOS` 对象中添加映射，如 `'网易': 'images/logos/netease.png'`
+4. **必须同步 `data/jobs.js`**（浏览器直接打开 index.html 依赖此文件）：
+   ```bash
+   echo -n 'window.__JOBS_DATA__ = ' > data/jobs.js && cat data/jobs.json >> data/jobs.js && echo ';' >> data/jobs.js
+   ```
+5. 在浏览器刷新页面即可看到新信息
 
 ### 岗位分类（positions）命名规范
 
@@ -154,3 +161,37 @@ This file provides guidance to Codex (Codex.ai/code) when working with code in t
 2. 在 `js/app.js` 的 `VIEW_TAGS` 中添加映射
 3. 在 `index.html` 的 `viewSwitcher` 中添加按钮
 4. 在 `css/style.css` 中添加样式
+
+## 数据同步流程（重要）
+
+编辑 `data/jobs.json` 后，**必须**重新生成 `data/jobs.js`，否则浏览器直接打开 index.html 无法加载数据：
+
+```bash
+echo -n 'window.__JOBS_DATA__ = ' > data/jobs.js && cat data/jobs.json >> data/jobs.js && echo ';' >> data/jobs.js
+```
+
+Electron 桌面版和开发服务器（npm start）走 XHR 加载 jobs.json，不受影响；但 `file://` 协议依赖 `data/jobs.js` 中的 `window.__JOBS_DATA__` 全局变量。
+
+## 筛选条件规范
+
+侧边栏筛选只保留以下三组，不可随意增减：
+1. **招聘类型** — 实习、校招、社招 等
+2. **行业** — 游戏、互联网、消费电子 等（见下方标准标签）
+3. **岗位分类** — 技术、财务、营销 等（见下方标准名称）
+
+## Git Commit 规范
+
+添加/修改招聘信息的 commit message 格式：
+```
+data: 添加<公司名>招聘信息
+data: 更新<公司名>招聘信息
+data: 添加<公司名>logo
+```
+
+涉及代码修改的 commit message：
+```
+feat: <功能描述>
+fix: <修复描述>
+style: <样式调整>
+refactor: <重构描述>
+```
