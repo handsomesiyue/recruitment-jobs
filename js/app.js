@@ -469,6 +469,11 @@ document.addEventListener('DOMContentLoaded', () => {
         addJobBtn.style.display = '';
         addJobBtn.addEventListener('click', () => window.JobEditor.openNew());
       }
+      const aiBtn = document.getElementById('aiAssistantBtn');
+      if (aiBtn && window.AIAssistant) {
+        aiBtn.style.display = '';
+        aiBtn.addEventListener('click', () => window.AIAssistant.open());
+      }
       if (statusFilterControl && statusFilterSelect) {
         statusFilterControl.style.display = '';
         statusFilterSelect.innerHTML =

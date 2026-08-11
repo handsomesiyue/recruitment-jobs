@@ -123,7 +123,250 @@ function validateJobs(jobs) {
   }
 }
 
+// ---- AI 助手（OpenAI 兼容接口）----
+
+// 个人 AI 配置存 userData（不进共享 data/，分发 exe 时不泄露 key）。
+// AI_CONFIG_FILE 写成函数延迟求值：app.getPath('userData') 需在 ready 之后才安全，
+// 而 IPC handler 运行时必在 ready 之后。
+function aiConfigFile() {
+  return path.join(app.getPath('userData'), 'ai-config.json');
+}
+
+async function readAiConfig() {
+  try {
+    const raw = await fsp.readFile(aiConfigFile(), 'utf8');
+    const cfg = JSON.parse(raw);
+    return {
+      baseUrl: String(cfg.baseUrl || '').trim(),
+      apiKey: String(cfg.apiKey || '').trim(),
+      model: String(cfg.model || '').trim(),
+    };
+  } catch {
+    return { baseUrl: '', apiKey: '', model: '' };
+  }
+}
+
+async function writeAiConfig(cfg) {
+  await fsp.mkdir(app.getPath('userData'), { recursive: true });
+  await atomicWrite(aiConfigFile(), JSON.stringify(cfg, null, 2) + '\n');
+}
+
+// baseUrl → chat/completions 完整 URL：兼容填 https://api.deepseek.com 与 …/v1 两种写法
+function chatCompletionsUrl(base) {
+  const b = String(base || '').replace(/\/+$/, '');
+  if (/\/chat\/completions$/i.test(b)) return b;
+  const p = b.endsWith('/v1') ? '/chat/completions' : '/v1/chat/completions';
+  return b + p;
+}
+
+// System prompt：从 CLAUDE.md 规范生成，标准词表单一事实来源在提示词里
+function buildSystemPrompt() {
+  const now = new Date();
+  const curMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+  return `你是一名招聘信息解析助手。用户会粘贴一段招聘信息文本（来自微信、官网、帖子等，口语化、格式杂乱）。
+请解析出结构化 JSON，严格遵循以下 schema 与命名规范。
+
+一、输出要求：
+- 只输出一个 JSON 对象，不要任何解释、前后缀或 markdown 代码围栏。
+- 字段必须使用下方指定的标准名称，禁止口语化/营销化描述。
+- 缺失的信息给合理默认（见三），不要臆造公司名/岗位不存在的内容。
+
+二、目标 JSON schema（字段类型与 jobs.json 一致）：
+{
+  "company":  string 公司名称（必填），
+  "title":    string 招聘标题（必填），
+  "type":     string 招聘类型，从 实习/校招/社招 中选一（见三推断），
+  "target":   string 目标人群，如"2027届在校生"，无则空串，
+  "positions": string[] 岗位分类，每个元素必须来自下方标准岗位名称表，
+  "locations": string[] 办公地点，城市名，如["广州","杭州"]，
+  "industry": string[] 行业标签，每个元素必须来自下方标准行业表（1-3 个），
+  "salary":   string 薪资，如"面议"、"200-300元/天"、"12-18万/年"，无则空串，
+  "education": string 学历要求，如"本科及以上"、"不限"，无则空串，
+  "experience": string 经验要求，如"在校/应届"、"经验不限"，无则空串，
+  "has_hc":   boolean 是否明确提到 HC 充足/有编制（无明确信息给 false），
+  "hc_detail": string HC 描述，无则空串，
+  "referral_code": string 内推码，如"DNKyR1"，无则空串，
+  "referral_url": string 投递/内推链接，必须是 https:// 开头的完整 URL，无则空串，
+  "post_date": string 发布日期，格式 YYYY-MM；未注明则用当前年月 ${curMonth}，
+  "tags":     string[] 标签，从文本提炼的短语，如["实习","2027届","内推"]，
+  "qr_code":  string 恒为 ""（二维码路径由人工后续填写），
+  "description": string 招聘文案全文（尽量原样保留，保留换行），
+  "extra_links": object[] 附加链接数组，每项 {"label":名称,"url":"https://..."}，无则 []
+}
+
+三、推断规则：
+- type：出现"实习/实习生"→实习；"春招/秋招/校园招聘/应届"→校招；"社招/社会招聘/经验X年"→社招；都未明确→校招。
+- positions：从岗位描述提炼职能方向，映射到标准岗位名称（如"后端开发"→"后端"，"前端开发"→"前端"，"数据科学"→"数据"，"UI/UX"→"用户体验"或"交互设计"）。不要用"八大职业群"、"海量岗位"等营销说法。
+- industry：按公司主营推断，如游戏公司→游戏/互联网，消费电子硬件→消费电子/智能硬件。
+- post_date：未注明用当前年月 ${curMonth}。
+
+四、标准岗位名称表（positions 取值必须在此表内）：
+技术、算法、研发、前端、后端、测试、数据、嵌入式、人工智能、产品、用户体验、交互设计、
+美术、设计、视觉、营销、市场、销售、运营、商务、战略、财务、人力资源、法务、行政、
+项目管理、供应链、采购、物流、质量、品质、生产、工程、硬件、硬件研发、声学、金融销售、
+投资顾问、客户服务、门店运营、选址开发、商品管理、新零售、策划、服务、客服
+
+五、标准行业表（industry 取值必须在此表内）：
+游戏、互联网、消费电子、智能硬件、家电、制造业、音频、医药、零售、机器人、新能源、
+电池、食品、金融、证券、能源、电力、央企`;
+}
+
+// 宽松提取 AI 返回内容中的 JSON（兼容不严格遵循 response_format 的网关）
+function extractJobJson(content) {
+  const tryParse = (s) => {
+    const obj = JSON.parse(s);
+    if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return null;
+    return obj;
+  };
+  try {
+    const obj = tryParse(content);
+    if (obj) return obj;
+  } catch { /* fallthrough */ }
+  // 剥 ```json 代码围栏
+  const fenced = content.match(/```(?:json)?\s*([\s\S]*?)```/i);
+  if (fenced) {
+    try {
+      const obj = tryParse(fenced[1].trim());
+      if (obj) return obj;
+    } catch { /* fallthrough */ }
+  }
+  // 取首个 { 到末个 } 的平衡块
+  const start = content.indexOf('{');
+  const end = content.lastIndexOf('}');
+  if (start >= 0 && end > start) {
+    try {
+      const obj = tryParse(content.slice(start, end + 1));
+      if (obj) return obj;
+    } catch { /* fallthrough */ }
+  }
+  throw new Error('AI_BAD_JSON');
+}
+
+function normalizeMonth(v) {
+  const s = String(v || '').trim();
+  let m = s.match(/^(\d{4})[-/.年](\d{1,2})/);
+  if (!m) {
+    const now = new Date();
+    m = [null, String(now.getFullYear()), String(now.getMonth() + 1)];
+  }
+  return `${m[1]}-${String(m[2]).padStart(2, '0')}`;
+}
+
+function normalizeType(v) {
+  const s = String(v || '').trim();
+  if (['实习', '校招', '社招'].includes(s)) return s;
+  return '';
+}
+
+// 归一数组字段：字符串按中文逗号/顿号/分号切分，数组去空去重
+function toList(v) {
+  if (v == null) return [];
+  const arr = Array.isArray(v) ? v : String(v).split(/[,，、;；]/);
+  return arr.map((s) => String(s).trim()).filter(Boolean);
+}
+
+// 轻校验不强映射：标准词表交给 system prompt，主进程只保形状与必填项
+function parseAndNormalizeJob(obj) {
+  const job = {
+    id: undefined, // 交给编辑器 nextId() 分配，避免 id 冲突
+    company: String(obj.company || '').trim(),
+    title: String(obj.title || '').trim(),
+    type: normalizeType(obj.type),
+    target: String(obj.target || '').trim(),
+    positions: toList(obj.positions),
+    locations: toList(obj.locations),
+    industry: toList(obj.industry),
+    salary: String(obj.salary || '').trim(),
+    education: String(obj.education || '').trim(),
+    experience: String(obj.experience || '').trim(),
+    has_hc: !!obj.has_hc,
+    hc_detail: String(obj.hc_detail || '').trim(),
+    referral_code: String(obj.referral_code || '').trim(),
+    referral_url: String(obj.referral_url || '').trim(),
+    post_date: normalizeMonth(obj.post_date),
+    tags: toList(obj.tags),
+    qr_code: '',
+    description: String(obj.description || '').trim(),
+    extra_links: Array.isArray(obj.extra_links)
+      ? obj.extra_links
+          .filter((l) => l && l.url)
+          .map((l) => ({ label: String(l.label || l.url).trim(), url: String(l.url).trim() }))
+      : [],
+  };
+  if (!job.company || !job.title) throw new Error('AI_MISSING_REQUIRED');
+  return job;
+}
+
 function setupIpc() {
+  // AI 配置：只回传是否已配置，绝不回传 key
+  ipcMain.handle('ai:get-config', async () => {
+    const cfg = await readAiConfig();
+    return { configured: !!(cfg.baseUrl && cfg.apiKey && cfg.model) };
+  });
+
+  ipcMain.handle('ai:set-config', async (_e, cfg = {}) => {
+    const clean = {
+      baseUrl: String(cfg.baseUrl || '').trim(),
+      apiKey: String(cfg.apiKey || '').trim(),
+      model: String(cfg.model || '').trim(),
+    };
+    if (!clean.baseUrl || !clean.apiKey || !clean.model) {
+      throw new Error('baseUrl / API Key / Model 均不能为空');
+    }
+    let base = clean.baseUrl.replace(/\/+$/, '');
+    if (!/^https?:\/\//i.test(base)) base = 'https://' + base;
+    clean.baseUrl = base;
+    await writeAiConfig(clean);
+    return { ok: true, configured: true };
+  });
+
+  // AI 解析：主进程调 OpenAI 兼容接口，错误以固定错误码字符串抛出
+  ipcMain.handle('ai:parse', async (_e, payload = {}) => {
+    const text = String(payload.text || '').trim();
+    if (text.length < 20) throw new Error('AI_TEXT_TOO_SHORT');
+    const cfg = await readAiConfig();
+    if (!cfg.baseUrl || !cfg.apiKey || !cfg.model) throw new Error('AI_NOT_CONFIGURED');
+
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 60000);
+    try {
+      const resp = await fetch(chatCompletionsUrl(cfg.baseUrl), {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: 'Bearer ' + cfg.apiKey,
+        },
+        body: JSON.stringify({
+          model: cfg.model,
+          messages: [
+            { role: 'system', content: buildSystemPrompt() },
+            { role: 'user', content: text },
+          ],
+          temperature: 0.2,
+          // 尽力而为：兼容模型忽略，不兼容则靠 extractJobJson 兜底
+          response_format: { type: 'json_object' },
+        }),
+        signal: controller.signal,
+      });
+      if (!resp.ok) {
+        if (resp.status === 401 || resp.status === 403) throw new Error('AI_AUTH_FAILED');
+        if (resp.status === 429) throw new Error('AI_RATE_LIMITED');
+        throw new Error('AI_HTTP_' + resp.status);
+      }
+      const data = await resp.json();
+      const content =
+        data && data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content;
+      if (!content) throw new Error('AI_PARSE_FAILED');
+      return { job: parseAndNormalizeJob(extractJobJson(content)) };
+    } catch (err) {
+      if (err && err.name === 'AbortError') throw new Error('AI_TIMEOUT');
+      if (err && err.type === 'system') throw new Error('AI_NETWORK');
+      throw err;
+    } finally {
+      clearTimeout(timer);
+    }
+  });
+
   // 保存全量岗位数据：同时写 jobs.json 与 jobs.js（file:// 兼容包装），写前自动备份
   ipcMain.handle('jobs:save', async (_e, jobs) => {
     const dir = writableDataDir();
@@ -296,7 +539,9 @@ app.whenReady().then(async () => {
       try {
         await new Promise((r) => setTimeout(r, 800));
         const result = await win.webContents.executeJavaScript(`(async () => {
-          const out = { jobsLoaded: false, cardCount: 0, searchCount: 0, highlight: false, modalOpen: false, drawerOpen: false, firstPostDate: '', cityCount: 0, typeFilterCount: 0, error: null };
+          const out = { jobsLoaded: false, cardCount: 0, searchCount: 0, highlight: false, modalOpen: false, drawerOpen: false, firstPostDate: '', cityCount: 0, typeFilterCount: 0, aiBridge: false, aiBtnVisible: false, error: null };
+          out.aiBridge = !!(window.desktopAPI && window.desktopAPI.aiParse);
+          out.aiBtnVisible = !!document.getElementById('aiAssistantBtn');
           try {
             const resp = await fetch('data/jobs.json');
             out.jobsLoaded = resp.ok;
