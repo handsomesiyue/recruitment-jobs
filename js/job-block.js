@@ -32,7 +32,7 @@ const JobBlock = {
           <span class="compact-title">${highlight(job.title, kw)}</span>
         </div>
         <div class="compact-tags">${tags}</div>
-        <div class="compact-meta">${typeBadge}${industryBadges}${locText ? `<span class="meta-badge">${escHtml(locText)}</span>` : ''}${dateBadge}</div>
+        <div class="compact-meta">${Utils.jobStatusBadge(job.id)}${typeBadge}${industryBadges}${locText ? `<span class="meta-badge">${escHtml(locText)}</span>` : ''}${dateBadge}</div>
         <div class="compact-salary-col">${salary}</div>
         <div class="compact-actions">
           ${copyBtn}
@@ -87,7 +87,7 @@ const JobBlock = {
           </div>
         </div>
         <div class="board-card-bottom">
-          <div class="board-card-badges">${tags}${industryBadges}</div>
+          <div class="board-card-badges">${Utils.jobStatusBadge(job.id)}${tags}${industryBadges}</div>
           ${copyBtn}
         </div>
       </div>`;
@@ -104,7 +104,7 @@ const JobBlock = {
     return `
       <tr class="table-row view-detail" data-id="${job.id}">
         <td class="td-company">${escHtml(job.company)}</td>
-        <td class="td-title">${highlight(job.title, kw)}</td>
+        <td class="td-title">${highlight(job.title, kw)}${Utils.jobStatusBadge(job.id)}</td>
         <td class="td-type">${escHtml(job.type || '—')}</td>
         <td class="td-industry">${escHtml(industryText)}</td>
         <td class="td-location">${escHtml(locText)}</td>
@@ -129,7 +129,7 @@ const JobBlock = {
           ${avatar}
           <div class="timeline-info">
             <div class="timeline-title">${highlight(job.title, kw)}</div>
-            <div class="timeline-company">${highlight(job.company, kw)}</div>
+            <div class="timeline-company">${highlight(job.company, kw)}${Utils.jobStatusBadge(job.id)}</div>
             ${salary}
           </div>
         </div>

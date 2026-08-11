@@ -3,6 +3,38 @@
    ============================================ */
 
 const Utils = {
+  // 个人投递进度状态（仅桌面版，数据存 data/my-status.json，不随共享数据分发）
+  STATUS_META: [
+    { value: 'pending', label: '待投递' },
+    { value: 'applied', label: '已投递' },
+    { value: 'exam', label: '笔试' },
+    { value: 'interview', label: '面试' },
+    { value: 'offer', label: 'offer' },
+    { value: 'rejected', label: '已拒绝' },
+  ],
+
+  statusLabel(value) {
+    const m = Utils.STATUS_META.find(s => s.value === value);
+    return m ? m.label : '';
+  },
+
+  // 状态徽章 HTML（无状态返回空串）
+  statusBadge(statusValue) {
+    if (!statusValue) return '';
+    const label = Utils.statusLabel(statusValue);
+    if (!label) return '';
+    return `<span class="status-badge status-${Utils.escHtml(statusValue)}">${Utils.escHtml(label)}</span>`;
+  },
+
+  // 当前个人进度表（app.js 启动时赋值）：{ "<jobId>": { status, note } }
+  jobStatuses: {},
+
+  // 按岗位 id 生成状态徽章（供 job-block 各视图调用）
+  jobStatusBadge(id) {
+    const st = Utils.jobStatuses[String(id)];
+    return st && st.status ? Utils.statusBadge(st.status) : '';
+  },
+
   has(v) {
     return v != null && String(v).trim() !== '';
   },
@@ -12,6 +44,13 @@ const Utils = {
     const div = document.createElement('div');
     div.textContent = String(str);
     return div.innerHTML;
+  },
+
+  // 属性值转义（escHtml 不转引号，用于 HTML 属性时需用此函数）
+  escAttr(str) {
+    return String(str == null ? '' : str)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   },
 
   escapeRegExp(s) {
@@ -78,5 +117,20 @@ const Utils = {
     } else {
       Utils.fallbackCopy(text, done);
     }
+  },
+
+  // 轻量 toast 提示
+  toast(msg) {
+    let el = document.getElementById('appToast');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'appToast';
+      el.className = 'app-toast';
+      document.body.appendChild(el);
+    }
+    el.textContent = msg;
+    el.classList.add('show');
+    clearTimeout(el._timer);
+    el._timer = setTimeout(() => el.classList.remove('show'), 2200);
   },
 };

@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     selectedJobId: null,
     viewMode: localStorage.getItem('viewMode') || 'compact',
     groupBy: localStorage.getItem('groupBy') || 'company',
+    // 个人投递进度（仅桌面版）：{ "<jobId>": { status, note } }
+    statuses: {},
+    statusFilter: '',
+    desktopEditable: false,
   };
 
   const GROUP_LABELS = { type: '类型', industry: '行业', position: '岗位分类' };
@@ -48,6 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const groupByControl = document.getElementById('groupByControl');
   const groupBySelect = document.getElementById('groupBySelect');
   const sortControl = document.querySelector('.sort-control');
+  const addJobBtn = document.getElementById('addJobBtn');
+  const statusFilterControl = document.getElementById('statusFilterControl');
+  const statusFilterSelect = document.getElementById('statusFilterSelect');
 
   // ---- Options derivation ----
   let options = { types: [], industries: [], positions: [], locations: [] };
@@ -88,6 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (f.industry.size && !(job.industry || []).some(i => f.industry.has(i))) return false;
       if (f.position.size && !(job.positions || []).some(p => f.position.has(p))) return false;
       if (f.location.size && !(job.locations || []).some(l => f.location.has(l))) return false;
+      if (state.statusFilter) {
+        const st = state.statuses[String(job.id)];
+        if (!st || st.status !== state.statusFilter) return false;
+      }
       return true;
     });
   }
@@ -170,6 +181,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---- Detail drawer ----
+  function buildStatusSection(job) {
+    const st = state.statuses[String(job.id)];
+    const current = st && st.status ? st.status : '';
+    const options = Utils.STATUS_META.map(s =>
+      `<option value="${s.value}"${s.value === current ? ' selected' : ''}>${Utils.escHtml(s.label)}</option>`
+    ).join('');
+    const note = st && st.note ? Utils.escAttr(st.note) : '';
+    return `
+      <div class="detail-section status-section">
+        <h3>我的进度</h3>
+        <div class="status-controls">
+          <select id="statusSelect" class="sort-select">
+            <option value="">未标记</option>
+            ${options}
+          </select>
+          <input type="text" id="statusNote" class="status-note-input" placeholder="备注（如面试日期、联系人）" value="${note}">
+        </div>
+      </div>`;
+  }
+
   function buildInfoRows(job) {
     const rows = [
       ['公司', job.company],
@@ -197,6 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const avatar = Utils.companyAvatar(job.company);
     const salary = Utils.has(job.salary) ? `<span class="detail-salary">${Utils.escHtml(job.salary)}</span>` : '';
     const tags = (job.tags || []).map(t => `<span class="tag">${Utils.escHtml(t)}</span>`).join('');
+    const statusBadge = Utils.jobStatusBadge(job.id);
     const hcBadge = job.has_hc
       ? `<span class="hc-badge has-hc">有HC${Utils.has(job.hc_detail) ? ' · ' + Utils.escHtml(job.hc_detail) : ''}</span>`
       : `<span class="hc-badge unknown">暂无HC</span>`;
@@ -208,6 +240,9 @@ document.addEventListener('DOMContentLoaded', () => {
       : (job.referral_url
           ? `<div class="referral-section"><span style="font-size:var(--text-sm);color:var(--color-text-secondary);">官方投递页面</span><a class="btn btn-primary" href="${Utils.escHtml(job.referral_url)}" target="_blank" rel="noopener">投递</a></div>`
           : '');
+    const manageBtns = state.desktopEditable
+      ? `<div class="detail-manage"><button type="button" class="btn btn-outline btn-sm" id="editJobBtn">编辑</button><button type="button" class="btn btn-outline btn-sm btn-danger" id="deleteJobBtn">删除</button></div>`
+      : '';
 
     return `
       <div class="job-detail">
@@ -221,7 +256,9 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
           ${salary}
         </div>
-        <div class="detail-tags">${tags}${hcBadge}</div>
+        <div class="detail-tags">${statusBadge}${tags}${hcBadge}</div>
+        ${state.desktopEditable ? buildStatusSection(job) : ''}
+        ${manageBtns}
         <div class="detail-section"><h3>职位信息</h3><div class="info-grid">${buildInfoRows(job)}</div></div>
         <div class="detail-section"><h3>招聘详情</h3><div class="detail-description">${Utils.escHtml(job.description || '暂无描述')}</div></div>
         ${qrBlock}
@@ -234,6 +271,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function buildLinkDetail(job) {
     const avatar = Utils.companyAvatar(job.company);
     const tags = (job.tags || []).map(t => `<span class="tag">${Utils.escHtml(t)}</span>`).join('');
+    const statusBadge = Utils.jobStatusBadge(job.id);
+    const manageBtns = state.desktopEditable
+      ? `<div class="detail-manage"><button type="button" class="btn btn-outline btn-sm" id="editJobBtn">编辑</button><button type="button" class="btn btn-outline btn-sm btn-danger" id="deleteJobBtn">删除</button></div>`
+      : '';
     const applyBtn = job.referral_url
       ? `<div class="referral-section"><span style="font-size:var(--text-sm);color:var(--color-text-secondary);">官方投递页面</span><a class="btn btn-primary" href="${Utils.escHtml(job.referral_url)}" target="_blank" rel="noopener">访问官网 →</a></div>`
       : '';
@@ -249,7 +290,9 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
         </div>
-        <div class="detail-tags">${tags}</div>
+        <div class="detail-tags">${statusBadge}${tags}</div>
+        ${state.desktopEditable ? buildStatusSection(job) : ''}
+        ${manageBtns}
         <div class="detail-section"><h3>职位信息</h3><div class="info-grid">${buildInfoRows(job)}</div></div>
         <div class="detail-section"><h3>招聘详情</h3><div class="detail-description">${Utils.escHtml(job.description || '暂无描述')}</div></div>
         ${applyBtn}
@@ -275,6 +318,47 @@ document.addEventListener('DOMContentLoaded', () => {
         feedbackEl.classList.add('show');
         setTimeout(() => feedbackEl.classList.remove('show'), 2000);
       }));
+    }
+
+    // 绑定进度控制与编辑/删除（仅桌面版）
+    bindManageControls(job);
+  }
+
+  function bindManageControls(job) {
+    const statusSel = modalBody.querySelector('#statusSelect');
+    const noteEl = modalBody.querySelector('#statusNote');
+    if (statusSel && noteEl) {
+      const persist = () => {
+        const key = String(job.id);
+        const status = statusSel.value;
+        const note = noteEl.value.trim();
+        if (!status && !note) delete state.statuses[key];
+        else state.statuses[key] = { status, note };
+        Utils.jobStatuses = state.statuses;
+        saveStatuses();
+      };
+      statusSel.addEventListener('change', () => { persist(); render(); });
+      noteEl.addEventListener('change', persist);
+    }
+    const editBtn = modalBody.querySelector('#editJobBtn');
+    if (editBtn) editBtn.addEventListener('click', () => {
+      closeDetail();
+      window.JobEditor.openEdit(job);
+    });
+    const delBtn = modalBody.querySelector('#deleteJobBtn');
+    if (delBtn) delBtn.addEventListener('click', async () => {
+      closeDetail();
+      await window.JobEditor.onDelete(job);
+    });
+  }
+
+  async function saveStatuses() {
+    if (!window.desktopAPI) return;
+    try {
+      const res = await window.desktopAPI.saveStatus(state.statuses);
+      if (!res || !res.ok) throw new Error((res && res.error) || '保存失败');
+    } catch (e) {
+      Utils.toast('进度保存失败：' + (e && e.message ? e.message : e));
     }
   }
 
@@ -353,6 +437,51 @@ document.addEventListener('DOMContentLoaded', () => {
     switchView(state.viewMode);
     renderStats(sortJobs(filterByState()));
     renderCityBar();
+  }
+
+  // 编辑器保存后：替换数据并整体重渲染（不重新加载页面）
+  function replaceJobs(jobs) {
+    initData(jobs);
+    render();
+  }
+
+  // 桌面版初始化：可编辑性探测、加载个人进度、显示编辑入口
+  async function initDesktop() {
+    if (!window.desktopAPI) return;
+    let editable = false;
+    try {
+      const info = await window.desktopAPI.getInfo();
+      editable = !!(info && info.editable);
+    } catch (e) { /* 探测失败按不可编辑处理 */ }
+    state.desktopEditable = editable;
+
+    if (editable) {
+      // 加载个人进度（文件可能不存在，属正常情况）
+      try {
+        const resp = await fetch('data/my-status.json');
+        if (resp.ok) {
+          const st = await resp.json();
+          if (st && typeof st === 'object' && !Array.isArray(st)) state.statuses = st;
+        }
+      } catch (e) { /* 无进度文件则保持空 */ }
+
+      if (addJobBtn) {
+        addJobBtn.style.display = '';
+        addJobBtn.addEventListener('click', () => window.JobEditor.openNew());
+      }
+      if (statusFilterControl && statusFilterSelect) {
+        statusFilterControl.style.display = '';
+        statusFilterSelect.innerHTML =
+          '<option value="">全部进度</option>' +
+          Utils.STATUS_META.map(s => `<option value="${s.value}">${Utils.escHtml(s.label)}</option>`).join('');
+        statusFilterSelect.addEventListener('change', () => {
+          state.statusFilter = statusFilterSelect.value;
+          render();
+        });
+      }
+    }
+    Utils.jobStatuses = state.statuses;
+    render();
   }
 
   function showError() {
@@ -508,6 +637,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   loadData();
+  initDesktop();
+
+  // 供编辑器（js/editor.js）读写当前数据
+  window.JobApp = {
+    state,
+    get options() { return options; },
+    replaceJobs,
+  };
 });
 
 // ---- QR Zoom (全局，供抽屉内联 onclick 调用) ----

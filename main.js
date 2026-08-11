@@ -9,7 +9,7 @@
    - 剪贴板权限放行（navigator.clipboard.writeText 无需改页面代码）
    ============================================ */
 
-const { app, BrowserWindow, shell, protocol, session } = require('electron');
+const { app, BrowserWindow, shell, protocol, session, ipcMain } = require('electron');
 const path = require('node:path');
 const fsp = require('node:fs/promises');
 
@@ -79,6 +79,76 @@ async function isFile(p) {
   } catch {
     return false;
   }
+}
+
+// ---- 数据写入（应用内编辑）----
+
+// 可写数据目录：打包模式=外置 data/；开发模式=项目内 data/。
+// 打包后外置目录不可写（externalDataDir 回退为 null）时返回 null，前端据此隐藏编辑入口。
+function writableDataDir() {
+  if (externalDataDir) return externalDataDir;
+  if (!app.isPackaged) return path.join(bundledRoot, 'data');
+  return null;
+}
+
+// 原子写：先写临时文件再 rename，避免写一半损坏数据
+async function atomicWrite(file, content) {
+  const tmp = file + '.tmp';
+  await fsp.writeFile(tmp, content, 'utf8');
+  await fsp.rename(tmp, file);
+}
+
+// 写入前备份现有 jobs.json 到 data/backups/，保留最近 10 份
+async function backupJobsJson(dir) {
+  const src = path.join(dir, 'jobs.json');
+  if (!(await isFile(src))) return;
+  const backupDir = path.join(dir, 'backups');
+  await fsp.mkdir(backupDir, { recursive: true });
+  const ts = new Date().toISOString().replace(/[:.]/g, '-');
+  await fsp.copyFile(src, path.join(backupDir, `jobs-${ts}.json`));
+  const files = (await fsp.readdir(backupDir))
+    .filter((f) => f.startsWith('jobs-') && f.endsWith('.json'))
+    .sort();
+  for (const f of files.slice(0, -10)) {
+    await fsp.unlink(path.join(backupDir, f));
+  }
+}
+
+function validateJobs(jobs) {
+  if (!Array.isArray(jobs)) throw new Error('数据必须是数组');
+  for (const j of jobs) {
+    if (typeof j !== 'object' || j === null) throw new Error('数据项必须是对象');
+    if (!Number.isFinite(j.id)) throw new Error('数据项缺少有效 id');
+    if (!j.company || !j.title) throw new Error('数据项缺少 company 或 title');
+  }
+}
+
+function setupIpc() {
+  // 保存全量岗位数据：同时写 jobs.json 与 jobs.js（file:// 兼容包装），写前自动备份
+  ipcMain.handle('jobs:save', async (_e, jobs) => {
+    const dir = writableDataDir();
+    if (!dir) throw new Error('当前数据目录不可写');
+    validateJobs(jobs);
+    await backupJobsJson(dir);
+    const json = JSON.stringify(jobs, null, 2) + '\n';
+    await atomicWrite(path.join(dir, 'jobs.json'), json);
+    await atomicWrite(path.join(dir, 'jobs.js'), 'window.__JOBS_DATA__ = ' + json + ';\n');
+    return { ok: true };
+  });
+
+  // 保存个人投递进度（按 job id 键控，与共享数据分离）
+  ipcMain.handle('status:save', async (_e, statuses) => {
+    const dir = writableDataDir();
+    if (!dir) throw new Error('当前数据目录不可写');
+    if (typeof statuses !== 'object' || statuses === null || Array.isArray(statuses)) {
+      throw new Error('进度数据格式错误');
+    }
+    await atomicWrite(path.join(dir, 'my-status.json'), JSON.stringify(statuses, null, 2) + '\n');
+    return { ok: true };
+  });
+
+  // 前端据此决定是否显示编辑入口
+  ipcMain.handle('desktop:info', async () => ({ editable: !!writableDataDir() }));
 }
 
 // ---- 内容类型 ----
@@ -166,6 +236,7 @@ function createWindow() {
       contextIsolation: true,
       nodeIntegration: false,
       sandbox: true,
+      preload: path.join(__dirname, 'preload.js'),
     },
   });
 
@@ -208,6 +279,9 @@ app.whenReady().then(async () => {
 
   // 注册协议
   protocol.handle('app', serve);
+
+  // 注册数据写入 IPC（应用内编辑）
+  setupIpc();
 
   // 剪贴板：只放行 navigator.clipboard.writeText 需要的权限
   session.defaultSession.setPermissionRequestHandler((_wc, permission, callback) => {
