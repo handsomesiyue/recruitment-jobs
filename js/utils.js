@@ -81,7 +81,7 @@ const Utils = {
     '鸣鸣很忙集团': 'images/logos/hnlshm.jpg',
     '国家电投集团': 'images/logos/spic.jpg',
     '游卡': 'images/logos/yoka.png',
-    '吉利科技集团': 'images/logos/geelytech.png',
+    '吉利科技集团': 'images/logos/geelytech.svg',
     '吉利商用车': 'images/logos/geely-cv.jpg',
   },
 
