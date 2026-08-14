@@ -315,5 +315,27 @@
     "experience": "在校",
     "qr_code": "images/wanjia-denghuo-campus-ambassador-qr.png",
     "extra_links": []
+  },
+  {
+    "id": 15,
+    "company": "游卡",
+    "title": "2027届校园招聘",
+    "positions": ["技术", "策划", "美术", "人工智能", "市场", "运营", "测试"],
+    "locations": ["杭州", "上海", "广州", "成都"],
+    "has_hc": true,
+    "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://campus.yokaverse.com",
+    "description": "🔥游卡2027届校园招聘正式启动🔥\n\n【关于游卡YOKAVERSE】\n✨ 多类型的产品矩阵：巩固核心游戏IP，拓展精品游戏品类\n✨ 国民IP《三国杀》\n✨ 卡牌品类持续深耕\n✨ 创意游戏探索多元发展\n✨ 深耕于线上线下融合的新网娱、新文创、新电竞业务\n\n【校招岗位】\n游戏程序类、游戏策划类、美术表现类、人工智能类、平台技术类、市场发行类、运营类、游戏测试类、桌游文创类\n\n【薪资福利】\n行业领先的薪酬水平，多重福利暖心保障，六险一金，福利年假，节日礼品等\n\n【工作城市】杭州、上海、广州、成都\n\n【简历投递】游卡校招官网 campus.yokaverse.com",
+    "target": "2027届毕业生",
+    "type": "校招",
+    "industry": ["游戏"],
+    "tags": ["校招", "2027届", "游戏", "三国杀"],
+    "post_date": "2026-08",
+    "salary": "面议",
+    "education": "本科及以上",
+    "experience": "在校/应届",
+    "qr_code": "",
+    "extra_links": []
   }
 ]
