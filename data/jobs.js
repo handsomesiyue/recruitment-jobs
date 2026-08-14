@@ -245,7 +245,7 @@ window.__JOBS_DATA__ = [
     "salary": "6000-10000元/月",
     "education": "本科及以上",
     "experience": "应届",
-    "qr_code": "",
+    "qr_code": "images/lijing-xinrong-qr.jpg",
     "extra_links": []
   },
   {
