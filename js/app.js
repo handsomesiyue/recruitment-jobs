@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     desktopEditable: false,
   };
 
-  const GROUP_LABELS = { type: '类型', industry: '行业', position: '岗位分类' };
+  const GROUP_LABELS = { type: '类型', industry: '行业', position: '岗位分类', location: '城市' };
 
   // ---- DOM refs ----
   const jobListEl = document.getElementById('jobList');         // kept for backward compat (smoke tests)
@@ -162,17 +162,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderCityBar() {
-    const allChip = `<button type="button" class="city-chip${state.filters.location.size ? '' : ' active'}" data-loc="__all__">全部</button>`;
-    const chips = options.locations.map(o =>
-      `<button type="button" class="city-chip${state.filters.location.has(o.name) ? ' active' : ''}" data-loc="${Utils.escHtml(o.name)}">${Utils.escHtml(o.name)}<span class="chip-count">${o.count}</span></button>`
-    ).join('');
-    cityBar.innerHTML = allChip + chips;
+    const selectedCount = state.filters.location.size;
+    const allChip = `<button type="button" class="city-chip${selectedCount ? '' : ' active'}" data-loc="__all__">全部</button>`;
+    const chips = options.locations.map(o => {
+      const isActive = state.filters.location.has(o.name);
+      return `<button type="button" class="city-chip${isActive ? ' active' : ''}" data-loc="${Utils.escHtml(o.name)}">${isActive ? '<span class="chip-check">✓</span>' : ''}${Utils.escHtml(o.name)}<span class="chip-count">${o.count}</span></button>`;
+    }).join('');
+    const hint = selectedCount > 1 ? `<span class="city-multi-hint">已选${selectedCount}城</span>` : '';
+    cityBar.innerHTML = allChip + chips + hint;
   }
 
   function renderActiveFilters() {
     const chips = [];
     if (state.keyword) chips.push({ group: 'keyword', value: '', label: `关键词：${state.keyword}` });
-    ['type', 'industry', 'position'].forEach(group => {
+    ['type', 'industry', 'position', 'location'].forEach(group => {
       state.filters[group].forEach(v => chips.push({ group, value: v, label: `${GROUP_LABELS[group]}：${v}` }));
     });
     activeFiltersEl.innerHTML = chips.map(c =>
