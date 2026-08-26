@@ -497,6 +497,28 @@
     "extra_links": []
   },
   {
+    "id": 24,
+    "company": "卧安机器人",
+    "title": "2027届秋季校园招聘正式启动",
+    "positions": ["算法", "运营", "人力资源", "人工智能"],
+    "locations": ["深圳"],
+    "has_hc": true,
+    "hc_detail": "",
+    "referral_code": "EVVRRV",
+    "referral_url": "https://woanhome.zhiye.com/campus/jobs?shareId=c98d7c81-2bab-4aa3-83c5-c644008bd798&shareSource=2",
+    "description": "卧安机器人（OneRobotics，6600.HK）2027届秋季校园招聘正式启动！\n\n【关于卧安】\n卧安机器人是全球领先的AI具身家庭机器人系统提供商。2025年12月30日，我们在香港交易所主板挂牌上市，成为\"AI具身家庭机器人第一股\"。\n发明数量全国NO.1 | 研发投入20%+ | 研发占比50%+\n全球首款AI网球机器人 | 全球首款AI陪伴机器人 | 为家庭场景打造的具身人形智能机器人\n\n【热招岗位】\n算法工程师、运营管培生、人力资源专员\n\n【成长发展】定制化培养、导师带教、多元发展路径、动态晋升机制\n【薪酬激励】试用期薪资不打折，每年两次调薪窗口；月度/季度绩效奖金、年终奖及专项激励\n【福利保障】六险一金、体检福利、搬家补贴、生日礼物、法定节假日福利\n【活力生活】营养餐福利、无限量零食饮料、季度团建经费、羽毛球/网球等兴趣社团\n【工作时间】弹性打卡、周末双休\n\n【内推码】EVVRRV（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://woanhome.zhiye.com/campus/jobs?shareId=c98d7c81-2bab-4aa3-83c5-c644008bd798&shareSource=2",
+    "target": "2027届应届生",
+    "type": "校招",
+    "industry": ["机器人", "智能硬件"],
+    "tags": ["校招", "2027届", "内推", "AI", "港股上市"],
+    "post_date": "2026-08",
+    "salary": "面议",
+    "education": "本科及以上",
+    "experience": "应届",
+    "qr_code": "images/woan-2027-campus-qr.jpg",
+    "extra_links": []
+  },
+  {
     "id": 18,
     "company": "腾讯",
     "title": "2027校园招聘全球正式启动",
