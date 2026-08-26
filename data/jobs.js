@@ -383,6 +383,30 @@ window.__JOBS_DATA__ = [
     "extra_links": []
   },
   {
+    "id": 19,
+    "company": "得物",
+    "title": "2027届校园招聘（秋招）",
+    "positions": ["技术", "运营", "供应链", "设计", "职能", "商品管理", "风控", "产品", "数据"],
+    "locations": ["上海", "杭州", "成都", "贵阳", "长沙", "广州", "沈阳", "廊坊", "武汉", "咸阳"],
+    "has_hc": true,
+    "hc_detail": "99+职位虚位以待",
+    "referral_code": "MB5FPSN",
+    "referral_url": "https://poizon.jobs.feishu.cn/s/WJHdljqRW9s",
+    "description": "【电商新势力+互联网独角兽——得物27届秋招启动】\n\n【公司简介】得物App2015年在上海成立，是新一代潮流网购社区，开创性地推出了\"先鉴别，再发货\"的购物流程，目前注册用户超5亿，《2024年·胡润全球独角兽榜》，得物估值高达710亿元。\n\n【招聘岗位】技术类、运营类、供应链类、设计类、职能类、商品研究类、风控类、产品类、数据分析类\n\n【工作城市】上海、杭州、成都、贵阳、长沙、广州、沈阳、廊坊、武汉、咸阳\n\n【内推码】MB5FPSN（推荐方式选择「大使推荐」填写内推码）\n【内推链接】https://poizon.jobs.feishu.cn/s/WJHdljqRW9s",
+    "target": "2027届在校生",
+    "type": "校招",
+    "industry": ["互联网", "零售"],
+    "tags": ["校招", "2027届", "内推", "电商", "独角兽"],
+    "post_date": "2026-08",
+    "salary": "面议",
+    "education": "本科及以上",
+    "experience": "在校/应届",
+    "qr_code": "images/dewu-2027-campus-qr.jpg",
+    "extra_links": [
+      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+    ]
+  },
+  {
     "id": 18,
     "company": "腾讯",
     "title": "2027校园招聘全球正式启动",

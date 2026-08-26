@@ -85,6 +85,7 @@ const Utils = {
     '吉利商用车': 'images/logos/geely-cv.jpg',
     '零一万物': 'images/logos/01ai.png',
     '腾讯': 'images/logos/tencent.png',
+    '得物': 'images/logos/dewu.jpg',
   },
 
   companyAvatar(name, size) {
