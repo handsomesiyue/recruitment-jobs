@@ -381,5 +381,29 @@
     "experience": "在校",
     "qr_code": "",
     "extra_links": []
+  },
+  {
+    "id": 18,
+    "company": "腾讯",
+    "title": "2027校园招聘全球正式启动",
+    "positions": ["产品", "技术", "运营", "设计", "市场"],
+    "locations": ["深圳", "北京", "上海", "广州", "成都", "武汉"],
+    "has_hc": true,
+    "hc_detail": "",
+    "referral_code": "2MR3134STJ",
+    "referral_url": "https://join.qq.com/resume.html?k=wVBCm2Aw3Z9m6WxvMZP6wJ-koXnwW3cpRelOqQ2wf0I",
+    "description": "腾讯2027校园招聘全球正式启动！\n\n⌚ 招聘时间：8月11日开始\n\n‍ 面向人群：毕业时间在2026年1月-2027年12月的本硕博在校大学生\n\n岗位：产品 / 技术 / 运营 / 设计 / 市场 等多方向\n\n❗️ AI 岗位上新！未来正在到来，我们相信人的力量\n\n在鹅厂，你会体验及获得：\n✅ 真实项目上手\n✅ 导师 1V1 带教\n✅ 丰厚福利 ++\n\n‼️ 早投递、早面试、早拿 Offer！\n\n内推码：2MR3134STJ\n\n内推链接进入完善简历后投递即可，优先筛选，不卡进度。\n\n27届校招实习秋招内推信息汇总（每日更新，推荐收藏，欢迎分享）：https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP",
+    "target": "毕业时间在2026年1月-2027年12月的本硕博在校大学生",
+    "type": "校招",
+    "industry": ["互联网"],
+    "tags": ["校招", "内推", "AI", "全球"],
+    "post_date": "2026-08",
+    "salary": "",
+    "education": "本科及以上",
+    "experience": "在校/应届",
+    "qr_code": "",
+    "extra_links": [
+      {"label": "27届校招内推汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+    ]
   }
 ]
