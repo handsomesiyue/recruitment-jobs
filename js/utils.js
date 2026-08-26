@@ -89,6 +89,7 @@ const Utils = {
     '联想集团': 'images/logos/lenovo.png',
     '蚂蚁集团': 'images/logos/antgroup.png',
     '波克': 'images/logos/boke.png',
+    '百度': 'images/logos/baidu.png',
   },
 
   companyAvatar(name, size) {

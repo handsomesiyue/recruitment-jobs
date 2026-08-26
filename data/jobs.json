@@ -519,6 +519,30 @@
     "extra_links": []
   },
   {
+    "id": 25,
+    "company": "百度",
+    "title": "2027届校园招聘启动",
+    "positions": ["技术", "算法", "人工智能", "产品", "运营", "数据", "硬件"],
+    "locations": ["北京", "上海", "深圳", "广州", "成都", "武汉"],
+    "has_hc": true,
+    "hc_detail": "AI相关岗位占90%",
+    "referral_code": "IZH1RV",
+    "referral_url": "https://dwz.cn/T3qWss4O",
+    "description": "百度2027届校园招聘启动！这波信息量很大，划重点：\n\nAI相关岗位占90%——大模型、智能体、自动驾驶、AI Infra……最硬核的前沿赛道，直接上手！\n来百度，挑大梁——培养复合型人才，跨级晋升的同学中60%来自校招，成长空间拉满！\n投递机制友好——全年开放投递，流程结束可以投递新职位，没有次数限制，相当于\"无限复活\"！常规校招、AIDU、管培生可以各投1个，流程互不冲突，机会翻三倍！\n内推全周期在线——找到百度学长学姐或百度校园大使要内推码，进度加速，先人一步！\n\n【内推码】IZH1RV（内推简历优先筛选）\n【内推链接】https://dwz.cn/T3qWss4O",
+    "target": "2027届应届毕业生",
+    "type": "校招",
+    "industry": ["互联网", "人工智能"],
+    "tags": ["校招", "2027届", "内推", "AI", "大模型", "自动驾驶"],
+    "post_date": "2026-08",
+    "salary": "面议",
+    "education": "本科及以上",
+    "experience": "在校/应届",
+    "qr_code": "images/baidu-2027-campus-qr.jpg",
+    "extra_links": [
+      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+    ]
+  },
+  {
     "id": 18,
     "company": "腾讯",
     "title": "2027校园招聘全球正式启动",
