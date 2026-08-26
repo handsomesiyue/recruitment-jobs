@@ -86,6 +86,9 @@ const Utils = {
     '零一万物': 'images/logos/01ai.png',
     '腾讯': 'images/logos/tencent.png',
     '得物': 'images/logos/dewu.jpg',
+    '联想集团': 'images/logos/lenovo.png',
+    '蚂蚁集团': 'images/logos/antgroup.png',
+    '波克': 'images/logos/boke.png',
   },
 
   companyAvatar(name, size) {
