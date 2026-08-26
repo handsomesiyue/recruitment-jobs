@@ -475,6 +475,28 @@ window.__JOBS_DATA__ = [
     ]
   },
   {
+    "id": 23,
+    "company": "大参林医药集团",
+    "title": "2027届校园招聘正式启动",
+    "positions": ["门店运营", "商品管理", "人力资源", "财务", "药学"],
+    "locations": ["全国多城市"],
+    "has_hc": true,
+    "hc_detail": "MT/OT/储备店长3大赛道",
+    "referral_code": "DS538Ffe",
+    "referral_url": "https://app.mokahr.com/m/campus-recruitment/dslyy/136052?recommendCode=DS538Ffe&hash=%23%2Fjobs",
+    "description": "大参林医药集团2027届校招正式启动！\n\n✅ MT/OT/储备店长3大赛道适配不同起点\n✅ 岗位全面开放，全国多城市可选\n✅ 免费住宿 + 竞争性薪资 + 专属福利\n✅ 2024届-2027届毕业生均可投递\n\n⌛ 网申截止12月30日，招满即止\n\n【推荐码】DS538Ffe（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://app.mokahr.com/m/campus-recruitment/dslyy/136052?recommendCode=DS538Ffe&hash=%23%2Fjobs",
+    "target": "2024届-2027届毕业生",
+    "type": "校招",
+    "industry": ["医药", "零售"],
+    "tags": ["校招", "内推", "医药", "零售"],
+    "post_date": "2026-08",
+    "salary": "面议",
+    "education": "本科及以上",
+    "experience": "应届",
+    "qr_code": "images/dashenlin-2027-campus-qr.jpg",
+    "extra_links": []
+  },
+  {
     "id": 18,
     "company": "腾讯",
     "title": "2027校园招聘全球正式启动",
