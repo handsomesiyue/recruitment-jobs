@@ -90,6 +90,9 @@ const Utils = {
     '蚂蚁集团': 'images/logos/antgroup.png',
     '波克': 'images/logos/boke.png',
     '百度': 'images/logos/baidu.png',
+    '智元机器人': 'images/logos/agirobot.png',
+    '搜狐畅游': 'images/logos/cyou.png',
+    '凡岛': 'images/logos/fandow.png',
   },
 
   companyAvatar(name, size) {
