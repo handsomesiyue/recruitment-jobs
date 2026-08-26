@@ -93,6 +93,8 @@ const Utils = {
     '智元机器人': 'images/logos/agirobot.png',
     '搜狐畅游': 'images/logos/cyou.png',
     '凡岛': 'images/logos/fandow.png',
+    '传音控股': 'images/logos/transsion.png',
+    '帆软': 'images/logos/fanruan.png',
   },
 
   companyAvatar(name, size) {

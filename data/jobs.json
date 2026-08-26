@@ -635,6 +635,54 @@
     "extra_links": []
   },
   {
+    "id": 30,
+    "company": "传音控股",
+    "title": "2027届AI专项计划启动",
+    "positions": ["技术", "算法", "人工智能", "硬件", "供应链", "市场", "运营"],
+    "locations": ["上海", "重庆", "深圳", "海外"],
+    "has_hc": true,
+    "hc_detail": "",
+    "referral_code": "ESS89A",
+    "referral_url": "https://transsion.zhiye.com/4/jobs?shareId=7b8b2da1-d9a6-4998-aba7-49d84d1ee037&shareSource=2",
+    "description": "传音控股2027届AI专项计划启动！\n\n【公司介绍】2019年上海科创板上市公司，旗下拥有新兴市场知名手机品牌TECNO、itel及Infinix，全球销售超过70个国家和地区。\n\n【工作地点】上海、重庆、深圳、海外\n\n【内推码】ESS89A（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://transsion.zhiye.com/4/jobs?shareId=7b8b2da1-d9a6-4998-aba7-49d84d1ee037&shareSource=2",
+    "target": "2027届应届毕业生",
+    "type": "校招",
+    "industry": ["消费电子", "智能硬件"],
+    "tags": ["校招", "2027届", "内推", "AI", "科创板", "海外"],
+    "post_date": "2026-08",
+    "salary": "面议",
+    "education": "本科及以上",
+    "experience": "在校/应届",
+    "qr_code": "images/transsion-2027-campus-qr.jpg",
+    "extra_links": [
+      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+    ]
+  },
+  {
+    "id": 31,
+    "company": "帆软",
+    "title": "2027届秋招提前批正式启动",
+    "positions": ["技术", "算法", "产品", "数据", "市场", "运营", "客户服务"],
+    "locations": ["全国20+城市"],
+    "has_hc": true,
+    "hc_detail": "SP Offer占比更高",
+    "referral_code": "FDYHC",
+    "referral_url": "https://t6ixa9nyl6.jiandaoyun.com/f/65e1a1308ce7672fded0f0cf?ext=FDYHC",
+    "description": "帆软2027届【秋招提前批】正式启动！\n\n✅ AI+BI前景赛道 | 中国BI行业连续8年市占率第一\n✅ 独角兽企业 | 2000+员工 | 重视校招同学培养\n✅ 全国20+城市有岗 | 家乡也能有一线城市待遇\n✅ 不影响正式批再投递 | SP Offer占比更高\n\n⏰ 网申时间：8月1日 - 8月31日\n面向对象：2027届本科及以上\n\n【内推码】FDYHC（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://t6ixa9nyl6.jiandaoyun.com/f/65e1a1308ce7672fded0f0cf?ext=FDYHC",
+    "target": "2027届本科及以上",
+    "type": "校招",
+    "industry": ["互联网", "人工智能"],
+    "tags": ["校招", "2027届", "内推", "AI", "BI", "提前批"],
+    "post_date": "2026-08",
+    "salary": "面议",
+    "education": "本科及以上",
+    "experience": "在校/应届",
+    "qr_code": "images/fanruan-2027-campus-qr.jpg",
+    "extra_links": [
+      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+    ]
+  },
+  {
     "id": 18,
     "company": "腾讯",
     "title": "2027校园招聘全球正式启动",
