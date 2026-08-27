@@ -95,6 +95,7 @@ const Utils = {
     '凡岛': 'images/logos/fandow.png',
     '传音控股': 'images/logos/transsion.png',
     '帆软': 'images/logos/fanruan.png',
+    '杭州银行': 'images/logos/hangzhou-bank.png',
   },
 
   companyAvatar(name, size) {

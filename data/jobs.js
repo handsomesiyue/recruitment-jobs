@@ -705,6 +705,78 @@ window.__JOBS_DATA__ = [
     "extra_links": [
       {"label": "27届校招内推汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
     ]
+  },
+  {
+    "id": 32,
+    "company": "杭州银行",
+    "title": "2027届校园大使招募",
+    "positions": ["商务", "运营"],
+    "locations": ["杭州"],
+    "has_hc": true,
+    "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "",
+    "description": "【杭州银行2027届校园大使】\n招募进行中，专业不限！\n欢迎有意向的同学扫码报名参加！\n\n你将收获：\n📨 杭银官方聘书\n💼 校招一手咨询\n🤩 丰厚津贴与限定周边\n📋 一对一简历辅导与职业规划\n\n⏰报名截止至2026年8月31日\n📮报名链接：https://v.wjx.cn/vm/tzMeMez.aspx",
+    "target": "2027届及以后毕业生",
+    "type": "校招",
+    "industry": ["金融"],
+    "tags": ["校招", "2027届", "校园大使", "金融"],
+    "post_date": "2026-08",
+    "salary": "丰厚津贴",
+    "education": "",
+    "experience": "在校/应届",
+    "qr_code": "images/hangzhou-bank-2027-campus-qr.jpg",
+    "extra_links": [
+      {"label": "报名链接", "url": "https://v.wjx.cn/vm/tzMeMez.aspx"}
+    ]
+  },
+  {
+    "id": 33,
+    "company": "上海曼伦商贸",
+    "title": "27届暑期实习正式开启",
+    "positions": ["财务", "人力资源", "运营", "技术"],
+    "locations": ["上海"],
+    "has_hc": true,
+    "hc_detail": "多样岗位实习，抢先一步拿秋招offer",
+    "referral_code": "DSENgmsm",
+    "referral_url": "https://app.mokahr.com/m/campus-recruitment/manon/164365?recommendCode=DSENgmsm#/jobs",
+    "description": "【本科薪资 22-25w】曼伦27届暑期实习正式开启！\n\n⛱别人等暑假，而你拿offer❗\n✅多样岗位实习，抢先一步拿秋招offer\n✅mentor带教、含金量超高的快消certificate—有趣尽兴也能满载而归～\n✅知名国际快消品牌（杜蕾斯、滴露、亮碟、益节、薇婷…都在这里！）\n✅办公室地铁站旁，出门商场，工区健身房&咖啡机自由\n\n正式offer：Nice薪资待遇、超长年假、六险一金、弹性打卡\n\n实习岗位：会计、HR（IT、内容运营、主播岗位即将开放实习机会，请随时关注我们的信息）\n\n付出和回报对等的工作，欢迎用专属内推渠道，简历直达HR，评选竞争力➕➕➕\n\n【内推码】DSENgmsm（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://app.mokahr.com/m/campus-recruitment/manon/164365?recommendCode=DSENgmsm#/jobs",
+    "target": "2027届在校生",
+    "type": "实习",
+    "industry": ["零售"],
+    "tags": ["实习", "27届", "快消", "FMCG", "内推"],
+    "post_date": "2026-08",
+    "salary": "本科22-25万/年",
+    "education": "本科及以上",
+    "experience": "在校/应届",
+    "qr_code": "images/manon-2027-summer-qr.jpg",
+    "extra_links": [
+      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+    ]
+  },
+  {
+    "id": 34,
+    "company": "高途",
+    "title": "2027全球校园招聘提前批正式启动",
+    "positions": ["教育", "技术", "运营", "策划"],
+    "locations": ["北京", "郑州", "武汉", "成都", "西安", "上海", "深圳"],
+    "has_hc": true,
+    "hc_detail": "提前批优势：流程更快、offer 先发、竞争更小",
+    "referral_code": "DSjKEcVW",
+    "referral_url": "https://app.mokahr.com/campus-recruitment/bjhl/102145?recommendCode=DSjKEcVW&hash=%23%2Fjobs",
+    "description": "高途 2027 全球校园招聘提前批正式启动！\n\n深耕教育 12 年，纽交所上市教育科技企业，All with AI 全新赛道，携手国家队资源，大咖带队成长✨\n\n✅招聘对象：2027 届海内外本硕博在校生\n\n热门岗位：教学主讲、教研、运营、管培生等多类岗位\n\n薪资福利\n▪ 主讲岗 20-60w，技术岗 20-50w，综合薪资行业领先\n▪ 入职即缴六险一金，满三月叠加补充商业保险\n▪ 入职万元大礼包（电脑 / 手机 / 耳机任选）\n▪ 带薪年假、年度体检、团建旅游、北京落户支持\n▪ 员工及家属免费享海量学习提升课程\n\n办公城市：北京、郑州、武汉、成都、西安、上海、深圳等\n提前批优势：流程更快、offer 先发、竞争更小，抢占秋招先机！\n\n【推荐码】DSjKEcVW（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://app.mokahr.com/campus-recruitment/bjhl/102145?recommendCode=DSjKEcVW&hash=%23%2Fjobs",
+    "target": "2027届海内外本硕博在校生",
+    "type": "校招",
+    "industry": ["教育", "互联网"],
+    "tags": ["校招", "2027届", "内推", "教育", "提前批"],
+    "post_date": "2026-08",
+    "salary": "主讲岗20-60万/年，技术岗20-50万/年",
+    "education": "本科及以上",
+    "experience": "在校/应届",
+    "qr_code": "images/gaotu-2027-campus-qr.jpg",
+    "extra_links": [
+      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+    ]
   }
 ]
 ;
