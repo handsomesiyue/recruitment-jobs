@@ -777,6 +777,54 @@ window.__JOBS_DATA__ = [
     "extra_links": [
       {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
     ]
+  },
+  {
+    "id": 35,
+    "company": "宇通集团",
+    "title": "2027届提前批校园招聘",
+    "positions": ["研发", "技术", "产品", "营销", "市场", "人力资源", "财务", "工程", "供应链"],
+    "locations": ["郑州"],
+    "has_hc": true,
+    "hc_detail": "优质岗位虚位以待",
+    "referral_code": "yfzyhw",
+    "referral_url": "https://actyco.wintalent.cn/actyco/home/receiver/poster/redirect?id=2ce781eb9e73fe9a019eabc8bd3212f0",
+    "description": "【宇通集团2027届提前批校园招聘】\n\n关于宇通：宇通是以客车、卡车为主的大型商用车集团，产品覆盖客车、卡车、工程机械、专用车和环卫设备。拥有1个工程技术中心、两家上市公司、4个整车工厂、5个零部件基地，2025年营业收入493.8亿。\nBase郑州（营销类含国内/海外各地）\n\n加入宇通，你将获得\n竞争力薪资，为实力护航：优质岗位虚位以待，硕士年薪上限40万元，本科年薪上限28万元，携手共赴新程\n\n神仙福利，幸福感拉满\n✅生活保障：免费公寓+通勤班车+企业健身房+免费疫苗接种\n✅多重补贴：贴心餐补/工装补/取暖费，多重生活支持\n✅专属关怀：带薪生理假（女性每月2天）、开斋节假、海外归国假等\n✅更有法定节假日、年休假、福利假（春节等）、带薪事假、婚假、产假、哺乳假、护理假、育儿假、生理假、探亲假、等多种假期\n\n【内推码】yfzyhw（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://actyco.wintalent.cn/actyco/home/receiver/poster/redirect?id=2ce781eb9e73fe9a019eabc8bd3212f0",
+    "target": "2027届应届毕业生",
+    "type": "校招",
+    "industry": ["制造业"],
+    "tags": ["校招", "2027届", "内推", "提前批", "商用车"],
+    "post_date": "2026-08",
+    "salary": "本科上限28万/年，硕士上限40万/年",
+    "education": "本科及以上",
+    "experience": "在校/应届",
+    "qr_code": "images/yutong-2027-campus-qr.jpg",
+    "extra_links": [
+      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+    ]
+  },
+  {
+    "id": 36,
+    "company": "点点互动",
+    "title": "Elite Program+ 2027全球顶尖人才计划",
+    "positions": ["策划", "技术", "算法", "数据", "人工智能", "市场"],
+    "locations": ["北京", "上海"],
+    "has_hc": true,
+    "hc_detail": "8月31日前免笔试，顶尖薪酬+签约奖金+房补+长期激励",
+    "referral_code": "ES3WKB",
+    "referral_url": "https://ddhd.cn/4/jobs?shareId=a91bacdf-0440-4ab9-bf68-5ff1cab374e3&shareSource=1",
+    "description": "——点点互动全球布局，在休闲、RPG、策略游戏三大品类均拥有头部产品（如《无尽冬日》《奔奔王国》等）\n\n我们要找这样的你：\n• 2027届全球高校毕业生\n• 游戏库比衣柜还满，见解比攻略还深\n• 顶刊论文/专利在手，或Game Jam、数模、商赛奖牌拿到手软\n• 敢想敢做，梦想从0到1打造爆款，也敢接千万级项目\n\n✨ 我们能给什么？\n• 顶尖薪酬+签约奖金+房补+长期激励\n• CXO/顶尖制作人1v1带教\n• 真实爆款项目实战，或自研游戏闭关修炼，任你选\n\n以下岗位开放，8月31日前免笔试！\n[胜利] 系统策划、数值策划\n[勾引] 全球广告创意策划、全球广告投放\n[OK] AI agent、AI算法\n[拳头] 客户端开发、数据分析\n\n流程：网申 → 笔试（8月31日前全免）→ 面试 → Offer，手慢无！\n\n内推码：ES3WKB（记得使用内推码，流程更快，不卡进度）\n内推链接：https://ddhd.cn/4/jobs?shareId=a91bacdf-0440-4ab9-bf68-5ff1cab374e3&shareSource=1",
+    "target": "2027届全球高校毕业生",
+    "type": "校招",
+    "industry": ["游戏", "互联网"],
+    "tags": ["校招", "2027届", "内推", "免笔试", "海外", "AI"],
+    "post_date": "2026-08",
+    "salary": "面议（顶尖薪酬+签约奖金+房补）",
+    "education": "本科及以上",
+    "experience": "在校/应届",
+    "qr_code": "images/diandian-2027-elite-qr.jpg",
+    "extra_links": [
+      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+    ]
   }
 ]
 ;
