@@ -915,5 +915,27 @@
     "experience": "在校/应届",
     "qr_code": "",
     "extra_links": []
+  },
+  {
+    "id": 41,
+    "company": "美团",
+    "title": "2026年秋招·2027届校招",
+    "positions": ["技术", "算法", "产品", "数据", "运营", "设计", "市场", "职能", "金融销售", "销售"],
+    "locations": ["北京", "上海", "深圳", "广州", "成都", "杭州", "武汉", "南京", "全球几十个城市"],
+    "has_hc": true,
+    "hc_detail": "今年 AI 方向大扩招，算法岗需求暴涨，首增 AI 原生岗位",
+    "referral_code": "GNP2FLC",
+    "referral_url": "https://zhaopin.meituan.com/web/campus?zp-from=hiring-campus-bole-elephant&staffSsoId=24682863",
+    "description": "【美团 2026 年秋招正式启动】本次面向 2027 届毕业生\n\n【10 大类岗位，100+ 种选择】\n技术 / 产品 / 商分 / 零售 / 运营 / 设计 / 市场 / 职能 / 金融 / 销售客服\n\n【工作地点】全球几十个城市等你选择\n\n【今年 AI 方向大扩招】算法岗需求暴涨，更首增 AI 原生岗位：\nAI 全栈工程师 / AI 产品经理 / 智能商业分析师……\n\n【内推码】GNP2FLC（记得使用内推码，流程更快，不卡进度，有问题欢迎联系）\n【内推链接】https://zhaopin.meituan.com/web/campus?zp-from=hiring-campus-bole-elephant&staffSsoId=24682863",
+    "target": "2027届毕业生",
+    "type": "校招",
+    "industry": ["互联网", "本地生活"],
+    "tags": ["校招", "2027届", "内推", "AI", "大扩招", "本地生活"],
+    "post_date": "2026-08",
+    "salary": "面议",
+    "education": "本科及以上",
+    "experience": "在校/应届",
+    "qr_code": "images/meituan-2027-campus-qr.jpg",
+    "extra_links": []
   }
 ]
