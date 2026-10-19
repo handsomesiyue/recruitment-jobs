@@ -3,8 +3,21 @@ window.__JOBS_DATA__ = [
     "id": 1,
     "company": "网易互娱",
     "title": "2027届实习生项目",
-    "positions": ["策划", "技术", "美术", "用户体验", "市场", "运营", "测试", "项目管理"],
-    "locations": ["广州", "杭州", "上海"],
+    "positions": [
+      "策划",
+      "技术",
+      "美术",
+      "用户体验",
+      "市场",
+      "运营",
+      "测试",
+      "项目管理"
+    ],
+    "locations": [
+      "广州",
+      "杭州",
+      "上海"
+    ],
     "has_hc": true,
     "hc_detail": "HC充足，30+岗位，全年最大岗位量",
     "referral_code": "DNKyR1",
@@ -12,21 +25,49 @@ window.__JOBS_DATA__ = [
     "description": "网易互娱2027届实习生项目大力招聘中，超高转正率！\n30+岗位上新，全年最大岗位量开放！HC充足\n\n面向 2027 届在校生，广州/杭州/上海均有岗\n首批策划 / 技术 / 美术 等岗位持续热招中\n用户体验/市场/运营/测试/项目管理等多类别上新岗位\n\n✅ 高转正率：表现优异直接发放校招OFFER\n多项目/方向任选，直接参与爆款项目实战\n福利拉满：行业竞争力薪酬 + 免费食堂/健身房 + 实习租房/交通补贴\n⏰ 入职超灵活：实习时间自主定，2个月及以上即可，可灵活/暑期实习，适配学业节奏",
     "target": "2027届在校生",
     "type": "实习",
-    "industry": ["游戏", "互联网"],
-    "tags": ["实习", "2027届", "高转正率", "内推"],
-    "post_date": "2026-06",
+    "industry": [
+      "游戏",
+      "互联网"
+    ],
+    "tags": [
+      "实习",
+      "2027届",
+      "高转正率",
+      "内推"
+    ],
+    "post_date": "2026-06-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/wangyi-2026-intern-qr.jpg",
+    "images": [
+      "images/wangyi-2026-intern-qr.jpg"
+    ],
     "extra_links": []
   },
   {
     "id": 2,
     "company": "安克创新",
     "title": "2027届可转正实习 · 26届春招",
-    "positions": ["算法", "硬件研发", "营销", "产品", "战略", "服务", "项目管理", "供应链", "人力资源", "质量"],
-    "locations": ["长沙", "深圳", "北京", "苏州", "海外"],
+    "positions": [
+      "算法",
+      "硬件研发",
+      "营销",
+      "产品",
+      "战略",
+      "服务",
+      "项目管理",
+      "供应链",
+      "人力资源",
+      "质量"
+    ],
+    "locations": [
+      "长沙",
+      "深圳",
+      "北京",
+      "苏州",
+      "海外"
+    ],
     "has_hc": true,
     "hc_detail": "",
     "referral_code": "DZKQTDW",
@@ -34,160 +75,283 @@ window.__JOBS_DATA__ = [
     "description": "安克创新2027届可转正实习进行中，26届春招同步进行中！\n\n【公司介绍】2023年全球营收175亿的上市公司，10年打造3个年销售超40亿的全球化品牌；全球办公网络，销售覆盖146个国家和地区，用户过亿。\n\n⭕招聘岗位：算法类/硬件研发类/营销类/产品类/战略类/服务类/项目管理类/供应链类/人力资源类/质量类\n⭕需求专业：专业不限，电子电力相关专业、小语种相关专业、机械自动化相关专业、计算软件相关专业更佳~\n⭕工作地点：长沙/深圳/北京/苏州/海外\n\n【内推码】DZKQTDW（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://anker-in.jobs.feishu.cn/s/u7Es5xWv4ko",
     "target": "2027届在校生（实习）· 26届（春招）",
     "type": "实习/校招",
-    "industry": ["消费电子", "智能硬件"],
-    "tags": ["实习", "校招", "2027届", "26届", "可转正", "内推"],
-    "post_date": "2026-06",
+    "industry": [
+      "消费电子",
+      "智能硬件"
+    ],
+    "tags": [
+      "实习",
+      "校招",
+      "2027届",
+      "26届",
+      "可转正",
+      "内推"
+    ],
+    "post_date": "2026-06-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/anker-2026-intern-qr.jpg",
+    "images": [
+      "images/anker-2026-intern-qr.jpg"
+    ],
     "extra_links": [
-      {"label": "春招&暑期内推合集", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+      {
+        "label": "春招&暑期内推合集",
+        "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"
+      }
     ]
   },
   {
-    "id": 3,
+    "id": 48,
     "company": "美的集团",
-    "title": "26届春招 & 27届美少年暑期实习",
-    "positions": ["信息技术", "研发", "财务", "人力资源", "供应链", "市场", "工程"],
-    "locations": ["佛山", "合肥", "上海", "广州", "深圳", "40+海内外城市"],
+    "title": "26届春招 & 27届美少年暑期实习 / 2027届美的星校园招聘",
+    "positions": [
+      "信息技术",
+      "研发",
+      "财务",
+      "人力资源",
+      "供应链",
+      "市场",
+      "工程"
+    ],
+    "locations": [
+      "佛山",
+      "合肥",
+      "上海",
+      "广州",
+      "深圳",
+      "40+海内外城市"
+    ],
     "has_hc": true,
     "hc_detail": "岗位扩招，大量HC，投递不限次数",
     "referral_code": "M1609R",
-    "referral_url": "https://careers.midea.com/recruit-school-wechat/job?mvp_code=M1609R",
-    "description": "【美的集团26届春招&27届美少年暑期实习仍在进行中，还有大量 HC】\n\n【岗位扩招总有一款适合你】\n【投递不限次数岗位自由切】\n【招聘岗位】涵盖信息技术、研发、财务、人力资源、供应链、市场、工程等方向\n【工作地点】佛山、合肥、上海、广州、深圳等40+海内外城市\n\n【内推码】M1609R（内部推荐→选择博乐（mvp）推荐→填写：M1609R）",
+    "referral_url": "https://careers.midea.com/schoolOut/home",
+    "description": "【美的集团26届春招&27届美少年暑期实习仍在进行中，还有大量 HC】\n\n【岗位扩招总有一款适合你】\n【投递不限次数岗位自由切】\n【招聘岗位】涵盖信息技术、研发、财务、人力资源、供应链、市场、工程等方向\n【工作地点】佛山、合肥、上海、广州、深圳等40+海内外城市\n\n【内推码】M1609R（内部推荐→选择博乐（mvp）推荐→填写：M1609R）\n\n【2027届美的星校园招聘 · 浙江工商大学站宣讲会】\n时间：2026年9月29日 18:00-20:00\n地点：浙江工商大学师生之家就业宣讲厅\n亮点：大咖现场分享，助力秋招通关；来宣讲现场将有机会赢取咖啡机、空气炸锅、电动牙刷等缤纷好礼；大咖面对面交流，一手校招资讯尽在掌握。\n网申：2026年8月18日起，网申投递通道正式开启\n简历投递：https://careers.midea.com/schoolOut/home （手机端「美的集团招聘」公众号；网页端「美的集团校园招聘」官网）\n\n【来源】《2027届美的星校园招聘-浙江工商大学站》宣讲会海报 + 美的集团校园招聘官网",
     "target": "26届（春招）· 27届（美少年暑期实习）",
-    "type": "实习/校招",
-    "industry": ["家电", "制造业"],
-    "tags": ["实习", "校招", "26届", "27届", "美少年", "内推"],
-    "post_date": "2026-06",
+    "type": "校招",
+    "industry": [
+      "家电",
+      "制造业"
+    ],
+    "tags": [
+      "实习",
+      "校招",
+      "26届",
+      "27届",
+      "美少年",
+      "内推"
+    ],
+    "post_date": "2026-06-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/midea-2026-spring-qr.jpg",
+    "images": [
+      "images/midea-2026-spring-qr.jpg"
+    ],
     "extra_links": []
   },
   {
     "id": 4,
-    "entry_type": "link",
     "company": "韶音科技",
     "title": "校园招聘官网",
-    "type": "校招",
-    "industry": ["消费电子", "音频"],
-    "target": "应届生/在校生",
-    "tags": ["校招", "官网"],
-    "post_date": "2026-06",
-    "salary": "",
-    "education": "",
-    "experience": "",
-    "description": "韶音科技（Shokz，原AfterShokz）校园招聘官方投递页面。骨传导耳机全球领军品牌，专注声学科技创新，产品畅销全球60+国家和地区，在深圳、香港、美国等地设有研发和销售中心。",
-    "referral_url": "https://app.mokahr.com/campus_apply/aftershokzhr/36940#/jobs",
-    "referral_code": "",
-    "positions": ["硬件", "研发", "声学"],
+    "positions": [
+      "硬件",
+      "研发",
+      "声学"
+    ],
     "locations": [],
     "has_hc": false,
     "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://app.mokahr.com/campus_apply/aftershokzhr/36940#/jobs",
+    "description": "韶音科技（Shokz，原AfterShokz）校园招聘官方投递页面。骨传导耳机全球领军品牌，专注声学科技创新，产品畅销全球60+国家和地区，在深圳、香港、美国等地设有研发和销售中心。",
+    "target": "应届生/在校生",
+    "type": "校招",
+    "industry": [
+      "消费电子",
+      "音频"
+    ],
+    "tags": [
+      "校招",
+      "官网"
+    ],
+    "post_date": "2026-06-01",
+    "salary": "",
+    "education": "",
+    "experience": "",
     "qr_code": "",
+    "images": [],
     "extra_links": []
   },
   {
     "id": 5,
-    "entry_type": "link",
     "company": "大参林医药集团",
     "title": "校园招聘官网",
-    "type": "校招",
-    "industry": ["医药", "零售"],
-    "target": "2026届/2027届在校生",
-    "tags": ["校招", "医药", "官网"],
-    "post_date": "2026-06",
-    "salary": "",
-    "education": "",
-    "experience": "",
-    "description": "大参林医药集团（A股上市，股票代码603233）校园招聘官方投递页面。中国药店价值榜100强第一名，全国500强上市企业。岗位涵盖营运、商品、新零售、人力、财务、数据分析等方向，综合年薪12-18万，提供免费住宿，全国50+城市可选。",
-    "referral_url": "https://app.mokahr.com/campus_apply/dslyy/136052#/jobs",
-    "referral_code": "",
-    "positions": ["门店运营", "商品管理", "人力资源", "财务", "数据分析", "新零售"],
+    "positions": [
+      "门店运营",
+      "商品管理",
+      "人力资源",
+      "财务",
+      "数据分析",
+      "新零售"
+    ],
     "locations": [],
     "has_hc": false,
     "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://app.mokahr.com/campus_apply/dslyy/136052#/jobs",
+    "description": "大参林医药集团（A股上市，股票代码603233）校园招聘官方投递页面。中国药店价值榜100强第一名，全国500强上市企业。岗位涵盖营运、商品、新零售、人力、财务、数据分析等方向，综合年薪12-18万，提供免费住宿，全国50+城市可选。",
+    "target": "2026届/2027届在校生",
+    "type": "校招",
+    "industry": [
+      "医药",
+      "零售"
+    ],
+    "tags": [
+      "校招",
+      "医药",
+      "官网"
+    ],
+    "post_date": "2026-06-01",
+    "salary": "",
+    "education": "",
+    "experience": "",
     "qr_code": "",
+    "images": [],
     "extra_links": []
   },
   {
     "id": 6,
-    "entry_type": "link",
     "company": "卧安机器人",
     "title": "实习生招聘官网",
-    "type": "实习",
-    "industry": ["智能硬件", "机器人"],
-    "target": "在校生（实习）",
-    "tags": ["实习", "机器人", "智能家居", "官网"],
-    "post_date": "2026-06",
-    "salary": "",
-    "education": "",
-    "experience": "",
-    "description": "卧安科技（SwitchBot）实习生招聘官方投递页面。全球领先的智能家居机器人品牌，产品覆盖智能开关、窗帘机器人、传感器等品类，畅销全球100+国家和地区。深圳总部，提供有竞争力的实习薪酬和转正机会。",
-    "referral_url": "https://woanhome.zhiye.com/intern/jobs?queryId=e6c9d860-a903-496e-b769-6b41f5b02e96",
-    "referral_code": "",
-    "positions": ["硬件", "嵌入式", "产品", "算法"],
+    "positions": [
+      "硬件",
+      "嵌入式",
+      "产品",
+      "算法"
+    ],
     "locations": [],
     "has_hc": false,
     "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://woanhome.zhiye.com/intern/jobs?queryId=e6c9d860-a903-496e-b769-6b41f5b02e96",
+    "description": "卧安科技（SwitchBot）实习生招聘官方投递页面。全球领先的智能家居机器人品牌，产品覆盖智能开关、窗帘机器人、传感器等品类，畅销全球100+国家和地区。深圳总部，提供有竞争力的实习薪酬和转正机会。",
+    "target": "在校生（实习）",
+    "type": "实习",
+    "industry": [
+      "智能硬件",
+      "机器人"
+    ],
+    "tags": [
+      "实习",
+      "机器人",
+      "智能家居",
+      "官网"
+    ],
+    "post_date": "2026-06-01",
+    "salary": "",
+    "education": "",
+    "experience": "",
     "qr_code": "",
+    "images": [],
     "extra_links": []
   },
   {
     "id": 7,
-    "entry_type": "link",
     "company": "欣旺达",
     "title": "实习生招聘官网",
-    "type": "实习",
-    "industry": ["新能源", "电池"],
-    "target": "在校生（实习）",
-    "tags": ["实习", "新能源", "电池", "官网"],
-    "post_date": "2026-06",
-    "salary": "",
-    "education": "",
-    "experience": "",
-    "description": "欣旺达电子（Sunwoda，A股上市300207）实习生招聘官方投递页面。全球领先的锂离子电池模组解决方案提供商，总部深圳，业务涵盖3C消费电池、动力电池、储能系统等领域，合作伙伴包括苹果、华为、小米等头部厂商。",
-    "referral_url": "https://sunwodacampus.zhiye.com/intern/jobs?queryId=7ebd6ead-94e7-4d46-a941-306723c94770",
-    "referral_code": "",
-    "positions": ["硬件", "研发", "工程", "品质"],
+    "positions": [
+      "硬件",
+      "研发",
+      "工程",
+      "品质"
+    ],
     "locations": [],
     "has_hc": false,
     "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://sunwodacampus.zhiye.com/intern/jobs?queryId=7ebd6ead-94e7-4d46-a941-306723c94770",
+    "description": "欣旺达电子（Sunwoda，A股上市300207）实习生招聘官方投递页面。全球领先的锂离子电池模组解决方案提供商，总部深圳，业务涵盖3C消费电池、动力电池、储能系统等领域，合作伙伴包括苹果、华为、小米等头部厂商。",
+    "target": "在校生（实习）",
+    "type": "实习",
+    "industry": [
+      "新能源",
+      "电池"
+    ],
+    "tags": [
+      "实习",
+      "新能源",
+      "电池",
+      "官网"
+    ],
+    "post_date": "2026-06-01",
+    "salary": "",
+    "education": "",
+    "experience": "",
     "qr_code": "",
+    "images": [],
     "extra_links": []
   },
   {
     "id": 8,
-    "entry_type": "link",
     "company": "鸣鸣很忙集团",
     "title": "校园招聘官网",
-    "type": "校招",
-    "industry": ["零售", "食品"],
-    "target": "2025届/2026届毕业生",
-    "tags": ["校招", "零售", "零食", "官网"],
-    "post_date": "2026-06",
-    "salary": "",
-    "education": "",
-    "experience": "",
-    "description": "鸣鸣很忙集团（港股01768）校园招聘官方投递页面。旗下零食很忙+赵一鸣零食双品牌，全国门店超21000家，2025年营收超935亿元。岗位涵盖开发选址、门店运营、供应链、客服、人力资源等方向，专业不限，零食自由，总部长沙。",
-    "referral_url": "https://hnlshm4.zhiye.com/campus/jobs?queryId=3fcdbd45-912e-44b1-92c9-c59841d7fea8",
-    "referral_code": "",
-    "positions": ["选址开发", "门店运营", "供应链", "客服", "人力资源"],
+    "positions": [
+      "选址开发",
+      "门店运营",
+      "供应链",
+      "客服",
+      "人力资源"
+    ],
     "locations": [],
     "has_hc": false,
     "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://hnlshm4.zhiye.com/campus/jobs?queryId=3fcdbd45-912e-44b1-92c9-c59841d7fea8",
+    "description": "鸣鸣很忙集团（港股01768）校园招聘官方投递页面。旗下零食很忙+赵一鸣零食双品牌，全国门店超21000家，2025年营收超935亿元。岗位涵盖开发选址、门店运营、供应链、客服、人力资源等方向，专业不限，零食自由，总部长沙。",
+    "target": "2025届/2026届毕业生",
+    "type": "校招",
+    "industry": [
+      "零售",
+      "食品"
+    ],
+    "tags": [
+      "校招",
+      "零售",
+      "零食",
+      "官网"
+    ],
+    "post_date": "2026-06-01",
+    "salary": "",
+    "education": "",
+    "experience": "",
     "qr_code": "",
+    "images": [],
     "extra_links": []
   },
   {
     "id": 9,
     "company": "中信证券浙江分公司",
     "title": "2026年暑期实习",
-    "positions": ["金融销售", "客户服务", "投资顾问"],
-    "locations": ["杭州", "宁波", "温州", "绍兴", "嘉兴", "金华", "台州", "湖州", "衢州", "丽水"],
+    "positions": [
+      "金融销售",
+      "客户服务",
+      "投资顾问"
+    ],
+    "locations": [
+      "杭州",
+      "宁波",
+      "温州",
+      "绍兴",
+      "嘉兴",
+      "金华",
+      "台州",
+      "湖州",
+      "衢州",
+      "丽水"
+    ],
     "has_hc": true,
     "hc_detail": "浙江全省有岗，表现优异可获2027年校招直通资格",
     "referral_code": "",
@@ -195,21 +359,49 @@ window.__JOBS_DATA__ = [
     "description": "中信证券浙江分公司2026年暑期实习招聘全面启动！\n\n中信证券（A股600030、H股6030）是中国第一家A+H股上市的证券公司，业务涵盖证券、基金、期货、直接投资等多个领域，总资产超1.3万亿元，稳居行业领先地位。目前在浙江区域设有浙江分公司及6家二级分公司、58家营业部，区域市场交易量份额近二十余年排名第一。\n\n【招聘对象】毕业时间为2026年下半年至2027年上半年的境内外本科及以上学历在校生\n【工作地点】浙江省全省各地（杭州、宁波、温州、绍兴、嘉兴、金华、台州、湖州、衢州、丽水等）\n【岗位职责】专注证券投资相关的客户开发与服务、金融产品销售以及其他投融资和资本中介业务，为全球客户提供财富保值增值的全方位金融服务\n【招聘流程】宣讲与网申 → 简历筛选 → 面试考察 → 暑期实习\n✅ 表现优异者将获得2027年校园招聘直通资格（实习与校招紧密衔接）\n\n【投递方式】登录中信证券人才招聘官网 careers.citics.com → 点击「暑期实习」→ 选择心仪岗位投递",
     "target": "2026年下半年至2027年上半年毕业的境内外本科及以上学历在校生",
     "type": "实习",
-    "industry": ["金融", "证券"],
-    "tags": ["实习", "暑期实习", "2027届", "2026届", "证券", "金融"],
-    "post_date": "2026-07",
+    "industry": [
+      "金融",
+      "证券"
+    ],
+    "tags": [
+      "实习",
+      "暑期实习",
+      "2027届",
+      "2026届",
+      "证券",
+      "金融"
+    ],
+    "post_date": "2026-07-01",
     "salary": "150-300元/天",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "",
+    "images": [],
     "extra_links": []
   },
   {
     "id": 10,
     "company": "国家电投集团",
     "title": "2026年实习生招募",
-    "positions": ["研发", "生产", "市场", "工程", "职能"],
-    "locations": ["北京", "上海", "广州", "重庆", "天津", "济南", "南京", "长春", "贵阳", "昆明"],
+    "positions": [
+      "研发",
+      "生产",
+      "市场",
+      "工程",
+      "职能"
+    ],
+    "locations": [
+      "北京",
+      "上海",
+      "广州",
+      "重庆",
+      "天津",
+      "济南",
+      "南京",
+      "长春",
+      "贵阳",
+      "昆明"
+    ],
     "has_hc": true,
     "hc_detail": "考核优秀者可提前锁定正式录用，签订《就业意向书》，表现突出者纳入集团优秀人才库",
     "referral_code": "",
@@ -217,21 +409,41 @@ window.__JOBS_DATA__ = [
     "description": "国家电投集团2026年实习生招募启动！\n\n国家电力投资集团有限公司（简称「国家电投集团」）是中央直接管理的特大型国有重要骨干企业，是我国第一家拥有光伏发电、风电、核电、水电、煤电、气电、生物质发电等全部发电类型的能源企业。资产规模2万亿元，员工13万人，总装机2.92亿千瓦，清洁能源装机占比73.66%，是全球最大的清洁能源发电企业。\n\n【招募对象】面向国家电投集团重点领域、重点产业方向所需的2027届本、硕、博毕业生\n【实习时间】一般为2-3个月，主要安排在暑假期间\n【实习地点】北京、上海、广州、重庆、天津、山东、吉林、江苏、云南、贵州等\n【实习岗位】研发、生产、市场、工程、职能\n【招募专业】电气类、自动化类、电子信息类、能源动力类、计算机类、经济类、核工程类、新能源类、法律类、机械类、土木工程类、管理类\n【实习待遇】实习津贴、工作餐、岗前系统培训、意外伤害保险、导师带教\n\n✅ 考评锁定：实习期满考核优秀者，提前锁定正式录用机会，直接签订《就业意向书》\n✅ 培优计划：表现突出者纳入集团优秀人才库，符合「培优计划」者直接推荐为培优生，在薪资待遇、职业发展、培养支持、户口等方面提供支持保障\n\n【投递方式】登录国家电投招聘官网 zhaopin.spic.com.cn 投递简历",
     "target": "2027届本、硕、博毕业生",
     "type": "实习",
-    "industry": ["能源", "电力", "央企"],
-    "tags": ["实习", "暑期实习", "央企", "2027届", "能源", "电力"],
-    "post_date": "2026-06",
+    "industry": [
+      "能源",
+      "电力",
+      "央企"
+    ],
+    "tags": [
+      "实习",
+      "暑期实习",
+      "央企",
+      "2027届",
+      "能源",
+      "电力"
+    ],
+    "post_date": "2026-06-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "",
+    "images": [],
     "extra_links": []
   },
   {
     "id": 11,
     "company": "杭州丽晶欣荣商业管理有限公司",
     "title": "2026届管培生招聘",
-    "positions": ["市场", "营运", "财务", "人力资源", "工程"],
-    "locations": ["杭州"],
+    "positions": [
+      "市场",
+      "营运",
+      "财务",
+      "人力资源",
+      "工程"
+    ],
+    "locations": [
+      "杭州"
+    ],
     "has_hc": true,
     "hc_detail": "管培生10名",
     "referral_code": "",
@@ -239,23 +451,40 @@ window.__JOBS_DATA__ = [
     "description": "浙江建工地产旗下商管公司校招开启啦！\n\n🏢 企业：杭州丽晶欣荣商业管理有限公司（浙江建工地产集团下属）\n📌 岗位方向：市场策划 / 招商 / 营运 / 财务 / 人力 / 工程，专业不限\n🎯 招聘要求：\n1. 应届本科及以上，学生会干部优先；\n2. 持有校级奖学金，学业优秀；\n3. 有勤工助学经历加分，踏实能吃苦。\n\n✨ 管培生专属福利\n全业务线轮岗 + 高管带教专项培训，清晰管理晋升通道\n薪资 6000-10000 元/月，试用期 3 个月\n\n📢 宣讲会安排：\n时间：8月20日（周四）14:00-16:00\n地点：仓前街道欧美金融城T1幢万创国际3楼国际会议厅\n\n之前预约报名的同学信息保留，无需重新报名。\n本次宣讲会为管培生招聘核心筛选前置环节，有意向的同学需本人到场参与宣讲且现场投递纸质简历。\n\n咨询热线：胡 13906756219",
     "target": "2026届应届本科及以上",
     "type": "校招",
-    "industry": ["零售"],
-    "tags": ["校招", "管培生", "2026届", "商业管理"],
-    "post_date": "2026-08",
+    "industry": [
+      "零售"
+    ],
+    "tags": [
+      "校招",
+      "管培生",
+      "2026届",
+      "商业管理"
+    ],
+    "post_date": "2026-08-01",
     "salary": "6000-10000元/月",
     "education": "本科及以上",
     "experience": "应届",
     "qr_code": "images/lijing-xinrong-qr.jpg",
+    "images": [
+      "images/lijing-xinrong-qr.jpg"
+    ],
     "extra_links": [
-      {"label": "宣讲会报名链接", "url": "https://alidocs.dingtalk.com/notable/share/form/v01vBPlN5X1N9rDPOdG_dv19yqvsgs3oebp3pcjys_1qX0QQ0?source=link"}
+      {
+        "label": "宣讲会报名链接",
+        "url": "https://alidocs.dingtalk.com/notable/share/form/v01vBPlN5X1N9rDPOdG_dv19yqvsgs3oebp3pcjys_1qX0QQ0?source=link"
+      }
     ]
   },
   {
     "id": 12,
     "company": "吉利商用车",
     "title": "研究院人力实习生",
-    "positions": ["人力资源"],
-    "locations": ["杭州"],
+    "positions": [
+      "人力资源"
+    ],
+    "locations": [
+      "杭州"
+    ],
     "has_hc": false,
     "hc_detail": "",
     "referral_code": "",
@@ -263,21 +492,33 @@ window.__JOBS_DATA__ = [
     "description": "吉利商用车研究院人力实习生招聘，base杭州大江东。\n\n【岗位职责】\n1. 负责考勤数据统计、核对与整理，跟进员工日常考勤异常问题、整理归档各类人事文件、报表；\n2. 协助组织员工节日福利、新人培训等企业文化及人力专项活动；\n3. 定期整理招聘数据、人员异动数据、考勤数据等，协助制作人力基础报表；\n4. 上级交办的其他人力相关临时性工作。\n\n📮 简历投递邮箱：Xiuzhen.Wang3@geely.com",
     "target": "在校生",
     "type": "实习",
-    "industry": ["制造业", "新能源"],
-    "tags": ["实习", "人力资源", "吉利"],
-    "post_date": "2026-08",
+    "industry": [
+      "制造业",
+      "新能源"
+    ],
+    "tags": [
+      "实习",
+      "人力资源",
+      "吉利"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校",
     "qr_code": "",
+    "images": [],
     "extra_links": []
   },
   {
     "id": 13,
     "company": "永安国富资管",
     "title": "行业研究助理",
-    "positions": ["投资顾问"],
-    "locations": ["杭州"],
+    "positions": [
+      "投资顾问"
+    ],
+    "locations": [
+      "杭州"
+    ],
     "has_hc": false,
     "hc_detail": "",
     "referral_code": "",
@@ -285,20 +526,30 @@ window.__JOBS_DATA__ = [
     "description": "永安国富资产管理有限公司是一家专注证券市场投资的私募，现招聘行业研究助理。\n\n【岗位职责】负责建立产业信息渠道，跟踪上市公司经营变化（订单、产能、价格等），整理并标准化数据，协助投资研究。岗位路径清晰，优秀者可参与行业研究与策略讨论。\n\n【任职要求】\n- 擅长沟通与信息获取，对商业模式有好奇心，能从信息中发现投资线索；\n- 有金融/产业资源背景、调研经验或Python技能者优先。\n\n📮 投递：hr@yagf.com.cn，标题格式「行业研究助理-姓名-学校-学历-专业-应届/非应届」",
     "target": "应届/非应届均可",
     "type": "社招",
-    "industry": ["金融"],
-    "tags": ["社招", "私募", "行业研究", "金融"],
-    "post_date": "2026-08",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "社招",
+      "私募",
+      "行业研究",
+      "金融"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "不限",
     "qr_code": "",
+    "images": [],
     "extra_links": []
   },
   {
     "id": 14,
     "company": "万葭灯火",
     "title": "校园大使（抖音生活服务）",
-    "positions": ["运营"],
+    "positions": [
+      "运营"
+    ],
     "locations": [],
     "has_hc": false,
     "hc_detail": "",
@@ -307,21 +558,44 @@ window.__JOBS_DATA__ = [
     "description": "万葭灯火是抖音生活服务旗下的子公司。抖音生活服务以「激发线下生意，丰富美好生活」为使命，致力于打造「最值得信赖的生活服务平台」，为用户带来更丰富、便捷的消费体验，为合作伙伴提供健康、开放、可持续的经营生态。截至2025年底，抖音生活服务业务已覆盖400+城市，超过1500万家动销门店。\n\n【工作内容】\n- 岗位宣传：在各校园渠道发布招聘信息、解答基本问题\n- 社群维护：建立并运营面试沟通群，做好拉新、内容分发、日常答疑与群内秩序维护\n- 宣讲宣传 & 邀请：配合发布宣讲会宣传信息、发送宣讲会意愿收集表格并进行信息校准&回收、进行宣讲会前提醒、解答宣讲会相关问题\n- 反馈收集：配合收集宣讲会 & 面试等环节的反馈\n\n【职位要求】\n- 2028届及以后毕业的在校同学，本科或研究生均可\n- 每周可稳定投入5-8小时，能按要求完成社群运营、职位宣传、面试邀约、反馈收集等基础任务\n- 可连续担任大使6个月及以上\n- 乐于沟通，表达清晰，愿意主动与同学建立联系\n- 有较好的执行能力和组织协调能力\n- 有责任心，做事认真，遇到问题及时反馈\n- 有学生组织、社团、班委、校园活动组织经验或社群运营经验者优先\n\n【招聘类型】兼职招聘\n【工作时间】不限；每周3-4天\n【薪资范围】200元/月基础津贴（额外有激励奖金和荣誉奖励）",
     "target": "2028届及以后毕业的在校同学",
     "type": "兼职",
-    "industry": ["互联网"],
-    "tags": ["兼职", "校园大使", "2028届", "抖音"],
-    "post_date": "2026-08",
+    "industry": [
+      "互联网"
+    ],
+    "tags": [
+      "兼职",
+      "校园大使",
+      "2028届",
+      "抖音"
+    ],
+    "post_date": "2026-08-01",
     "salary": "200元/月",
     "education": "本科及以上",
     "experience": "在校",
     "qr_code": "images/wanjia-denghuo-campus-ambassador-qr.png",
+    "images": [
+      "images/wanjia-denghuo-campus-ambassador-qr.png"
+    ],
     "extra_links": []
   },
   {
     "id": 15,
     "company": "游卡",
     "title": "2027届校园招聘",
-    "positions": ["技术", "策划", "美术", "人工智能", "市场", "运营", "测试"],
-    "locations": ["杭州", "上海", "广州", "成都"],
+    "positions": [
+      "技术",
+      "策划",
+      "美术",
+      "人工智能",
+      "市场",
+      "运营",
+      "测试"
+    ],
+    "locations": [
+      "杭州",
+      "上海",
+      "广州",
+      "成都"
+    ],
     "has_hc": true,
     "hc_detail": "",
     "referral_code": "",
@@ -329,21 +603,33 @@ window.__JOBS_DATA__ = [
     "description": "🔥游卡2027届校园招聘正式启动🔥\n\n【关于游卡YOKAVERSE】\n✨ 多类型的产品矩阵：巩固核心游戏IP，拓展精品游戏品类\n✨ 国民IP《三国杀》\n✨ 卡牌品类持续深耕\n✨ 创意游戏探索多元发展\n✨ 深耕于线上线下融合的新网娱、新文创、新电竞业务\n\n【校招岗位】\n游戏程序类、游戏策划类、美术表现类、人工智能类、平台技术类、市场发行类、运营类、游戏测试类、桌游文创类\n\n【薪资福利】\n行业领先的薪酬水平，多重福利暖心保障，六险一金，福利年假，节日礼品等\n\n【工作城市】杭州、上海、广州、成都\n\n【简历投递】游卡校招官网 campus.yokaverse.com",
     "target": "2027届毕业生",
     "type": "校招",
-    "industry": ["游戏"],
-    "tags": ["校招", "2027届", "游戏", "三国杀"],
-    "post_date": "2026-08",
+    "industry": [
+      "游戏"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "游戏",
+      "三国杀"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "",
+    "images": [],
     "extra_links": []
   },
   {
     "id": 16,
     "company": "吉利科技集团",
     "title": "电站运营实习生",
-    "positions": ["运营"],
-    "locations": ["杭州"],
+    "positions": [
+      "运营"
+    ],
+    "locations": [
+      "杭州"
+    ],
     "has_hc": false,
     "hc_detail": "",
     "referral_code": "",
@@ -351,21 +637,35 @@ window.__JOBS_DATA__ = [
     "description": "吉利科技集团电站运营实习生招聘，base杭州滨江。\n\n【岗位职责】\n1. 协助收集、整理各电站运行数据，配合完成发电量、设备效率等基础数据分析\n2. 协助开展电站资产盘点，核对设备台账与实物资产信息\n3. 协助整理招投标文件（运维服务、设备采购等），跟进相关工作\n4. 协助部门日常行政事务、会议纪要整理、文件归档\n5. 完成负责人交办的其他事务性工作\n\n【任职要求】\n1. 本科及以上在读，专业不限\n2. 熟练使用Excel（数据透视表、基础公式），熟练使用PPT/Word，文字能力强，需要独立完成汇报材料和投标材料的写作和修改\n3. 做事细心、有责任心，能适应一定的重复性工作\n4. 每周至少可到岗3天，实习期3个月以上，短期实习不考虑\n5. 有电力/新能源行业或运营实习经验者优先\n\n【薪资待遇】\n研究生180元/天，本科150元/天，另有850元每月出勤天数补贴\n\n📮 简历投递：Qin.Yu5@geely.com",
     "target": "本科及以上在读",
     "type": "实习",
-    "industry": ["新能源", "电力"],
-    "tags": ["实习", "电站运营", "新能源"],
-    "post_date": "2026-08",
+    "industry": [
+      "新能源",
+      "电力"
+    ],
+    "tags": [
+      "实习",
+      "电站运营",
+      "新能源"
+    ],
+    "post_date": "2026-08-01",
     "salary": "150-180元/天",
     "education": "本科及以上",
     "experience": "在校",
     "qr_code": "",
+    "images": [],
     "extra_links": []
   },
   {
     "id": 17,
     "company": "零一万物",
     "title": "AI产品用户体验实习生",
-    "positions": ["用户体验", "运营", "营销"],
-    "locations": ["杭州"],
+    "positions": [
+      "用户体验",
+      "运营",
+      "营销"
+    ],
+    "locations": [
+      "杭州"
+    ],
     "has_hc": true,
     "hc_detail": "",
     "referral_code": "",
@@ -373,21 +673,51 @@ window.__JOBS_DATA__ = [
     "description": "零一万物 AI 产品用户体验实习生招聘，base 杭州余杭区海创园。\n\n【岗位亮点】\n零一万物国内 Top Tier AI 独角兽公司，面向海外 AI 办公效率工具业务。与业界大牛同台共事，一线接触前沿 AI 应用与全球化运营。\n\n【核心职责】\n1. 系统自动化升级：搭建与优化反馈自动化流程，用技术与 AI 工具提升运营效率\n2. 体验优化与反馈闭环：收集排查海外多渠道用户反馈，推动产品体验迭代\n3. 精准 EDM 营销：负责产品更新 EDM 的策划、发布与数据监控，按需灵活调整策略与内容\n4. 海外支付争议处理：联动 AI 机器人核查，高效处理海外支付平台退款与拒付申诉\n5. 业务拓展空间：有潜力者可探索 AI 工具产品用户运营的其他模块事宜\n\n【任职要求】\n1. 出勤要求：每周必须出勤 ≥ 3 天，可以 4 天及以上优先；必须持续实习 6 个月以上\n2. 目标人群：大二 / 大三 / 研一（非应届），或已保研 / 已有 Offer 的应届生（暂无转正机会）\n3. 工作地点：杭州余杭区海创园地铁站附近\n4. 素质要求：极强责任心与耐心，有创造力与主动学习积极性，乐于尝试新鲜事物，良好英文读写能力，对 AI 工具敏锐、注重细节、能长期稳定实习者优先\n\n【实习薪资】本科 160 元/天，硕士 200 元/天\n\n📮 简历投递：sunqing@01.ai",
     "target": "大二/大三/研一（非应届），或已保研/已有Offer的应届生",
     "type": "实习",
-    "industry": ["互联网"],
-    "tags": ["实习", "AI", "用户体验", "海外业务", "杭州"],
-    "post_date": "2026-08",
+    "industry": [
+      "互联网"
+    ],
+    "tags": [
+      "实习",
+      "AI",
+      "用户体验",
+      "海外业务",
+      "杭州"
+    ],
+    "post_date": "2026-08-01",
     "salary": "本科160元/天，硕士200元/天",
     "education": "本科及以上",
     "experience": "在校",
     "qr_code": "",
+    "images": [],
     "extra_links": []
   },
   {
     "id": 19,
     "company": "得物",
     "title": "2027届校园招聘（秋招）",
-    "positions": ["技术", "运营", "供应链", "设计", "职能", "商品管理", "风控", "产品", "数据"],
-    "locations": ["上海", "杭州", "成都", "贵阳", "长沙", "广州", "沈阳", "廊坊", "武汉", "咸阳"],
+    "positions": [
+      "技术",
+      "运营",
+      "供应链",
+      "设计",
+      "职能",
+      "商品管理",
+      "风控",
+      "产品",
+      "数据"
+    ],
+    "locations": [
+      "上海",
+      "杭州",
+      "成都",
+      "贵阳",
+      "长沙",
+      "广州",
+      "沈阳",
+      "廊坊",
+      "武汉",
+      "咸阳"
+    ],
     "has_hc": true,
     "hc_detail": "99+职位虚位以待",
     "referral_code": "MB5FPSN",
@@ -395,23 +725,59 @@ window.__JOBS_DATA__ = [
     "description": "【电商新势力+互联网独角兽——得物27届秋招启动】\n\n【公司简介】得物App2015年在上海成立，是新一代潮流网购社区，开创性地推出了\"先鉴别，再发货\"的购物流程，目前注册用户超5亿，《2024年·胡润全球独角兽榜》，得物估值高达710亿元。\n\n【招聘岗位】技术类、运营类、供应链类、设计类、职能类、商品研究类、风控类、产品类、数据分析类\n\n【工作城市】上海、杭州、成都、贵阳、长沙、广州、沈阳、廊坊、武汉、咸阳\n\n【内推码】MB5FPSN（推荐方式选择「大使推荐」填写内推码）\n【内推链接】https://poizon.jobs.feishu.cn/s/WJHdljqRW9s",
     "target": "2027届在校生",
     "type": "校招",
-    "industry": ["互联网", "零售"],
-    "tags": ["校招", "2027届", "内推", "电商", "独角兽"],
-    "post_date": "2026-08",
+    "industry": [
+      "互联网",
+      "零售"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "电商",
+      "独角兽"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/dewu-2027-campus-qr.jpg",
+    "images": [
+      "images/dewu-2027-campus-qr.jpg"
+    ],
     "extra_links": [
-      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+      {
+        "label": "27届校招实习秋招内推信息汇总",
+        "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"
+      }
     ]
   },
   {
     "id": 20,
     "company": "联想集团",
     "title": "2027届秋季校园招聘",
-    "positions": ["技术", "产品", "人工智能", "硬件", "人力资源", "项目管理", "运营", "市场"],
-    "locations": ["北京", "上海", "深圳", "天津", "武汉", "成都", "广州", "杭州", "南京", "厦门", "长沙"],
+    "positions": [
+      "技术",
+      "产品",
+      "人工智能",
+      "硬件",
+      "人力资源",
+      "项目管理",
+      "运营",
+      "市场"
+    ],
+    "locations": [
+      "北京",
+      "上海",
+      "深圳",
+      "天津",
+      "武汉",
+      "成都",
+      "广州",
+      "杭州",
+      "南京",
+      "厦门",
+      "长沙"
+    ],
     "has_hc": true,
     "hc_detail": "",
     "referral_code": "2027XZLMCZL",
@@ -419,21 +785,42 @@ window.__JOBS_DATA__ = [
     "description": "联想集团2027届秋季校园招聘开启！\n\n联想是一家成立于中国、年收入超过4100亿人民币、业务遍及180个市场的全球化科技公司。\n\n【招聘项目】应届生招聘｜实习生｜管培生｜AI专项\n【20+工作地点】北京、上海、深圳、天津、武汉、成都、广州、杭州、南京、厦门、长沙等\n\n【内推码】2027XZLMCZL\n之前在联想校招官网已创建过简历的需要重新创建简历才能填写内推码进入内推！\n【内推入口】在「联想校招官网」投递校招职位，创建简历时在我的简历-其他中「从哪儿获知招聘信息」选择「联想员工推荐」并且输入推荐人itCode：2027XZLMCZL\n内推简历优先筛选，面试流程加快！速速网申！",
     "target": "2027届应届生",
     "type": "校招",
-    "industry": ["消费电子", "互联网"],
-    "tags": ["校招", "2027届", "内推", "AI", "全球化"],
-    "post_date": "2026-08",
+    "industry": [
+      "消费电子",
+      "互联网"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "AI",
+      "全球化"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/lenovo-2027-campus-qr.jpg",
+    "images": [
+      "images/lenovo-2027-campus-qr.jpg"
+    ],
     "extra_links": []
   },
   {
     "id": 21,
     "company": "蚂蚁集团",
     "title": "2027届秋季校园招聘",
-    "positions": ["技术", "产品", "运营", "数据", "风控"],
-    "locations": ["杭州", "上海"],
+    "positions": [
+      "技术",
+      "产品",
+      "运营",
+      "数据",
+      "风控"
+    ],
+    "locations": [
+      "杭州",
+      "上海"
+    ],
     "has_hc": true,
     "hc_detail": "",
     "referral_code": "V1MXLlRVAIattj7JOXFivMCtFJ2MTvXPg4c5vkobsHQ",
@@ -441,21 +828,41 @@ window.__JOBS_DATA__ = [
     "description": "【蚂蚁集团2027届秋季校园招聘】\n\n✅ 我们期待遇见这样的你：\n✅ 敢想敢做、热爱探索，对未来充满好奇与期待。\n✅ 无论你是技术控、产品派、运营达人，还是擅长数据分析、关注风险管理、懂设计又懂用户。\n✅ 在蚂蚁，你都能找到属于自己的成长舞台。\n\n✅ 招聘对象\n2027届应届毕业生：毕业时间：2026年11月—2027年10月海内外院校毕业生\n\n✅ 招聘岗位\n技术｜产品｜运营｜数据｜风险管理等\n多元赛道全面开放，等你来探索更多可能！\n\n‼️ 内推链接：https://hrrecommend.antgroup.com/job-list.html?source=campus_external_recommend&code=V1MXLlRVAIattj7JOXFivMCtFJ2MTvXPg4c5vkobsHQ%3D",
     "target": "2027届应届毕业生（毕业时间2026年11月—2027年10月）",
     "type": "校招",
-    "industry": ["互联网", "金融"],
-    "tags": ["校招", "2027届", "内推", "金融科技"],
-    "post_date": "2026-08",
+    "industry": [
+      "互联网",
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "金融科技"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/antgroup-2027-campus-qr.jpg",
+    "images": [
+      "images/antgroup-2027-campus-qr.jpg"
+    ],
     "extra_links": []
   },
   {
     "id": 22,
     "company": "波克",
     "title": "2027届秋季校园招聘",
-    "positions": ["技术", "美术", "产品", "市场", "职能", "人工智能"],
-    "locations": ["上海"],
+    "positions": [
+      "技术",
+      "美术",
+      "产品",
+      "市场",
+      "职能",
+      "人工智能"
+    ],
+    "locations": [
+      "上海"
+    ],
     "has_hc": true,
     "hc_detail": "71个职位虚位以待",
     "referral_code": "Q1TPS2C",
@@ -463,23 +870,46 @@ window.__JOBS_DATA__ = [
     "description": "波克2027届秋招网申启动啦！\n想进游戏行业、互联网、做全球化精品游戏的同学看过来～目前校园大使内推通道已提前开放，官方宣传预计下周一发布！走大使内推，早投递早 offer！！\n✅ 2026年9月及以后毕业的同学均可投递！\n\n关于波克：\n波克成立于2010年，全球注册用户超5亿。多款产品进入微信小游戏、抖音小游戏头部阵营，日活跃用户超3000万。连续7年入选中国互联网百强企业，研发和技术人员占比60%以上，AI全线赋能，累计自主知识产权2000余项。\n\n岗位方向覆盖：\n技术｜美术｜产品｜发行｜职能\n包括算法、开发、UI、原画、AI产品经理、游戏策划、用户增长、视频设计、海外资金管理、法律合规等方向。\n\n福利亮点：行业竞争力薪酬、免费三餐、租房补贴、年度带薪旅游、多重员工福利～\n工作地点：上海市普陀区\n\n【内推码】Q1TPS2C（内推方式选择「大使推荐」填写推荐码，优先筛选，不卡进度）\n【内推链接】https://boke.jobs.feishu.cn/s/YTwpRvhzMF0",
     "target": "2026年9月及以后毕业的同学",
     "type": "校招",
-    "industry": ["游戏", "互联网"],
-    "tags": ["校招", "2027届", "内推", "游戏", "AI"],
-    "post_date": "2026-08",
+    "industry": [
+      "游戏",
+      "互联网"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "游戏",
+      "AI"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/boke-2027-campus-qr.jpg",
+    "images": [
+      "images/boke-2027-campus-qr.jpg"
+    ],
     "extra_links": [
-      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+      {
+        "label": "27届校招实习秋招内推信息汇总",
+        "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"
+      }
     ]
   },
   {
     "id": 23,
     "company": "大参林医药集团",
     "title": "2027届校园招聘正式启动",
-    "positions": ["门店运营", "商品管理", "人力资源", "财务", "药学"],
-    "locations": ["全国多城市"],
+    "positions": [
+      "门店运营",
+      "商品管理",
+      "人力资源",
+      "财务",
+      "药学"
+    ],
+    "locations": [
+      "全国多城市"
+    ],
     "has_hc": true,
     "hc_detail": "MT/OT/储备店长3大赛道",
     "referral_code": "DS538Ffe",
@@ -487,21 +917,39 @@ window.__JOBS_DATA__ = [
     "description": "大参林医药集团2027届校招正式启动！\n\n✅ MT/OT/储备店长3大赛道适配不同起点\n✅ 岗位全面开放，全国多城市可选\n✅ 免费住宿 + 竞争性薪资 + 专属福利\n✅ 2024届-2027届毕业生均可投递\n\n⌛ 网申截止12月30日，招满即止\n\n【推荐码】DS538Ffe（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://app.mokahr.com/m/campus-recruitment/dslyy/136052?recommendCode=DS538Ffe&hash=%23%2Fjobs",
     "target": "2024届-2027届毕业生",
     "type": "校招",
-    "industry": ["医药", "零售"],
-    "tags": ["校招", "内推", "医药", "零售"],
-    "post_date": "2026-08",
+    "industry": [
+      "医药",
+      "零售"
+    ],
+    "tags": [
+      "校招",
+      "内推",
+      "医药",
+      "零售"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "应届",
     "qr_code": "images/dashenlin-2027-campus-qr.jpg",
+    "images": [
+      "images/dashenlin-2027-campus-qr.jpg"
+    ],
     "extra_links": []
   },
   {
     "id": 24,
     "company": "卧安机器人",
     "title": "2027届秋季校园招聘正式启动",
-    "positions": ["算法", "运营", "人力资源", "人工智能"],
-    "locations": ["深圳"],
+    "positions": [
+      "算法",
+      "运营",
+      "人力资源",
+      "人工智能"
+    ],
+    "locations": [
+      "深圳"
+    ],
     "has_hc": true,
     "hc_detail": "",
     "referral_code": "EVVRRV",
@@ -509,21 +957,48 @@ window.__JOBS_DATA__ = [
     "description": "卧安机器人（OneRobotics，6600.HK）2027届秋季校园招聘正式启动！\n\n【关于卧安】\n卧安机器人是全球领先的AI具身家庭机器人系统提供商。2025年12月30日，我们在香港交易所主板挂牌上市，成为\"AI具身家庭机器人第一股\"。\n发明数量全国NO.1 | 研发投入20%+ | 研发占比50%+\n全球首款AI网球机器人 | 全球首款AI陪伴机器人 | 为家庭场景打造的具身人形智能机器人\n\n【热招岗位】\n算法工程师、运营管培生、人力资源专员\n\n【成长发展】定制化培养、导师带教、多元发展路径、动态晋升机制\n【薪酬激励】试用期薪资不打折，每年两次调薪窗口；月度/季度绩效奖金、年终奖及专项激励\n【福利保障】六险一金、体检福利、搬家补贴、生日礼物、法定节假日福利\n【活力生活】营养餐福利、无限量零食饮料、季度团建经费、羽毛球/网球等兴趣社团\n【工作时间】弹性打卡、周末双休\n\n【内推码】EVVRRV（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://woanhome.zhiye.com/campus/jobs?shareId=c98d7c81-2bab-4aa3-83c5-c644008bd798&shareSource=2",
     "target": "2027届应届生",
     "type": "校招",
-    "industry": ["机器人", "智能硬件"],
-    "tags": ["校招", "2027届", "内推", "AI", "港股上市"],
-    "post_date": "2026-08",
+    "industry": [
+      "机器人",
+      "智能硬件"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "AI",
+      "港股上市"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "应届",
     "qr_code": "images/woan-2027-campus-qr.jpg",
+    "images": [
+      "images/woan-2027-campus-qr.jpg"
+    ],
     "extra_links": []
   },
   {
     "id": 25,
     "company": "百度",
     "title": "2027届校园招聘启动",
-    "positions": ["技术", "算法", "人工智能", "产品", "运营", "数据", "硬件"],
-    "locations": ["北京", "上海", "深圳", "广州", "成都", "武汉"],
+    "positions": [
+      "技术",
+      "算法",
+      "人工智能",
+      "产品",
+      "运营",
+      "数据",
+      "硬件"
+    ],
+    "locations": [
+      "北京",
+      "上海",
+      "深圳",
+      "广州",
+      "成都",
+      "武汉"
+    ],
     "has_hc": true,
     "hc_detail": "AI相关岗位占90%",
     "referral_code": "IZH1RV",
@@ -531,23 +1006,51 @@ window.__JOBS_DATA__ = [
     "description": "百度2027届校园招聘启动！这波信息量很大，划重点：\n\nAI相关岗位占90%——大模型、智能体、自动驾驶、AI Infra……最硬核的前沿赛道，直接上手！\n来百度，挑大梁——培养复合型人才，跨级晋升的同学中60%来自校招，成长空间拉满！\n投递机制友好——全年开放投递，流程结束可以投递新职位，没有次数限制，相当于\"无限复活\"！常规校招、AIDU、管培生可以各投1个，流程互不冲突，机会翻三倍！\n内推全周期在线——找到百度学长学姐或百度校园大使要内推码，进度加速，先人一步！\n\n【内推码】IZH1RV（内推简历优先筛选）\n【内推链接】https://dwz.cn/T3qWss4O",
     "target": "2027届应届毕业生",
     "type": "校招",
-    "industry": ["互联网", "人工智能"],
-    "tags": ["校招", "2027届", "内推", "AI", "大模型", "自动驾驶"],
-    "post_date": "2026-08",
+    "industry": [
+      "互联网",
+      "人工智能"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "AI",
+      "大模型",
+      "自动驾驶"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/baidu-2027-campus-qr.jpg",
+    "images": [
+      "images/baidu-2027-campus-qr.jpg"
+    ],
     "extra_links": [
-      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+      {
+        "label": "27届校招实习秋招内推信息汇总",
+        "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"
+      }
     ]
   },
   {
     "id": 26,
     "company": "智元机器人",
     "title": "2027届校园招聘全面启动",
-    "positions": ["算法", "技术", "测试", "硬件", "运营", "设计", "产品"],
-    "locations": ["上海", "北京", "深圳"],
+    "positions": [
+      "算法",
+      "技术",
+      "测试",
+      "硬件",
+      "运营",
+      "设计",
+      "产品"
+    ],
+    "locations": [
+      "上海",
+      "北京",
+      "深圳"
+    ],
     "has_hc": true,
     "hc_detail": "341个职位虚位以待",
     "referral_code": "TKNGV9Z",
@@ -555,21 +1058,44 @@ window.__JOBS_DATA__ = [
     "description": "【机器人头部企业——智元·2027届校园招聘全面启动！】\n\n【公司简介】\n智元机器人致力于AI+机器人的融合创新，其远征、精灵、灵犀三大机器人家族，在全球范围内率先实现了人形机器人的规模化量产和商业化落地。\n\n【招聘岗位】7大类100+岗位\n算法类、软件系统类、测试类、硬件机械类、市场/运营类、设计类、产品/策划/项目类\n【Base】上海、北京、深圳\n\n【大使推荐码】TKNGV9Z（推荐方式选择「大使推荐」填写推荐码，流程更快）\n【秋招内推链接】https://agirobot.jobs.feishu.cn/s/HN0mAwvVeGA",
     "target": "2027届应届生",
     "type": "校招",
-    "industry": ["机器人", "人工智能", "智能硬件"],
-    "tags": ["校招", "2027届", "内推", "人形机器人", "AI"],
-    "post_date": "2026-08",
+    "industry": [
+      "机器人",
+      "人工智能",
+      "智能硬件"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "人形机器人",
+      "AI"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/agirobot-2027-campus-qr.jpg",
+    "images": [
+      "images/agirobot-2027-campus-qr.jpg"
+    ],
     "extra_links": []
   },
   {
     "id": 27,
     "company": "搜狐畅游",
     "title": "2027届秋季校园招聘正式启动",
-    "positions": ["产品", "技术", "美术", "运营", "市场", "测试", "项目管理"],
-    "locations": ["北京"],
+    "positions": [
+      "产品",
+      "技术",
+      "美术",
+      "运营",
+      "市场",
+      "测试",
+      "项目管理"
+    ],
+    "locations": [
+      "北京"
+    ],
     "has_hc": true,
     "hc_detail": "",
     "referral_code": "DSkQcJRS",
@@ -577,23 +1103,47 @@ window.__JOBS_DATA__ = [
     "description": "搜狐畅游2027届秋招正式启动！！！\n\n【招聘对象】面向27届毕业的校招生（部分岗位兼收26届）\n【招聘岗位】游戏策划、游戏开发、游戏美术、游戏运营、业务支持、平台开发、平台职能7大类岗位。\n【流程加速】秋招正式启动，offer无需等待，先到先得，招满即停\n【岗位众多】岗位不断刷新，7大类岗位等你投递！\n【福利待遇】七险一金、18天带薪年假、餐费补贴、绩效奖金、企业滴滴、24h健身房…\n\n【内推码】DSkQcJRS（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://app.mokahr.com/m/campus_apply/cyou-inc/42233?recommendCode=DSkQcJRS&hash=%23%2Fjobs",
     "target": "27届毕业生（部分岗位兼收26届）",
     "type": "校招",
-    "industry": ["游戏", "互联网"],
-    "tags": ["校招", "2027届", "内推", "游戏"],
-    "post_date": "2026-08",
+    "industry": [
+      "游戏",
+      "互联网"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "游戏"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/cyou-2027-campus-qr.jpg",
+    "images": [
+      "images/cyou-2027-campus-qr.jpg"
+    ],
     "extra_links": [
-      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+      {
+        "label": "27届校招实习秋招内推信息汇总",
+        "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"
+      }
     ]
   },
   {
     "id": 28,
     "company": "凡岛",
     "title": "2027届秋季校园招聘正式启动",
-    "positions": ["产品", "供应链", "商务", "营销", "人力资源", "财务", "人工智能"],
-    "locations": ["广州"],
+    "positions": [
+      "产品",
+      "供应链",
+      "商务",
+      "营销",
+      "人力资源",
+      "财务",
+      "人工智能"
+    ],
+    "locations": [
+      "广州"
+    ],
     "has_hc": true,
     "hc_detail": "",
     "referral_code": "G0EXPME",
@@ -601,45 +1151,97 @@ window.__JOBS_DATA__ = [
     "description": "【日化新锐·凡岛】27届秋招正式启动！—— 不凡不设限，JOIN FANDOW ——\n\n【关于凡岛】\n凡岛创立于2007年，是一家全数据驱动的日化新消费品公司，布局功效护肤、洗护等多个品类，旗下拥有护肤品牌WIS、IRY，洗护品牌KONO卡厘、赫系等多个新国货品牌。\n\n【27届秋招岗位】\n日化产品类（研发/产品经理/供应链/品控）18-24w\n市场商务类（商务经理/线下商务）18-24w\n广告营销类（营销经理/电商经理/主播教练）18-24w\n综合职能类（总助/人资行政/内控/公关）18-24w\nAI技术类（AI技术经理/AI工程师/AI产品经理）22-26w\n财务管理类（财务专员/会计/财务bp）11-21w\n\n【岗位亮点】\n√ 体系化培养，从平凡走向不凡，成为品牌新星\n√ 晋升通道清晰，\"经理→高级经理→总监\"，每年两次竞聘机会\n√ 扁平化管理，拒绝内耗\n【工作地点】广州黄埔区\n\n【内推码】G0EXPME\n【内推链接】https://job.fandow.com?pushCode=G0EXPME",
     "target": "2027届应届生",
     "type": "校招",
-    "industry": ["消费电子", "零售"],
-    "tags": ["校招", "2027届", "内推", "日化", "新消费"],
-    "post_date": "2026-08",
+    "industry": [
+      "消费电子",
+      "零售"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "日化",
+      "新消费"
+    ],
+    "post_date": "2026-08-01",
     "salary": "11-26万/年",
     "education": "本科及以上",
     "experience": "应届",
     "qr_code": "images/fandow-2027-campus-qr.jpg",
+    "images": [
+      "images/fandow-2027-campus-qr.jpg"
+    ],
     "extra_links": [
-      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+      {
+        "label": "27届校招实习秋招内推信息汇总",
+        "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"
+      }
     ]
   },
   {
     "id": 29,
     "company": "网易互娱",
     "title": "2027届校园招聘正式启动",
-    "positions": ["产品", "技术", "美术", "测试", "用户体验", "市场", "运营", "项目管理"],
-    "locations": ["广州", "杭州", "上海"],
+    "positions": [
+      "产品",
+      "技术",
+      "美术",
+      "测试",
+      "用户体验",
+      "市场",
+      "运营",
+      "项目管理"
+    ],
+    "locations": [
+      "广州",
+      "杭州",
+      "上海"
+    ],
     "has_hc": true,
     "hc_detail": "",
     "referral_code": "DNKyR1",
     "referral_url": "https://campus.game.163.com?referralCode=DNKyR1",
     "description": "网易游戏（互娱）2027届校园招聘正式启动！\n\n✅ 做游戏，来网易\n✅ 在这里，热爱游戏就是最好的入场券\n\n✅ 面向2027届毕业生，广州/杭州/上海多base地可选\n✅ 多元岗位，总有你心仪：策划/技术/美术/测试/用户体验/市场/运营/PM等多类岗位\n\n✅ 《蛋仔派对》《燕云十六声》《第五人格》《漫威争锋》……超多爆款游戏出自我们~\n✅ 业内第一梯队薪酬·多元风格爆款项目·金牌培训体系·重视新人想法\n\n【大使内推码】DNKyR1（立享直通笔试或简历优先筛选）\n【内推链接】https://campus.game.163.com?referralCode=DNKyR1",
-    "target": "2027届毕业生",
+    "target": "2027届毕业生；面试岗位含策划、技术、美术、测试、用户体验、市场、运营、PM等（内推码可享直通笔试或简历优先筛选）",
     "type": "校招",
-    "industry": ["游戏", "互联网"],
-    "tags": ["校招", "2027届", "内推", "游戏", "爆款"],
-    "post_date": "2026-08",
+    "industry": [
+      "游戏",
+      "互联网"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "游戏",
+      "内推"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/netease-game-2027-campus-qr.jpg",
+    "images": [
+      "images/netease-game-2027-campus-qr.jpg"
+    ],
     "extra_links": []
   },
   {
     "id": 30,
     "company": "传音控股",
     "title": "2027届AI专项计划启动",
-    "positions": ["技术", "算法", "人工智能", "硬件", "供应链", "市场", "运营"],
-    "locations": ["上海", "重庆", "深圳", "海外"],
+    "positions": [
+      "技术",
+      "算法",
+      "人工智能",
+      "硬件",
+      "供应链",
+      "市场",
+      "运营"
+    ],
+    "locations": [
+      "上海",
+      "重庆",
+      "深圳",
+      "海外"
+    ],
     "has_hc": true,
     "hc_detail": "",
     "referral_code": "ESS89A",
@@ -647,23 +1249,49 @@ window.__JOBS_DATA__ = [
     "description": "传音控股2027届AI专项计划启动！\n\n【公司介绍】2019年上海科创板上市公司，旗下拥有新兴市场知名手机品牌TECNO、itel及Infinix，全球销售超过70个国家和地区。\n\n【工作地点】上海、重庆、深圳、海外\n\n【内推码】ESS89A（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://transsion.zhiye.com/4/jobs?shareId=7b8b2da1-d9a6-4998-aba7-49d84d1ee037&shareSource=2",
     "target": "2027届应届毕业生",
     "type": "校招",
-    "industry": ["消费电子", "智能硬件"],
-    "tags": ["校招", "2027届", "内推", "AI", "科创板", "海外"],
-    "post_date": "2026-08",
+    "industry": [
+      "消费电子",
+      "智能硬件"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "AI",
+      "科创板",
+      "海外"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/transsion-2027-campus-qr.jpg",
+    "images": [
+      "images/transsion-2027-campus-qr.jpg"
+    ],
     "extra_links": [
-      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+      {
+        "label": "27届校招实习秋招内推信息汇总",
+        "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"
+      }
     ]
   },
   {
     "id": 31,
     "company": "帆软",
     "title": "2027届秋招提前批正式启动",
-    "positions": ["技术", "算法", "产品", "数据", "市场", "运营", "客户服务"],
-    "locations": ["全国20+城市"],
+    "positions": [
+      "技术",
+      "算法",
+      "产品",
+      "数据",
+      "市场",
+      "运营",
+      "客户服务"
+    ],
+    "locations": [
+      "全国20+城市"
+    ],
     "has_hc": true,
     "hc_detail": "SP Offer占比更高",
     "referral_code": "FDYHC",
@@ -671,23 +1299,52 @@ window.__JOBS_DATA__ = [
     "description": "帆软2027届【秋招提前批】正式启动！\n\n✅ AI+BI前景赛道 | 中国BI行业连续8年市占率第一\n✅ 独角兽企业 | 2000+员工 | 重视校招同学培养\n✅ 全国20+城市有岗 | 家乡也能有一线城市待遇\n✅ 不影响正式批再投递 | SP Offer占比更高\n\n⏰ 网申时间：8月1日 - 8月31日\n面向对象：2027届本科及以上\n\n【内推码】FDYHC（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://t6ixa9nyl6.jiandaoyun.com/f/65e1a1308ce7672fded0f0cf?ext=FDYHC",
     "target": "2027届本科及以上",
     "type": "校招",
-    "industry": ["互联网", "人工智能"],
-    "tags": ["校招", "2027届", "内推", "AI", "BI", "提前批"],
-    "post_date": "2026-08",
+    "industry": [
+      "互联网",
+      "人工智能"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "AI",
+      "BI",
+      "提前批"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/fanruan-2027-campus-qr.jpg",
+    "images": [
+      "images/fanruan-2027-campus-qr.jpg"
+    ],
     "extra_links": [
-      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+      {
+        "label": "27届校招实习秋招内推信息汇总",
+        "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"
+      }
     ]
   },
   {
     "id": 18,
     "company": "腾讯",
     "title": "2027校园招聘全球正式启动",
-    "positions": ["产品", "技术", "运营", "设计", "市场"],
-    "locations": ["深圳", "北京", "上海", "广州", "成都", "武汉"],
+    "positions": [
+      "产品",
+      "技术",
+      "运营",
+      "设计",
+      "市场"
+    ],
+    "locations": [
+      "深圳",
+      "北京",
+      "上海",
+      "广州",
+      "成都",
+      "武汉"
+    ],
     "has_hc": true,
     "hc_detail": "",
     "referral_code": "2MR3134STJ",
@@ -695,47 +1352,78 @@ window.__JOBS_DATA__ = [
     "description": "腾讯2027校园招聘全球正式启动！\n\n⌚ 招聘时间：8月11日开始\n\n‍ 面向人群：毕业时间在2026年1月-2027年12月的本硕博在校大学生\n\n岗位：产品 / 技术 / 运营 / 设计 / 市场 等多方向\n\n❗️ AI 岗位上新！未来正在到来，我们相信人的力量\n\n在鹅厂，你会体验及获得：\n✅ 真实项目上手\n✅ 导师 1V1 带教\n✅ 丰厚福利 ++\n\n‼️ 早投递、早面试、早拿 Offer！\n\n内推码：2MR3134STJ\n\n内推链接进入完善简历后投递即可，优先筛选，不卡进度。\n\n27届校招实习秋招内推信息汇总（每日更新，推荐收藏，欢迎分享）：https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP",
     "target": "毕业时间在2026年1月-2027年12月的本硕博在校大学生",
     "type": "校招",
-    "industry": ["互联网"],
-    "tags": ["校招", "内推", "AI", "全球"],
-    "post_date": "2026-08",
+    "industry": [
+      "互联网"
+    ],
+    "tags": [
+      "校招",
+      "内推",
+      "AI",
+      "全球"
+    ],
+    "post_date": "2026-08-01",
     "salary": "",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "",
+    "images": [],
     "extra_links": [
-      {"label": "27届校招内推汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+      {
+        "label": "27届校招内推汇总",
+        "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"
+      }
     ]
   },
   {
-    "id": 32,
+    "id": 49,
     "company": "杭州银行",
-    "title": "2027届校园大使招募",
-    "positions": ["商务", "运营"],
-    "locations": ["杭州"],
+    "title": "2027届校园大使招募 / 2027届秋季校园招聘（浙工商专场宣讲会）",
+    "positions": [
+      "商务",
+      "运营"
+    ],
+    "locations": [
+      "杭州"
+    ],
     "has_hc": true,
     "hc_detail": "",
     "referral_code": "",
-    "referral_url": "",
-    "description": "【杭州银行2027届校园大使】\n招募进行中，专业不限！\n欢迎有意向的同学扫码报名参加！\n\n你将收获：\n📨 杭银官方聘书\n💼 校招一手咨询\n🤩 丰厚津贴与限定周边\n📋 一对一简历辅导与职业规划\n\n⏰报名截止至2026年8月31日\n📮报名链接：https://v.wjx.cn/vm/tzMeMez.aspx",
+    "referral_url": "https://xyz.51job.com/consumer/pc/home/index?ctmid=8931993",
+    "description": "【杭州银行2027届校园大使】\n招募进行中，专业不限！\n欢迎有意向的同学扫码报名参加！\n\n你将收获：\n📨 杭银官方聘书\n💼 校招一手咨询\n🤩 丰厚津贴与限定周边\n📋 一对一简历辅导与职业规划\n\n⏰报名截止至2026年8月31日\n📮报名链接：https://v.wjx.cn/vm/tzMeMez.aspx\n\n【2027届秋季校园招聘 · 浙江工商大学专场宣讲会】\n宣讲时间：2026年9月21日（周一）14:00开始。签到时间两处口径并存：校方群内通知为\"请提前30分钟签到\"，官方海报为\"请提前10分钟签到\"。\n宣讲地点：浙江工商大学下沙校区图书馆一楼报告厅\n招聘说明：国有控股，平台稳定；岗位类型多，地点选择广；专业不限，欢迎金融经管与理工科同学。\n参与福利：\n① 总行携浙江省内13家分行（机构）组团进校，一对一现场咨询，并提供现场初面绿色通道；\n② 大咖现场帮你划重点，助你避开网申雷区，精准匹配适合你的岗位；\n③ 趣味游戏与抽奖机会，拍立得（即拍即得）、膳魔师保温杯（秋冬刚需）、旅行枕（睡睡平安）等精美礼品等你来拿。\n网申链接：https://xyz.51job.com/consumer/pc/home/index?ctmid=8931993\n\n【来源】《杭州银行2027届校园招聘 浙工商专场大型宣讲会》官方海报 + 校方宣讲会通知（2026-09-21 场次）",
     "target": "2027届及以后毕业生",
     "type": "校招",
-    "industry": ["金融"],
-    "tags": ["校招", "2027届", "校园大使", "金融"],
-    "post_date": "2026-08",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "金融",
+      "杭州"
+    ],
+    "post_date": "2026-08-01",
     "salary": "丰厚津贴",
     "education": "",
     "experience": "在校/应届",
     "qr_code": "images/hangzhou-bank-2027-campus-qr.jpg",
-    "extra_links": [
-      {"label": "报名链接", "url": "https://v.wjx.cn/vm/tzMeMez.aspx"}
-    ]
+    "images": [
+      "images/hangzhou-bank-2027-campus-qr.jpg"
+    ],
+    "extra_links": []
   },
   {
     "id": 33,
     "company": "上海曼伦商贸",
     "title": "27届暑期实习正式开启",
-    "positions": ["财务", "人力资源", "运营", "技术"],
-    "locations": ["上海"],
+    "positions": [
+      "财务",
+      "人力资源",
+      "运营",
+      "技术"
+    ],
+    "locations": [
+      "上海"
+    ],
     "has_hc": true,
     "hc_detail": "多样岗位实习，抢先一步拿秋招offer",
     "referral_code": "DSENgmsm",
@@ -743,23 +1431,50 @@ window.__JOBS_DATA__ = [
     "description": "【本科薪资 22-25w】曼伦27届暑期实习正式开启！\n\n⛱别人等暑假，而你拿offer❗\n✅多样岗位实习，抢先一步拿秋招offer\n✅mentor带教、含金量超高的快消certificate—有趣尽兴也能满载而归～\n✅知名国际快消品牌（杜蕾斯、滴露、亮碟、益节、薇婷…都在这里！）\n✅办公室地铁站旁，出门商场，工区健身房&咖啡机自由\n\n正式offer：Nice薪资待遇、超长年假、六险一金、弹性打卡\n\n实习岗位：会计、HR（IT、内容运营、主播岗位即将开放实习机会，请随时关注我们的信息）\n\n付出和回报对等的工作，欢迎用专属内推渠道，简历直达HR，评选竞争力➕➕➕\n\n【内推码】DSENgmsm（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://app.mokahr.com/m/campus-recruitment/manon/164365?recommendCode=DSENgmsm#/jobs",
     "target": "2027届在校生",
     "type": "实习",
-    "industry": ["零售"],
-    "tags": ["实习", "27届", "快消", "FMCG", "内推"],
-    "post_date": "2026-08",
+    "industry": [
+      "零售"
+    ],
+    "tags": [
+      "实习",
+      "27届",
+      "快消",
+      "FMCG",
+      "内推"
+    ],
+    "post_date": "2026-08-01",
     "salary": "本科22-25万/年",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/manon-2027-summer-qr.jpg",
+    "images": [
+      "images/manon-2027-summer-qr.jpg"
+    ],
     "extra_links": [
-      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+      {
+        "label": "27届校招实习秋招内推信息汇总",
+        "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"
+      }
     ]
   },
   {
     "id": 34,
     "company": "高途",
     "title": "2027全球校园招聘提前批正式启动",
-    "positions": ["教育", "技术", "运营", "策划"],
-    "locations": ["北京", "郑州", "武汉", "成都", "西安", "上海", "深圳"],
+    "positions": [
+      "教育",
+      "技术",
+      "运营",
+      "策划"
+    ],
+    "locations": [
+      "北京",
+      "郑州",
+      "武汉",
+      "成都",
+      "西安",
+      "上海",
+      "深圳"
+    ],
     "has_hc": true,
     "hc_detail": "提前批优势：流程更快、offer 先发、竞争更小",
     "referral_code": "DSjKEcVW",
@@ -767,23 +1482,50 @@ window.__JOBS_DATA__ = [
     "description": "高途 2027 全球校园招聘提前批正式启动！\n\n深耕教育 12 年，纽交所上市教育科技企业，All with AI 全新赛道，携手国家队资源，大咖带队成长✨\n\n✅招聘对象：2027 届海内外本硕博在校生\n\n热门岗位：教学主讲、教研、运营、管培生等多类岗位\n\n薪资福利\n▪ 主讲岗 20-60w，技术岗 20-50w，综合薪资行业领先\n▪ 入职即缴六险一金，满三月叠加补充商业保险\n▪ 入职万元大礼包（电脑 / 手机 / 耳机任选）\n▪ 带薪年假、年度体检、团建旅游、北京落户支持\n▪ 员工及家属免费享海量学习提升课程\n\n办公城市：北京、郑州、武汉、成都、西安、上海、深圳等\n提前批优势：流程更快、offer 先发、竞争更小，抢占秋招先机！\n\n【推荐码】DSjKEcVW（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://app.mokahr.com/campus-recruitment/bjhl/102145?recommendCode=DSjKEcVW&hash=%23%2Fjobs",
     "target": "2027届海内外本硕博在校生",
     "type": "校招",
-    "industry": ["教育", "互联网"],
-    "tags": ["校招", "2027届", "内推", "教育", "提前批"],
-    "post_date": "2026-08",
+    "industry": [
+      "教育",
+      "互联网"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "教育",
+      "提前批"
+    ],
+    "post_date": "2026-08-01",
     "salary": "主讲岗20-60万/年，技术岗20-50万/年",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/gaotu-2027-campus-qr.jpg",
+    "images": [
+      "images/gaotu-2027-campus-qr.jpg"
+    ],
     "extra_links": [
-      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+      {
+        "label": "27届校招实习秋招内推信息汇总",
+        "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"
+      }
     ]
   },
   {
     "id": 35,
     "company": "宇通集团",
     "title": "2027届提前批校园招聘",
-    "positions": ["研发", "技术", "产品", "营销", "市场", "人力资源", "财务", "工程", "供应链"],
-    "locations": ["郑州"],
+    "positions": [
+      "研发",
+      "技术",
+      "产品",
+      "营销",
+      "市场",
+      "人力资源",
+      "财务",
+      "工程",
+      "供应链"
+    ],
+    "locations": [
+      "郑州"
+    ],
     "has_hc": true,
     "hc_detail": "优质岗位虚位以待",
     "referral_code": "yfzyhw",
@@ -791,23 +1533,47 @@ window.__JOBS_DATA__ = [
     "description": "【宇通集团2027届提前批校园招聘】\n\n关于宇通：宇通是以客车、卡车为主的大型商用车集团，产品覆盖客车、卡车、工程机械、专用车和环卫设备。拥有1个工程技术中心、两家上市公司、4个整车工厂、5个零部件基地，2025年营业收入493.8亿。\nBase郑州（营销类含国内/海外各地）\n\n加入宇通，你将获得\n竞争力薪资，为实力护航：优质岗位虚位以待，硕士年薪上限40万元，本科年薪上限28万元，携手共赴新程\n\n神仙福利，幸福感拉满\n✅生活保障：免费公寓+通勤班车+企业健身房+免费疫苗接种\n✅多重补贴：贴心餐补/工装补/取暖费，多重生活支持\n✅专属关怀：带薪生理假（女性每月2天）、开斋节假、海外归国假等\n✅更有法定节假日、年休假、福利假（春节等）、带薪事假、婚假、产假、哺乳假、护理假、育儿假、生理假、探亲假、等多种假期\n\n【内推码】yfzyhw（记得使用内推码，流程更快，不卡进度）\n【内推链接】https://actyco.wintalent.cn/actyco/home/receiver/poster/redirect?id=2ce781eb9e73fe9a019eabc8bd3212f0",
     "target": "2027届应届毕业生",
     "type": "校招",
-    "industry": ["制造业"],
-    "tags": ["校招", "2027届", "内推", "提前批", "商用车"],
-    "post_date": "2026-08",
+    "industry": [
+      "制造业"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "提前批",
+      "商用车"
+    ],
+    "post_date": "2026-08-01",
     "salary": "本科上限28万/年，硕士上限40万/年",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/yutong-2027-campus-qr.jpg",
+    "images": [
+      "images/yutong-2027-campus-qr.jpg"
+    ],
     "extra_links": [
-      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+      {
+        "label": "27届校招实习秋招内推信息汇总",
+        "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"
+      }
     ]
   },
   {
     "id": 36,
     "company": "点点互动",
     "title": "Elite Program+ 2027全球顶尖人才计划",
-    "positions": ["策划", "技术", "算法", "数据", "人工智能", "市场"],
-    "locations": ["北京", "上海"],
+    "positions": [
+      "策划",
+      "技术",
+      "算法",
+      "数据",
+      "人工智能",
+      "市场"
+    ],
+    "locations": [
+      "北京",
+      "上海"
+    ],
     "has_hc": true,
     "hc_detail": "8月31日前免笔试，顶尖薪酬+签约奖金+房补+长期激励",
     "referral_code": "ES3WKB",
@@ -815,23 +1581,55 @@ window.__JOBS_DATA__ = [
     "description": "——点点互动全球布局，在休闲、RPG、策略游戏三大品类均拥有头部产品（如《无尽冬日》《奔奔王国》等）\n\n我们要找这样的你：\n• 2027届全球高校毕业生\n• 游戏库比衣柜还满，见解比攻略还深\n• 顶刊论文/专利在手，或Game Jam、数模、商赛奖牌拿到手软\n• 敢想敢做，梦想从0到1打造爆款，也敢接千万级项目\n\n✨ 我们能给什么？\n• 顶尖薪酬+签约奖金+房补+长期激励\n• CXO/顶尖制作人1v1带教\n• 真实爆款项目实战，或自研游戏闭关修炼，任你选\n\n以下岗位开放，8月31日前免笔试！\n[胜利] 系统策划、数值策划\n[勾引] 全球广告创意策划、全球广告投放\n[OK] AI agent、AI算法\n[拳头] 客户端开发、数据分析\n\n流程：网申 → 笔试（8月31日前全免）→ 面试 → Offer，手慢无！\n\n内推码：ES3WKB（记得使用内推码，流程更快，不卡进度）\n内推链接：https://ddhd.cn/4/jobs?shareId=a91bacdf-0440-4ab9-bf68-5ff1cab374e3&shareSource=1",
     "target": "2027届全球高校毕业生",
     "type": "校招",
-    "industry": ["游戏", "互联网"],
-    "tags": ["校招", "2027届", "内推", "免笔试", "海外", "AI"],
-    "post_date": "2026-08",
+    "industry": [
+      "游戏",
+      "互联网"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "免笔试",
+      "海外",
+      "AI"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议（顶尖薪酬+签约奖金+房补）",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/diandian-2027-elite-qr.jpg",
+    "images": [
+      "images/diandian-2027-elite-qr.jpg"
+    ],
     "extra_links": [
-      {"label": "27届校招实习秋招内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+      {
+        "label": "27届校招实习秋招内推信息汇总",
+        "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"
+      }
     ]
   },
   {
     "id": 37,
     "company": "科锐国际",
     "title": "2026届校园招聘（计算机&电子信息类专场）",
-    "positions": ["技术", "测试"],
-    "locations": ["上海", "东莞", "西安", "南京", "北京", "深圳", "杭州", "成都", "武汉", "苏州", "长沙", "济南"],
+    "positions": [
+      "技术",
+      "测试"
+    ],
+    "locations": [
+      "上海",
+      "东莞",
+      "西安",
+      "南京",
+      "北京",
+      "深圳",
+      "杭州",
+      "成都",
+      "武汉",
+      "苏州",
+      "长沙",
+      "济南"
+    ],
     "has_hc": true,
     "hc_detail": "覆盖半导体/芯片、终端、云计算、ICT 通信、数字能源等 8 大方向，可协调意向地点",
     "referral_code": "KRYHC",
@@ -839,23 +1637,41 @@ window.__JOBS_DATA__ = [
     "description": "【科锐国际·2026届校园招聘（计算机&电子信息类专场）】\n\n【企业简介】\n科锐国际——中国首家 A 股上市人力资源服务企业，与通信、半导体等领域头部企业开展项目合作。2026 届开放软件开发/软件测试两大岗位，助力应届生接触顶尖项目、实现技术快速成长。\n\n【招聘岗位】\n软件开发工程师 / 软件测试工程师\n两大岗位 × 8 大业务方向可意向选择：半导体/芯片器件、终端技术、数字能源、云计算、ICT 通信、集团财经技术、企业服务等\n技术栈覆盖 C/C++/Java/Python/Go/JS/Rust，可按专业方向匹配\n\n【招聘城市】上海、东莞、西安、南京、北京、深圳、杭州、成都、武汉、苏州、长沙、济南（12 城可选，可协调意向工作地点）\n\n【岗位亮点】六险一金、周末双休、福利年假、大厂项目环境、1v1 导师带教、完整能力成长体系\n\n【薪资说明】固定底薪 11000-33000 元/月 + 月度奖金 2000-7000 元/月 + 年终奖 2-4 个月，最终薪酬以机试+面试考核结果为准\n\n【内推码】KRYHC（直推 HR 通道，简历优先筛选！）\n【内推链接】https://docs.qq.com/form/page/DWktRTnZiUUhCZEFC",
     "target": "2026届本科及以上，往届生亦可投递",
     "type": "校招",
-    "industry": ["互联网"],
-    "tags": ["校招", "2026届", "内推", "半导体", "上市企业"],
-    "post_date": "2026-08",
+    "industry": [
+      "互联网"
+    ],
+    "tags": [
+      "校招",
+      "2026届",
+      "内推",
+      "半导体",
+      "上市企业"
+    ],
+    "post_date": "2026-08-01",
     "salary": "底薪11000-33000元/月+月度奖金2000-7000元/月+年终奖2-4个月",
     "education": "本科及以上",
     "experience": "应届",
     "qr_code": "",
+    "images": [],
     "extra_links": [
-      {"label": "27届秋招&提前批内推信息汇总", "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"}
+      {
+        "label": "27届秋招&提前批内推信息汇总",
+        "url": "https://docs.qq.com/smartsheet/DT3NnY3RjV0hyYkVP"
+      }
     ]
   },
   {
     "id": 38,
     "company": "海尔智家",
     "title": "2027届全球校园招聘（顶尖人才项目）",
-    "positions": ["技术", "产品", "市场"],
-    "locations": ["青岛"],
+    "positions": [
+      "技术",
+      "产品",
+      "市场"
+    ],
+    "locations": [
+      "青岛"
+    ],
     "has_hc": true,
     "hc_detail": "LTDP 智领计划/GEDP 全球卓越工程师/MEDP 智造工程师/GMTP 海外市场/DMAP 数智市场 五大项目同步启动",
     "referral_code": "GHJ493",
@@ -863,21 +1679,39 @@ window.__JOBS_DATA__ = [
     "description": "【海尔智家·2027 顶尖人才项目启动】\n\n✨ 海尔智家股份有限公司是世界 500 强企业、全球用户定制美好生活解决方案的智慧家庭生态品牌商，总部位于青岛。\n\n【五大顶尖人才项目】\n✅ 管培方向：LTDP 智领计划——复合型全球领军人才发展计划\n✅ 技术方向：GEDP 全球卓越工程师发展计划、MEDP 智造技术工程师发展计划\n✅ 市场方向：GMTP 海外市场领航者计划、DMAP 中国区数智市场精英计划\n\n【薪酬激励】根据岗位要求和综合表现定薪，多元化薪酬结构——除工资奖金等短期激励外，还配套股票等长期激励，伴随个人发展持续兑现。\n\n【福利保障】年节福利、带薪假期、健康保障 + 青岛市人才政策支持\n\n✅ 欢迎加入海尔，共创智慧生活！\n\n【内推码】GHJ493（招聘信息来源选择「未来规划局」，填写内推码 GHJ493）\n【内推链接】https://maker.haier.net/client/campusmobile/customizedjobs/type/top.html?inviter_code=djBhZmlkSHdvcTA9",
     "target": "2027届应届生",
     "type": "校招",
-    "industry": ["智能硬件", "家电"],
-    "tags": ["校招", "2027届", "内推", "世界500强", "管培生"],
-    "post_date": "2026-08",
+    "industry": [
+      "智能硬件",
+      "家电"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "世界500强",
+      "管培生"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议（多元化薪酬结构+长期股权激励）",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/haier-2027-campus-qr.jpg",
+    "images": [
+      "images/haier-2027-campus-qr.jpg"
+    ],
     "extra_links": []
   },
   {
     "id": 39,
     "company": "好未来（学而思）",
     "title": "27届实习转正 + 秋招同步启动",
-    "positions": ["算法", "技术", "产品"],
-    "locations": ["北京"],
+    "positions": [
+      "算法",
+      "技术",
+      "产品"
+    ],
+    "locations": [
+      "北京"
+    ],
     "has_hc": true,
     "hc_detail": "教育+AI 双赛道，实习与校招两条线并行开放，实习期表现优秀可直接转正",
     "referral_code": "DSjQTQfY",
@@ -885,21 +1719,46 @@ window.__JOBS_DATA__ = [
     "description": "【好未来集团（学而思）·27 届实习转正 + 秋招同步启动】\n\n教育+AI 双赛道，实习与校招两条线并行开放。实习期表现优秀可直接转正，校招岗位同步在招。\n\n【岗位方向】算法、研发、产品\n\n【实习薪资】算法岗 420-500 元/天，另有 2000 元/月房补\n\n【内推码】DSjQTQfY（使用内推码，流程更快，不卡进度，有问题欢迎联系）\n【投递链接】https://app.mokahr.com/m/campus-recruitment/tal/169887?recommendCode=DSjQTQfY#/jobs",
     "target": "2027届在校生",
     "type": "实习/校招",
-    "industry": ["教育", "互联网"],
-    "tags": ["实习", "校招", "2027届", "内推", "教育+AI", "可转正"],
-    "post_date": "2026-08",
+    "industry": [
+      "教育",
+      "互联网"
+    ],
+    "tags": [
+      "实习",
+      "校招",
+      "2027届",
+      "内推",
+      "教育+AI",
+      "可转正"
+    ],
+    "post_date": "2026-08-01",
     "salary": "算法岗420-500元/天+2000元/月房补",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/talu-2027-campus-qr.jpg",
+    "images": [
+      "images/talu-2027-campus-qr.jpg"
+    ],
     "extra_links": []
   },
   {
     "id": 40,
     "company": "快手",
     "title": "27届秋招",
-    "positions": ["算法", "技术", "产品", "运营", "设计", "市场"],
-    "locations": ["北京", "上海", "深圳", "杭州"],
+    "positions": [
+      "算法",
+      "技术",
+      "产品",
+      "运营",
+      "设计",
+      "市场"
+    ],
+    "locations": [
+      "北京",
+      "上海",
+      "深圳",
+      "杭州"
+    ],
     "has_hc": true,
     "hc_detail": "HC 充足，11 类岗位全开放，越早投递选择越多",
     "referral_code": "campuseBRZTZcjT",
@@ -907,21 +1766,49 @@ window.__JOBS_DATA__ = [
     "description": "【快手 27 届秋招正式启动】岗位已官网上线！\n\n【岗位类型】\n算法、工程、产品、运营、设计、职能、市场……十一类岗位总有一个方向适合你\n\n【工作地点】\n北京、上海、深圳、杭州等多城可选\n\n【投递建议——尽早投递！】\n1️⃣ 秋招刚开，HC 最充足——越早投，选择越多\n2️⃣ 先投先筛先面，你的简历会被最早处理\n\n【投递链接】https://campus.kuaishou.cn/recruit/campus/e/h5/#/campus/jobs?code=campuseBRZTZcjT\n【内推码】campuseBRZTZcjT",
     "target": "2027届在校生",
     "type": "校招",
-    "industry": ["互联网"],
-    "tags": ["校招", "2027届", "内推"],
-    "post_date": "2026-08",
+    "industry": [
+      "互联网"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "",
+    "images": [],
     "extra_links": []
   },
   {
     "id": 41,
     "company": "美团",
     "title": "2026年秋招·2027届校招",
-    "positions": ["技术", "算法", "产品", "数据", "运营", "设计", "市场", "职能", "金融销售", "销售"],
-    "locations": ["北京", "上海", "深圳", "广州", "成都", "杭州", "武汉", "南京", "全球几十个城市"],
+    "positions": [
+      "技术",
+      "算法",
+      "产品",
+      "数据",
+      "运营",
+      "设计",
+      "市场",
+      "职能",
+      "金融销售",
+      "销售"
+    ],
+    "locations": [
+      "北京",
+      "上海",
+      "深圳",
+      "广州",
+      "成都",
+      "杭州",
+      "武汉",
+      "南京",
+      "全球几十个城市"
+    ],
     "has_hc": true,
     "hc_detail": "今年 AI 方向大扩招，算法岗需求暴涨，首增 AI 原生岗位",
     "referral_code": "GNP2FLC",
@@ -929,13 +1816,2305 @@ window.__JOBS_DATA__ = [
     "description": "【美团 2026 年秋招正式启动】本次面向 2027 届毕业生\n\n【10 大类岗位，100+ 种选择】\n技术 / 产品 / 商分 / 零售 / 运营 / 设计 / 市场 / 职能 / 金融 / 销售客服\n\n【工作地点】全球几十个城市等你选择\n\n【今年 AI 方向大扩招】算法岗需求暴涨，更首增 AI 原生岗位：\nAI 全栈工程师 / AI 产品经理 / 智能商业分析师……\n\n【内推码】GNP2FLC（记得使用内推码，流程更快，不卡进度，有问题欢迎联系）\n【内推链接】https://zhaopin.meituan.com/web/campus?zp-from=hiring-campus-bole-elephant&staffSsoId=24682863",
     "target": "2027届毕业生",
     "type": "校招",
-    "industry": ["互联网", "本地生活"],
-    "tags": ["校招", "2027届", "内推", "AI", "大扩招", "本地生活"],
-    "post_date": "2026-08",
+    "industry": [
+      "互联网",
+      "本地生活"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "AI",
+      "大扩招",
+      "本地生活"
+    ],
+    "post_date": "2026-08-01",
     "salary": "面议",
     "education": "本科及以上",
     "experience": "在校/应届",
     "qr_code": "images/meituan-2027-campus-qr.jpg",
+    "images": [
+      "images/meituan-2027-campus-qr.jpg"
+    ],
+    "extra_links": []
+  },
+  {
+    "id": 42,
+    "company": "中汇会计师事务所",
+    "title": "汇梦生菁英计划·2027校园招聘",
+    "positions": [
+      "财务",
+      "咨询",
+      "金融"
+    ],
+    "locations": [
+      "杭州",
+      "上海",
+      "北京",
+      "广州",
+      "深圳",
+      "宁波",
+      "南京",
+      "无锡",
+      "苏州",
+      "成都",
+      "济南",
+      "重庆",
+      "武汉",
+      "西安",
+      "青岛"
+    ],
+    "has_hc": true,
+    "hc_detail": "6大业务线、15座城市同步招聘：审计 / 税务 / 工程造价 / 管理咨询 / 风险咨询等",
+    "referral_code": "",
+    "referral_url": "https://zhcpa.zhiye.com/campus/jobs",
+    "description": "【中汇2027秋季校招火热推进中】青春合伙，向上人生 —— 汇梦生菁英计划\n\n【关于中汇】全国大型综合性专业服务机构，提供审计、税务、工程以及咨询等全方位专业服务，客户覆盖金融、电子信息、能源、软件、房地产高端制造等多个行业；全国会计师事务所中资本市场业绩排名保持前10位，多次荣获“最佳雇主品牌”奖项。\n\n【招聘群体】2026年11月—2027年7月毕业的国内外在校大学生\n\n【招聘岗位】审计岗 / 税务岗 / 管理咨询岗 / 风险咨询岗（财务咨询方向）/ 风险咨询岗（IT审计方向）/ 交易并购重组岗 / 金融咨询岗（更多岗位详情请至官网查看）\n\n【工作地点】杭州、上海、北京、广州、深圳、宁波、南京、无锡、苏州、成都、济南、重庆、武汉、西安、青岛（6大业务线，15座城市）\n\n【招聘流程】网申 → 人才测评（仅部分地区）→ 笔试 → 复试 → 小组面试 → 录用offer → 就业协议 → 见习\n\n【校招亮点】面试直通OFFER，签约无忧；考研考公成功，解约无负担；多元化的录用途径。\n\n【投递方式】电脑端：https://zhcpa.zhiye.com/campus/jobs ；手机端：扫描二维码投递；官方咨询QQ群：662492566",
+    "target": "2027届（2026年11月—2027年7月毕业）国内外在校大学生",
+    "type": "校招",
+    "industry": [
+      "专业服务"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "会计师事务所",
+      "菁英计划",
+      "审计"
+    ],
+    "post_date": "2026-09-01",
+    "salary": "",
+    "education": "",
+    "experience": "在校/应届",
+    "qr_code": "images/zhonghui-2027-campus-qr.png",
+    "images": [
+      "images/zhonghui-2027-campus-qr.png"
+    ],
+    "extra_links": [
+      {
+        "label": "电脑端投递",
+        "url": "https://zhcpa.zhiye.com/campus/jobs"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "company": "三一集团",
+    "title": "2027届全球校园招聘",
+    "positions": [
+      "技术",
+      "研发",
+      "人工智能",
+      "生产",
+      "营销",
+      "采购",
+      "财务",
+      "金融",
+      "管理"
+    ],
+    "locations": [
+      "长沙",
+      "北京",
+      "上海",
+      "苏州"
+    ],
+    "has_hc": true,
+    "hc_detail": "7 大职类开放招聘：研发技术 / 计算机及AI / 生产制造 / 营销服务 / 商务采购 / 财务金融 / 综合管理",
+    "referral_code": "EVVM82",
+    "referral_url": "https://sanycampus.zhiye.com/campus/jobs?shareId=f1495f25-997e-4d66-941a-627d79f44b9d&shareSource=2",
+    "description": "三一集团2027届全球校招正式启动！\n\n秋招找机会的同学看过来～今年三一集团校招必须重点关注\n\n【平台够大】世界500强，业务遍及全球180+国家和地区，海外设有5大研发制造基地\n\n【岗位够多】研发技术、计算机及AI、生产制造、营销服务、商务采购、财务金融、综合管理等7大职类开放招聘\n\n【方向够新】智能制造、新能源、AI、数智化、全球化等方向都有机会\n\n【待遇有竞争力】不设限的薪酬激励 + 完善的薪酬福利体系 + 清晰的成长发展通道\n\n【流程够快】网申 → AI测评 → HR/专业面 → 终面 → Offer\n\n面向2027届毕业生：不同专业背景都有机会找到适合自己的岗位\n\n内推码：EVVM82（记得使用内推码，流程更快，不卡进度）",
+    "target": "2027届毕业生（不同专业背景均有岗位）",
+    "type": "校招",
+    "industry": [
+      "制造业",
+      "新能源"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "世界500强",
+      "全球"
+    ],
+    "post_date": "2026-09-01",
+    "salary": "",
+    "education": "",
+    "experience": "在校/应届",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 44,
+    "company": "易点云",
+    "title": "2027校园招聘",
+    "positions": [
+      "管理",
+      "商务",
+      "产品",
+      "研发",
+      "技术"
+    ],
+    "locations": [
+      "北京"
+    ],
+    "has_hc": true,
+    "hc_detail": "五大岗位类别：储备管理类 / 商业创新类 / 产品经理类 / 研发技术类 / 其他职能类",
+    "referral_code": "YDHJBNV",
+    "referral_url": "https://recruit-pro.edianyun.com/#/wap/recruitment-collect",
+    "description": "易点云2027校园招聘正式启航！\n\n【关于我们】易点云2014年成立于北京，2023年港交所上市（02416.HK），国内头部办公IT综合服务商、办公云第一股，专注中小企业一站式IT订阅与数字化全链路服务。\n\n【招聘对象】2027届本科、硕士研究生毕业生，专业不限！\n\n【五大岗位类别】储备管理类｜商业创新类｜产品经理类｜研发技术类｜其他职能类，总有一款适合你\n\n【为什么选易点云】\n✅ 港股上市公司，高速发展赛道\n✅ 真实管培机制，24岁子公司CEO、26岁总监\n✅ 部门团建、多元福利体系\n\n内推码：YDHJBNV（记得使用内推码，流程更快，不卡进度）",
+    "target": "2027届本科、硕士研究生毕业生（专业不限）",
+    "type": "校招",
+    "industry": [
+      "企业服务",
+      "互联网"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "港股上市",
+      "管培生"
+    ],
+    "post_date": "2026-09-01",
+    "salary": "",
+    "education": "",
+    "experience": "在校/应届",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 45,
+    "company": "中信证券",
+    "title": "统一客户联络中心（杭州）2027秋招",
+    "positions": [
+      "客户服务",
+      "运营"
+    ],
+    "locations": [
+      "杭州"
+    ],
+    "has_hc": true,
+    "hc_detail": "培训生（分支机构后台支持序列）",
+    "referral_code": "",
+    "referral_url": "",
+    "description": "中信证券统一客户联络中心（杭州）秋招开启！\n\n【培训生】\n属于分支机构后台支持序列，从事线上柜台业务办理，通过电话、在线、短信、邮件等多元化渠道为客户提供服务，并做好客户服务提升等各项运营支持工作，无营销考核。\n\n【任职要求】\n1、全日制本科及以上学历2027届毕业生；\n2、热爱证券行业，人际通达，能够承受一定的工作压力，具备业务开拓能力和团队协作能力；\n3、无违法违规记录，具备良好的职业道德与专业素质，入职前须通过证券从业资格测试。\n\n【福利满满】\n✅ 年终奖金 ✅ 周末双休\n✅ 六险二金 ✅ 培训体系\n✅ 佳节福利 ✅ 工会福利\n✅ 午餐补助 ✅ 通讯补助\n✅ 开工利是 ✅ 带薪年假\n✅ 证券人专属休市假",
+    "target": "全日制本科及以上学历2027届毕业生",
+    "type": "校招",
+    "industry": [
+      "证券",
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "培训生",
+      "杭州",
+      "无营销考核"
+    ],
+    "post_date": "2026-09-01",
+    "salary": "",
+    "education": "",
+    "experience": "在校/应届",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 46,
+    "company": "毕马威（KPMG）",
+    "title": "2027秋季校园招聘",
+    "positions": [
+      "财务",
+      "咨询",
+      "税务"
+    ],
+    "locations": [
+      "北京",
+      "上海",
+      "广州",
+      "深圳",
+      "香港",
+      "杭州",
+      "成都",
+      "重庆",
+      "武汉",
+      "南京等"
+    ],
+    "has_hc": true,
+    "hc_detail": "审计 / 税务 / 咨询 均有岗位，面向本科/研在读及应届生",
+    "referral_code": "",
+    "referral_url": "",
+    "description": "毕马威KPMG 2027秋季校园招聘正式启动！\n\n不论你是本科/研在读，还是应届生正在寻找工作机会，在KPMG都有适合您的岗位，更有专属内推码为您准备！选你所爱，奔赴所选～\n\n✅ 一手招聘信息（审计/税务/咨询都有）\n✅ 专属内推码（简历免筛/优先看）\n✅ 面试真题+避坑指南\n\n📍 招聘城市覆盖：北京、上海、广深、香港、杭州、成都、重庆、武汉、南京等\n\n毕马威每年都在等一批优秀的人，今年为什么不能是你！\n\n感兴趣的同学速速扫描下方二维码入群吧✨",
+    "target": "本科/研在读及2027届应届生",
+    "type": "校招",
+    "industry": [
+      "专业服务"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "会计师事务所",
+      "审计",
+      "税务",
+      "咨询"
+    ],
+    "post_date": "2026-09-01",
+    "salary": "",
+    "education": "",
+    "experience": "在校/应届",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 47,
+    "company": "中信银行",
+    "title": "杭州分行 2027年校园招聘",
+    "positions": [
+      "管培生",
+      "客户经理",
+      "柜员"
+    ],
+    "locations": [
+      "浙江（除宁波外）"
+    ],
+    "has_hc": true,
+    "hc_detail": "管理培训生（含跨境金融/科技金融/二级分行方向）、客户经理类（含科技金融方向）、柜员",
+    "referral_code": "",
+    "referral_url": "https://jobwx.citicbank.com/mobile/position.html?channelType=02",
+    "description": "中信银行杭州分行 2027年校园招聘正式启动！\n\n【关于杭州分行】\n中信银行杭州分行成立于1994年，是中信银行在长江三角洲南翼经济区设立的一家省级分行，也是首批进驻浙江省的股份制银行省级分行。\n下辖10个二级分行、37个直属机构、98个营业网点（含社区银行），覆盖浙江省（不含宁波）所有地级市和大部分县域。\n\n【招聘岗位】\n· 管理培训生（含跨境金融 / 科技金融 / 二级分行方向）\n· 客户经理类（含科技金融方向）\n· 柜员\n\n【工作地点】\n浙江省（除宁波外）\n\n【招聘对象】\n· 境内院校应届毕业生：纳入国家统一招生计划，在校期间为非在职的2027届毕业生（不含委培生和定向生），2027年7月31日前获得国家认可的毕业证、学位证\n· 境外院校毕业生：2026年1月1日至2027年8月31日期间毕业且初次就业，2027年8月31日前获得学历（学位）证书原件及教育部留学服务中心的学历学位认证\n\n【基本条件】\n· 遵纪守法、诚实守信，无违法、违规、违纪等不良记录\n· 中国内地、香港特别行政区、澳门特别行政区、台湾地区生源\n· 国家认可的本科及以上学历，主修经济学类、管理学类、法学类、理学类、工学类等相关专业\n· 一般应通过大学英语四级（成绩不低于425分）或同等级别及以上考试\n· 身心健康，能承担一定工作压力\n\n【应聘方式】\n登录中信银行招聘官网 https://job.citicbank.com 或关注「中信银行招聘」公众号，注册用户后投递简历。每位应聘者最多可同时投递两个机构，每个机构最多申请两个职位。\n\n【时间安排】\n· 即日起开启网申\n· 简历截止时间暂定 2026年10月9日\n· 全球统一考试（在线）安排另行通知",
+    "target": "2027届应届毕业生（境内外）",
+    "type": "校招",
+    "industry": [
+      "金融",
+      "央企"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "管培生",
+      "杭州",
+      "浙江"
+    ],
+    "post_date": "2026-09-01",
+    "salary": "",
+    "education": "本科及以上",
+    "experience": "在校/应届",
+    "qr_code": "images/citicbank-hz-2027-campus-qr.jpg",
+    "images": [
+      "images/citicbank-hz-2027-campus-qr.jpg"
+    ],
+    "extra_links": [
+      {
+        "label": "中信银行招聘官网",
+        "url": "https://job.citicbank.com"
+      },
+      {
+        "label": "原文链接",
+        "url": "https://mp.weixin.qq.com/s/nXkR_0j960yxUPFcwfJ84g"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "company": "浦发银行杭州分行",
+    "title": "2027年度校园招聘",
+    "positions": [
+      "管培生",
+      "客户经理",
+      "投资顾问",
+      "运营"
+    ],
+    "locations": [
+      "杭州（含萧山",
+      "临平",
+      "余杭",
+      "临安",
+      "富阳）",
+      "温州",
+      "绍兴",
+      "嘉兴",
+      "金华",
+      "义乌",
+      "湖州",
+      "丽水",
+      "衢州",
+      "舟山",
+      "建德",
+      "桐庐"
+    ],
+    "has_hc": false,
+    "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://job.spdb.com.cn",
+    "description": "【关于浦发银行杭州分行】上海浦东发展银行杭州分行成立于1994年3月28日，是浦发银行跨出上海开设的第一家分行，也是进驻浙江的首家股份制商业银行机构。全辖共有92家营业网点，业务范围覆盖杭州、温州、嘉兴、湖州、绍兴、金华、丽水、衢州和舟山九个地市，员工2600余人。2025年获评全行“十佳分行”称号；2024年、2025年连续两年人行评价获得A；2025年5月获评第七届全国文明单位，为当年省内唯一一家金融机构。\n\n【招聘岗位（杭州分行）】\n管理培训生：学历要求硕士及以上，主要工作城市杭州；\n业务储备生（公司业务方向）：本科及以上，杭州（含萧山、临平、余杭、临安、富阳）、温州、绍兴、嘉兴、金华、义乌、湖州、丽水、衢州、舟山、建德、桐庐；\n业务储备生（财富管理方向）：本科及以上，杭州（含萧山、临平、余杭、临安、富阳）、温州、绍兴、丽水、衢州、舟山、建德、桐庐；\n业务储备生（综合运营方向）：本科及以上，杭州（含萧山、临平、余杭、临安、富阳）、温州、嘉兴、金华、舟山。\n注：一名学生最多报两个岗位，须明确志愿顺序。\n\n【基本条件】1、毕业时间：境内外均统一为2025年1月1日—2027年7月31日，并取得国家认可的毕业证、学位证；2、本科及以上学历；3、原则上不限专业，人工智能、数据科学、软件工程、金融科技等专业背景及多学科复合型教育背景学生优先；4、符合浦发银行亲属回避制度要求；5、品行端正、学业优良、身心健康；6、外语水平、计算机应用能力出色；7、开拓进取，勇于创新，具备高度的责任心和敬业精神。\n\n【招聘流程】简历投递 2026年9月3日10:00 至 10月8日18:00 → 笔试 2026年10月中下旬 → 面试 2026年11月起 → 录用 2026年11月底起分批次 → 入职 2026年12月起分批次。具体时间及安排以我行实际通知为准，通知形式包括电子邮件或电话等；确定录用后将以电子邮件形式发放录用通知。\n\n【报名方式】登录浦发银行招聘官方网站 https://job.spdb.com.cn ，选择“校园招聘—杭州分行”；或通过“遇见浦发”公众号—走进浦发—校园招聘—招聘需求—杭州分行，在线注册、投递简历。服务热线：021-61617777（综合咨询，开通至2026年10月31日 9:00-17:00）；400-006-7005（前程无忧，在线测评咨询，10月12日至10月31日 9:00-21:00）。\n\n【福利】员工食堂、生日福利、年度体检、员工疗休养、租房福利；养老保险、工伤保险、医疗保险、补充医疗保险、失业保险、生育保险、住房公积金、企业年金。\n\n【来源】微信公众号推文，2026年9月3日 18:36 发布。",
+    "target": "境内外2025年1月1日—2027年7月31日毕业并取得毕业证、学位证的本科及以上学生；原则上不限专业，人工智能、数据科学、软件工程、金融科技等专业及多学科复合背景优先",
+    "type": "校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "金融",
+      "浙江"
+    ],
+    "post_date": "2026-09-01",
+    "salary": "",
+    "education": "管理培训生：硕士及以上；业务储备生：本科及以上",
+    "experience": "应届生（2025年1月1日—2027年7月31日毕业）",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 51,
+    "company": "永富物产",
+    "title": "2027届校园招聘（大宗商品研究员）",
+    "positions": [
+      "金融"
+    ],
+    "locations": [
+      "杭州"
+    ],
+    "has_hc": true,
+    "hc_detail": "8人（黑色、有色、农产品、化工四大板块各2人；实习考核总名额16名，招录比2:1）",
+    "referral_code": "",
+    "referral_url": "mailto:hr@yagf.com.cn",
+    "description": "【关于我们】永富物产有限公司成立于2019年，是永安国富资产管理有限公司的全资子公司。业务覆盖能源化工、农产品、有色金属、黑色金属等品种——现货贸易商+产业研究所+交易团队，用研究驱动业务，用交易验证研究。\n\n【招聘岗位】大宗商品研究员。\n招聘人数：8人（黑色、有色、农产品、化工四大板块，每个板块2人；实习考核总名额16名，招录比2:1）。\n招聘对象：2027届应届毕业生，硕士及以上学历。\n专业要求：理工科优先（数学、统计学、物理学、计算机、金融工程、化学化工、材料、机械等——只要专业让你逻辑好、数感强，都可以来试试）。\n考核安排：两个月实习考核期，到岗时间不限。\n\n【岗位具体做什么】搭数据库：搭建品种数据库和供需平衡表，随时知道市场上在发生什么；跑调研：去产地、去工厂、去港口，跟产业链上的人聊天；写报告：指导业务决策的研究输出；做贸易：直接参与真实的期现贸易业务，对接现货客户、询价报价、跟踪基差，实现业务闭环；出策略：基于研究提出交易策略、期现套利建议。\n进阶路径：研究可以转投资，条件成熟时可直接管理资金。\n\n【什么样的同学适合投递】对大宗商品好奇；坐得住冷板凳（研究没有捷径，数据要一条一条扒）；逻辑清晰（能从一堆数字里理出头绪）；愿意冲到一线（敢跑产地、跑工厂、跟贸易商坐下来聊）；对“赚钱”有敏感度；不怕面对不确定性（能接受判断出错、快速复盘、继续下一把）。\n\n【你能得到什么】①有竞争力的薪酬：丰厚奖金包，上不封顶；②导师制培养：业内大佬与精英团队指导，系统学习永安系数十年积累的研究体系与投资方法；③平台与资源：内部自由的交流环境，公司充分配给产业与数据资源；④清晰的职业路径：研究员→投资经理／业务负责人，有成熟的转投资通道；⑤平等活泼的氛围：没有职级压迫，没有无效加班，不搞形式主义；⑥暖心福利：六险二金、带薪休假、节日补贴、员工体检、生日福利、家属慰问、食堂+健身房、各种兴趣俱乐部。\n\n【简历投递】邮箱：hr@yagf.com.cn；地址：杭州市上城区永安国富大厦B座12楼。邮件及简历标题均注明“岗位方向-姓名-学校-学历-毕业年月-目前所在地-拟到岗时间”（示例：农产品方向-张三-浙江大学-硕士-2027.06-杭州-2026.11）。\n\n【来源】微信公众号推文，2026年9月4日 18:01 发布。",
+    "target": "2027届应届毕业生，硕士及以上学历，理工科优先（数学、统计学、物理学、计算机、金融工程、化学化工、材料、机械等）",
+    "type": "校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "金融",
+      "行业研究",
+      "私募",
+      "杭州"
+    ],
+    "post_date": "2026-09-01",
+    "salary": "有竞争力的薪酬：丰厚奖金包，上不封顶（另有六险二金、带薪休假、节日补贴、员工体检、食堂+健身房、兴趣俱乐部等）",
+    "education": "硕士及以上",
+    "experience": "应届生（2027届）；两个月实习考核期，到岗时间不限",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 52,
+    "company": "群核科技（杭州群核信息技术有限公司）",
+    "title": "2027届校园招聘（含科研实习生、星核人才计划）",
+    "positions": [
+      "技术",
+      "算法",
+      "人工智能",
+      "研发"
+    ],
+    "locations": [
+      "浙江·杭州市；上海市·浦东新区（仅3D几何算法工程师）"
+    ],
+    "has_hc": false,
+    "hc_detail": "",
+    "referral_code": "DSzzee3A",
+    "referral_url": "https://app.mokahr.com/campus_apply/qunhemail/2832?recommendCode=DSzzee3A#/jobs",
+    "description": "【公司】杭州群核信息技术有限公司校园招聘（moka 校招官网），含 27 届校招（全职）与科研/日常实习岗。\n\n【在招岗位（页面所列，共 30+）】\n算法类：算法工程师（模型训练方向）；算法工程师（3DGS/3D视觉）-27届校招；科研算法工程师（图形3D重建与生成方向）-27届校招；科研算法工程师（Neural Rendering方向）-27届校招；科研算法工程师（大模型与AIGC方向）-27届校招；科研算法工程师（世界模型方向）-27届校招；3D几何算法工程师-27届校招。\n工程类：AI Infra工程师-27届校招；容器化开发工程师-算力中心-27校招；运维开发工程师-算力中心；算力集群开发工程师-算力调度方向-27校招。\n实习类：科研算法实习生（前沿院）；科研算法实习生（超级空间自主智能组）。\n专项计划：【星核人才计划】-2027届校招生投递链接、【星核人才计划】-日常实习生投递链接。\n\n【工作城市】浙江·杭州市；上海市·浦东新区（3D几何算法工程师）。\n\n【投递方式】通过 moka 校招官网在线投递，使用内推码：DSzzee3A。\n投递入口：https://app.mokahr.com/campus_apply/qunhemail/2832?recommendCode=DSzzee3A#/jobs\n\n【备注】该招聘页面未标注发布时间与学历要求，此处留空未作推测。",
+    "target": "2027届校招生（全职岗），以及在校科研实习生、日常实习生",
+    "type": "实习/校招",
+    "industry": [
+      "互联网",
+      "人工智能"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "AI",
+      "大模型",
+      "实习",
+      "杭州"
+    ],
+    "post_date": "",
+    "salary": "",
+    "education": "页面未标注",
+    "experience": "27届校招岗为2027届毕业生；实习岗面向在校生",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 53,
+    "company": "宁波亚虎进出口有限公司",
+    "title": "2027校园招聘（120个管培生岗位）",
+    "positions": [
+      "管培生",
+      "销售"
+    ],
+    "locations": [
+      "宁波"
+    ],
+    "has_hc": true,
+    "hc_detail": "120人（外贸经营管培生40人 + 外贸全流程管培生80人）",
+    "referral_code": "",
+    "referral_url": "https://www.home-dollar.com/job.html",
+    "description": "【关于亚虎】宁波亚虎进出口有限公司成立于1992年，由国家外经贸部批准、拥有自主出口品牌“HOME-DOLLAR”，是耐用消费品供应链管理集团、全球百货中国首席供应创新平台。现有员工1600+，95%以上本科及以上学历。年出口额8.5亿美元（约合60亿元人民币），年均业绩增长30%+（连续十年），供应链品类100+系列、10万+SKU，业务覆盖全球60+国家和地区，合作客户2000+，国内供应商8000+家。荣获中国民营外贸企业500强、宁波外贸出口企业10强、宁波综合百强（同类企业唯一上榜）、年度最佳雇主等荣誉。公司自有园区87000平方米，2022年投入使用的15层办公大楼可容纳员工2000+，整个园区可容纳4000+员工。公司坐落于宁波——长三角南翼经济中心、计划单列市之一，2025年全国GDP万亿城市排名第11位，拥有吞吐量世界第一大港口，16次获评中国最具幸福感的城市。\n\n【招聘岗位】共120个管培生岗位。\n1. 外贸经营管培生（40人）：专研外贸行业知识、全流程学习，要求在1.5年内获得晋升带团队，属于挑战岗位。要求本科（985/211/QS前100）或硕士研究生（一本以上）优先，经管类、理工类专业，有商业意识，高中数学高分，CET-6或TEM-4良好及以上。首年综合年薪10-15W+。\n2. 外贸全流程管培生（80人）：掌握整个外贸流程，包括采购、跟单、物流、业务和服务，对产品、价格、数据分析敏感。要求本科及以上，专业不限，国贸/理工科优先，CET-4或TEM-4及以上，有商业意识、勤奋努力、优秀的成长力。首年综合年薪8-12W。\n备注：面试表现优异/试用期表现出色的员工，直接晋升为“经营方向管培生”，并相应上调薪资。以上所有岗位试用期3个月（实习期可抵试用期，以具体入职时间为准）。\n\n【发展培养】亚虎95%以上的管理层都是从应届生培养出来的，被业内誉为“外贸的黄埔军校”。师带徒、业务全流程、共享资源、业务+管理双能力培养、创始人亲自指导、业务大牛坐镇授课、亚虎商学院定制课程等。晋升路径——业务岗：业务员-业务组长-业务经理-业务总监-业务副总-业务总经理-股东；职能岗：专员-主管-高级主管-经理-总监-公司高管-股东。\n\n【应聘流程】网申 → 宣讲 → 笔试 → 初试 → 复试 → offer。\n\n【投递方式】电脑端：登录网申地址 www.home-dollar.com/job.html ，选择“校园招聘”，点击应聘岗位在线网申；手机端：微信关注公众号“宁波亚虎进出口有限公司”，点击“亚虎招聘-校园招聘”，选择“在线网申”。\n\n【福利与补贴】免费食堂（三个，套餐、面食、炒菜、锅仔任选）、免费班车、免费工作手机（含话费流量）、出差报销、自由式办公环境、轻松租房（提供中介/公寓信息）、团建素拓、五险一金+实习期商业保险、带薪年休假/婚假/产假/产检假、员工关爱基金、节日福利。政府补贴：人才安居补贴（本科及以上1k/月，最长发放30个月，硕士60个月）、购房补贴最高8万、一年内免费不限次乘坐地铁、9家租赁机构租房优待、景区/电影/音乐会等文旅优待、体育优待、免费职业技能培训。\n\n【来源】微信公众号推文，2026年8月31日 17:19 发布。",
+    "target": "2027届本科及以上毕业生，专业不限（国贸/理工科优先）；经营管培生要求CET-6或TEM-4良好及以上，全流程管培生要求CET-4或TEM-4及以上",
+    "type": "校招",
+    "industry": [
+      "零售"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "管培生",
+      "浙江"
+    ],
+    "post_date": "2026-08-01",
+    "salary": "外贸经营管培生：首年综合年薪10-15W+；外贸全流程管培生：首年综合年薪8-12W",
+    "education": "本科及以上（外贸经营管培生偏好985/211/QS前100本科或一本以上硕士）",
+    "experience": "应届生（2027届）；试用期3个月，实习期可抵试用期",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 54,
+    "company": "养生堂·农夫山泉·万泰生物",
+    "title": "2027届校园招聘（600+ Offer、八大职类）",
+    "positions": [
+      "销售",
+      "营销",
+      "生产",
+      "研发",
+      "药学",
+      "信息技术",
+      "市场",
+      "职能"
+    ],
+    "locations": [
+      "全国可选（农夫山泉销售",
+      "生产等岗位城市标注为“中国”；总部类岗位在浙江·杭州市）"
+    ],
+    "has_hc": true,
+    "hc_detail": "600+ Offer；官网在招岗位约28个，其中销售校招生（2027届）500人，其余单岗1-43人不等",
+    "referral_code": "DS7sD3bF",
+    "referral_url": "https://app.mokahr.com/m/campus-recruitment/yst/68367?recommendCode=DS7sD3bF",
+    "description": "【企业背景】养生堂·农夫山泉·万泰生物联合校园招聘，覆盖快消饮品（农夫山泉）、生物医药（万泰生物）、化妆品（养生堂）等业务板块。官方口径：600+ Offer、八大职类、全国可选；行业头部品牌背书、长期主义稳健增长、人才计划持续护航。\n\n【热招岗位（八大职类）】行销、生产、研发、生物、信息技术、品牌、职能等。\n官网（moka）在招岗位节选（括号内为HC/学历）：销售校招生（2027届）（500人/本科，专业不限，注“25-27届均可投递”，预计10月起陆续进行面试及实习OFFER沟通）；生产制造校招生（43人/本科，机械、电气、自动化、信息化、计算机、智能制造、人工智能等）；生产品保校招生（17人/本科，食品、化工、生物类等优先）；生产供应链校招生（12人/本科，物流类、管理类、统计类）；市场储备校招生（10人/硕士，市场营销等优先）；茶叶基地管理（8人/本科，茶学、种植、食品，2025-2026届毕业生也可投递）；生产品保校招生（茶学方向，6人/本科）；人力校招生（5人/本科）；算法工程师（4人/硕士，0-2年经验均可）；AI开发工程师（4人/硕士，0-2年经验均可）；生产动力校招生（3人/本科）；自动化软件工程师（PLC/IoT方向，3人/硕士）；饮品开发（3人/硕士）；财务校招生（3人/本科）；茶叶基地技术（种植端，2人/硕士）；生物防治（病虫害方向，2人/本科）；农业原料品保（食品/农学，2人/本科）；发酵技术（2人/本科）等。\n总部（浙江·杭州市）岗位：茶原料开发（茶学，2人/博士）、人工智能应用研究员（AI+生物/化学，3人/博士）、产业项目管理（1人/硕士，工科或法学背景优先）、工艺/分析方法开发（2人/硕士，生物、医药相关，有细胞免疫背景优先）、设备配套采购（机械/自动化，2人/硕士）、品牌（2人/硕士，新闻学、社会学、汉语言文学、历史优先）、设备开发（机械/自动化，1人/硕士）、设计（品牌设计，1人/本科）、销售校招生（养生堂化妆品，10人/本科）。\n\n【投递方式】内推码：DS7sD3bF（官方口径：使用内推码流程更快、不卡进度）。投递入口：https://app.mokahr.com/m/campus-recruitment/yst/68367?recommendCode=DS7sD3bF\n⏰ 网申9月启动，满员即止。\n\n【来源】内推公告（文本）+ 官方 moka 校招官网岗位明细，2026年9月归档。",
+    "target": "2027届毕业生为主，部分岗位放宽至2025-2027届；2027届秋招每个岗位允许投递1次",
+    "type": "校招",
+    "industry": [
+      "食品",
+      "医药"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "快消",
+      "医药",
+      "大扩招",
+      "浙江"
+    ],
+    "post_date": "2026-09-01",
+    "salary": "",
+    "education": "本科及以上为主；算法工程师、AI开发工程师、产业项目管理、品牌、饮品开发、设备配套采购等要求硕士及以上；茶原料开发（茶学）、人工智能应用研究员（AI+生物/化学）要求博士",
+    "experience": "2027届为主；销售、市场储备校招生注明 25-27 届均可投递，茶叶基地管理/茶叶基地技术注明 2025-2026 届也可投递；算法、AI开发、品牌、设备配套采购、自动化软件工程师注明 0-2 年经验均可投递",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 55,
+    "company": "幸福基业物业服务有限公司嘉善分公司",
+    "title": "2027届将才生校园招聘",
+    "positions": [
+      "管培生",
+      "管理"
+    ],
+    "locations": [
+      "嘉兴嘉善（浙江）"
+    ],
+    "has_hc": false,
+    "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "mailto:hankaixuan@cfldcn.com",
+    "description": "【企业】幸福基业物业服务有限公司嘉善分公司（招聘公告口径；海报主体为“幸福基业”，简历投递邮箱域名为 cfldcn.com）。\n\n【项目】将才生项目——“将才生”是幸福基业的管培生项目。“将才生”称号寄托着公司对管培生成长为将帅之才的殷切期望，他们既是公司重要的战略资源，也是公司未来中高层管理者的后备力量。该项目于2012年正式启动，经过十余年的积累与沉淀，已形成清晰的成长路径和系统的培养体系。目前，超过90%的“将才生”已晋升为管理人员，其中更有不少人走上分公司总经理岗位。“将才生”队伍正逐步成长为分公司管理干部的主力军。\n\n【晋升路径】专员（1-2年）→ 项目负责人/专业经理（3-4年）→ 片区/区域经理（5-7年）→ 分公司总经理/总部职能部门（8-10年）→ 业务/副总（15年以上）→ 总经理。\n\n【福利待遇】健康食堂、员工住宿、免费健康体检；有竞争力的薪酬、多元化的福利、五险一金；公司荣誉表彰、系统培训、团建活动等（海报归类为员工关怀+薪酬福利+成长激励）。\n\n【应聘信息（引自推荐人说明）】薪资 6000 元/月，双休；岗位最低是主管岗位，属于内部培养；2027 年 7 月正式入职，入职缴纳五险一金；在 2027 年 7 月之前也可以先进入实习。\n\n【简历投递】扫描海报二维码投递简历 / 扫码关注企业公众号；如有任何问题可咨询 HR 韩经理——邮箱 hankaixuan@cfldcn.com，电话 133-8366-1051（微信同号）。\n\n【备注】海报未标注发布时间与学历门槛，本表相应字段留空未作推测。",
+    "target": "2027届毕业生（将才生/管培生方向，面向公司未来中高层管理者后备力量）",
+    "type": "校招",
+    "industry": [
+      "专业服务"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "管培生",
+      "浙江"
+    ],
+    "post_date": "",
+    "salary": "6000元/月，双休（岗位起点为主管岗，属内部培养序列）",
+    "education": "海报未标注",
+    "experience": "2027届毕业生；2027年7月正式入职（入职即缴纳五险一金），2027年7月之前可先入职实习",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 56,
+    "company": "未来一手（广州未来一手网络科技有限公司）",
+    "title": "2027届校园招聘（管培生，五个方向）",
+    "positions": [
+      "管培生",
+      "运营",
+      "产品",
+      "数据分析",
+      "人力资源",
+      "设计"
+    ],
+    "locations": [
+      "广州（总部：广州市荔湾区花地街道陆居路2号立白中心主塔楼7楼）"
+    ],
+    "has_hc": true,
+    "hc_detail": "85人（买手方向30、商家运营30、产品经理10、用户运营5、数据分析师5、人力资源5）",
+    "referral_code": "",
+    "referral_url": "https://app.mokahr.com/campus-recruitment/weilaiyishou/145029?locale=zh-CN",
+    "description": "【公司简介】——服装产业互联网先锋，用科技重塑服装供应链！广州未来一手网络科技有限公司，是中国领先的服装产业互联网平台，已构建覆盖服装生产、流通、零售的全产业链数字化生态。作为首家实现移动互联网深度赋能服装产业的国家高新技术企业（2022年认定），我们以“让更多服装人有效率、有价值、有成长、有信赖”为使命，服务超千万的服装从业者，最高单月交易额超4亿，已实现多年持续盈利，连续获得多家全球顶级资本的青睐。\n\n三大业务护城河，定义行业新范式：\n█ 国内最大服装 B2B 平台：直连广州十三行/杭州四季青等全国核心产业带货源，首创“一件起批+自营仓储”模式，为服装店主提供一站式采购服务，提高行业效率，降低进货成本与开店压力。\n█ 产业级 SaaS 技术矩阵：自主研发衣者生产管理系统、巧飞工厂系统等数字化工具，赋能 9000+ 小微服装企业实现智能排产、精准库存管理，推动行业降本增效。\n█ AI 驱动创新生态：率先应用大数据选款算法（爆款预测准确率 95%+）、AI 营销工具（智能组货方案生成），建立覆盖抖音生态、跨境贸易的数字化服务闭环。\n截至目前，公司已获评「广州市数字经济标杆案例」「中国产业互联网领军企业」等荣誉，业务覆盖中国各省市，正构建服装产业的数字文明新生态。\n\n【管培生岗位需求】面向人群：2027届毕业生。\n买手方向 30 人（服装与设计相关）；商家运营 30 人（统计学、数学、电子商务、市场营销等）；产品经理 10 人（计算机、人工智能、自然语言处理等）；用户运营 5 人（统计学、数学、电子商务、市场营销等）；数据方向-数据分析师 5 人（统计学、数学等）；人力资源方向 5 人（工商管理、人力资源管理、行政管理等）。合计 85 人。\n\n【培养方案】集中培养周期6个月，关注成长周期2年。带教机制：部门负责人担任职业导师（职业规划及发展指导）、公司合伙人担任金牌导师（战略高度提升与认知拓展）、HRBP 担任伙伴导师（日常帮助及心理辅导）、P7 及以上伙伴担任业务导师（工作知识与技能带教）。培养四阶段：扬帆起航·融入一手（CEO面对面、企业文化融入、职业化塑造）→ 学海无涯·业务全链条实战（前台市场与服务、中台运营规则、后端供应链中心）→ 劈波斩浪·部门定向培育（业务前辈 1V1 带教、重点业务项目实战、公司级重要会议与项目参与）→ 逐梦深蓝·考核定岗（课题汇报释放潜能、双向定岗明确方向、毕业典礼身份转换）。\n\n【薪资福利】其他福利：入职满一年后有机会加入合伙人计划享有期权；绩效优异者年终有机会获得额外年终奖；公司提供房补，与一年两度的晋升调薪评优机会；周末双休、带薪撸猫、员工代金券、员工体检、员工父母体检、CEO面对面、大咖分享、健身房、按摩室、家庭日、节日礼物、节日活动、节日提前下班、10+天春节假、每日鲜食夜宵、每周下午茶、每周运动日。\n\n【招聘流程】宣讲&面试 2026年8月-10月 → offer发放（提供实习）2026年12月-2027年6月 → 办理入职 2027年7月。面试流程：校园宣讲（现场面试）→ 复试 → 不一样的终面。\n\n【联系方式】联系人：栗子 19155907768；电子邮箱：xiaozhaohr@yishouapp.com；网申地址：https://app.mokahr.com/campus-recruitment/weilaiyishou/145029?locale=zh-CN\n\n【来源】《广州未来一手网络科技有限公司2027届校园招聘简章》PDF（4页，含岗位数量表）+ 官方微信公众号推文《未来一手2027届校招启动ing》。",
+    "target": "2027届毕业生，按方向限专业：买手方向—服装与设计相关；商家/用户运营—统计学、数学、电子商务、市场营销等；产品经理—计算机、人工智能、自然语言处理等；数据分析—统计学、数学等；人力资源—工商管理、人力资源管理、行政管理等",
+    "type": "校招",
+    "industry": [
+      "互联网",
+      "零售"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "管培生",
+      "电商"
+    ],
+    "post_date": "",
+    "salary": "买手方向：本科8-9k／硕士9-10k；运营方向：本科8-9k／硕士9-10k；产品经理方向：本科9-10K／硕士10-11K；数据方向：本科9-10K／硕士10-11K；职能（人力资源）方向：本科7-8k／硕士8-9k（具体薪资标准以实际院校为准）",
+    "education": "本科及以上（本科/硕士分档定薪）",
+    "experience": "2027届毕业生；offer 发放后提供实习（2026年12月—2027年6月），2027年7月办理入职",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 57,
+    "company": "杭州热联集团股份有限公司（热联集团）",
+    "title": "2027届全球校园招聘",
+    "positions": [
+      "管培生",
+      "商务",
+      "财务",
+      "供应链",
+      "税务",
+      "数据分析"
+    ],
+    "locations": [
+      "国内：杭州（覆盖国内41城）；海外外派：巴基斯坦",
+      "印度",
+      "土耳其",
+      "阿联酋",
+      "沙特",
+      "印尼",
+      "越南",
+      "泰国",
+      "坦桑尼亚",
+      "埃及"
+    ],
+    "has_hc": false,
+    "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://www.duomian.com/project/13806544/",
+    "description": "【企业背景】杭州热联集团股份有限公司成立于2001年，致力于成为国际领先的全球化大宗商品产业服务商。隶属于世界500强国企杭实集团（杭州市实业投资集团），为世界500强下属千亿级国有企业。2025年实现销售收入 2704.8 亿元；2016—2024 年八度跻身中国钢贸企业百强综合榜前三；信用评级“AA+”；业务覆盖超 80 个国家和地区，国内 41 城＋海外 17 国双网联动。\n\n【工作区域】中国：杭州；南亚：巴基斯坦、印度；中东：土耳其、阿联酋、沙特；东南亚：印尼、越南、泰国；非洲：坦桑尼亚、埃及。\n\n【面向人群】2027届海内外高校全日制本科及以上应届毕业生，毕业时间在2026年9月—2027年8月内（中国大陆以毕业证为准，中国港澳台及海外地区以学位证为准）。外籍人员毕业时间不做限制，欢迎所有外籍华人、华侨、华裔应聘业务岗。优秀者可放宽至工作经验一年内。\n\n【热招职位】\n集团本部：国际业务管培生（外派）、国内业务管培生。专业方向：国贸、金融、理工科（冶金、矿业工程、化工、材料）等相关专业。培养方式：按要求完成业务实务、业务实战、中后台轮岗三个阶段的实践，培养懂现货、会经营的复合型全球化业务人才。\n国际岗位·业务类：国际黑色大宗商品业务员（外派）、黑色大宗商品业务员（外籍）。\n国际岗位·职能类：国际资金专员（外籍）、国际研究员（外派）、国际财务（外派）、国际物流专员（外派）、国际仓管员（外派）。\n国内岗位·业务类：黑色大宗商品业务员、期现业务员（非黑）。\n国内岗位·职能类：财务核算员、税务助理、运输专员。\n子公司岗位：热联同裕（大宗商品研究员、大宗商品期现交易员、期现业务员）、热联云盛（大宗商品期现业务员）、杭实化工（大宗商品研究员）、杭实善成（大宗商品研究员）、海晟能化（大宗商品研究员）。\n\n【招聘流程】投递简历 → 初试 → 复试 → 终试 → OFFER → 三方签订 → 正式入职。注意：部分岗位需提前实习1—2个月后发放正式offer，详见职位要求；外籍需在杭州总部实习和培养6个月后发放正式offer。\n\n【薪酬福利】薪酬激励：具有竞争力的薪酬（业务岗高额提成、上不封顶）；生活无忧：提供三年免费单身公寓，公司自带食堂及健身房，免费年度体检及疗休养；外派护航：外派员工享受外派津贴及带薪探亲假，配齐商业保险；多重福利：享受四大节日福利金，各类兴趣活动小组，节日、生日暖心福利；培养带教：配备帮带导师，三位一体培养模式；政策支持：应届生享受杭州市引才政策（一次性大额补贴、三年租房补贴）。\n\n【简历投递】PC端：https://www.duomian.com/project/13806544/ ；移动端：扫码投递。内推：通过热联集团员工/校园大使等渠道获得内推资格。投递规则：每位同学至多可投递三个志愿，HR按照第一至第三志愿顺序依次筛选；完善信息后同步上传附件简历，方便HR查阅。\n\n【校园活动】9月下旬起进入各大院校安排线下宣讲会：浙江大学（9月下旬）、上海财经大学（10月中旬）、华东理工大学（10月中旬）、中国矿业大学（10月下旬）、浙江工商大学（10月下旬）。更多日程请关注“热联招聘”公众号。\n\n【来源】微信公众号「热联招聘」（企业官方号），2026年8月21日 17:00 发布。招聘详情为海报图片，经 OCR 提取整理。",
+    "target": "2027届海内外高校全日制本科及以上应届毕业生，毕业时间在2026年9月—2027年8月内（中国大陆以毕业证为准，中国港澳台及海外地区以学位证为准）；欢迎所有外籍华人、华侨、华裔应聘业务岗",
+    "type": "校招",
+    "industry": [
+      "制造业"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "世界500强",
+      "全球化",
+      "海外业务",
+      "浙江"
+    ],
+    "post_date": "2026-08-01",
+    "salary": "具有竞争力的薪酬（业务岗高额提成、上不封顶）；三年的免费单身公寓、公司自带食堂及健身房、免费年度体检及疗休养、四大节日福利金；外派员工享外派津贴及带薪探亲假、配齐商业保险；应届生享杭州市引才政策（一次性大额补贴、三年租房补贴）",
+    "education": "全日制本科及以上",
+    "experience": "2027届应届生（毕业时间 2026年9月—2027年8月）；优秀者可放宽至工作经验一年内；外籍人员毕业时间不限",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 58,
+    "company": "物产中大集团股份有限公司",
+    "title": "2027届校园招聘（物色未来）",
+    "positions": [
+      "商务",
+      "技术",
+      "研发",
+      "财务",
+      "审计",
+      "职能"
+    ],
+    "locations": [
+      "总部浙江杭州；业务范围覆盖全球90多个国家和地区（招聘页未列具体可选城市）"
+    ],
+    "has_hc": false,
+    "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://campus.wzgroup.cn",
+    "description": "【企业背景】物产中大集团股份有限公司（股票代码：600704.SH），浙江省属特大型国有控股上市公司，致力于成为中国智慧供应链集成服务引领者，努力打造“大而强、富而美”受人尊敬的优秀上市公司。连续16年入围世界500强，2026年位列世界500强第154位；拥有各级成员单位超500家、员工近3万人，办有1所企业大学；业务范围覆盖全球90多个国家和地区；首批全国供应链创新与应用示范企业。\n\n【发展战略】以智慧供应链集成服务为主体，以金融服务与高端制造为两翼的“一体两翼”发展战略。\n智慧供应链集成服务：金属、煤炭、化工、汽车等主营品种均位列全国经销商前列。\n金融服务：融资租赁、期货、财务公司、典当、平台交易、保险、保理、资管等，构建综合金融服务平台。\n高端制造：线缆、热电、轮胎、不锈钢、镁业、铝合金、战略金属、医药、水务等，提质增效步伐不断加速。\n\n【招聘岗位】业务拓展类、技术研发类、财务审计类、行政职能类。\n\n【招聘流程】网申 → 专场招聘会 → 简历筛选 → 笔试/面试（线上或线下）→ 现场面试 → 录用。\n\n【专场招聘会行程】9月22日（周二）浙江大学-紫金港校区；10月14日（周三）复旦大学-邯郸校区；10月15日（周四）上海财经大学-国定路校区；10月21日（周三）南京大学-仙林校区；10月22日（周四）东南大学-九龙湖校区；10月28日（周三）西安交通大学-创新港校区；10月29日（周四）西北工业大学-长安校区。备注：具体行程安排以网申通道内行程发布为准。\n\n【网申通道】https://campus.wzgroup.cn\n\n【来源】微信公众号「浙江工商大学就业指导中心」2026年9月15日 17:02 转载（原文来源 / 物产中大集团）。招聘详情为长图海报，经 OCR 提取整理，个别细分字词可能有识别偏差，请以官网为准。",
+    "target": "2027届应届毕业生",
+    "type": "校招",
+    "industry": [
+      "制造业",
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "世界500强",
+      "上市企业",
+      "全球化",
+      "浙江"
+    ],
+    "post_date": "2026-09-01",
+    "salary": "",
+    "education": "招聘海报未标注",
+    "experience": "2027届应届毕业生",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 59,
+    "company": "珀莱雅（珀莱雅化妆品股份有限公司）",
+    "title": "2027届校园招聘（青苗计划）",
+    "positions": [
+      "营销",
+      "运营",
+      "设计",
+      "职能",
+      "人工智能",
+      "市场"
+    ],
+    "locations": [
+      "杭州·珀莱雅大厦"
+    ],
+    "has_hc": false,
+    "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://jobs.proya.com/campus/",
+    "description": "【企业背景】珀莱雅（PROYA）2027届校园招聘正式开启，主题“敢突破、敢创新、敢发光”。多元品牌矩阵：十大品牌，覆盖护肤、彩妆、科研、潮流热门赛道（珀莱雅、彩棠 HAPSODE、Off&Relax、悦芙媞、INSBAHA、CORRECTORS、惊时、原色波塔、科瑞肤、Awaken Seeds、优资莱等）。多元业务场景、超多新鲜玩法，为创意与成长提供足够大的舞台。\n\n【招聘对象】2027届毕业生，本科及以上学历。毕业时间：2026年12月—2027年9月（中国大陆（内地）以毕业证为准，中国港澳台及海外地区以学位证为准）。\n\n【岗位方向】多赛道岗位同步热招：营销类、海外类、AI类、运营类、设计类、职能类。工作地点：杭州·珀莱雅大厦。所有岗位信息以官网发布为准，更多详情请登录 jobs.proya.com/campus 查看。\n\n【青苗计划】资源加持：专属青苗培养计划，集训营＋多元学习资源，解锁职场全新征程；导师同行：班主任＋业务导师双向护航，深耕国货实战项目；破圈成长：跨业务轮岗挖掘潜能，成长路径清晰可循；多元福利：节日礼遇、带薪旅游假、实现护肤品自由。\n\n【招聘流程】网申投递 → 简历评估 → 面试安排 → Offer发放。\n\n【校园宣讲季】9月—10月，奔赴校园之约。HR助力启航（校招政策、培养计划解析）；学长学姐现身（分享真实职场成长故事）；神秘大咖分享（探秘国货美妆赛道趋势）；多重现场福利（惊喜伴手礼）。关注“珀莱雅招聘”微信公众号及“珀莱雅招聘课代表”小红书账号获取最新动态；最终宣讲院校、时间、地点信息以官方通知为准。\n\n【投递指南】PC端：进入珀莱雅校招官网 jobs.proya.com/campus/ ，登录后选择意向岗位完善信息并投递；移动端：关注“珀莱雅招聘”微信公众号，点击菜单栏【加入我们—校园招聘】，选择意向岗位登录完善信息并投递；支持微信上传/手机上传/邮箱投递/创建微简历投递。\n\n【来源】微信公众号「浙江工商大学就业指导中心」2026年9月15日 17:02 转载（原文来源 / 珀莱雅招聘）。招聘详情为海报长图，经 OCR 提取整理。\n\n【浙江工商大学站宣讲会】时间：2026年9月23日（周三）18:00—19:00；地点：下沙校区 C222教室；面向同学：2027届本科及以上应届毕业生（大二、大三同学也欢迎到场，提前攒求职经验）。\n现场三重福利：①现场惊喜——入场可领珀莱雅伴手礼，座位先到先得；②幸运抽奖——超多超值美妆好物随机掉落；③浙工商社群加码——扫码加入专属群，额外礼物拿到手软，宣讲会当天直接兑换。\n\n【来源补充】珀莱雅2027届秋招校内宣讲会海报（浙江工商大学站）及校方宣讲会通知（2026年9月）；另经微信公众号「珀莱雅招聘」2026年9月9日 11:00 发布《珀莱雅招聘 | 2027秋季校园招聘正式启动！》核对。",
+    "target": "2027届毕业生，本科及以上学历；毕业时间 2026年12月—2027年9月（中国大陆（内地）以毕业证为准，中国港澳台及海外地区以学位证为准）",
+    "type": "校招",
+    "industry": [
+      "制造业",
+      "零售"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "日化",
+      "新消费",
+      "快消",
+      "管培生"
+    ],
+    "post_date": "2026-09-01",
+    "salary": "海报未列明薪酬；福利含节日礼遇、带薪旅游假、实现“护肤品自由”等",
+    "education": "本科及以上",
+    "experience": "2027届毕业生，毕业时间 2026年12月—2027年9月",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 60,
+    "company": "浙江省交通投资集团有限公司（浙江交通集团）",
+    "title": "2027届校园招聘（含“交投新光”管培生计划）",
+    "positions": [
+      "管培生",
+      "工程",
+      "财务",
+      "信息技术",
+      "金融",
+      "管理"
+    ],
+    "locations": [
+      "浙江为主（集团总部杭州",
+      "23家招聘单位覆盖全省；含浙江省海运集团等）"
+    ],
+    "has_hc": true,
+    "hc_detail": "23家单位合计约953人。其中浙商证券 160、浙江交工集团 190、浙商财产保险 75、南通江海电容器 66、浙商中拓集团 60、浙江省交通投资集团本部 45、浙江省商业集团 44、浙江交投物流集团 40、浙江沪杭甬高速 38、浙江省海运集团 30、浙江镇洋发展 30、浙江金温铁道 29、浙江高信技术 28、浙江省轨道交通运营管理集团 26、浙江省交通集团技术研究总院 25、浙江交通资源投资集团 20、浙江交投建设管理 12、浙江数智交院 10、浙江交投科教集团 10、浙江交投产融控股 7、集团信息中心 3、集团财务共享服务中心 3、浙江省经济建设投资 3",
+    "referral_code": "",
+    "referral_url": "https://www.cncico.com/",
+    "description": "【企业背景】浙江省交通投资集团有限公司是浙江省综合交通投融资主平台和综合交通建设主力军，统筹承担全省高速公路、铁路、重要的跨区域轨道交通和综合交通枢纽等交通基础设施的投融资、建设、运营及管理职责，并积极参与市县主导的综合交通基础设施项目。企业愿景：建设“价值卓越的国际综合交通产业投资集团”；企业使命：高水平服务人民美好出行，高质量发展综合交通产业。\n综合实力：2025年位列世界500强第309位；营业收入（2025年）3653亿元；集团资产总额（截至2025年12月末）11470亿元；上市公司6家、全资或控股各级企业430家；参与建成铁路里程占浙江省79%，累计投资建成高速公路里程占浙江省64%。\n\n【业务布局】结合国家战略和产业发展趋势，构建智慧交通、新基建、新供应链、新金融、新产业“1+4”业务布局。智慧交通：承担国家和浙江省交通基础设施重大战略任务，涵盖高速公路和铁路及轨道交通投资、建设、运营业务；新基建：涵盖咨询设计、工程施工、服务区运营、智慧高速解决方案、城市开发等；新供应链：涵盖大宗商品资源开发、大宗商品供应链、大宗商品加工制造、仓储物流等；新金融：涵盖证券、保险、期货、租赁等；新产业：重点关注新能源、新材料、装备制造、循环经济、环保等。\n\n【招聘信息】招聘对象：2027届全球应届毕业生。招聘单位：23家企业。\n“交投新光”管培生计划：“交投新光”是浙江交通集团面向全球优秀青年才俊的人才专项计划——旨在为集团培养未来的青年后备管理人才和业务核心骨干，提供双导师护航、多维度锻炼、多通道发展。\n\n【招聘单位与计划数】1 浙江省交通投资集团有限公司 45；2 浙江省交通投资集团有限公司信息中心 3；3 浙江省交通投资集团有限公司财务共享服务中心 2；4 ★浙江沪杭甬高速公路股份有限公司 38；5 浙江交投建设管理有限公司 12；6 浙江省轨道交通运营管理集团有限公司 26；7 浙江金温铁道开发有限公司 29；8 浙江数智交院科技股份有限公司 10；9 ★浙江交工集团股份有限公司 190；10 浙江省商业集团有限公司 44；11 浙江交投产融控股有限公司 7；12 浙商财产保险股份有限公司 75；13 ★浙商中拓集团股份有限公司 60；14 ★浙江镇洋发展股份有限公司 30；15 浙江省经济建设投资有限公司 3；16 浙江省海运集团有限公司 30；17 浙江高信技术股份有限公司 28；18 浙江交通资源投资集团有限公司 20；19 浙江交投物流集团有限公司 40；20 浙江交投科教集团有限公司 10；21 ★浙商证券股份有限公司 160；22 浙江省交通集团技术研究总院有限责任公司 25；23 ★南通江海电容器股份有限公司 66。注：标★企业为上市公司。合计约 953 人。\n\n【招聘流程】简历筛选 → 素质测评 → 岗位测试 → 面试甄选 → 背景调查 → 就业协议 → 入职报道。\n\n【投递方式】PC端方式一：登录浙江交通集团官网 https://www.cncico.com/ ，进入“人才招聘”板块；PC端方式二：扫描下方二维码投递。移动端：关注“浙江省交通投资集团有限公司”微信公众号 → 公众服务 → 人才招聘 → 投递简历。可选择 3 个意向岗位进行投递，建议尽早投递；请确保网申信息 100% 完整。\n\n【宣讲行程（海报所载）】9月15日 中南大学；9月16日 长安大学；9月22日 浙江大学；10月9日 北京大学；10月10日 北京交通大学；10月10日 中国人民大学；10月13日 西南交通大学；10月15日 华中科技大学；10月21日 同济大学/上海交通大学（海报中日期排布存在歧义，请以官方发布为准）；10月27日 香港大学；10月30日 东南大学。空中宣讲会三场直播：9月14日、9月22日、9月29日。其它高校宣讲行程陆续规划中。浙江交通集团2027届校园招聘工作由浙江科教集团承办。\n\n【来源】微信公众号「浙江工商大学就业指导中心」2026年9月15日 17:02 转载（原文来源 / 浙江交通集团）。招聘详情为海报长图，经 OCR 提取整理，宣讲日期与细分字词可能存在识别偏差，请以官方渠道为准。",
+    "target": "2027届全球应届毕业生。“交投新光”管培生计划（面向全球优秀青年才俊，培养未来青年后备管理人才和业务核心骨干）与成员单位校招计划同步启动，两大计划互不冲突，可同时投递",
+    "type": "校招",
+    "industry": [
+      "制造业",
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "世界500强",
+      "管培生",
+      "上市企业",
+      "浙江",
+      "大扩招"
+    ],
+    "post_date": "2026-09-01",
+    "salary": "海报未列明薪酬",
+    "education": "海报未标注",
+    "experience": "2027届全球应届毕业生",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 61,
+    "company": "中国邮政集团有限公司",
+    "title": "2027年度联合校园招聘",
+    "positions": [
+      "金融",
+      "财务",
+      "信息技术",
+      "供应链",
+      "运营",
+      "职能"
+    ],
+    "locations": [
+      "全国（集团公司总部",
+      "邮储银行",
+      "中邮保险",
+      "中邮证券",
+      "集团公司寄递事业部",
+      "集团公司直属各单位",
+      "全国各省邮政分公司）；具体工作地点详见网申系统"
+    ],
+    "has_hc": true,
+    "hc_detail": "近3000个岗位（官方口径“近3000新鲜岗位”）",
+    "referral_code": "",
+    "referral_url": "https://chinapost2027.zhaopin.com/",
+    "description": "【企业背景】中国邮政集团有限公司是大型国有独资企业，依法经营各项邮政业务，承担邮政普遍服务义务，受政府委托提供邮政特殊服务，对竞争性邮政业务实行商业化运营。经过多年持续发展，已转型升级为业务多元化的大型企业集团，竞争实力稳步增强，企业效益明显提升，社会影响不断扩大。以邮政、快递物流、金融、电子商务等为主业，实行多元化经营（普遍服务、寄递业务、金融业务、电商业务）。\n\n【招聘规模】近 3000 个新鲜岗位。招聘单位：集团公司总部、邮储银行、中邮保险、中邮证券、集团公司寄递事业部、集团公司直属各单位、全国各省邮政分公司。\n\n【招聘对象】普通高等院校2027年应届毕业生（同时面向择业期内毕业生）；经教育部留学服务中心认证学历学位的国（境）外应届毕业留学生。\n\n【专业类别】邮政类、交通运输（物流）类、金融经济类、电子商务类、工商管理类、计算机类、财务会计类、法律、中文等专业。\n\n【薪酬与培养】为能力付薪、为岗位付薪、为绩效付薪，以岗位管理为基础的一岗多薪的宽带薪酬体系与正常增长机制；坚持关心关爱员工，提供全方位的福利保障；分类分层的人才培养选拔体系，完善的人才使用和激励机制，大力实施重点人才培养工程，健全的人才成长通道。\n\n【网申重点】在网申系统内，每名应聘者均可申请 2 个单位、每个单位可申请 1 个职位；各机构具体的招聘岗位、招聘条件、工作地点详见网申系统。注：邮储银行和中邮保险以各自招聘官网公布信息为准。\n\n【网申通道与截止时间】PC 端：https://chinapost2027.zhaopin.com/ ；移动端：扫描二维码投递简历。⏰ 网申报名截止日期：10月31日（邮储银行：10月7日；中邮保险：10月17日）。\n\n【来源】微信公众号「浙江工商大学就业指导中心」2026年9月15日 17:02 转载（原文来源 / 中国邮政）。招聘详情为海报图片，经 OCR 提取整理。",
+    "target": "普通高等院校2027年应届毕业生（同时面向择业期内毕业生）；经教育部留学服务中心认证学历学位的国（境）外应届毕业留学生。专业类别：邮政类、交通运输（物流）类、金融经济类、电子商务类、工商管理类、计算机类、财务会计类、法律、中文等专业",
+    "type": "校招",
+    "industry": [
+      "金融",
+      "央企"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "央企",
+      "金融",
+      "大扩招"
+    ],
+    "post_date": "2026-09-01",
+    "salary": "为能力付薪、为岗位付薪、为绩效付薪，以岗位管理为基础的一岗多薪的宽带薪酬体系及正常增长机制；提供全方位的福利保障",
+    "education": "海报未标注具体学历门槛（要求为普通高等院校2027年应届毕业生）",
+    "experience": "2027年应届毕业生（同时面向择业期内毕业生）；国（境）外应届毕业留学生",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 62,
+    "company": "泰隆银行（浙江泰隆商业银行）",
+    "title": "2027届秋季全球校园招聘",
+    "positions": [
+      "管培生",
+      "营销",
+      "财务",
+      "运营",
+      "金融",
+      "客户服务",
+      "信息技术"
+    ],
+    "locations": [
+      "浙江：全省覆盖；上海市；江苏：苏州；湖北：大冶；河南：叶县",
+      "汝南；陕西：旬阳",
+      "眉县",
+      "泾阳（网申时选择意向工作地点为第一工作",
+      "轮岗地）"
+    ],
+    "has_hc": false,
+    "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://zjtlcb.zhiye.com",
+    "description": "【企业背景】泰隆银行（浙江泰隆商业银行）2027届秋季全球校园招聘正式启动，主题“未来银行，由你定义”。福利：有竞争力的薪酬福利；轮岗及梯队培养；传帮带文化（多导师、职场搭子）；自己的企业大学；年休假、探亲假、育儿假、亲情假等二十余种假期；六险二金、免费早餐、父母领薪、免费体检、节日礼盒、旅游补贴、社团club等。\n\n【招聘对象】2027届及2026届毕业生。境内院校毕业时间：2026年1月—2027年7月之间；境外院校毕业时间：2025年8月—2027年7月之间（以毕业证书中毕业时间为准）。\n\n【投递岗位】\n金融专场：①“菁鲤计划”培训生（营销方向）；②“菁鲤计划”培训生（财务运营方向）；③量化投资策略研发岗；④服务经理。\n科技专场：①“鲤跃计划”培训生（金融科技方向）；②IT“菁英”人才。\n\n【工作地点】浙江：全省覆盖；上海市；江苏：苏州；湖北：大冶；河南：叶县、汝南；陕西：旬阳、眉县、泾阳。网申时选择意向工作地点为第一工作/轮岗地。\n\n【投递方式】PC 端：登录 zjtlcb.zhiye.com，点击“校园招聘”栏目网申；移动端：关注“泰隆银行微招聘”公众号，点击“招聘-应届生招聘”栏目网申；内部推荐：寻找身边泰隆学长学姐一键内推。\n\n【招聘流程】金融专场岗位：网申 → 线上测评 → 简历筛选 → 面试 → 体检offer → 入职。科技专场岗位：网申 → 线上测评 → 简历筛选 → 笔试 → 面试 → 体检 → offer → 入职。\n\n【时间安排】STEP 1 网申时间：即日起—2026年11月30日；STEP 2 测评时间：9月陆续开始；STEP 3 面试时间：9月中旬陆续安排；STEP 4 offer发放时间：10月开始陆续发放。\n\n【来源】微信公众号「浙江工商大学就业指导中心」2026年9月15日 17:02 转载（原文来源 / 泰隆银行微招聘）。招聘详情为海报图片，经 OCR 提取整理。",
+    "target": "2027届及2026届毕业生（境内 2026年1月—2027年7月毕业；境外 2025年8月—2027年7月毕业）",
+    "type": "校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "金融",
+      "金融科技",
+      "管培生",
+      "浙江"
+    ],
+    "post_date": "2026-09-01",
+    "salary": "有竞争力的薪酬福利；轮岗及梯队培养、传帮带文化（多导师、职场搭子）、自己的企业大学；年休假、探亲假、育儿假、亲情假等二十余种假期；六险二金、免费早餐、父母领薪、免费体检、节日礼盒、旅游补贴、社团club等",
+    "education": "海报未标注",
+    "experience": "2027届及2026届毕业生。境内院校毕业时间：2026年1月—2027年7月之间；境外院校毕业时间：2025年8月—2027年7月之间（以毕业证书中毕业时间为准）",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 63,
+    "company": "重庆百亚卫生用品股份有限公司（百亚股份）",
+    "title": "百亚股份2027校园招聘（浙江工商大学宣讲会，2026-09-17）",
+    "positions": [
+      "管培生",
+      "销售",
+      "运营",
+      "营销",
+      "职能",
+      "产品",
+      "研发",
+      "人力资源"
+    ],
+    "locations": [
+      "重庆市（重庆市九龙坡区袁家岗奥体路一号中新城上城5栋）；宣讲会地点：浙江工商大学下沙校区 师生之家就业宣讲厅"
+    ],
+    "has_hc": true,
+    "hc_detail": "管培生（销售）需求 11—20 人",
+    "referral_code": "",
+    "referral_url": "mailto:jiang.xz@baiya.cn",
+    "description": "【宣讲会信息】重庆百亚卫生用品股份有限公司校园宣讲会。举办时间：2026年9月17日 14:00—17:00；举办校区：浙江工商大学下沙校区；举办地点：师生之家就业宣讲厅（师生之家咖啡店旁）。\n宣讲内容流程：1、公司介绍及产品介绍；2、领导致辞；3、岗位发布；4、优秀代表发言；5、互动答疑。现场环节：1、简历收取；2、伴手礼发放。\n\n【企业简介】重庆百亚卫生用品股份有限公司（股票代码：003006.SZ）成立于2010年11月，是国内集研发、生产与销售于一体的一次性卫生用品领域的领军企业，旗下拥有女性卫生用品品牌“自由点”。2020年9月，百亚股份成功登陆深圳主板，成为国内卫生巾行业“A股卫生巾第一股”。2025年，百亚股份营业收入约35亿元。\n生产基地坐落于重庆巴南麻柳沿江开发区百亚国际产业园，拥有30余条行业领先智能化生产线，年产能达67亿片卫生巾；2019年获评重庆市经信委“重庆市智能工厂”称号，2023年获批国家工信部“国家级绿色工厂”称号，2025年入选工信部《2025年5G工厂名录》。\n核心品牌“自由点”作为中国卫生巾行业头部国货品牌，2024年跻身中国卫生巾市场份额前三；2025年荣膺工信部“中国消费名品”及艾媒咨询“2025中国国货消费品牌500强”。自由点产品线涵盖卫生巾、安睡裤、护垫等全系列品类，自2002年品牌创立以来开创“大健康卫生巾”新赛道，2023年创新推出益生菌系列；2024年度自由点产品实现营业收入30.36亿元，较上年同期增长60.6%。\n\n【招聘岗位】管培生（销售）。工作类型：全职；需求人数：11—20人；学历要求：硕士、本科；专业要求：不限专业；薪资：8000—8499元/月；工作地点：重庆市（重庆市九龙坡区袁家岗奥体路一号中新城上城5栋）。\n岗位职责：1.负责区域内客户的沟通及维护，挖掘客户新需求；2.组织区域内客户进行产品的推广、演示及产品的试用；3.及时了解市场动态、竞争对手情况，提出合理化建议；4.正确理解和执行公司销售策略，达成业务指标；5.定期总结区域内销售工作，及时向总公司汇报。\n\n【投递方式】简历投递邮箱：jiang.xz@baiya.cn；岗位截止日期：2026-10-15；岗位发布日期：2026-08-28。\n\n【来源】浙江工商大学智慧就业服务平台·校园宣讲会页面（xjhid 233590262138540032）。\n\n【2027校招官方海报补充（“自由向上 一路生光”）】\n·招聘会时间：9月17日（周四）14:00—15:00（校就业平台页面另记为 14:00—17:00）\n·招聘会地点：【下沙校区】师生之家就业宣讲厅\n·招聘岗位：电商运营类、职能类等岗位\n·招聘对象：本科及以上学历2027届应届全日制毕业生\n·招聘流程：网申/线下投递 → 初面 → 终面 → Offer（2026年10—11月）\n·宣讲范围：宣讲/双选覆盖浙江大学、浙江工商大学等10所高校，最终行程以招聘官网为准\n·网申通道：海报附招聘官网二维码；邮箱通道 hr@baiya.cn\n·交流群：微信群“百亚股份2027校招·浙江工商大学交流”（群二维码标注7日内有效）\n\n【企业荣誉（海报版）】国内一次性卫生用品行业知名综合性企业，理念“因为爱，让生活更阳光灿烂”。2010年成立、2020年深交所上市、员工2300+、“500强国货消费品牌”。2025荣誉精选：天猫金妆奖、年度女性护理奖、巨量引擎年度行业标杆奖、重庆民营企业双百强。\n\n【岗位说明（海报版）】\n01 销售校招生：投放线上电商渠道（天猫、京东、拼多多等），经历轮岗学习后承担电商运营职责，面向消费者的toC销售；主要工作涵盖业务规划、产品管理、活动执行、数据采集&费用管理等。专业不限，市场营销、工商管理类优先。发展路径：电商运营主管 → 电商运营经理 → 电商渠道负责人。\n02 职能校招生：公司后备梯队，轮岗后定岗，方向为产品、品牌、研发&技术、人资。市场营销、生物医药、机械工程等专业优先。\n\n【培养体系（“３个月，从校园到定岗”）】入职集训（前三天）→ 基础能力塑造（第1-2周）→ 销售轮岗（第3-4周）→ 实战历练 → 3个月定岗；专属导师全程带教。核心任务含专业筑基、小场景验证、跟岗学习、独立任务实战等，并设“面向部门训战”环节。\n\n【成长与晋升】专属导师制，入职一对一带教；系统化岗前培训，快速上手业务；销售岗有轮岗机会，全面了解生意；定期内部分享。一年两次绩效评估，能力到了就晋升；管理线&专业线双通道；优秀校招生2-3年可成长为骨干；往届不少2-3年前入职的校招生已能独当一面带项目。\n\n【福利】五险一金；具有竞争力的薪资＋绩效奖金；带薪年假、节日福利、生日关怀；员工内购福利，丰富团建。\n\n【来源】百亚股份2027校园招聘官方海报（两张）及“百亚股份2027校招·浙江工商大学交流”微信群通知（2026年9月）。",
+    "target": "本科/硕士应届毕业生，不限专业（岗位发布日期 2026-08-28，投递截止 2026-10-15）",
+    "type": "校招",
+    "industry": [
+      "制造业"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "管培生",
+      "上市企业",
+      "快消",
+      "电商"
+    ],
+    "post_date": "2026-08-01",
+    "salary": "8000—8499元/月",
+    "education": "本科、硕士",
+    "experience": "应届生（不限专业）；岗位截止日期 2026-10-15",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 64,
+    "company": "中国移动浙江公司（浙江移动）",
+    "title": "2027校园招聘（第六届“金种子”计划同步启动）",
+    "positions": [
+      "技术",
+      "人工智能",
+      "市场",
+      "销售",
+      "客户经理",
+      "产品",
+      "运营",
+      "财务",
+      "人力资源"
+    ],
+    "locations": [
+      "浙江省内各地市（含衢州",
+      "丽水等全省地市）"
+    ],
+    "has_hc": true,
+    "hc_detail": "招聘岗位1000+（技术类、市场政企类、综合类）",
+    "referral_code": "",
+    "referral_url": "http://www.zj.10086.cn/job/",
+    "description": "【招聘主体】中国移动浙江公司（浙江移动）2027校园招聘，第六届“金种子”计划同步启动。\n\n【企业背景】中国移动锚定“世界一流科技服务企业”愿景，实施“网络强基、全栈创新”战略，聚焦“网络强国、数字中国”建设主责，做强做优做大“通信服务、算力服务、智能服务”三大主业。行业第一：中央企业负责人经营业绩考核A级、中央企业科技创新优秀企业榜单TOP10；2026年《财富》世界500强排名第53位，位列全球电信运营商首位；最佳雇主——最受大学生关注雇主。中国移动浙江公司为国务院国资委深化人才发展体制机制改革示范企业、省内规模最大运营商，总资产规模超1200亿元，年主营业务收入超710亿元，员工总数近1.9万人。\n\n【招聘对象】面向2027届应届生和2026届未就业毕业生；要求国内外普通高等学校本科及以上学历；品学兼优，身心健康，认同公司文化。\n\n【专业方向】计算机类、人工智能类、通信类、电子类、信息类、安全类、互联网类、物联网类、电气类、自动控制类、数学类、统计类、法学类、财务类（欢迎相关专业或具有上述专业能力的学生报名）。\n\n【招聘岗位（1000+）】\n·技术类：AI工程师、AI产品经理、大数据工程师、云计算工程师、通信网络工程师、动力运行维护工程师；\n·市场政企类：技术销售（客户经理）、技术销售（市场方向）、政企解决方案经理、数字化产品运营；\n·综合类：财务管理、法律合规管理、人力资源管理、综合文秘。\n（更多招聘职位及岗位职责详见网申页面）\n\n【工作地点】浙江省内各地市（含衢州、丽水等）。\n\n【成长福利】央企完善的管理机制、关爱人才的用人氛围、畅通公平的职业平台、有竞争力的薪酬福利；“善知善行、惟实惟新”的工作文化；五险一金、工资奖金、年终奖、各类培训、带薪年假、补充医疗、劳动保护、员工宿舍、美味食堂、良好办公环境、节日关怀、关爱互助金。\n\n【招聘流程】网申报名（10月上旬截止）→在线笔试（10月24日）→初面及测评（10月下旬）→现场复面（11月中旬）→发放offer（12月中旬）→体检与背调（12月下旬）→入职（2027年6—8月）。\n\n【投递方式】PC端：http://www.zj.10086.cn/job/ ；手机端：微信公众号掌上报名。关注“浙江移动人才招聘”微信公众号获取职位信息、查询应聘进展。\n\n【来源】微信公众号「浙江移动人才招聘」，2026年9月8日发布。招聘详情为海报图片，经 OCR 提取整理；另经浙江工商大学就业指导中心推送（2026-09-14）转发。",
+    "target": "2027届应届生和2026届未就业毕业生；专业方向：计算机类、人工智能类、通信类、电子类、信息类、安全类、互联网类、物联网类、电气类、自动控制类、数学类、统计类、法学类、财务类",
+    "type": "校招",
+    "industry": [
+      "央企"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "26届",
+      "央企",
+      "浙江"
+    ],
+    "post_date": "2026-09-08",
+    "salary": "五险一金、工资奖金＋年终奖、各类培训、带薪年假、补充医疗、劳动保护、员工宿舍、美味食堂、良好办公环境、节日关怀、关爱互助金（页面未披露具体金额）",
+    "education": "国内外普通高等学校本科及以上学历",
+    "experience": "2027届应届生，以及2026届未就业毕业生；品学兼优，身心健康，认同公司文化",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 65,
+    "company": "中信银行宁波分行",
+    "title": "中信银行宁波分行2027年校园招聘",
+    "positions": [
+      "管培生",
+      "客户经理",
+      "柜员"
+    ],
+    "locations": [
+      "浙江省宁波市（机构网点覆盖宁波各县（市）区）"
+    ],
+    "has_hc": false,
+    "hc_detail": "管理培训生、客户经理类、柜员（页面未披露具体人数）",
+    "referral_code": "",
+    "referral_url": "https://job.citicbank.com",
+    "description": "【招聘主体】中信银行宁波分行2027年校园招聘。\n\n【分行简介】中信银行宁波分行成立于2000年，是总行直属一级分行，机构网点覆盖宁波各县（市）区。依托中信集团“金融全牌照”“金融＋实业”综合优势，分行以服务宁波经济社会高质量发展为己任，强党建、践初心、担使命、勇争先，持续为宁波加快高质量发展推动共同富裕先行示范、高水平建设现代化滨海大都市贡献中信金融力量。分行始终坚持“以人为本”，为员工施展才华提供广阔通道与和谐工作环境。\n\n【招聘岗位】管理培训生、客户经理类、柜员。\n\n【工作地点】浙江省宁波市。\n\n【招聘对象】\n·境内院校毕业生：应纳入国家统一招生计划，在校期间为非在职的2027年应届毕业生（不含委培生和定向生），2027年7月31日前获得国家认可的毕业证、学位证。\n·境外院校毕业生：应在2026年1月1日至2027年8月31日期间毕业且初次就业，原则上2027年8月31日前获得学历（学位）证书原件及教育部留学服务中心的学历学位认证。\n\n【基本条件】遵纪守法、诚实守信，无违法、违规、违纪等不良记录；中国内地、香港特别行政区、澳门特别行政区、台湾地区生源；具有国家认可的本科及以上学历，主修经济学类、管理学类、法学类、理学类、工学类等相关专业；一般应通过大学英语四级（成绩不低于425分）或同等级别及以上考试；按国家或高校规定如期毕业；具有较强的使命感和责任感，服从组织安排，适应企业发展要求，事业心强，富有工作激情，认同中国特色金融文化，有志于在中信银行系统内长期发展；具有良好的学习和研究分析能力、文字表达能力、组织协调能力和团队合作意识；身心健康，能够承担一定的工作压力，身体条件需符合人社部《公务员录用体检通用标准（试行）》《公务员录用体检操作手册（试行）》等相关规定；符合履职回避的有关规定及校园招聘的其他条件。\n\n【应聘方式】登录中信银行招聘官网 https://job.citicbank.com 或关注“中信银行招聘”公众号，注册用户、按要求创建和完善简历并申请职位。每位应聘者最多可同时投递两个机构，每个机构最多只能申请两个职位。\n\n【时间安排】即日起开启网申，简历截止时间暂定2026年10月9日；全球统一考试（在线）安排另行通知。\n\n【来源】微信公众号「中信银行招聘」，2026年9月4日发布（《宁波｜中信银行宁波分行2027年校园招聘》）。招聘详情为长图海报，经 OCR 提取整理。",
+    "target": "境内院校2027年应届毕业生及符合条件的境外院校毕业生；主修经济学类、管理学类、法学类、理学类、工学类等相关专业；一般应通过大学英语四级（成绩不低于425分）或同等级别及以上考试；中国内地、香港特别行政区、澳门特别行政区、台湾地区生源",
+    "type": "校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "金融",
+      "浙江"
+    ],
+    "post_date": "2026-09-04",
+    "salary": "",
+    "education": "本科及以上学历",
+    "experience": "境内院校：在校期间为非在职的2027年应届毕业生（不含委培生和定向生），2027年7月31日前获得毕业证、学位证；境外院校：应在2026年1月1日至2027年8月31日期间毕业且初次就业，原则上2027年8月31日前获得学历（学位）证书原件及教育部留学服务中心的学历学位认证",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 66,
+    "company": "亿联网络（厦门亿联网络技术股份有限公司）",
+    "title": "亿联网络2027届校园招聘提前批",
+    "positions": [
+      "研发",
+      "技术",
+      "算法",
+      "声学",
+      "产品",
+      "质量",
+      "供应链",
+      "采购",
+      "工程",
+      "信息技术",
+      "财务",
+      "人力资源",
+      "销售",
+      "营销"
+    ],
+    "locations": [
+      "福建省·厦门市"
+    ],
+    "has_hc": true,
+    "hc_detail": "校园招聘列表共 57 个职位（研发类、营销类、产品类、职能类、运营类、制造类）",
+    "referral_code": "",
+    "referral_url": "https://yealink.zhiye.com/campus/jobs",
+    "description": "【招聘主体】亿联网络（Yealink）2027届校园招聘提前批，招聘主体为厦门亿联网络技术股份有限公司。\n\n【招聘岗位】校园招聘列表共 57 个职位，覆盖研发类、营销类、产品类、职能类、运营类、制造类。页面所列部分职位（含职位编号）：\n·安全产品经理（27届校招）(J12393)\n·IT技术支持工程师（27届校招）(J12390)\n·流程设计工程师（27届校招）(J12389)\n·海外订单交付（27届校招）(J12386)\n·音频算法工程师（27届校招）(J12287)\n·海外售前工程师（27届校招）(J12341)\n·体系助理工程师（27届校招）(J12382)\n·人力营运专员（27届校招）(J12381)\n·发展设计师（27届校招）(J12378)\n·行政（27届校招）(J12377)\n·MQE助理（27届校招）(J12376)\n·DQE助理（27届校招）(J12375)\n·财务（27届校招）(J12374)\n·人力资源（27届校招）(J12373)\n·计划工程师（27届校招）(J12372)\n·物控助理工程师（27届校招）(J12371)\n·工艺工程师助理（27届校招）(J12370)\n·采购助理工程师（27届校招）(J12369)\n（其余职位详见网申页面）\n\n【工作城市】福建省·厦门市。\n\n【投递方式】亿联网络招聘官网校园招聘页在线投递：https://yealink.zhiye.com/campus/jobs\n\n【备注】页面职位列表未统一标注发布时间，发布时间此处留空未作推测；已渲染页面所带“2026-08-20 发布”为其中个别职位（国内客户经理-上海）的发布时间。",
+    "target": "2027届本硕毕业生",
+    "type": "校招",
+    "industry": [
+      "智能硬件",
+      "音频"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "提前批",
+      "上市企业"
+    ],
+    "post_date": "",
+    "salary": "",
+    "education": "按职位区分：音频算法工程师要求硕士及以上；IT技术支持工程师、海外订单交付、流程设计工程师等要求本科及以上（页面未给出统一口径）",
+    "experience": "2027届校园招聘（提前批）",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 67,
+    "company": "叠纸游戏（Papergames）",
+    "title": "2027校园招聘（秋季）；另设“游戏编剧实习”专项",
+    "positions": [
+      "美术",
+      "策划",
+      "设计",
+      "技术"
+    ],
+    "locations": [
+      "上海市"
+    ],
+    "has_hc": true,
+    "hc_detail": "页面显示“开启新的工作（39）”",
+    "referral_code": "",
+    "referral_url": "https://career.papegames.com/s/E3xzfVBWDsg",
+    "description": "【招聘主体】叠纸游戏（Papergames）2027秋季校园招聘。\n\n【招聘项目】2027校园招聘（秋季）；另设“游戏编剧实习”专项。职能分类包括：技术研发类、美术类、策划类、动画CG类、市场运营类、音频类、职能支持类。\n\n【招聘岗位】页面显示“开启新的工作（39）”，页面所列部分职位：\n·3D特效实习生-恋与深空（校招/实习，美术类，2027校园招聘（秋季））\n·游戏编剧实习生-恋与深空（校招/实习，策划类，游戏编剧实习）\n·内容导演-UE5写实在研（2027届秋招）（校招/正式，策划类）\n·3D动画-恋与深空（2027届秋招）（校招/正式，动画CG类）\n·3D特效-恋与深空（2027届秋招）（校招/正式，美术类）\n·灯光渲染-恋与深空（2027届秋招）（校招/正式，美术类）\n·3D场景-恋与深空（2027届秋招）（校招/正式，美术类）\n·角色原画-恋与深空（2027届秋招）（校招/正式，美术类）\n·分镜师-恋与深空（2027届秋招）（校招/正式，动画CG类）\n·场景概念设计-UE5写实在研（2027届秋招）（校招/正式，美术类）\n\n【工作城市】上海市。\n\n【投递方式】叠纸游戏校园招聘官网：https://career.papegames.com/s/E3xzfVBWDsg\n\n【备注】页面未标注统一的发布时间与学历要求，均留空未作推测。岗位同时包含正式岗与实习岗。",
+    "target": "2027届毕业生及在校实习生（职能分类：技术研发类、美术类、策划类、动画CG类、市场运营类、音频类、职能支持类）",
+    "type": "实习/校招",
+    "industry": [
+      "游戏"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "游戏",
+      "实习"
+    ],
+    "post_date": "",
+    "salary": "",
+    "education": "页面未标注，此处留空未作推测",
+    "experience": "2027届秋季校园招聘（正式岗）；实习岗面向在校生",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 68,
+    "company": "合合信息（INTSIG）",
+    "title": "合合信息2027届校园招聘",
+    "positions": [
+      "算法",
+      "技术",
+      "人工智能",
+      "研发",
+      "产品",
+      "数据分析",
+      "设计",
+      "运营",
+      "管培生"
+    ],
+    "locations": [
+      "上海市（含静安区）",
+      "苏州市",
+      "广州市"
+    ],
+    "has_hc": true,
+    "hc_detail": "校园招聘列表共 52 个职位",
+    "referral_code": "",
+    "referral_url": "https://intsig.zhiye.com/campus/jobs",
+    "description": "【招聘主体】合合信息（INTSIG）2027届校园招聘。\n\n【招聘岗位】校园招聘列表共 52 个职位，工作地点覆盖上海市、苏州市、静安区、广州市。页面所列部分职位（含职位编号）：\n·27届校招-产运管培生(J14390)\n·27届校招-AI全栈开发工程师(J14388)\n·27届校招-产品经理(J14387)\n·27届校招-数据分析师(J14386)\n·27届校招-AI创新交互设计师(J14385)\n·27届校招-AI数据分析师(J14384)\n·27届校招—AI产品经理(J14383)\n·27届校招-大模型算法工程师(J14380)\n·27届秋招-数据产品经理(J14511)\n·【27校招】机器人运动控制算法工程师(J14448)\n·【27校招】智能图像算法工程师(J14447)\n·【27校招】3D视觉算法工程师(J14446)\n·【27校招】AI 数据工程师(J14445)\n·【27校招】多模态算法工程师(J14444)\n·【27校招】AI 安全工程师(J14441)\n·【27校招】AI Agent研发工程师（数据合规方向）(J14440)\n\n【学历要求】按职位区分：产品/运营/数据类多为本科及以上（如产运管培生要求2027届本科及以上，专业不限，计算机、信息管理、统计、心理学等相关背景优先）；算法类（智能图像算法工程师、3D视觉算法工程师、机器人运动控制算法工程师、多模态算法工程师等）要求硕士及以上；AI数据分析师等部分岗位面向在读硕士或博士。\n\n【投递方式】合合信息招聘门户校园招聘页在线投递：https://intsig.zhiye.com/campus/jobs\n\n【备注】页面“热招职位”标注的发布时间为 2026-07-23 至 2026-07-27，此处取最早日期。",
+    "target": "2027届本硕博毕业生（计算机、软件工程、人工智能、数据科学、电子信息、模式识别、自动化等相关专业优先；产运管培生专业不限，计算机、信息管理、统计、心理学等背景优先）",
+    "type": "校招",
+    "industry": [
+      "人工智能",
+      "企业服务"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "AI",
+      "大模型",
+      "科创板"
+    ],
+    "post_date": "2026-07-23",
+    "salary": "",
+    "education": "按职位区分：产品/运营/数据类多为本科及以上（产运管培生要求2027届本科及以上、专业不限）；算法类（智能图像算法、3D视觉算法、机器人运动控制、多模态算法等）要求硕士及以上；AI数据分析师等部分岗位面向在读硕士或博士",
+    "experience": "2027届校园招聘（含2027秋招）",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 69,
+    "company": "鹰角网络（Hypergryph）",
+    "title": "鹰角网络2027秋招提前批（同时开放2028届校招实习）",
+    "positions": [
+      "技术",
+      "美术",
+      "策划",
+      "产品",
+      "设计",
+      "测试",
+      "项目管理",
+      "人力资源",
+      "数据"
+    ],
+    "locations": [
+      "上海市"
+    ],
+    "has_hc": false,
+    "hc_detail": "在招职位共 105 个结果（含全职与实习两类）",
+    "referral_code": "DSpuAXX5",
+    "referral_url": "https://app.mokahr.com/campus_apply/hypergryph/26326?recommendCode=DSpuAXX5#/jobs",
+    "description": "【招聘主体】鹰角网络（Hypergryph）2027秋招提前批，同时开放2028届校招实习。\n\n【招聘岗位】在招职位共 105 个结果，含全职与实习两类，工作地点均为上海市。页面所列部分职位：\n·角色模型（全职，美术表现类）\n·技术美术-PCG方向（全职，程序技术类）\n·游戏测试（全职，质量管理类）\n·影视TD（全职，程序技术类）\n·数据产品（全职）\n·系统开发工程师（全职，程序技术类）\n·测试开发工程师-Agent开发方向（全职，程序技术类）\n·产品经理-平台工具方向 / SDK方向 / 效能工具方向 / 启动器方向（全职，产品策划类）\n·音乐设计师-发行方向 / 研发方向（全职，产品策划类）\n·UI动效设计（全职，美术表现类）\n·招聘HR-校招方向（全职，职能综合类）\n·实习岗：分镜-宣发向、声音设计师、音乐设计师-发行方向、衍生品设计、系统策划、项目管理-视频向、演出动画、游戏灯光师、游戏特效、场景模型、平面设计、地编、影视模型师-CG向、角色模型（均为实习，美术表现类/产品策划类）\n\n【投递规则】秋招2027届应届生允许2026年08月07日至2026年10月31日内投递2次，请选择适合的职位进行投递；秋招2028届校招实习生同一窗口（2026-08-07 至 2026-10-31）内投递2次；部分岗位（如数据产品）允许3个月内投递1个职位。\n\n【投递方式】鹰角网络校园招聘（moka）：https://app.mokahr.com/campus_apply/hypergryph/26326?recommendCode=DSpuAXX5#/jobs ，内推码 DSpuAXX5。\n\n【备注】页面未标注统一的发布时间与学历要求，均留空未作推测；投递窗口为2026年8月7日至10月31日。",
+    "target": "2027届应届生（全职岗）与2028届在校实习生（实习岗）",
+    "type": "实习/校招",
+    "industry": [
+      "游戏"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "2028届",
+      "内推",
+      "游戏",
+      "实习"
+    ],
+    "post_date": "",
+    "salary": "",
+    "education": "页面未标注，此处留空未作推测",
+    "experience": "秋招2027届应届生：允许2026年08月07日至2026年10月31日内投递2次；秋招2028届校招实习生：同一窗口（2026-08-07 至 2026-10-31）内投递2次；部分岗位允许3个月内投递1个职位",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 70,
+    "company": "OPPO（广东欧珀移动通信有限公司）",
+    "title": "OPPO 2027届秋季校园招聘（寻梦实习／应届生／博士生三类）",
+    "positions": [
+      "算法",
+      "人工智能",
+      "技术",
+      "研发",
+      "硬件",
+      "嵌入式",
+      "设计",
+      "产品",
+      "测试",
+      "工程",
+      "销售",
+      "市场"
+    ],
+    "locations": [
+      "深圳市",
+      "东莞市",
+      "北京市",
+      "上海市",
+      "成都市",
+      "南京市",
+      "重庆市",
+      "杭州市",
+      "武汉市",
+      "西安市",
+      "厦门市"
+    ],
+    "has_hc": true,
+    "hc_detail": "在招职位共 213 个（含2027届寻梦实习招聘、2027届应届生校园招聘、2027届博士生招聘三类，另有面向全体在校生的日常实习生入口）",
+    "referral_code": "",
+    "referral_url": "https://careers.oppo.com/university/oppo/campus/post",
+    "description": "【招聘主体】OPPO 2027届秋季校园招聘。\n\n【招聘项目】含三类：实习生（2027届寻梦实习招聘）、应届生（2027届应届生校园招聘）、博士生（2027届博士生招聘）；另有“面向全体在校生申请入口”（日常实习生）。\n\n【招聘规模】在招职位（213）个（经推荐人分享入口查看）。\n\n【职位类别】AI/算法类、标准研究类、软件类、硬件类、工程技术类、采购类、品牌策划类、销售服务类、综合职能类、设计类、产品类、业务支撑类。\n\n【工作城市】深圳市、东莞市、北京市、上海市、成都市、南京市、重庆市、杭州市、武汉市、西安市、厦门市。\n\n【页面所列部分职位】\n·电池算法工程师（东莞市，AI/算法类，应届生）\n·高级屏显算法工程师-博士（上海市，AI/算法类，博士生）\n·系统工程师（成都/深圳/武汉/南京，软件类，应届生）\n·高级多媒体算法工程师-博士（南京市，AI/算法类，博士生）\n·应用工程师（成都/深圳，软件类，应届生）\n·动效设计师（深圳市，设计类，应届生）\n·计算机图形学工程师（南京市，软件类，应届生）\n·高级NLP算法工程师（预训练模型及轻量化方向）-博士（北京/深圳，AI/算法类）\n·高级AI研究员（内容生成推荐智能体）-博士（深圳市，AI/算法类，实习生）\n·Channel Manager（Gurugram/东莞，销售服务类，应届生，仅面向非中国大陆籍候选人）\n\n【投递方式】OPPO招聘官网校园招聘页：https://careers.oppo.com/university/oppo/campus/post\n\n【备注】页面所列职位发布时间多为 2026-07-15（个别为 2026-03-06），此处取 2026-07-15；页面未标注统一学历要求。",
+    "target": "2027届本／硕／博毕业生及在校实习生",
+    "type": "实习/校招",
+    "industry": [
+      "消费电子",
+      "智能硬件"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "实习",
+      "全球"
+    ],
+    "post_date": "2026-07-15",
+    "salary": "",
+    "education": "页面未标注统一学历要求；按招聘类型区分（应届生面向本硕、博士生面向博士、寻梦实习面向在校生）",
+    "experience": "2027届应届生、2027届博士生，以及2027届寻梦实习生",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 71,
+    "company": "天锐星通（成都天锐星通科技股份有限公司）",
+    "title": "天锐星通2027校招提前批",
+    "positions": [
+      "硬件研发",
+      "硬件",
+      "研发",
+      "技术",
+      "嵌入式",
+      "算法",
+      "人工智能",
+      "工程",
+      "测试"
+    ],
+    "locations": [
+      "四川省·成都市（含高新区）",
+      "上海市",
+      "南京市"
+    ],
+    "has_hc": true,
+    "hc_detail": "校园招聘列表共 12 个职位",
+    "referral_code": "",
+    "referral_url": "https://t-ray.zhiye.com/campus/jobs",
+    "description": "【招聘主体】成都天锐星通科技股份有限公司（天锐星通）2027校招提前批。\n\n【招聘岗位】校园招聘列表共 12 个职位，页面所列职位（岗位职责与任职资格均可在网申页查看）：\n·校招-天线测试方法研究工程师（成都市，公开发布 2026-05-12）\n·校招-射频工程师（成都市·高新区，公开发布 2026-05-11）\n·校招-天线工程师（成都市，公开发布 2026-04-09）\n·校招-逻辑工程师\n·校招-嵌入式软件工程师\n·校招-硬件工程师\n·校招-模拟IC设计工程师\n·校招-射频IC设计工程师\n·校招-AI开发工程师\n·校招-结构工程师\n（其余职位未在首屏渲染，详见网申页面）\n\n【工作城市】四川省·成都市（岗位含高新区）、上海市、南京市。\n\n【学历要求】硕士及以上学历。以“校招-天线测试方法研究工程师”为例：电磁场与微波技术、无线电物理等相关专业，硕士及以上学历；熟悉相控阵天线指标体系和测试方法，熟悉频谱仪、信号源、示波器、矢网、综测仪等常用仪器。\n\n【投递方式】天锐星通校园招聘（zhiye）：https://t-ray.zhiye.com/campus/jobs\n\n【备注】页面所列职位发布时间为 2026-04-09 至 2026-05-12，此处取最早日期。",
+    "target": "2027届硕博毕业生；专业方向：电磁场与微波技术、无线电物理、电子与通信工程、电磁场微波等",
+    "type": "校招",
+    "industry": [
+      "制造业",
+      "智能硬件"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "提前批",
+      "半导体"
+    ],
+    "post_date": "2026-04-09",
+    "salary": "",
+    "education": "硕士及以上学历",
+    "experience": "2027校招提前批（校园招聘·全职）",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 72,
+    "company": "卓驭科技（深圳市卓驭科技有限公司，大疆车载）",
+    "title": "领航者计划（2027届秋季校园招聘专项，含校招与实习）",
+    "positions": [
+      "算法",
+      "人工智能",
+      "技术",
+      "研发"
+    ],
+    "locations": [
+      "上海市",
+      "广东省·深圳市",
+      "北京市",
+      "香港特别行政区"
+    ],
+    "has_hc": true,
+    "hc_detail": "领航者计划职位共 17 个（全部为算法类，含领航者校招、领航者实习、领航者实习生）",
+    "referral_code": "",
+    "referral_url": "https://we.zyt.com/5/jobs",
+    "description": "【招聘主体】深圳市卓驭科技有限公司（大疆车载／卓驭科技）2027届秋季校园招聘。\n\n【招聘项目】领航者计划——卓驭面向全球顶尖AI人才发起的战略级校园招聘专项，是驱动移动物理AI时代变革的核心人才引擎。聚焦多模态大模型、世界模型、闭环仿真、强化学习、训推优化、具身Agent 等前沿技术，提供移动物理AI核心攻坚岗位、真实场景的深度技术历练、行业顶尖的薪酬回报与稳健的职业成长体系。含领航者校招、领航者实习、领航者实习生三类。\n\n【招聘岗位】领航者计划职位列表共 17 个，全部为算法类，页面所列职位：\n·多模态大模型预训练算法岗（领航者实习）\n·多模态大模型数据与评测算法岗（领航者实习）\n·多模态大模型后训练算法岗（领航者实习）\n·大模型训练优化算法岗（领航者实习）\n·大模型推理优化算法岗（领航者实习）\n·世界模型算法岗（领航者实习）\n·端到端领航算法岗（领航者校招）\n·大模型算法岗（机器人移动后训练&应用-领航者校招）\n·大模型算法岗（几何重建与动态估计-领航者校招）\n·世界模型算法岗（领航者校招）\n·重建仿真算法岗（领航者校招）\n·大模型推理优化算法岗（领航者校招）\n·多模态大模型后训练算法岗（领航者校招）\n·多模态大模型数据与评测算法岗（领航者校招）\n·大模型训练优化算法岗（领航者校招）\n·多模态大模型预训练算法岗（领航者校招）\n·重建仿真算法岗（领航者实习生）\n\n【探索课题】探索物理AI Scaling 的架构与训练范式，构建原生多模态预训练、后训练全流程；探索物理一致、因果感知的多模态世界模型，构建多时间尺度预测的高效视频生成架构，打造物理AI仿真训练与评测的强力引擎；挑战物理AI基础模型的预训练效率与精度难题，构建鲁棒可信的大规模闭环强化学习框架，探索多模态大模型的高效架构与蒸馏压缩技术。\n\n【培养与回报】改变行业的机会（代码可能出现在明天量产上路的每一个移动载体中）；顶配资源（海量数据＋数万卡规模训练集群）；核心突破（直面难题，每一次突破都在定义行业前沿）；大牛导师（1对1带教）；Top级回报（行业领先薪酬＋量身定制的专属激励方案）。\n\n【招聘流程】简历筛选 → 专业测评 → 专业面试 → 综合面试 → offer。\n\n【工作城市】上海市、广东省·深圳市、北京市、香港特别行政区。\n\n【投递方式】卓驭科技招聘官网领航者计划职位页：https://we.zyt.com/5/jobs\n\n【备注】页面所列职位发布时间为 2026-07-15。",
+    "target": "面向全球顶尖AI人才的2027届校招与在校实习生；方向：多模态大模型、世界模型、闭环仿真、强化学习、训推优化、具身Agent等",
+    "type": "实习/校招",
+    "industry": [
+      "人工智能"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "实习",
+      "自动驾驶",
+      "大模型"
+    ],
+    "post_date": "2026-07-15",
+    "salary": "",
+    "education": "本科及以上学历（以“多模态大模型预训练算法岗（领航者实习）”为例：计算机科学、人工智能、电子信息等相关专业本科及以上学历，具有多模态大模型预训练项目经验）",
+    "experience": "2027届秋季校园招聘（校招岗）与在校实习生（实习岗）",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 73,
+    "company": "微步在线（北京微步在线科技有限公司）",
+    "title": "微步在线2027届校园招聘",
+    "positions": [
+      "技术",
+      "算法",
+      "研发",
+      "产品",
+      "测试",
+      "数据分析",
+      "客户服务",
+      "销售",
+      "运营",
+      "市场",
+      "服务"
+    ],
+    "locations": [
+      "北京市",
+      "上海市",
+      "深圳市",
+      "武汉市",
+      "昆明市",
+      "成都市",
+      "西安市",
+      "广州市等"
+    ],
+    "has_hc": true,
+    "hc_detail": "在招职位共 56 个结果（含全职与实习/兼职类）",
+    "referral_code": "DSbSK2J7",
+    "referral_url": "https://app.mokahr.com/m/campus-recruitment/threatbook/39679?recommendCode=DSbSK2J7#/jobs",
+    "description": "【招聘主体】北京微步在线科技有限公司（ThreatBook）2027届校园招聘。\n\n【招聘岗位】在招职位共 56 个结果，含全职与实习/兼职类。页面所列部分职位（含发布时间）：\n·安全研究员-沙箱检测（27届）——2026-09-08\n·安全研究员-网络空间测绘（27届）——2026-09-08\n·客户成功经理-贵州（27届）——2026-08-28\n·产品市场专员（27届）——2026-08-10\n·技术工程师-深圳／上海／北京／昆明（27届）——2026-08-07\n·回款运营专员（27届）——2026-08-07\n·Java开发工程师（27届）——2026-08-07\n·测试工程师（27届）——2026-08-07\n·Windows终端开发工程师（27届）——2026-08-07\n·产品经理（27届）——2026-08-07\n·Golang开发工程师（27届）——2026-08-07\n·安全分析师-威胁情报（27届）——2026-08-07\n·售前工程师-北京／上海／深圳／成都（27届）——2026-08-07\n·产品运营（27届）——2026-08-07\n·客户成功经理-武汉／上海／北京（27届）——2026-08-07\n·销售管培生-北京／深圳／上海企业／成都／郑州／重庆（27届）——2026-08-07\n·渠道运营岗位（27届）——2026-08-07\n\n【职位类型】安全类、业务类、客户成功与支持中心、研发/产品/运营等。\n\n【工作地点】北京市、上海市、深圳市、武汉市、昆明市、成都市、西安市、广州市等。\n\n【学历要求】页面学历筛选仅列出“本科”；以安全研究员-网络空间测绘（27届）为例：2027届本科及以上学历，信息安全、计算机、网络工程、软件工程等相关专业优先。\n\n【投递规则】部分岗位允许2个月内投递2个职位，请选择适合的职位进行投递。\n\n【投递方式】微步在线校园招聘（moka）：https://app.mokahr.com/m/campus-recruitment/threatbook/39679?recommendCode=DSbSK2J7#/jobs ，内推码 DSbSK2J7。\n\n【备注】页面所列职位发布时间为 2026-08-07 至 2026-09-08，此处取最早日期。",
+    "target": "2027届本科及以上毕业生（信息安全、计算机、网络工程、软件工程等相关专业优先）",
+    "type": "校招",
+    "industry": [
+      "企业服务",
+      "互联网"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "AI"
+    ],
+    "post_date": "2026-08-07",
+    "salary": "",
+    "education": "本科（页面学历筛选仅列出“本科”；如安全研究员-网络空间测绘要求2027届本科及以上学历）",
+    "experience": "2027届校园招聘；部分岗位允许2个月内投递2个职位",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 74,
+    "company": "多益网络",
+    "title": "多益网络27届校园招聘秋季提前批",
+    "positions": [
+      "技术",
+      "算法",
+      "人工智能",
+      "研发",
+      "策划",
+      "美术",
+      "设计",
+      "运营",
+      "市场",
+      "职能"
+    ],
+    "locations": [
+      "广州市",
+      "武汉市",
+      "苏州市",
+      "杭州市"
+    ],
+    "has_hc": true,
+    "hc_detail": "共 33 个职位",
+    "referral_code": "",
+    "referral_url": "https://xz.duoyi.com/ZNa",
+    "description": "【招聘主体】多益网络2027届校园招聘秋季提前批。\n\n【招聘岗位】共 33 个职位，覆盖职能类、策划类、市场类、程序类、艺术类；工作城市为广州、武汉、苏州、杭州。页面所列职位（含薪资与发布时间）：\n·灵活职业岗——3000元/月——职能类——广州/武汉/杭州——2026-07-01\n·游戏服务端开发工程师——21~25.5W/年——程序类——广州/武汉/杭州——2026-08-14\n·游戏客户端开发工程师——21~25.5W/年——程序类——广州/武汉/杭州——2026-08-14\n·游戏引擎开发工程师——21~30W/年——程序类——广州/杭州——2026-08-14\n·游戏策划助理——15.5~22.5W/年——策划类——广州/武汉/杭州——2026-08-17\n·产品策划助理——17~22.5W/年——策划类——广州/武汉/杭州——2026-08-17\n·AI应用开发工程师——20~24W/年——程序类——广州/杭州——2026-08-17\n·软件工程师——18.5~24W/年——程序类——广州/武汉/杭州——2026-08-20\n·算法工程师——25.5~30W/年——程序类——广州/杭州——2026-08-20\n·游戏运营——14~18W/年——市场类——广州/武汉/杭州——2026-08-17\n·游戏运营（海外方向）——17~21W/年——市场类——广州/武汉/杭州——2026-08-17\n·视觉设计师——14~18W/年——艺术类——杭州——2026-08-17\n·技术美术/TA——20~25.5W/年——艺术类——广州/杭州——2026-08-17\n·原画设计师——14~18W/年——艺术类——广州/武汉/杭州——2026-08-17\n·特效设计师——14~18W/年——艺术类——广州/武汉/杭州——2026-08-17\n（共 33 个职位，其余详见网申页面）\n\n【招聘流程】在线测评 → 在线笔试 → 面试（页面设有“状态/进度”模块可查询）。\n\n【投递方式】多益网络校园招聘官网：https://xz.duoyi.com/ZNa\n\n【备注】页面所列职位发布时间为 2026-07-01 至 2026-08-20，此处取最早日期；页面未标注统一的学历要求。",
+    "target": "2027届毕业生（职位类型：职能类、策划类、市场类、程序类、艺术类）",
+    "type": "校招",
+    "industry": [
+      "游戏"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "游戏",
+      "提前批"
+    ],
+    "post_date": "2026-07-01",
+    "salary": "按职位定薪：游戏服务端开发工程师21~25.5W/年；游戏客户端开发工程师21~25.5W/年；游戏引擎开发工程师21~30W/年；算法工程师25.5~30W/年；AI应用开发工程师20~24W/年；软件工程师18.5~24W/年；技术美术/TA20~25.5W/年；产品策划助理17~22.5W/年；游戏策划助理15.5~22.5W/年；游戏运营（海外方向）17~21W/年；游戏运营14~18W/年；视觉设计师/原画设计师/特效设计师14~18W/年；灵活职业岗3000元/月",
+    "education": "页面职位列表未标注学历要求，此处留空未作推测",
+    "experience": "2027届校园招聘秋季提前批",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 75,
+    "company": "泛微网络（泛微网络科技股份有限公司）",
+    "title": "泛微网络27届提前批——销售经理校园招聘",
+    "positions": [
+      "销售"
+    ],
+    "locations": [
+      "页面未直接标注；表单提示“请注意接听来上海的电话面试”",
+      "推测面试地",
+      "公司所在地为上海市"
+    ],
+    "has_hc": false,
+    "hc_detail": "页面未标注岗位数量",
+    "referral_code": "",
+    "referral_url": "https://jsj.top/f/nvVv4H",
+    "description": "【招聘主体】泛微网络27届销售经理校园招聘（27届提前批）。\n\n【岗位职责】1.负责泛微数字化业务相关核心产品的销售；2.开拓对接B端（企业级）市场客户，挖掘客户需求，提供专业解决方案；3.积累行业人脉伙伴，拓展商机渠道，挖掘商机；4.进行客户拜访、解决方案撰写、价值呈现、商务谈判、合同签订销售全流程；5.维护客户关系，进行客户定期回访，给客户提供专业的销售服务；6.了解行业及市场信息、持续学习产品知识、提高销售专业能力。\n\n【岗位要求】1.本科及以上学历应届毕业生、专业不限，理工类专业背景优先；2.对销售工作感兴趣，有长期在销售岗位上发展的职业规划；3.优秀的人际交往和沟通表达能力，善于团队合作，学生组织工作经验优先；4.勤奋认真，理性思维，逻辑性强，学习能力强；5.爱挑战，目标感强，内驱力强，有激情，执行力强，抗压能力强。\n\n【薪资福利】薪资结构：无责底薪＋高额奖金（达标奖、提成）。无责底薪：普通本科：统一7K；985/211院校：8—12K（具体面试）；硕士：9—15K（具体面试）。\n\n【投递方式】金数据表单在线投递（需填写姓名、手机并上传简历，附件限20MB以内，支持 txt, pdf, doc, docx, xls, xlsx, ppt, pptx, wps, rtf, hlp）：https://jsj.top/f/nvVv4H\n\n【备注】表单提示“请注意接听来上海的电话面试、安卓手机请关闭电话拦截”；页面未标注工作城市、发布时间、岗位数量与学历要求的统一口径，相应字段留空未作推测。",
+    "target": "本科及以上学历应届毕业生，专业不限；要求对销售工作感兴趣、有长期在销售岗位上发展的职业规划；优秀的人际交往和沟通表达能力；学生组织工作经验优先",
+    "type": "校招",
+    "industry": [
+      "企业服务"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "提前批"
+    ],
+    "post_date": "",
+    "salary": "薪资结构：无责底薪＋高额奖金（达标奖、提成）。无责底薪：普通本科：统一7K；985/211院校：8—12K（具体面试）；硕士：9—15K（具体面试）",
+    "education": "本科及以上学历应届毕业生，专业不限（理工类专业背景优先）",
+    "experience": "应届毕业生（27届校园招聘提前批）",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 76,
+    "company": "恒生电子（恒生电子股份有限公司，600570.SH）",
+    "title": "恒生2027校园招聘（“恒生新力量”）",
+    "positions": [
+      "人工智能",
+      "技术",
+      "研发",
+      "测试",
+      "服务",
+      "销售",
+      "金融",
+      "产品"
+    ],
+    "locations": [
+      "浙江省杭州市（总部）；宣讲城市覆盖大连",
+      "重庆",
+      "成都",
+      "合肥",
+      "南昌",
+      "南京",
+      "武汉",
+      "西安",
+      "长沙",
+      "青岛",
+      "杭州等（页面未逐一列出各岗位工作地）"
+    ],
+    "has_hc": false,
+    "hc_detail": "页面未披露招聘人数；校招岗位方向为 AI方向、技术研发、软件测试、技术支持、其他（销售/金融业务研究/需求分析），并另开设博士与博士后岗位",
+    "referral_code": "需向身边的恒生人或校园大使获取专属内推码/内推链接（页面未公布统一内推码）",
+    "referral_url": "https://campus.hundsun.com",
+    "description": "【企业背景】恒生电子（600570.SH）是一家以“让金融变简单”为使命的金融科技公司，总部位于杭州，成立于1995年。公司服务超过3500家金融行业客户，连续18年入选FinTech100全球金融科技百强榜单。面向AI时代，恒生正加速向AI金融科技公司转型，推动技术架构、产品体系、开放生态等的代际升级，共创数智金融新未来。（海报标注“LIGHT 30”，即恒生成立30周年）\n\n【招聘项目】恒生2027校园招聘，主题“恒生新力量”。\n\n【招聘对象】全球2027届应届毕业生，毕业时间：2026年9月—2027年8月。\n\n【校招岗位】\n·AI方向：AI应用开发、智能体开发、模型后训练；\n·技术研发：Java开发、C/C++开发、FPGA开发；\n·软件测试：测试开发、软件测试；\n·技术支持：交付、维护、运维；\n·其他：销售、金融业务研究、需求分析。\n恒生公司拥有国家级博士后科研工作站，同时开设博士与博士后岗位的招聘。\n\n【校招流程】网申 → 线下宣讲/空宣 → 笔试/测评（专业技术笔试或部分岗位AI面试，具体以通知邮件和短信为准）→ 面试 → 录用签约。\n9月起，恒生将到大连、重庆、成都、合肥、南昌、南京、武汉、西安、长沙、青岛、杭州等城市举办校园宣讲会，具体场次时间请留意【恒生招聘】官方渠道。\n\n【浙江工商大学站宣讲会】时间：2026年9月18日（周五）16:00；地点：师生之家就业宣讲厅；宣讲官：杨汉杰。\n\n【多阶成才·个性培养】专属导师一对一辅导；应届生入职集训“恒新鲜”；工程专项客户现场培训；高潜计划（高潜应届生培养计划）；良将计划（关键岗位后备梯队培养）；青训班（中高层管理者培养）；学习平台自主学习海量资源。\n\n【实力兜底·福利保障】五险一金、年度奖金、节日礼金、员工持股、婚育礼金、母婴室、理疗室、图书馆、婚假、陪护假、产假&年假、育儿假、定期体检、团建基金、周年庆生、下午茶点、员工餐厅、健身房、EAP关怀；入职后公司会协助申请对应base地的人才补贴。\n社团圈子：跑步圈、摄影圈、电影圈、桌游圈、U点创意圈、音乐圈、动漫圈、宠物圈、亲子圈；俱乐部：足球、台球、功夫、羽毛球、农场钓鱼、游泳、篮球、瑜伽、户外、骑行、音乐流瑜伽、健身、网球、乒乓球、团操、图书等。\n\n【内推渠道】找到你身边的恒生人或校园大使，获取专属内推码/内推链接，扫码或点击链接即可快速网申（海报未公布统一内推码）。\n\n【投递方式】网申地址：https://campus.hundsun.com （扫码投递简历，一键解锁众多热门岗位）。资讯阵地：可关注恒生官方公众号、视频号、小红书获取最新动态。\n\n【来源】微信公众号「恒生招聘」2026年8月13日 16:58 发布《恒生2027校园招聘正式启动》，招聘详情为海报长图，经 OCR 提取整理；浙江工商大学站宣讲会信息另据恒生电子宣讲会海报（浙江工商大学站）整理。",
+    "target": "全球2027届应届毕业生，毕业时间 2026年9月—2027年8月",
+    "type": "校招",
+    "industry": [
+      "金融",
+      "企业服务"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "金融科技",
+      "上市企业",
+      "浙江",
+      "AI",
+      "内推"
+    ],
+    "post_date": "2026-08-13",
+    "salary": "页面未披露具体薪资；福利含五险一金、年度奖金、节日礼金、员工持股、婚育礼金、定期体检、带薪年假、团建基金、员工餐厅、健身房、EAP关怀及各类社团俱乐部；入职后公司协助申请对应base地人才补贴",
+    "education": "页面未标注统一学历要求（另开设博士与博士后岗位招聘）",
+    "experience": "2027届校园招聘（全球2027届应届毕业生）",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 77,
+    "company": "中国民生银行温州分行",
+    "title": "民生银行2027届校园招聘及实习生招聘（温州分行）",
+    "positions": [],
+    "locations": [
+      "温州市区及瑞安",
+      "塘下",
+      "乐清",
+      "柳市",
+      "永嘉",
+      "苍南",
+      "平阳",
+      "龙港地区（均有网点）"
+    ],
+    "has_hc": false,
+    "hc_detail": "校园招聘岗位：「启航」校招岗、「扬帆」校招岗（均为温州分行·温州，截止日期 2026-10-25）；实习生岗（温州分行·温州，截止日期 2026-12-31）；页面未披露招聘人数",
+    "referral_code": "",
+    "referral_url": "https://career.cmbc.com.cn/#/app/recruitmentlist/campus/0123",
+    "description": "【招聘主体】中国民生银行温州分行——2027届校园招聘及实习生招聘，新闻稿主题“花young年华，相约民生”。\n\n【招聘对象与时间安排】\n·校园招聘（校招生）：面向境内2027年1月—2027年8月毕业生，专业不限；网申截止时间 2026年10月25日。\n·实习生招聘：面向2028年、2029年毕业在校生，专业不限；网申截止时间 2026年12月31日。\n\n【招聘岗位（民生招聘官网·温州分行）】\n·「启航」校招岗——所属机构：温州分行；工作区域：温州；截止日期：2026-10-25\n·「扬帆」校招岗——所属机构：温州分行；工作区域：温州；截止日期：2026-10-25\n·实习生岗——所属机构：温州分行；工作区域：温州；截止日期：2026-12-31\n实习生岗工作职责：主要安排在重点业务领域跟岗实习，配套专业培训、导师辅导、毕业设计指导等支持，实习考核优异者将予以优先留用。\n实习生岗任职要求：1.本科及以上学历在校生，STEM（科学、技术、工程、数学）理工专业背景，或金融数学、金融科技等“STEM+金融”复合专业背景者优先；2.视野开阔，善于创新，具备较强的自驱力以及良好的学习应用、团队协作、沟通表达能力；3.具有社团创建及管理经历者优先，学生干部优先；4.具备CFA、CPA、法律职业资格等专业资质认证优先；5.具备良好的道德品质，无违法违纪记录。\n\n【工作地点/网点覆盖】温州市区及瑞安、塘下、乐清、柳市、永嘉、苍南、平阳、龙港地区均有网点。\n\n【福利待遇】提供在温州地区有竞争力的福利待遇；非温州籍校招生提供住房补贴政策。\n\n【投递方式】\n·校招报名链接：https://career.cmbc.com.cn/#/app/recruitmentlist/campus/0123\n·实习报名链接：https://career.cmbc.com.cn/#/app/recruitmentview/c3af797e-76e8-4054-ad65-0ec81f6d790b\n有意向的同学（含实习生）可扫码入群（群聊“民生银行温州分行27届秋招沟通”），招聘相关流程、信息会在群里发布。\n\n【来源】民生银行温州分行招聘沟通群发布的招聘通知（群二维码标注“7天内(9月23日前)有效”），并对照民生招聘官网（career.cmbc.com.cn）温州分行校园招聘/实习生招聘列表核验。原通知未标注发布日期，发布时间字段留空未作推测。",
+    "target": "校招：境内2027年1月—2027年8月毕业生，专业不限；实习：2028年、2029年毕业生，专业不限（实习生岗任职要求：本科及以上在校生，STEM理工专业背景或“STEM+金融”复合专业背景者优先；具有社团创建及管理经历者、学生干部优先；具备CFA、CPA、法律职业资格等专业资质认证者优先）",
+    "type": "实习/校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "2028届",
+      "实习",
+      "金融",
+      "浙江"
+    ],
+    "post_date": "",
+    "salary": "提供在温州地区有竞争力的福利待遇；非温州籍校招生提供住房补贴政策（页面未披露具体金额）",
+    "education": "实习生岗要求本科及以上学历在校生；校园招聘岗页面未标注学历要求",
+    "experience": "校招生面向境内2027年1月—2027年8月毕业生；实习生面向2028年、2029年毕业在校生",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 78,
+    "company": "浦发银行宁波分行",
+    "title": "2027年度全球校园招聘",
+    "positions": [
+      "管培生",
+      "客户经理",
+      "运营"
+    ],
+    "locations": [
+      "宁波",
+      "台州"
+    ],
+    "has_hc": false,
+    "hc_detail": "管理培训生、业务储备生（营销方向）、业务储备生（综合运营方向），招聘人数均标注“若干”",
+    "referral_code": "",
+    "referral_url": "https://job.spdb.com.cn",
+    "description": "【招聘主体】浦发银行宁波分行——2027年度全球校园招聘，主题“Call浦青年 锚定未来”。\n\n【公司介绍】\n上海浦东发展银行股份有限公司位列英国《银行家》杂志“全球银行1000强”榜单第18位、“全球银行品牌价值500强”中资银行第10位。在美国《财富》（FORTUNE）杂志发布的2024年“财富世界500强排行榜”，浦发银行位列全球企业第292位，居上榜中资银行第8位。\n上海浦东发展银行宁波分行成立于1994年12月28日，是入驻宁波的第一家全国性股份制商业银行，也是总行设立的第二家分行。成立以来，经营业绩始终保持在区域股份制商业银行前列。\n\n【招聘岗位】\n·管理培训生——工作城市：宁波、台州；招聘人数：若干\n·业务储备生（营销方向）——工作城市：宁波、台州；招聘人数：若干\n·业务储备生（综合运营方向）——工作城市：宁波、台州；招聘人数：若干\n注：一名学生最多报两家机构，每家机构最多报两个岗位；须明确志愿顺序。\n\n【招聘流程】\n简历投递：即日起至2026年10月8日18:00\n笔试：2026年10月中下旬\n面试：2026年11月起\n录用：2026年11月底起分批次\n入职：2026年12月起分批次\n具体时间及安排以我行实际通知为准，通知形式包括短信、电子邮件或电话；若未收到通知，则表示未进入下一环节。确定录用后将以书面形式发放录用通知。\n\n【招聘要求】\n1. 毕业时间：境内外均统一为2025年1月1日—2027年7月31日，并取得国家认可的毕业证、学位证。\n2. 本科及以上学历。\n3. 原则上不限专业，人工智能、数据科学、软件工程、金融科技等专业背景及多学科复合型教育背景学生优先。\n4. 符合浦发银行亲属回避制度要求。\n5. 品行端正、学业优良、身心健康。\n6. 外语水平、计算机应用能力出色。\n7. 开拓进取，勇于创新，具备高度的责任心和敬业精神。\n\n【温馨提示】不仅面向2027届应届毕业生，也向2025届、2026届同学发出邀请。\n\n【宣讲会信息·浙江工商大学站】\n·时间：2026年9月17日（周四）18:00\n·地点：浙江工商大学下沙校区 师生之家就业宣传厅\n·内容：公司介绍、岗位解读、职业发展路径、互动答疑\n·现场福利：签到即领精美伴手礼，提问互动更有LABUBU、星星人盲盒掉落。\n\n【报名方式】\n·登录浦发银行招聘官方网站 https://job.spdb.com.cn，选择“校园招聘”—“宁波分行”投递简历。\n·通过“遇见浦发”公众号—“走进浦发”—“校园招聘”，在线注册，选择“宁波分行”投递。\n\n【服务热线】综合咨询：0574-81888531（浦发银行宁波分行）9:00—17:00，开通日期：即日起至2026年10月31日。\n\n【薪资福利】页面未披露具体金额，留空未作推测。\n\n【来源】浦发银行招聘官网（job.spdb.com.cn）校园招聘-宁波分行；本条目参照新疆大学职业发展网转载页及用户提供的宣讲会海报整理，发布日期据银行招聘网转载信息为2026年9月3日。",
+    "target": "境内外2025年1月1日—2027年7月31日毕业并取得国家认可的毕业证、学位证的本科及以上学生；原则上不限专业，人工智能、数据科学、软件工程、金融科技等专业及多学科复合背景优先",
+    "type": "校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "金融",
+      "浙江",
+      "宁波"
+    ],
+    "post_date": "2026-09-03",
+    "salary": "页面未披露具体金额，留空未作推测",
+    "education": "本科及以上",
+    "experience": "应届生（2025年1月1日—2027年7月31日毕业）",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 79,
+    "company": "招商银行上海分行",
+    "title": "2027秋季校园招聘（上海分行）",
+    "positions": [
+      "技术",
+      "数据分析",
+      "客户经理",
+      "营销"
+    ],
+    "locations": [
+      "上海"
+    ],
+    "has_hc": false,
+    "hc_detail": "",
+    "referral_code": "KGFM",
+    "referral_url": "https://t.zhaopin.com/07SlVy",
+    "description": "【招商银行上海分行2027秋季校园招聘】\n\n关于我们\n招商银行已连续15年入围《财富》世界500强排行榜。招商银行上海分行成立于1991年，是招商银行第一家异地分行，也是第一家进驻浦东的异地股份制商业银行。截至目前，持牌机构已达百余家，并设有战略客户团队、金融机构客户团队、私银中心、个贷直营中心等直营团队30余家，服务网络覆盖上海全市16个区，分行员工总数6000余人。\n\n招聘岗位\n1. 数字金融岗（AI应用方向）——专业要求：IT/DT类。从事大语言模型在金融领域的研发，包括大模型后训练、提示词工程、检索增强生成等；开发AI Agent，基于MCP协议实现工具调用、Skill开发、多Agent协同调度、模型编排与任务规划等；负责AI模型从研发到生产的全流程工程化落地。\n2. 数字金融岗（系统开发方向）——专业要求：IT/DT类。从事数字金融相关业务系统的设计、开发、测试与上线；技术方案设计、系统架构优化、模块划分及核心功能编码实现；负责系统日常运维。\n3. 数字金融岗（数据分析方向）——专业要求：IT/DT类。通过数据分析和挖掘发现业务增长点与风险点；运用机器学习、统计分析等方法构建并优化数据产品；参与数字金融数据仓库与数据集市、数据可视化平台建设。\n4. 综合培养生（基础业务方向）——专业不限，STEM类专业优先。从事理财经理、零售市场经理、零售个贷经理、厅堂经理、对公客户经理等相关岗位工作。\n5. 定向培养生（市场营销方向）——专业不限，STEM类专业优先。参与个人或企业客户的维护、营销、拓展等工作，作为储备管理人才培养。\n\n报名条件\n① 境内院校毕业生：2027年1月1日-2027年7月31日期间毕业，获得国家认可的毕业证和学位证；境外院校毕业生：2026年1月1日-2027年7月31日期间毕业，应于2027年7月31日前取得教育部学历学位认证。\n② 本科生应具备大学英语四级425分（含）、雅思5.5分（含）或托福70分（含）以上或其他同等外语水平；硕士生应具备大学英语六级425分（含）、雅思6分（含）或托福80分（含）以上或其他同等外语水平。\n③ 诚实守信，具有较强的责任心、学习能力和良好的团队协作精神，具备良好的书面及口头表达能力。\n④ 初次就业，未与其他单位建立劳动关系。\n\n招聘流程\n简历投递 → 笔试+多轮面试 → 体检及基本情况调查 → Offer发放。\n简历投递截至2026年10月10日，后续具体安排请以短信通知为准。\n\n报名路径\n① \"招商银行招聘\"官方网站：\"校园招聘\"-\"应届生招聘\"-机构选择\"上海分行\"。\n② \"招商银行\"APP：首页搜索\"招商银行招聘\"-\"校园招聘\"-\"应届生招聘\"-机构选择\"上海分行\"。\n③ \"招商银行招聘\"微信公众平台：\"招了-校园招聘-上海分行\"。\n网申链接：https://t.zhaopin.com/07SlVy\n专属内推码：KGFM（投递时填写，提高简历选中率）\n\n应聘提示\n① 个人信息的完整性、真实性将直接影响简历筛选，请在提交前确认资料详细完整、真实无误。\n② 应聘期间请勿变更手机号码，后续安排将通过短信通知，请注意取消手机屏蔽设置。\n③ 应聘渠道以官网为准，招商银行招聘不收取任何费用。\n④ 联系邮箱：career_cmbsh@126.com\n\n【来源】微信公众号「招商银行招聘」《上海｜\"梦想靠岸\"招商银行上海分行2027校园招聘》，2026-08-28 20:09 发布",
+    "target": "2027届毕业生（境内2027.1.1-2027.7.31毕业；境外2026.1.1-2027.7.31毕业）",
+    "type": "校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "内推",
+      "金融",
+      "世界500强"
+    ],
+    "post_date": "2026-08-28",
+    "salary": "",
+    "education": "本科及以上（本科四级425+/雅思5.5+/托福70+；硕士六级425+/雅思6+/托福80+）",
+    "experience": "在校/应届",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 80,
+    "company": "临安农商银行（浙江临安农村商业银行股份有限公司）",
+    "title": "2027年度秋季校园招聘",
+    "positions": [
+      "管培生",
+      "柜员",
+      "客户经理"
+    ],
+    "locations": [
+      "杭州（临安；定向通用岗：於潜片",
+      "昌化片）"
+    ],
+    "has_hc": false,
+    "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "http://campus.51job.com/lnnsbank2027/",
+    "description": "【临安农商银行2027年度校园招聘】\n\n企业简介\n浙江临安农村商业银行股份有限公司是一家地方股份制商业银行，于2018年4月26日正式挂牌成立，由临安农信联社改制而来。目前下辖网点63家，在编员工650余人，是当地存贷规模最大、营业网点最多、服务群体最广的金融机构。截至2026年7月末，资产总额659.48亿元，各项存款余额525.01亿元，各项贷款余额443.61亿元。\n\n浙江工商大学专场宣讲会\n时间：9月21日 18:00-20:00\n地点：C104\n会后现场面试，欢迎携带简历参加。\n\n热招岗位\n1. 管理培训生（若干名）——主要从事金融投资、法律合规、风险管理、财务审计、软件开发、人力资源、新闻传媒等专业工作和各条线管理人才储备。要求国内外2027年重点高校全日制应届毕业硕士研究生，重点高校包括国内985、211高校，本硕毕业院校满足国内985、211其中之一。\n2. 综合通用岗（合同制，27名）——主要从事银行综合金融服务，包括柜面服务、客户管理、业务运营等各条线工作，入职先担任柜员岗位。要求国内外2027年全日制应届本科及以上学历，其中本科要求高考一批（一段）录取或浙江省内15所重点建设高校毕业，国外硕士研究生毕业要求院校为QS排名前100。\n3. 定向通用岗（合同制）——从事银行综合金融服务，包括柜面服务、客户管理、业务运营等，入职先担任柜员岗位，且须在定向机构服务不少于3年，工作地点为於潜片、昌化片。\n\n招聘对象\n2027年全日制应届本科及以上学历毕业生（境外院校2027年1月-2027年7月期间毕业，且能在2027年12月31日前获得毕业证书）。\n\n招聘流程\n简历投递（即日起至2026年10月31日）→ 简历筛选（11月上旬）→ 笔试（11月上旬）→ 在线测评（11月中旬）→ 面试（12月初）→ 政审（12月上旬）→ 体检（12月中旬）→ 发放Offer（12月下旬）。\n\n福利待遇\n· 岗位薪酬、绩效薪酬\n· 五险一金、企业年金\n· 补充医疗、年休疗养、健康体检、互助医疗\n· 专业培训、职业晋升\n· 团建活动、工会福利、节日关爱、员工俱乐部\n\n网申截止：2026年10月31日\n投递渠道：http://campus.51job.com/lnnsbank2027/\n每位求职者可同时填报3个岗位，填报条件所述专业要求均为主修专业。\n\n【来源】用户在群内转发的招聘通知；岗位划分与招聘流程、公司数据经对照招聘公告（银行招聘网转载公告、中南大学就业信息网《临安农商银行2027秋季校园招聘简章》）核对补充。该批公告页面未标注企业发布日，「发布时间」留空未作推测。另转载来源对\"定向通用岗\"招聘人数记载不一致（3名／38名），未采信其中任一数字。",
+    "target": "2027年全日制应届本科及以上学历毕业生（境外院校2027年1月-2027年7月毕业，且能在2027年12月31日前获得毕业证书）",
+    "type": "校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "金融",
+      "杭州",
+      "管培生"
+    ],
+    "post_date": "",
+    "salary": "",
+    "education": "本科及以上（管理培训生要求全日制硕士，本硕任一为985/211）",
+    "experience": "在校/应届",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 81,
+    "company": "中国农业发展银行浙江省分行",
+    "title": "2027年度校园招聘",
+    "positions": [
+      "客户经理",
+      "财务",
+      "信息技术",
+      "职能"
+    ],
+    "locations": [
+      "浙江省内（杭州",
+      "宁波",
+      "温州",
+      "湖州",
+      "嘉兴",
+      "绍兴",
+      "金华",
+      "衢州",
+      "舟山",
+      "台州",
+      "丽水）"
+    ],
+    "has_hc": false,
+    "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://campus.chinahr.com/pages/adbc2027",
+    "description": "【中国农业发展银行浙江省分行2027年度校园招聘正式启动】\n\n简介\n中国农业发展银行是全球最大、全国唯一、直属国务院领导的农业政策性银行，主要职责是以国家信用为基础筹集资金，支持\"三农\"事业发展，全力服务国家粮食安全、乡村振兴等重点领域。目前，全国设有总、省、市、县四级机构共2000多个，在岗员工近5万人，在农村金融体系中发挥主力和骨干作用。\n中国农业发展银行浙江省分行是总行下属的一级分行，下辖11家二级分行、47家县级支行，辖内干部员工近1400人。\n\n招聘机构、岗位及人数（招聘机构／招聘岗位／招聘人数）\n浙江省分行本级／信贷岗／4\n杭州市分行杭州市余杭支行／信贷岗／1；杭州市分行杭州市富阳支行／信贷岗／1；杭州市分行建德市支行／信贷岗／1；杭州市分行淳安县支行／信贷岗／1\n宁波市分行慈溪市支行／信贷岗／1；宁波市分行余姚市支行／信贷岗／1\n温州市分行本级／信贷岗／1；温州市分行本级／财会岗／1；温州市分行本级／法律岗／1；温州市分行乐清市支行／信贷岗／1\n湖州市分行本级／信息科技岗／1；湖州市分行本级／法律岗／1；湖州市分行德清县支行／信贷岗／1；湖州市分行长兴县支行／信贷岗／1；湖州市分行安吉县支行／信贷岗／2\n嘉兴市分行海盐县支行／信贷岗／1\n绍兴市分行嵊州市支行／信贷岗／2\n金华市分行本级／信息科技岗／1；金华市分行武义县支行／财会岗／1；金华市分行兰溪市支行／信贷岗／1\n衢州市分行本级／信贷岗／2；衢州市分行本级／财会岗／1；衢州市分行本级／法律岗／1；衢州市分行龙游县支行／信贷岗／1\n舟山市分行本级／信息科技岗／1；舟山市分行本级／法律岗／1；舟山市分行舟山市普陀区支行／信贷岗／2；舟山市分行岱山县支行／信贷岗／2\n台州市分行本级／信贷岗／2；台州市分行本级／法律岗／1；台州市分行台州市路桥支行／信贷岗／1；台州市分行临海市支行／信贷岗／1；台州市分行玉环市支行／信贷岗／1；台州市分行仙居县支行／信贷岗／1；台州市分行三门县支行／信贷岗／1\n丽水市分行本级／信贷岗／3；丽水市分行本级／法律岗／1；丽水市分行青田县支行／信贷岗／2\n\n报名方式\n网上报名为本次招聘的唯一报名方式。具体报名时间为2026年9月15日-10月11日24时。\n报名入口：https://campus.chinahr.com/pages/adbc2027\n\n【来源】微信公众号「中国农业发展银行浙江省分行」《中国农业发展银行浙江省分行2027年度校园招聘正式启动》，2026-09-15 18:32 发布",
+    "target": "2027届毕业生（原文未标注具体毕业时间口径）",
+    "type": "校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "金融",
+      "央企",
+      "浙江"
+    ],
+    "post_date": "2026-09-15",
+    "salary": "",
+    "education": "",
+    "experience": "在校/应届",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 82,
+    "company": "浙江十勇士网络科技有限公司",
+    "title": "校园游戏分享会 & 招聘见面会（浙工商站）",
+    "positions": [
+      "策划",
+      "技术",
+      "美术",
+      "运营"
+    ],
+    "locations": [],
+    "has_hc": false,
+    "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "",
+    "description": "【浙江十勇士网络科技 校园游戏分享会&招聘见面会（浙江工商大学站）】\n\n活动信息\n时间：2026年9月23日（周三）下午2点\n地点：「商创钱潮」浙商大学生创业园（浙江工商大学金沙港生活区清风苑三楼）\n到场嘉宾：王翔坤（资深游戏制作人、项目孵化导师）\n\n活动内容\n资深游戏制作人、项目孵化导师王翔坤将到场，介绍公司与团队情况，分享本次校招岗位信息及面向应届生的人才培养方案；围绕从游戏策划到研发、美术，不同岗位怎样参与一款游戏的制作，以及进入团队后应届生能获得怎样的项目锻炼展开。\n\n关于十勇士\n浙江十勇士网络科技有限公司成立于2018年7月，专注游戏研发，业务涵盖游戏研发运营、海外项目推广及引入。公司面向全球市场，研发方向涉及动作、模拟养成、卡牌、即时战术等品类，以\"创新游戏，快乐无界\"为使命。\n\n招聘岗位\n· 游戏策划——数值方向、系统方向\n· 游戏研发工程师——客户端、服务端\n· 游戏美术设计——原画、UI\n· 游戏主播——内容创作、游戏直播\n\n培养路径\n\"海选 → 实习 → 转正 → 孵化工作室\"。通过筛选的同学有机会进入真实项目，在团队协作中积累研发经验；优秀实习生可获得转正及独立游戏孵化机会。\n\n组织单位\n指导单位：钱塘区人力资源与社会保障局；主办单位：浙江十勇士网络科技有限公司、浙江工商大学创新创业学院；协办单位：引力社、商创钱潮·浙商大学生创业园、青年勇士创业园。\n\n【来源】微信公众号「商创钱潮」《活动预告｜你与亲自创作游戏只差一次见面》，2026-09-14 18:06 发布。页面未标注具体岗位要求、学历门槛与投递链接，相关字段留空未作推测。",
+    "target": "对游戏行业感兴趣、正在寻找实习或就业方向的在校生／应届生（原文未标注届别）",
+    "type": "实习/校招",
+    "industry": [
+      "游戏"
+    ],
+    "tags": [
+      "校招",
+      "实习",
+      "2027届",
+      "游戏"
+    ],
+    "post_date": "2026-09-14",
+    "salary": "",
+    "education": "",
+    "experience": "在校/应届",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 83,
+    "company": "交通银行宁波分行",
+    "title": "2027年度校园招聘",
+    "positions": [
+      "技术",
+      "客户经理",
+      "产品",
+      "营销"
+    ],
+    "locations": [
+      "宁波（市区",
+      "余姚",
+      "慈溪",
+      "杭州湾",
+      "象山",
+      "奉化）"
+    ],
+    "has_hc": false,
+    "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://job.bankcomm.com",
+    "description": "【交通银行宁波分行2027年度校园招聘】\n\n百年民族金融品牌\n成立于1908年，近代中国发钞行之一。\n\n国有大型商业银行\n六家国有大型商业银行之一，扎实做好金融\"五篇大文章\"；跨境跨业跨市场经营，拥有38家境内省直分行、24家境外分（子）行及代表处、8家主要子公司，业务全牌照。《银行家》杂志2026\"全球银行1000强\"位列第7位。\n\n宁波分行\n总行直属分行：宁波分行组建于1987年10月，1995年升格为总行直属分行；是交通银行重新组建后在国内首批开设的分支机构之一，网点遍布宁波全辖。聚焦做好金融\"五篇大文章\"，着力打造宁波区域业务特色，全力服务区域经济社会发展。曾获市级文明单位、宁波市模范集体、市民最满意银行、宁波市金融支持制造业优秀银行、宁波市金融支持实体经济发展贡献突出机构等荣誉。\n\n招聘岗位\n· 金融科技储备生——金融科技方向\n· 业务经营储备生——科技金融、绿色金融、普惠金融、养老金融、数字金融（客户经理／产品经理方向）；营销方向（市区、余姚、慈溪、杭州湾、象山、奉化）\n\n招聘对象\n主要面向毕业时间在2026年1月至2027年7月的境内外高校毕业生。\n\n培养与保障\n· 快速成长：\"管理+专业\"双通道职业发展路径；人才结构合理分布；注重多岗位实践历练。\n· 全面培养：重点领域人才培养机制；终身学习、分层分类教育培训体系。\n· 有力保障：行业有竞争力的薪酬福利；完善的员工配套设施；全周期护航职业生涯。\n\n招聘流程\n简历投递（截至2026年10月18日）→ 分批甄选评估 → 发放offer。\n\n网申通道\nPC端：登录交通银行官网 https://job.bankcomm.com ，选择校园招聘 → 招聘机构中选择\"宁波分行\"。\n移动端：关注\"交通银行微招聘\"微信公众号 → 关于招聘 → 校招职位 → 境内行 → 宁波分行。\n\n【来源】微信公众号「交通银行宁波分行」《交通银行宁波分行2027年度校园招聘火热开启》，2026-09-18 17:52 发布",
+    "target": "毕业时间在2026年1月至2027年7月的境内外高校毕业生",
+    "type": "校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "金融",
+      "宁波"
+    ],
+    "post_date": "2026-09-18",
+    "salary": "",
+    "education": "",
+    "experience": "在校/应届",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 84,
+    "company": "杰瑞集团（烟台杰瑞石油服务集团股份有限公司）",
+    "title": "2027届校园招聘（27届）",
+    "positions": [
+      "研发",
+      "技术",
+      "销售",
+      "采购",
+      "工程",
+      "职能"
+    ],
+    "locations": [
+      "烟台",
+      "天津",
+      "北京",
+      "上海",
+      "深圳",
+      "成都",
+      "天水",
+      "国外（阿联酋）等"
+    ],
+    "has_hc": false,
+    "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://jereh.zhiye.com/campus",
+    "description": "【杰瑞集团2027届校园招聘（27届校招）】\n\n职位概览（官网按类别显示职位数）\n· 应届生职位 13个\n· 技术研发类 35个\n· 市场开发类 12个\n· 职能类 11个\n· 采购类 6个\n· 工程服务&产品交付类 8个\n官网职位列表页另标注\"全部职位（共 85 个）\"。\n岗位示例：27届-杰瑞青年合伙人计划、27届合伙人-算法工程师／材料修复工程师／嵌入式工程师／计算机视觉工程师／高电压与绝缘方向-北京／网测控制算法方向-敏电／（燃气轮机·航空发动机）气动方向-上海／燃烧方向-上海、27届-机械工程师、27届-机械工艺工程师、27届-液压工程师、27届-化工机械工程师-天津、27届-机械工程师（燃气轮机）-上海、27届-总体工程师-上海等。\n工作地点：山东省烟台市、天津市、北京市、上海市、广东省深圳市、四川省成都市、甘肃省天水市、国外（阿联酋）等。\n\n校招流程\n网申 → 简历筛选 → 现场/远程面试 → 综合评估 → 薪资沟通及offer发放 → 签约锁定岗位。\n\n应届生专属政策\n· 20万无息贷款：针对在公司表现优秀的应届生（四年内获得两次集团级表彰）提供20万元无息贷款，用于购房。\n· 试用期薪资不打折\n· 支持三年住宿\n· 专属轿车奖、股权激励\n\n应届生培训培养\n文化融入（认同企业文化、养成职业习惯）→ 业务实习（储备产品知识、熟悉业务流程）→ 转正答辩（总结过往经验、选拔储备人才）→ 岗位实践（人员岗位融合、承担实际工作）；导师制：一对一带教制、有培训有考核、周沟通月复盘、关注工作生活。\n\n常见问题\n· 27届校招岗位仅针对毕业时间在2027年1月份到2027年12月份毕业的应届生。\n· 校招期间每位同学仅允许申请一个岗位，且无法修改；投递错误可电话咨询 0535-6766467。\n· 网申进度可在校招官网右上方个人中心→【投递记录】查看。\n· 杰瑞校招面向所有27届毕业生，秋招期间任意时间均可投递，岗位数量有限，请尽快投递。\n\n投递入口：https://jereh.zhiye.com/campus\n\n【来源】杰瑞集团招聘官网（北森系统）https://jereh.zhiye.com/campus 。官网未标注招聘简章发布日期，「发布时间」留空未作推测；官网当前列出的宣讲会（山东大学 2026-06-24、河北工业大学 2026-06-26、天津大学 2026-06-30）均已结束。",
+    "target": "2027届应届生（毕业时间2027年1月-2027年12月）",
+    "type": "校招",
+    "industry": [
+      "制造业",
+      "能源"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "上市企业"
+    ],
+    "post_date": "",
+    "salary": "",
+    "education": "本科及以上（青年合伙人计划要求博士研究生）",
+    "experience": "在校/应届",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 85,
+    "company": "中国农业银行浙江省分行",
+    "title": "2027年度校园招聘（浙江工商大学专场宣讲会）",
+    "positions": [
+      "客户经理",
+      "客户服务",
+      "技术",
+      "管理"
+    ],
+    "locations": [
+      "浙江省内（省行",
+      "市行本部及城区",
+      "县域）"
+    ],
+    "has_hc": false,
+    "hc_detail": "岗位分三类：省行/市行本部（业务管理岗、信息科技岗）；城区业务类（城区客户经理岗、城区客服经理岗）；乡村振兴类（县域客户经理岗、县域客服经理岗）",
+    "referral_code": "",
+    "referral_url": "https://career.abchina.com.cn",
+    "description": "【中国农业银行浙江省分行2027年度校园招聘】\n\n【宣讲会】9月28日18:00-20:00，浙江工商大学师生之家就业宣讲厅（已举行）\n\n【热招岗位】\n· 省行/市行本部：业务管理岗、信息科技岗\n· 城区业务类：城区客户经理岗、城区客服经理岗\n· 乡村振兴类：县域客户经理岗、县域客服经理岗\n\n【网申通道】\n投递链接：https://career.abchina.com.cn 或「中国农业银行人才招聘」微信公众号（选择「校园招聘」-「浙江分行」）\n\n【网申截止】10月8日24时（已截止）\n\n招聘对象、学历要求页面未标注，留空未作推测；消息为宣讲会推送（宣讲会2026-09-28举行），推文未标注发布日期。",
+    "target": "",
+    "type": "校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届"
+    ],
+    "post_date": "",
+    "salary": "",
+    "education": "",
+    "experience": "",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 86,
+    "company": "知原药业（ZIYOND）",
+    "title": "2027校园招聘（浙江工商大学专场宣讲会，10-19/10-21两场）",
+    "positions": [
+      "营销",
+      "运营",
+      "管培生",
+      "职能"
+    ],
+    "locations": [
+      "杭州",
+      "北京"
+    ],
+    "has_hc": false,
+    "hc_detail": "岗位方向四类：品牌营销类（新媒体营销/品牌营销/商务营销/视频剪辑等）；电商运营类（店铺运营/私域运营/供应链运营/维价维权等）；管理与职能类（管培生/助理产品经理/法务/财数等）；实习储备类（人力实习/客服实习/视觉设计实习生等）",
+    "referral_code": "",
+    "referral_url": "",
+    "description": "【知原药业2027校园招聘·浙江工商大学专场宣讲会】（两场，内容相同）\n\n第一场：2026年10月19日18:30-21:00\n第二场：2026年10月21日18:30-21:00\n地点均为：浙江工商大学下沙校区C213教室\n\n【公司简介】医药电商头部企业、国内头部皮肤药企，国家专精特新「小巨人」企业，旗下有洛芙、丽芙、质润等知名品牌；布局皮肤大健康新零售，天猫、京东、抖音、拼多多、美团等全网主流电商平台销售领先；研究院获CNAS认可，完成BSL-2生物安全实验室备案。\n\n【宣讲嘉宾】知原药业新零售总裁 黄俊楠\n\n【你会收获】了解皮肤健康赛道的行业现状与发展前景；听企业高管分享校招新人的真实成长路径；现场答疑解惑，有奖互动，简历直投\n\n【岗位方向】\n· 品牌营销类：新媒体营销/品牌营销/商务营销/视频剪辑……\n· 电商运营类：店铺运营/私域运营/供应链运营/维价维权……\n· 管理与职能类：管培生/助理产品经理/法务/财数……\n· 实习储备类：人力实习/客服实习/视觉设计实习生……\n\n【招聘流程】简历投递-面试-录用\n【投递渠道】17712452171（微信同号）；宣讲会现场简历直投\n【薪资福利】薪资范围8k-15k；不限专业\n\n工作地点未标注具体细则（面向2026届、2027届、2028届同学），留空未作推测；推文未标注发布日期。",
+    "target": "2026届应届毕业生、2027届/2028届在校生",
+    "type": "实习/校招",
+    "industry": [
+      "医药"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "医药",
+      "实习"
+    ],
+    "post_date": "",
+    "salary": "薪资范围8k-15k（海报标注「薪资最高至15K」）",
+    "education": "",
+    "experience": "",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 87,
+    "company": "天天基金（东方财富全资子公司）",
+    "title": "2027校园招聘·VIP理财师（浙江工商大学专场宣讲会+直通面试）",
+    "positions": [
+      "金融销售"
+    ],
+    "locations": [],
+    "has_hc": false,
+    "hc_detail": "岗位：VIP理财团队-VIP理财师（经营维护高净值客户，提供专业化的一对一指导和服务）",
+    "referral_code": "",
+    "referral_url": "",
+    "description": "【天天基金｜浙江工商大学专场宣讲会】\n\n时间：10月20日14:00；地点：下沙校区B325\n现场内容：企业介绍、岗位解读、培养体系、答疑交流、直通面试\n\n【公司介绍】天天基金是中国证监会批准的首批独立基金销售机构，是上市公司东方财富（股票代码：300059）旗下全资子公司，凭借其专业、及时、全面、权威的财经平台优势，为广大投资者提供一站式金融理财服务。理财师团队专注于为高端用户提供个性化、专业化的一对一指导及服务。\n\n【岗位】VIP理财团队-VIP理财师\n【职责】经营维护高净值客户，提供专业化的一对一指导和服务\n【招聘流程】2轮面试，面试节奏快，最快10月底可将offer收入囊中\n【薪资福利】固薪+月服务绩效+产品激励，平均综合13-20k，绩效优异者薪资上浮空间可观\n\n宣讲会现场直通面试；可提前加入宣讲会交流群（群二维码7天内有效，10月22日前）。\n\n工作城市、招聘对象、学历要求、投递链接页面未标注，留空未作推测；推文未标注发布日期。",
+    "target": "",
+    "type": "校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "金融"
+    ],
+    "post_date": "",
+    "salary": "固薪+月服务绩效+产品激励，平均综合13-20k，绩效优异者薪资上浮空间可观",
+    "education": "",
+    "experience": "",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 88,
+    "company": "恒安集团",
+    "title": "2027届校园招聘（宣讲会-浙江工商大学站）",
+    "positions": [],
+    "locations": [],
+    "has_hc": false,
+    "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://hengan1.zhiye.com/",
+    "description": "【恒安集团2027届校园招聘宣讲会-浙江工商大学站】\n\n宣讲时间：10月20日（星期二）14:00；宣讲地点：经济304\n\n【关于我们】\n1. 国内知名企业，制造业民营企业500强\n2. 拥有心相印、七度空间、安儿乐等知名品牌\n3. 产品国内市场占有率名列前茅\n4. 产品远销全球63个国家与地区\n\n【简历投递】\n网申通道：https://hengan1.zhiye.com/\n招聘邮箱：lihuiping@hengan.com，有意者可将个人简历（含成绩单扫描件、相关证书扫描件）投递至招聘邮箱，邮件主题请写明「应聘（应届生或历届生）+学校+专业+姓名」\n\n现场有精彩礼品。\n\n招聘岗位、工作城市、薪资、招聘对象页面未标注，留空未作推测；推文未标注发布日期。",
+    "target": "",
+    "type": "校招",
+    "industry": [
+      "制造业"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "快消"
+    ],
+    "post_date": "",
+    "salary": "",
+    "education": "",
+    "experience": "",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 89,
+    "company": "杭州海关（海关总署直属）",
+    "title": "2027年度国家公务员考试招录（50个职位50名公务员）",
+    "positions": [],
+    "locations": [
+      "浙江省（除宁波市",
+      "辖内13个隶属海关）"
+    ],
+    "has_hc": false,
+    "hc_detail": "本次杭州海关共招考50个职位50名公务员",
+    "referral_code": "",
+    "referral_url": "https://bm.scs.gov.cn/2027",
+    "description": "【杭州海关2027年度国家公务员考试招录】\n\n【关于杭州海关】杭州海关是直属于海关总署的正厅级国家进出境监督管理机关，管辖浙江省（除宁波市以外）的各项海关管理工作。海关实行垂直管理体制，基本任务是进出境监管、征收关税和其他税费、查缉走私、出入境检验检疫、编制海关统计，并承担口岸管理、保税监管、海关稽查、知识产权海关保护、国际海关合作等职责。目前设有13个隶属海关。\n\n【招考职位】2027年度国家公务员考试网上报名工作10月15日正式启动。本次杭州海关共招考50个职位50名公务员。具体职位信息请登录中央机关及其直属机构2027年度考试录用公务员专题网站和海关总署、杭州海关官方网站查阅。\n\n【宣讲会】10月16日（周五）上午10:00，浙江大学紫金港校区尧坤楼222传化厅（已举行）\n\n【报名】通过2027年度国考报名专题网站（bm.scs.gov.cn）报名；报名10月15日启动，截止时间详见专题网站公告\n\n更多杭州海关招录资讯可关注公众号「杭州海关发布」。\n\n岗位具体职责与专业要求详见国考职位表；消息为浙工商就业指导中心2026-10-15转发，推文未标注企业发布日期，发布时间留空未作推测。",
+    "target": "",
+    "type": "校招",
+    "industry": [],
+    "tags": [
+      "校招",
+      "2027届"
+    ],
+    "post_date": "",
+    "salary": "",
+    "education": "",
+    "experience": "",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 90,
+    "company": "交通银行浙江省分行",
+    "title": "2027校园招聘（浙江省分行）",
+    "positions": [
+      "柜员",
+      "客户经理",
+      "技术"
+    ],
+    "locations": [
+      "杭州",
+      "绍兴",
+      "温州",
+      "湖州",
+      "台州",
+      "金华",
+      "衢州",
+      "舟山",
+      "丽水",
+      "嘉兴",
+      "义乌"
+    ],
+    "has_hc": false,
+    "hc_detail": "岗位含：柜面营运类（杭州、嘉兴）；客户经理类（杭州、绍兴、温州、湖州、台州、金华、衢州、舟山、丽水）；「五篇大文章」客户经理（杭州、温州、嘉兴、义乌）；绿色金融客户经理（丽水）；贸易金融/国际业务客户经理（义乌）；金融科技类（杭州，两年半轮岗培养「业务+科技」复合人才）",
+    "referral_code": "",
+    "referral_url": "https://job.bankcomm.com",
+    "description": "【交新程 行未来｜交通银行浙江省分行2027校园招聘】\n\n【招聘对象】主要面向毕业时间在2026年1月至2027年7月的境内外高校毕业生\n\n【培养与晋升】平台广阔（全牌照经营网络、全集团人才轮动）；快速成长（「师徒带教」+「管理+专业」双通道）；全面培养（终身学习、分层分类的教育培训体系）\n\n【招聘流程】简历投递（10月18日截止，已截止）→ 校园宣讲（9-10月）→ 甄选评估（10-11月）→ 发放Offer（11-12月）\n\n【简历投递】\nPC端：交通银行招聘官网 https://job.bankcomm.com/ ，选择「校园招聘」-「招聘机构」-「境内分行」-「浙江省分行」\n移动端：关注「交通银行微招聘」微信公众号，选择「关于招聘」-「我要应聘」-「校招职位」-「境内分行」-「浙江省分行」\n\n【浙江省分行简介】1988年成立交通银行杭州分行，2009年更名为交通银行浙江省分行；16家杭州本部支行、10家管辖分行、营业网点129家、员工4000+人。交通银行成立于1908年，近代中国发钞行之一，六家国有大型商业银行之一，《银行家》杂志「2026年度全球银行1000强榜单」位列第7位。\n\n学历要求页面未标注，留空未作推测；消息为浙工商就业指导中心2026-10-15转发（原文来源：交通银行浙江省分行），推文未标注发布日期，发布时间留空未作推测。",
+    "target": "毕业时间在2026年1月至2027年7月的境内外高校毕业生",
+    "type": "校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "金融",
+      "浙江"
+    ],
+    "post_date": "",
+    "salary": "五险一金、企业年金、补充医疗、租房支持、伙食补贴、定制行服、健康体检、带薪年假、文体活动、节日慰问、生日慰问、困难帮扶（海报「福利关怀」列示）",
+    "education": "",
+    "experience": "",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 91,
+    "company": "舜宇集团（舜宇集团有限公司）",
+    "title": "2027届秋季校园招聘",
+    "positions": [
+      "人力资源",
+      "研发",
+      "工程",
+      "品质",
+      "营销",
+      "管理"
+    ],
+    "locations": [
+      "广东",
+      "浙江",
+      "上海",
+      "深圳",
+      "陕西等"
+    ],
+    "has_hc": false,
+    "hc_detail": "1500+offer；需求方向7大类：人力资源、产品开发、工程技术、量产管理、品质、市场营销、企管等；60+岗位",
+    "referral_code": "DSauMTqX",
+    "referral_url": "https://app.mokahr.com/m/campus-recruitment/sunnyoptical/45602?recommendCode=DSauMTqX#/jobs",
+    "description": "【1500+offer，中国制造业500强舜宇集团2027届秋招】\n\n【公司简介】舜宇集团公司成立于1984年，是全球领先的综合光学产品开发和大规模制造企业。集团概况：全球雇员3.44万人，2025年总收入432亿，子公司20+，研发投入占比约7.5%；制造业单项冠军示范企业5家公司（浙江舜宇光学、宁波舜宇光电信息、宁波舜宇车载光学、舜宇光学（中山）、宁波舜宇红外）；专精特新「小巨人」企业3家公司（宁波舜宇红外、浙江舜宇智能光学、浙江舜宇智领技术）。\n\n【福利待遇】提供住宿/住房补贴+工作餐；13薪+年终奖+EVA+年度调薪+五险一金，双休\n\n【需求方向】人力资源、产品开发、工程技术、量产管理、品质、市场营销、企管等7大类，60+岗位\n\n【工作城市】广东、浙江、上海、深圳、陕西等\n\n【校招官网】官网投递：https://app.mokahr.com/m/campus-recruitment/sunnyoptical/45602?recommendCode=DSauMTqX#/jobs\n应聘跟进QQ群：https://qm.qq.com/q/zV3BeRJMJM\n60+岗位明细：https://www.kdocs.cn/l/cbfLBEzVFxC9\n\n招聘对象与学历要求页面未标注，留空未作推测；推文未标注发布日期。",
+    "target": "",
+    "type": "校招",
+    "industry": [
+      "智能硬件"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "浙江"
+    ],
+    "post_date": "",
+    "salary": "13薪+年终奖+EVA+年度调薪+五险一金，双休；提供住宿/住房补贴+工作餐",
+    "education": "",
+    "experience": "",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 92,
+    "company": "杭州城投（杭州市城市建设投资集团有限公司）",
+    "title": "2027届秋季校园招聘",
+    "positions": [
+      "管理",
+      "人力资源",
+      "财务",
+      "风控",
+      "工程",
+      "营销",
+      "采购",
+      "数据"
+    ],
+    "locations": [
+      "杭州"
+    ],
+    "has_hc": false,
+    "hc_detail": "招聘岗位13类：综合管理类、党建纪检类、干部人事类、财务管理类、风控法务类、产业投资类、招商营运类、数据信息类、资本运作类、招标采购类、工程管理类、市场营销类、基层操作类",
+    "referral_code": "",
+    "referral_url": "https://hzct2027.zhaopin.com",
+    "description": "【为城为民 筑创未来｜杭州城投2027届秋季校园招聘】\n\n【公司介绍】杭州市城市建设投资集团有限公司（「杭州城投」）成立于2003年，是由杭州市政府出资，并授权经营国有资产的国有全资有限责任公司。经过20多年的发展，杭州城投已发展成为一家业务范围涵盖水务、公交、能源、安居、产城、城建、置业、投资等领域的大型国有企业。截至2025年底：200多家全资、控股企业；4万余名员工；AAA级公司信用等级；净资产约1400亿元；资产总额约3100亿元；连续五年入选中国企业500强。\n\n【招聘对象】2027届海内外高校毕业生（要求见目标人群栏）\n\n【招聘流程】网申简历投递→简历筛选→初试→复试→确定拟录用选→考察（背景调查）→确定考察人选（具体以实际流程为准）\n\n【网申通道】PC端：https://hzct2027.zhaopin.com ；移动端：扫码报名\n【报名截止时间】2026年11月15日\n【投递限制】每位应聘者最多可投递3个岗位，每家直管企业（含下属企业）仅限投递1个岗位，投递后不可修改\n\n【招聘相关事项说明】本次招聘不指定考试辅导用书，不举办、不委托任何机构或个人开展考试辅导培训。\n\n薪资福利页面未标注，留空未作推测；公众号「杭州城投」2026-10-10官方发布。",
+    "target": "2027届海内外高校毕业生（应于2027年7月31日前取得毕业证和学位证；国（境）外院校毕业生应于2027年7月31日前取得教育部留学服务中心出具的《学历学位认证书》）",
+    "type": "校招",
+    "industry": [],
+    "tags": [
+      "校招",
+      "2027届",
+      "杭州"
+    ],
+    "post_date": "2026-10-10",
+    "salary": "",
+    "education": "",
+    "experience": "",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 93,
+    "company": "绍兴市人社局（2026年全国城市巡回招聘绍兴站）",
+    "title": "「浙里有才」2027届高校毕业生综合双选会（绍兴站）",
+    "positions": [],
+    "locations": [
+      "绍兴"
+    ],
+    "has_hc": false,
+    "hc_detail": "参会企业344家（名单见附件Excel《绍兴大学企业名单-10.15（发学院）》），以绍兴本地为主（越城区57、柯桥区53、上虞区40、滨海新区32、新昌县32、嵊州市30、诸暨市27家等），另有少量杭州、宁波、台州、上海、深圳、成都等地企业",
+    "referral_code": "",
+    "referral_url": "",
+    "description": "【2026年全国城市巡回招聘绍兴站暨「浙里有才」2027届高校毕业生综合双选会】\n\n举办时间：2026年10月21日（周三）下午13:30\n举办地点：绍兴大学南山校区篮球场\n参加对象：有意向来绍兴就业的学生\n\n我校统一组织大巴车接送往返，未经所属学院老师和带队老师允许，严禁擅自离队。参会同学加入微信群（附在问卷星二维码内），后续事宜在微信群通知。\n\n【报名截止】10月19日（周一）上午8点（视报名情况而定，已截止）\n\n岗位信息详见附件Excel企业名单（共344家用人单位，以绍兴本地为主，含芯联集成、卧龙电气、民生银行绍兴分行、台州银行绍兴分行等）。\n\n发布时间页面未标注，留空未作推测。",
+    "target": "",
+    "type": "校招",
+    "industry": [],
+    "tags": [
+      "校招",
+      "2027届",
+      "双选会"
+    ],
+    "post_date": "",
+    "salary": "",
+    "education": "",
+    "experience": "",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 94,
+    "company": "中国民生银行杭州分行",
+    "title": "2027校园招聘（浙江工商大学宣讲会）",
+    "positions": [
+      "客户经理",
+      "管理",
+      "风控"
+    ],
+    "locations": [
+      "杭州"
+    ],
+    "has_hc": false,
+    "hc_detail": "招聘计划两个：扬帆计划（面向硕士及以上，培养成长为战略重点领域关键专业人才或管理储备人才）；启航计划（面向本科及以上，向客群营销、财富管理、风险管理等专业岗位发展）",
+    "referral_code": "",
+    "referral_url": "http://career.cmbc.com.cn:8080/index.jsp#/app/recruitment?searchEnterpriseId=0111",
+    "description": "【中国民生银行杭州分行2027校园招聘·浙江工商大学宣讲会】\n\n宣讲会时间：10月19日18:00-20:00；地点：浙江工商大学（下沙校区）C117\n\n【招聘计划】\n· 扬帆计划：面向硕士及以上，培养成长为战略重点领域关键专业人才或管理储备人才\n· 启航计划：面向本科及以上，向客群营销、财富管理、风险管理等专业岗位发展\n\n【招聘对象】\n· 校园招聘：境内院校2027届（2027年1-8月毕业）；境外院校2026年1月-2027年12月毕业\n\n【简历投递】http://career.cmbc.com.cn:8080/index.jsp#/app/recruitment?searchEnterpriseId=0111\n\n【网申截止】2026年10月25日24点\n\n可扫码加入宣讲会交流群（民生杭分&浙工商27届校招交流群，二维码7天内有效至10月22日前）。",
+    "target": "校园招聘：境内院校2027届（2027年1-8月毕业）；境外院校2026年1月-2027年12月毕业",
+    "type": "校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "金融",
+      "浙江"
+    ],
+    "post_date": "",
+    "salary": "",
+    "education": "本科及以上（扬帆计划要求硕士及以上）",
+    "experience": "",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 95,
+    "company": "郎酒股份（四川郎酒股份有限公司）",
+    "title": "2027届秋季校园招聘（营销体系·浙江工商大学宣讲会）",
+    "positions": [
+      "销售",
+      "营销",
+      "管培生"
+    ],
+    "locations": [
+      "全国（工作地点根据公司需求与个人意向统筹安排）"
+    ],
+    "has_hc": false,
+    "hc_detail": "销售郎培生20人、市场营销岗30人",
+    "referral_code": "",
+    "referral_url": "",
+    "description": "【与郎同行，酿造未来｜四川郎酒股份有限公司2027届秋季校园招聘（营销体系）】\n\n宣讲会：10月22日（周四）14:00-15:00，浙江工商大学教学楼C208；面向2027届本科生、硕士，不限专业类别。现场有精美伴手礼，现场投递简历，宣讲结束后直接初试。\n\n【公司简介】四川郎酒股份有限公司是以生产经营中国名酒「郎」牌系列酒为主营业务的大型现代化企业，现有员工2万余人，20余家全资及控股子公司，产品远销26个国家及地区。2026年郎酒以1693.16亿元的品牌价值，连续18年稳居白酒行业前三位。营销体系下设青花郎公司、红花郎公司、龙马郎公司、电商公司、国际发展公司。\n\n【招聘岗位】\n· 销售郎培生：硕士及以上（优秀者放宽至重点院校本科），20人\n· 市场营销岗：本科及以上，30人\n\n【招聘条件】2027年应届毕业生（2027年7月前取得毕业证和学位证），认同郎酒价值观；专业不限，经管类、食品类、新闻传媒类等专业优先；具有良好的沟通和社交能力，抗压能力强；接受销售工作性质，工作地点根据公司需求与个人意向统筹安排\n\n【薪酬福利】第一年综合薪酬：固定岗位年薪销售郎培生12-14万/年、市场营销岗10-13万/年（按学校与学历差异化定档）；额外年度专项奖励1-5万/年（目标达成奖励及各类现金补贴）；六险一金（养老、医疗、失业、工伤、生育保险、商业意外险、住房公积金）；现金津贴：学历补贴、季度绩效奖励、高寒补贴、异地房租补贴、区域工作津贴、通讯/交通/出差补贴、继续学历教育奖励、职称/职业资格证书奖励、优秀员工奖励等；假期休假：国家法定节假日、带薪年假、婚假、产假、陪产假、超长春节假等；其他福利：生日福利、结婚福利、节日福利、探亲费、团建活动、出国旅游等\n\n【培养与晋升】销售郎培生计划：培养企业未来中高层营销管理人才，六位一体培养（精品课程体系、最优师资力量、跨部门轮岗学习、职场发展多样性、长期重点关注、高薪酬），三阶段：轮岗期1.5年→以岗代训期2年→锻炼深造期2年。市场营销岗表现优异者可转为销售郎培生。晋升通道：销售代表/销售主管（1-2年）→城市经理（3-5年）→办事处总经理（5-8年）→大区总经理（8年以上）\n\n【应聘流程】网申报名→现场宣讲会→多轮面试→笔试、测评→录用并签订三方协议→入职\n\n【投递】网申移动端为简章二维码扫码投递；校招QQ群：799280146\n\n推文未标注发布日期，发布时间留空未作推测。",
+    "target": "2027届应届毕业生（2027年7月前取得毕业证和学位证）；专业不限，经管类、食品类、新闻传媒类等专业优先",
+    "type": "校招",
+    "industry": [
+      "食品"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "管培生"
+    ],
+    "post_date": "",
+    "salary": "第一年综合薪酬：销售郎培生12-14万/年，市场营销岗10-13万/年；另有年度专项奖励1-5万/年；六险一金及各项现金补贴",
+    "education": "销售郎培生：硕士及以上（优秀者放宽至重点院校本科）；市场营销岗：本科及以上",
+    "experience": "",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 96,
+    "company": "浙商银行合肥分行",
+    "title": "2027校园招聘（合肥分行·综合培养岗）",
+    "positions": [
+      "管培生"
+    ],
+    "locations": [
+      "合肥"
+    ],
+    "has_hc": false,
+    "hc_detail": "",
+    "referral_code": "",
+    "referral_url": "https://zp.czbank.com.cn",
+    "description": "【星启浙银，耀见未来｜浙商银行合肥分行2027校园招聘】\n\n招聘岗位：合肥分行综合培养岗\n\n【关于浙商银行】十二家全国性股份制商业银行之一，总部在浙江杭州，2004年8月18日正式开业，「A+H」上市银行，国内系统重要性银行；资产总额3.70万亿元、贷款规模2.01万亿元、存款规模2.18万亿元；377家分支机构；以「人才银行」作为战略特色之一。\n\n【合肥分行简介】浙商银行合肥分行为浙商银行安徽省内首家分行，自2017年12月8日入驻江淮以来，深度融入合肥发展大局，立足合肥、辐射安徽。\n\n【招聘流程】网申报名→简历筛选→初面→复面→发放offer→签约\n【网申截止时间】2026年10月25日\n\n【网申方式】\n① 官网：https://zp.czbank.com.cn\n② 浙商银行服务号→招聘&服务→校园招聘\n③ 浙商银行App搜招聘进入校招\n\n薪资福利、专业要求页面未标注，留空未作推测；推文未标注发布日期。",
+    "target": "国内院校2026年1月至2027年7月期间毕业；境外院校2025年1月至2027年7月期间毕业（以海报为准）",
+    "type": "校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "金融"
+    ],
+    "post_date": "",
+    "salary": "",
+    "education": "",
+    "experience": "",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 97,
+    "company": "宁波浮沉矿业有限公司（浮沉矿业）",
+    "title": "2027届秋季招聘宣讲会（浙江工商大学站）",
+    "positions": [
+      "行业研究",
+      "管培生",
+      "采购",
+      "财务",
+      "人力资源"
+    ],
+    "locations": [
+      "宁波"
+    ],
+    "has_hc": false,
+    "hc_detail": "招聘岗位：业务管培生、大宗商品研究员、期现业务员、采购专员、期货下单员、AI业务架构师、基金运营、财务专员、人事专员",
+    "referral_code": "",
+    "referral_url": "",
+    "description": "【浮沉之上，青年敢为｜宁波浮沉矿业有限公司·浙江工商大学2027届秋季招聘宣讲会】\n\n时间：10月20日（周二）18:00-20:00；地点：浙江工商大学B213\n\n【招聘岗位】业务管培生、大宗商品研究员、期现业务员、采购专员、期货下单员、AI业务架构师、基金运营、财务专员、人事专员\n\n【亮点剧透】\n· HR面对面答辩，助力你的offer之路\n· 招聘流程、福利与成长体系一站解读\n· 校友走心分享，求职秘籍大公开\n· 前辈零距离畅聊，心仪岗位真实体验\n· 福利彩蛋掉落\n\n可扫码加群获取更多信息。\n\n薪资、学历要求、投递链接页面未标注，留空未作推测；推文未标注发布日期。",
+    "target": "",
+    "type": "校招",
+    "industry": [
+      "金融"
+    ],
+    "tags": [
+      "校招",
+      "2027届",
+      "宁波"
+    ],
+    "post_date": "",
+    "salary": "",
+    "education": "",
+    "experience": "",
+    "qr_code": "",
+    "images": [],
+    "extra_links": []
+  },
+  {
+    "id": 98,
+    "company": "杭州市临平区人社局（2026临平大学生专场招聘会）",
+    "title": "2026临平大学生专场招聘会",
+    "positions": [],
+    "locations": [
+      "杭州（临平）"
+    ],
+    "has_hc": false,
+    "hc_detail": "参会企业100家，招聘岗位389个，招聘2121人，含实习岗位",
+    "referral_code": "",
+    "referral_url": "https://mp.weixin.qq.com/s/M1s50Uxpicac-O1sNbCcuQ",
+    "description": "【2026临平大学生专场招聘会】（杭州临平区人社局主办）\n\n举办时间：2026年10月22日（周四）下午13:00\n举办地点：杭州城北招商花园城（L1户外YO街广场）\n参会企业100家，招聘岗位389个，招聘2121人，含实习岗位（参会企业名录见问卷星二维码内）\n\n参加对象：应届毕业生以及在校生\n\n我校统一组织大巴车接送往返，未经所属学院老师和带队老师允许，严禁擅自离队。参会同学加入微信群（附在问卷星二维码内），后续事宜在微信群通知。\n\n【报名截止】10月21日（周三）上午8点（视报名情况而定）\n\n【其他】参会同学可盖职规章（根据问卷星报名名单与活动现场实际签到情况）；招聘会现场设置多处互动打卡点，有奖品和伴手礼。未尽事宜联系孙老师，分机7585。\n\n详情推文：https://mp.weixin.qq.com/s/M1s50Uxpicac-O1sNbCcuQ\n\n发布时间页面未标注，留空未作推测。",
+    "target": "应届毕业生以及在校生",
+    "type": "实习/校招",
+    "industry": [],
+    "tags": [
+      "校招",
+      "2027届",
+      "实习",
+      "杭州"
+    ],
+    "post_date": "",
+    "salary": "",
+    "education": "",
+    "experience": "",
+    "qr_code": "",
+    "images": [],
     "extra_links": []
   }
 ]

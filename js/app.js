@@ -238,6 +238,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const qrBlock = Utils.has(job.qr_code)
       ? `<div class="detail-section"><h3>扫码投递</h3><div class="qr-block"><img src="${Utils.escHtml(job.qr_code)}" alt="二维码" class="qr-img" onclick="openQrZoom('${Utils.escHtml(job.qr_code)}')"><p class="qr-label">点击二维码放大，用微信/扫码工具扫描</p></div></div>`
       : '';
+    // 二维码之外的其它图片（JD 截图 / 宣讲会海报等），点击同样可放大
+    const extraImgs = (job.images || []).filter(p => Utils.has(p) && p !== job.qr_code);
+    const galleryBlock = extraImgs.length
+      ? `<div class="detail-section"><h3>相关图片</h3><div class="img-gallery">${extraImgs
+          .map(src => `<img src="${Utils.escAttr(src)}" alt="相关图片" class="gallery-img" loading="lazy" onclick="openQrZoom('${Utils.escAttr(src)}')">`)
+          .join('')}</div><p class="qr-label">点击图片放大查看</p></div>`
+      : '';
     const referral = Utils.has(job.referral_code)
       ? `<div class="referral-section"><div class="referral-code-box"><span class="code-label">内推码</span><span class="code-value">${Utils.escHtml(job.referral_code)}</span><span class="copy-feedback">已复制</span></div>${job.referral_url ? `<a class="btn btn-primary" href="${Utils.escHtml(job.referral_url)}" target="_blank" rel="noopener">投递</a>` : ''}</div>`
       : (job.referral_url
@@ -265,6 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="detail-section"><h3>职位信息</h3><div class="info-grid">${buildInfoRows(job)}</div></div>
         <div class="detail-section"><h3>招聘详情</h3><div class="detail-description">${Utils.escHtml(job.description || '暂无描述')}</div></div>
         ${qrBlock}
+        ${galleryBlock}
         ${referral}
         ${buildExtraLinks(job)}
       </div>

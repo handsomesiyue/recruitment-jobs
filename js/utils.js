@@ -78,6 +78,7 @@ const Utils = {
     '卧安机器人': 'images/logos/switchbot.png',
     '大参林医药集团': 'images/logos/dashenlin.png',
     '中信证券浙江分公司': 'images/logos/citics.jpg',
+    '中信证券': 'images/logos/citics.jpg',
     '鸣鸣很忙集团': 'images/logos/hnlshm.jpg',
     '国家电投集团': 'images/logos/spic.jpg',
     '游卡': 'images/logos/yoka.png',
@@ -96,6 +97,10 @@ const Utils = {
     '传音控股': 'images/logos/transsion.png',
     '帆软': 'images/logos/fanruan.png',
     '杭州银行': 'images/logos/hangzhou-bank.png',
+    '中汇会计师事务所': 'images/logos/zhonghui.png',
+    '三一集团': 'images/logos/sany.png',
+    '易点云': 'images/logos/edianyun.png',
+    '毕马威（KPMG）': 'images/logos/kpmg.png',
   },
 
   companyAvatar(name, size) {

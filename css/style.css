@@ -925,6 +925,29 @@ img { max-width: 100%; display: block; }
 
 .qr-label { font-size: var(--text-xs); color: var(--color-text-tertiary); }
 
+/* ---------- 详情页图集（JD 截图 / 宣讲会海报等） ---------- */
+.img-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: var(--space-3);
+}
+
+.gallery-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  cursor: zoom-in;
+  transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+
+.gallery-img:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
 /* ---------- 二维码放大遮罩 ---------- */
 .qr-zoom-overlay {
   position: fixed;
@@ -1885,3 +1908,125 @@ mark.hl {
 }
 .ai-input-box:focus { outline: none; border-color: var(--color-primary); }
 .ai-input .btn { align-self: flex-end; }
+
+/* ============================================
+   主题切换
+   约定：--teal-* 在此充当「可替换的品牌主色阶」。
+   组件里既有直接引用它的地方，也有走 --color-primary
+   等语义别名的地方，覆盖色阶即可让两处一起变。
+   ============================================ */
+
+/* 主题切换按钮 */
+.theme-switcher { position: relative; }
+
+.theme-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 6px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  transition: color var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+
+.theme-btn:hover { color: var(--color-primary); border-color: var(--color-primary); }
+
+.theme-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 600;
+  min-width: 132px;
+  padding: var(--space-1);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+  display: none;
+}
+
+.theme-menu.open { display: block; }
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: 7px var(--space-2);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  text-align: left;
+}
+
+.theme-option:hover { background: var(--color-border-light); }
+.theme-option[aria-current="true"] { color: var(--color-primary); font-weight: 600; }
+
+.theme-swatch {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* ---------- 科技蓝 ---------- */
+html[data-theme="blue"] {
+  --teal-50:  #eff6ff;
+  --teal-100: #dbeafe;
+  --teal-200: #bfdbfe;
+  --teal-300: #93c5fd;
+  --teal-400: #60a5fa;
+  --teal-500: #3b82f6;
+  --teal-600: #2563eb;
+  --teal-700: #1d4ed8;
+  --teal-800: #1e40af;
+  --teal-900: #1e3a8a;
+}
+
+/* ---------- 暖阳橙 ---------- */
+html[data-theme="amber"] {
+  --teal-50:  #fffbeb;
+  --teal-100: #fef3c7;
+  --teal-200: #fde68a;
+  --teal-300: #fcd34d;
+  --teal-400: #fbbf24;
+  --teal-500: #f59e0b;
+  --teal-600: #d97706;
+  --teal-700: #b45309;
+  --teal-800: #92400e;
+  --teal-900: #78350f;
+}
+
+/* ---------- 暗夜 ---------- */
+html[data-theme="dark"] {
+  /* 灰阶反转：直接引用灰阶的组件随之转深 */
+  --gray-50:  #0f172a;
+  --gray-100: #111827;
+  --gray-200: #1f2937;
+  --gray-300: #374151;
+  --gray-400: #4b5563;
+  --gray-500: #6b7280;
+  --gray-600: #9ca3af;
+  --gray-700: #d1d5db;
+  --gray-800: #e5e7eb;
+  --gray-900: #f3f4f6;
+
+  --color-surface: #1b2230;
+  --color-primary: var(--teal-400);
+  --color-primary-hover: var(--teal-300);
+  /* 不用 --teal-50：那会让徽章变成亮青底配浅字，读不出来 */
+  --color-primary-soft: rgba(62, 203, 185, .16);
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .40);
+  --shadow: 0 2px 8px rgba(0, 0, 0, .45);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, .60);
+  --shadow-drawer: -16px 0 40px rgba(0, 0, 0, .60);
+}
