@@ -11,6 +11,8 @@
       try {
         var t = localStorage.getItem('site-theme');
         if (t) document.documentElement.setAttribute('data-theme', t);
+        var w = localStorage.getItem('site-width');
+        if (w) document.documentElement.setAttribute('data-width', w);
       } catch (e) { /* 隐私模式下 localStorage 不可用，忽略 */ }
     })();
   </script>
@@ -24,6 +26,10 @@
         <span class="brand-logo" aria-hidden="true" data-page-node-id="5EEw8GAN1ZCGIT2fOxAs8J">招</span>
         <span class="brand-name" data-page-node-id="CjNYoGcD3bhRijuzqfm61p">招聘信息聚合</span>
       </a>
+      <nav class="site-nav" aria-label="板块导航">
+        <a href="./" class="active" aria-current="page">岗位</a>
+        <a href="events.html">宣讲会</a>
+      </nav>
       <div class="header-search" data-page-node-id="BbtCUKuDbamTMeBCdpPjWa">
         <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-page-node-id="70mTUh8tD8n4rlthQeppSv">
           <circle cx="11" cy="11" r="7" data-page-node-id="qxy3upxeprp98C4fnHkvqa"></circle>
@@ -35,6 +41,11 @@
         <span class="site-subtitle" data-page-node-id="mkiAIq29iWzVRW9LNSAbF7">会计专硕2401专用</span>
         <button id="addJobBtn" class="add-job-btn" type="button" style="display:none;" data-page-node-id="JbO2dfrXw5bp0ylsCIkU1q">+ 新增</button>
         <button id="aiAssistantBtn" class="add-job-btn ai-assistant-btn" type="button" style="display:none;" data-page-node-id="lxalp5k695iEolpLPvxAFk">AI 助手</button>
+        <!-- 宽度切换：标准 / 宽屏 / 全宽 三档循环 -->
+        <button id="widthBtn" class="theme-btn" type="button" title="内容区宽度">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18"></path><path d="M7 8l-4 4 4 4"></path><path d="M17 8l4 4-4 4"></path></svg>
+          <span id="widthLabel">宽屏</span>
+        </button>
         <!-- 主题切换：选择存 localStorage，下次访问沿用 -->
         <div class="theme-switcher">
           <button id="themeBtn" class="theme-btn" type="button" aria-haspopup="true" aria-expanded="false">
@@ -167,6 +178,7 @@
   <script src="data/jobs.js?v=20261019"></script>
   <script src="js/utils.js"></script>
   <script src="js/theme.js"></script>
+  <script src="js/layout.js"></script>
   <script src="js/job-block.js"></script>
   <script src="js/views/compact-list-view.js"></script>
   <script src="js/views/board-view.js"></script>
